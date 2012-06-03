@@ -1,14 +1,16 @@
 package testBloque;
-import Errores.VidaInvalidaError;
-import Modelo.*;
 import junit.framework.TestCase;
+import Errores.VidaInvalidaError;
+import Modelo.BloqueAcero;
+import Modelo.Obstaculo;
+
 
 public class TestBloqueAcero extends TestCase {
 	
 	public void testConstructor()
 	{
 		Obstaculo Bloque = new BloqueAcero(10);
-		assertTrue(Bloque.vidaRestante() == 10);
+		assertEquals(Bloque.vidaRestante(), 10);
 	}
 	
 	
@@ -19,7 +21,7 @@ public class TestBloqueAcero extends TestCase {
 			Obstaculo Bloque = new BloqueAcero(-1);
 		}catch(VidaInvalidaError e)
 		{
-			assertTrue(true);
+			assert(true);
 		}
 	}
 	
@@ -36,5 +38,4 @@ public class TestBloqueAcero extends TestCase {
 		Bloque.QuitarVida(10);
 		assertTrue(Bloque.Destruido());
 	}
-	
 }
