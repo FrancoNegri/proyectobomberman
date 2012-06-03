@@ -1,5 +1,5 @@
 package Modelo;
-import bloqueAcero.*;
+import Errores.*;
 
 public abstract class Obstaculo {
 	int vida;
