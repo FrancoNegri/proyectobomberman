@@ -1,5 +1,5 @@
 package testBloque;
-import bloqueAcero.VidaInvalidaError;
+import Errores.VidaInvalidaError;
 import Modelo.*;
 import junit.framework.TestCase;
 
