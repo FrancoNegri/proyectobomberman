@@ -1,4 +1,4 @@
-package bloqueAcero;
+package Errores;
 
 public class VidaInvalidaError extends RuntimeException {
 
