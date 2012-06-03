@@ -1,5 +1,6 @@
 package Modelo;
-import Errores.*;
+import Errores.VidaInvalidaError;
+
 
 public abstract class Obstaculo {
 	int vida;
