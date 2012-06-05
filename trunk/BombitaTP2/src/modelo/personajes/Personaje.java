@@ -4,9 +4,9 @@ import modelo.bomba.Bomba;
 
 public class Personaje implements Caminable {
 
-	private Bomba bomba;
-	private float velocidad;
-	private int vida;
+	protected Bomba bomba;
+	protected float velocidad;
+	protected int vida;
 
 	public Personaje() {
 
@@ -24,7 +24,19 @@ public class Personaje implements Caminable {
 		return vida;
 	}
 
-	public void setVida(int vida) {
-		this.vida = vida;
+	public void restarVida(int danio) {
+		this.vida = vida - danio;
+	}
+	
+	public float getVelocidad() {
+		return velocidad;
+	}
+	
+	public void setVelocidad(float velocidad) {
+		this.velocidad = velocidad;
+	}
+	
+	public boolean estaMuerto() {
+		return (this.vida == 0);
 	}
 }
