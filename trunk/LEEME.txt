@@ -1,2 +1,0 @@
--las carpetas estan configuradas para que ant las reconosca.
--ya probe hacer un build. funciona bien.
