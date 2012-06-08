@@ -1,12 +1,13 @@
 package modelo.bloquetest;
 
-import modelo.bombitatest.Test;
 import modelo.errores.VidaInvalidaError;
 import modelo.obstaculos.*;
 import junit.framework.TestCase;
+import static org.junit.Assert.*;
+import org.junit.*;
 
 public class TestBloqueAcero extends TestCase {
-	@test
+	@Test
 	public void testConstructor()
 	{
 		Obstaculo Bloque = new BloqueAcero(10);
