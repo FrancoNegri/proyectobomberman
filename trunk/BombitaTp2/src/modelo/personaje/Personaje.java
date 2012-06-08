@@ -19,8 +19,12 @@ public abstract class Personaje implements Caminable {
 
 	}
 
-	public void caminar() {
-
+	public  void caminar(Caminable unCaminable){
+		unCaminable.mover(this);
+	}
+	
+	public Coordenada obtenerCoordenadaXY(){
+		return coordenadaXY;
 	}
 
 	public int getVida() {
@@ -46,5 +50,4 @@ public abstract class Personaje implements Caminable {
 	public boolean estaMuerto() {
 		return (this.vida == 0);
 	}
-
 }

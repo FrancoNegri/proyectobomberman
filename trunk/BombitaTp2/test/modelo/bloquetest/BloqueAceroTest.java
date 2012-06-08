@@ -2,13 +2,12 @@ package modelo.bloquetest;
 
 import modelo.errores.VidaInvalidaError;
 import modelo.obstaculos.*;
-import junit.framework.TestCase;
 import static org.junit.Assert.*;
 import org.junit.*;
 
-public class testBloqueAcero{
+public class BloqueAceroTest {
 	@Test
-	public void testConstructor()
+	public void setUp()
 	{
 		Obstaculo Bloque = new BloqueAcero(10);
 		assertEquals(Bloque.vidaRestante(), 10);
