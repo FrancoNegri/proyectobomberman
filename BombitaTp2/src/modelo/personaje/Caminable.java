@@ -2,5 +2,5 @@ package modelo.personaje;
 
 public interface Caminable {
 
-	void caminar();
+	void mover(Personaje unPersonaje);
 }

@@ -1,8 +1,6 @@
 package modelo.bombitatest;
 
 import static org.junit.Assert.*;
-import junit.framework.TestCase;
-
 import org.junit.*;
 import modelo.armamento.*;
 import modelo.articulo.*;

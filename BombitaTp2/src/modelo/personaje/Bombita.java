@@ -22,5 +22,9 @@ public class Bombita extends Personaje {
 	public void cambiarArmamento(Armamento unArmamento) {
 		this.bomba = unArmamento;
 	}
+
+	public void mover(Personaje unPersonaje) {
+		
+	}
 	
 }

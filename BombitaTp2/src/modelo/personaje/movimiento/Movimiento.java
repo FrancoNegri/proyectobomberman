@@ -2,7 +2,10 @@ package modelo.personaje.movimiento;
 
 import java.util.*;
 
-public abstract class Movimiento {
+import modelo.personaje.Caminable;
+import modelo.personaje.Personaje;
+
+public abstract class Movimiento implements Caminable {
 	
 	private ArrayList<Movimiento> movimientos;
 	
@@ -18,16 +21,16 @@ public abstract class Movimiento {
 		this.movimientos.add(derecha);
 		this.movimientos.add(izquierda);
 		this.movimientos.add(abajo);
-		this.movimientos.add(arriba);
-		
+		this.movimientos.add(arriba);	
 	}
 	
-	public int funcionRandom(){
-		//Modificar esta parte para sacar uno al azar
-		return movimientos.size();
+	public int obtenerNumeroRandom(){
+		//Devuelve un numero entre 0 y 9
+		int numero = (int) Math.round((Math.random()*1000)); 
+		return ( (numero % 4) + 1);
 	}
 	
 
-	public abstract void mover();
+	public abstract void mover(Personaje unPersonaje);
 
 }
