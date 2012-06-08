@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 import static org.junit.Assert.*;
 import org.junit.*;
 
-public class TestBloqueAcero extends TestCase {
+public class testBloqueAcero{
 	@Test
 	public void testConstructor()
 	{
