@@ -1,6 +1,7 @@
 package modelo.mapa;
 
-import modelo.casilleros.*;
+import modelo.casillero.casillero;
+import modelo.casillerotest.*;
 import modelo.errores.*;
 
 public class tablero {
