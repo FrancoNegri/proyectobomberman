@@ -11,7 +11,8 @@ public class testsdecasillero {
 	public void testQuePruebaQueSeInicializeDeManeraCorrecta()
 	{
 		casillero unCasillero = new casillero();
-		
+		Object unBloque = new Object();
+		unCasillero.agregar(unBloque);
 		assertTrue(true);
 	}
 	
