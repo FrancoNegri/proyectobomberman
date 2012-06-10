@@ -2,6 +2,8 @@ package modelo.articulotest;
 
 import modelo.articulo.*;
 import modelo.armamento.*;
+import modelo.errores.ArmamentoNoInicializadoError;
+import modelo.errores.TiempoInvalidoError;
 import modelo.personaje.*;
 import junit.framework.TestCase;
 import static org.junit.Assert.*;
