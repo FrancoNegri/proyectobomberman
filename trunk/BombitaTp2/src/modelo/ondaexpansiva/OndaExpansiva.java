@@ -1,8 +1,7 @@
 package modelo.ondaexpansiva;
-import modelo.obstaculos.Obstaculo;
+import modelo.obstaculos.Obstaculo; 
 import modelo.personaje.Caminable;
-import modelo.personaje.Personaje;
-import modelo.personaje.movimiento.*;
+import modelo.personaje.Personaje;//nn
 
 public class OndaExpansiva implements Caminable {
     private int radio;
