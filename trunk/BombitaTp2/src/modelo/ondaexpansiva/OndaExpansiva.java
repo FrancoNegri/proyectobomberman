@@ -5,7 +5,7 @@ import modelo.personaje.Personaje;//nn
 
 public class OndaExpansiva implements Caminable {
     private int radio;
-    private int danio;
+    private int danio;//a ver
     
     public OndaExpansiva(int r,int d) {
    	 	this.radio=r;
