@@ -7,7 +7,6 @@ import modelo.personaje.movimiento.*;
 public class OndaExpansiva implements Caminable {
     private int radio;
     private int danio;
-	private Movimiento Arriba;
     
     public OndaExpansiva(int r,int d) {
    	 	this.radio=r;
@@ -22,17 +21,12 @@ public class OndaExpansiva implements Caminable {
     	return danio;
     }
     
-    public static void Mover(Personaje unPersonaje){
-    	
-    }
-    
     public void Expandirse(int x,int y){//A partir de la posicion donde explota la bomba,camina como un objeto la zona afectada de acuerdo al radio
     	int i,j;
-    	Personaje k = null;
     	
     	for(i=1;i<5;i++)
     		for(j=1;j<=this.radio;j++){
-    			OndaExpansiva.Mover(k); //En proceso.
+    			
     		}
     }
     
@@ -41,9 +35,7 @@ public class OndaExpansiva implements Caminable {
     	
     }
 
-	@Override
-	public void mover(Personaje unPersonaje) {
-		// TODO Auto-generated method stub
+	public void mover(Personaje unPersonaje){
 		
 	}
 }
