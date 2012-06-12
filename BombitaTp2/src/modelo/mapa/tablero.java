@@ -1,7 +1,6 @@
 package modelo.mapa;
 
 import modelo.casillero.casillero;
-import modelo.casillerotest.*;
 import modelo.errores.*;
 
 public class tablero {
@@ -18,7 +17,7 @@ public class tablero {
 		this.tamanioValido(tamanio);
 		this.tamanio=tamanio;
 		this.casilleros= new casillero[tamanio][tamanio];
-		this.cargarMatriz(this.casilleros, this.tamanio);
+		this.cargarMatriz(this.casilleros, this.obtenerTamanio());
 		
 	}
 	
@@ -41,7 +40,7 @@ public class tablero {
 	private void tamanioValido(int tamanio){
 		
 		
-		if((tamanio<=0)|| (tamanio>this.tamanio)){
+		if((tamanio<=0)|| (tamanio>this.obtenerTamanio())){
 			
 			throw new TamanioMatrizInvalidoError();
 		}
@@ -63,6 +62,11 @@ public class tablero {
 		
 	}
 	
+	public int obtenerTamanio(){
+		
+		return this.tamanio;
+		
+	}
 	
 
 }
