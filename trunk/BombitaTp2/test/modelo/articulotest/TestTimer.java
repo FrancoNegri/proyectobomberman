@@ -5,7 +5,6 @@ import modelo.armamento.*;
 import modelo.errores.ArmamentoNoInicializadoError;
 import modelo.errores.TiempoInvalidoError;
 import modelo.personaje.*;
-import junit.framework.TestCase;
 import static org.junit.Assert.*;
 import org.junit.*;
 
@@ -13,7 +12,7 @@ public class TestTimer {
 	
 	private Bombita rodriguez;
 	private Armamento arma;
-	private int resultadotiempo;
+	private double resultadotiempo;
 	private Timer unTimer;
 	
 	
@@ -21,17 +20,17 @@ public class TestTimer {
 	public void setUp()
 	{
 		this.rodriguez=new Bombita();
-		this.arma=new Armamento();
-		this.resultadotiempo=0.995;//constante para comparar el tiempo de una molotov una vez que fue mejorada por el metodo usar.
+		this.unTimer = new Timer();
+		this.arma=new Molotov();
+		this.resultadotiempo=0.99;//constante para comparar el tiempo de una molotov una vez que fue mejorada por el metodo usar.
 	}
 	
 	@Test
 	public void testUsar(){
 		
-		this.unTimer = new Timer();
 		unTimer.usar(this.rodriguez);
 		Armamento armamentoprueba = this.rodriguez.armamentoActual();
-		assertTrue(armamentoprueba.obtenerTime()==resultadotiempo);
+		assertTrue(armamentoprueba.obtenerTime() == resultadotiempo);
 		
 	}
 	
