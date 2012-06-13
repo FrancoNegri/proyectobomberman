@@ -6,6 +6,8 @@ import java.util.LinkedList;
 public class Casillero {
 	
 	LinkedList <Object> objetos;
+	
+	
 	public Casillero()
 	{
 		objetos = new LinkedList<Object>();
