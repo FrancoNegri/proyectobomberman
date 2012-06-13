@@ -17,7 +17,7 @@ public abstract class Personaje implements Caminable {
 	}
 
 	public void tirarBomba() {
-
+		//agregar la bomba en el casillero
 	}
 
 	public void caminar(Movimiento unMovimiento){
