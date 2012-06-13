@@ -5,6 +5,7 @@ import org.junit.*;
 import modelo.armamento.*;
 import modelo.articulo.*;
 import modelo.personaje.*;
+import modelo.personaje.movimiento.*;
 
 
 public class BombitaTest {
@@ -14,6 +15,8 @@ public class BombitaTest {
 	private Habano habano;
 	private ToleTole toleTole;
 	private Timer timer;
+	private Derecha derecha;
+	private Abajo abajo;
 
 	
 	@Before
@@ -23,6 +26,8 @@ public class BombitaTest {
 		habano = new Habano();
 		toleTole = new ToleTole();
 		timer = new Timer();
+		derecha = new Derecha();
+		abajo = new Abajo();
 	}
 	
 	@Test
@@ -39,6 +44,16 @@ public class BombitaTest {
 	@Test
 	public void testInicializarVida() {
 		assertTrue(rodriguez.getVida() == 100);
+	}
+	
+	@Test
+	public void testInicializarCoordenadaX() {
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 1);
+	}
+	
+	@Test
+	public void testInicializarCoordenadaY() {
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 1);
 	}
 	
 	@Test
@@ -77,17 +92,15 @@ public class BombitaTest {
 		rodriguez.tomarArticulo(timer);
 		assertEquals(0,0, rodriguez.armamentoActual().obtenerTime() );
 	}
-//	@Test
-//	public void testCambiarAEstadoHabanoChalaYVerVelocidad() {
-//		rodriguez.cambiarEstado(unEstado);
-//		rodriguez.actualizarAtributosBombita(rodriguez);
-//		assertTrue(rodriguez.getVelocidad() == 10);
-//	}
-//	
-//	@Test
-//	public void testCambiarAEstadoToleToleYVerBomba() {
-//		rodriguez.cambiarEstado(otroEstado);
-//		rodriguez.actualizarAtributosBombita(rodriguez);
-//		assertTrue(rodriguez.conocerBomba() == "ToleTole");
-//	}
+	
+	@Test
+	public void testCaminarHaciaLaDerecha() {
+		rodriguez.caminar(derecha);
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 2);
+	}
+	
+	public void testCaminarHaciaAbajo() {
+		rodriguez.caminar(abajo);
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 0);
+	}
 }

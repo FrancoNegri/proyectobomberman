@@ -1,6 +1,5 @@
 package modelo.articulotest;
 
-import junit.framework.TestCase;
 import static org.junit.Assert.*;
 import org.junit.*;
 import modelo.articulo.*;
@@ -64,4 +63,5 @@ public class TestHabano {
 			assert(true);
 		}
 		
+}
 }
