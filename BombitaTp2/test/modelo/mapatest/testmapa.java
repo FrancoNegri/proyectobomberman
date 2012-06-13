@@ -4,6 +4,6 @@ import modelo.mapa.*;
 import org.junit.Assert.*;
 import org.junit.*;
 
-public class testmapa {
+public class testMapa {
 
 }

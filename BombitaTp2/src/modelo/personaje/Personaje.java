@@ -2,6 +2,7 @@ package modelo.personaje;
 
 import modelo.armamento.Armamento;
 import modelo.coordenadas.Coordenada;
+import modelo.personaje.movimiento.Movimiento;
 
 
 public abstract class Personaje implements Caminable {
@@ -19,8 +20,8 @@ public abstract class Personaje implements Caminable {
 
 	}
 
-	public  void caminar(Caminable unCaminable){
-		unCaminable.mover(this);
+	public void caminar(Movimiento unMovimiento){
+		unMovimiento.mover(this);
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
@@ -48,6 +49,6 @@ public abstract class Personaje implements Caminable {
 	}
 	
 	public boolean estaMuerto() {
-		return (this.vida == 0);
+		return (this.vida <= 0);
 	}
 }

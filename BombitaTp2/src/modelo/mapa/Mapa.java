@@ -1,26 +1,26 @@
 package modelo.mapa;
 
-import modelo.casillero.*;
 
 import modelo.articulo.*;
+import modelo.casillero.Casillero;
 
 public class Mapa {
 	
-	private tablero TableroJuego;
+	private Tablero TableroJuego;
 	
-	public void Mapa(int tamanio){
+	public Mapa(int tamanio){
 		
-		this.TableroJuego = new tablero(tamanio);
+		this.TableroJuego = new Tablero(tamanio);
 		
 	}
 	
-	private void agregarCasillero(int x, int y,  casillero unCasillero){
+	private void agregarCasillero(int x, int y,  Casillero unCasillero){
 		
 		this.TableroJuego.cambiarCasillero(x, y, unCasillero);
 		
 	}
 	
-	private casillero obtenerCasillero(int x, int y){
+	private Casillero obtenerCasillero(int x, int y){
 		
 		return this.TableroJuego.obtenerCasillero(x, y);
 		
@@ -28,8 +28,8 @@ public class Mapa {
 	
 	public void agregarArticulo (int x, int y, Articulo Unarticulo){
 		
-		casillero casilleroauxiliar= this.obtenerCasillero(x, y);
-		casilleroauxiliar.agregarArticulo(Unarticulo);
+		Casillero casilleroauxiliar= this.obtenerCasillero(x, y);
+		casilleroauxiliar.agregar(Unarticulo);
 		this.agregarCasillero(x, y, casilleroauxiliar);
 	
 	}

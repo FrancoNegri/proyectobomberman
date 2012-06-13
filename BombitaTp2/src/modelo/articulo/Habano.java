@@ -7,7 +7,7 @@ public class Habano extends Articulo{
 	
 	private float velocidadmaxima;
 	
-	public void Habano(){
+	public Habano(){
 		
 		this.velocidadmaxima=35;
 	}

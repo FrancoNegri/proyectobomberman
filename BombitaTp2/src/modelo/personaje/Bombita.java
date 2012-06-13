@@ -24,7 +24,7 @@ public class Bombita extends Personaje {
 	}
 
 	public void mover(Personaje unPersonaje) {
-		
+	
 	}
 	
 }

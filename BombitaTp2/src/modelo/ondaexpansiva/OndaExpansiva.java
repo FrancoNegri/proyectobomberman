@@ -1,7 +1,7 @@
 package modelo.ondaexpansiva;
 import modelo.obstaculos.Obstaculo; 
 import modelo.personaje.Caminable;
-import modelo.personaje.Personaje;//nn
+import modelo.personaje.Personaje;
 
 public class OndaExpansiva implements Caminable {
     private int radio;
@@ -33,7 +33,7 @@ public class OndaExpansiva implements Caminable {
     	
     }
 
-	public void mover(Caminable unCaminable){
+	public void mover(Personaje unPersonaje){
 		
 	}
 }

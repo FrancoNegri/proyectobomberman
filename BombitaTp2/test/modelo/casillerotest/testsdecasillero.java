@@ -1,7 +1,5 @@
 package modelo.casillerotest;
-import modelo.casillero.casillero;
-import modelo.errores.VidaInvalidaError;
-import modelo.obstaculos.*;
+import modelo.casillero.Casillero;
 import static org.junit.Assert.*;
 import org.junit.*;
 
@@ -10,7 +8,7 @@ public class testsdecasillero {
 	@Test
 	public void testQuePruebaQueSeInicializeDeManeraCorrecta()
 	{
-		casillero unCasillero = new casillero();
+		Casillero unCasillero = new Casillero();
 		Object unBloque = new Object();
 		unCasillero.agregar(unBloque);
 		assertTrue(true);
