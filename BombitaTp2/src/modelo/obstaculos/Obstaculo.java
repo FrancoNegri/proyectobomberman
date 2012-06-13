@@ -12,10 +12,10 @@ public abstract class Obstaculo {
 	}
 	
 
-	public void QuitarVida(int daño) {
-		if((vida > 0)&&(daño > 0))
+	public void QuitarVida(int danio) {
+		if((vida > 0)&&(danio > 0))
 		{
-			vida = vida - daño;
+			vida = vida - danio;
 		}
 	}
 	
