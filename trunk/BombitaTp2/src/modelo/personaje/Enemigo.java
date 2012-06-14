@@ -7,7 +7,7 @@ public class Enemigo extends Personaje{
 		this.coordenadaXY.cambiarCoordenadaY(0);
 	}
 
-	public void mover(Personaje unPersonaje) {
+	public void mover(Personaje unPersonaje){
 		
 	}
 }

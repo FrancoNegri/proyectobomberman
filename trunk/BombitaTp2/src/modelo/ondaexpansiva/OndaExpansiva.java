@@ -1,9 +1,7 @@
 package modelo.ondaexpansiva;
-import modelo.obstaculos.Obstaculo; 
-import modelo.personaje.Caminable;
-import modelo.personaje.Personaje;
+import modelo.obstaculos.Obstaculo;  
 
-public class OndaExpansiva implements Caminable {
+public class OndaExpansiva{
     private int radio;
     private int danio;
     
@@ -20,12 +18,18 @@ public class OndaExpansiva implements Caminable {
     	return danio;
     }
     
-    public void Expandirse(int x,int y){//A partir de la posicion donde explota la bomba,camina como un objeto la zona afectada de acuerdo al radio
+    public void Expandirse(int x, int y){
+    	
+    }
+    
+    public void expandirseArriba(int x,int y){//A partir de la posicion donde explota la bomba,camina como un objeto la zona afectada de acuerdo al radio
     	int j;
     	
-    	 for(j=1;j<=this.radio;j++){
-    			//Falta implementacion
-    	 }
+    	for(j=1;j<=this.radio;j++){
+    		
+    	}
+    			
+    	 
     }
     
     public void degradarBloque(Obstaculo unObstaculo){//Si encuentra un bloque lo degrada.
@@ -33,7 +37,4 @@ public class OndaExpansiva implements Caminable {
     	
     }
 
-	public void mover(Personaje unPersonaje){
-		
-	}
 }
