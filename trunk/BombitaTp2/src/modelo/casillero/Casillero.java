@@ -1,6 +1,5 @@
 package modelo.casillero;
 
-import java.util.LinkedList;
 import modelo.personaje.*;
 import modelo.articulo.*;
 import modelo.armamento.*;
@@ -16,7 +15,7 @@ public class Casillero {
 	Articulo unArticulo;
 	
 	
-	public void Casillero()
+	public Casillero()
 	{
 		this.identificador = "noName";
 		this.unPersonaje = null;
@@ -25,7 +24,7 @@ public class Casillero {
 		
 	}
 	
-	public void Casillero(String identificador){
+	public Casillero(String identificador){
 		
 		this.identificador = identificador;
 		this.unPersonaje = null;
@@ -34,7 +33,7 @@ public class Casillero {
 		
 	}
 	
-	public void cambiarPersonaje(Personaje unPersonaje)
+	public void agregarPersonaje(Personaje unPersonaje)
 	{
 		this.unPersonaje = unPersonaje;
 	}

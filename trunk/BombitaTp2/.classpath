@@ -4,24 +4,13 @@
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/CDC-1.0%Foundation-1.0"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/bsh-core-2.0b4.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/cglib-2.1_3-src.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/cglib-nodep-2.1_3.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/hamcrest-core-1.1.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/hamcrest-library-1.1.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/jmock-2.5.1.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/jmock-junit3-2.5.1.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/jmock-junit4-2.5.1.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/jmock-legacy-2.5.1.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/jmock-script-2.5.1.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jmock-2.5.1/objenesis-1.0.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/asm-3.0.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/asm-tree-3.0.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/checkstyle-5.5-all.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/cobertura.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/jakarta-oro-2.0.8.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/junit-4.10.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/log4j-1.2.9.jar"/>
-	<classpathentry kind="lib" path="/home/matias/Escritorio/programacion/repositorio/trunk/BombitaTp2/libs/mockito-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/libs/asm-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/libs/asm-tree-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/libs/checkstyle-5.5-all.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/libs/cobertura.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/libs/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/libs/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/libs/log4j-1.2.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/libs/mockito-all-1.9.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
