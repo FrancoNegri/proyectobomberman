@@ -18,7 +18,7 @@ public class Casillero {
 	
 	public void Casillero()
 	{
-		this.identificador = "";
+		this.identificador = "noName";
 		this.unPersonaje = null;
 		this.unArmamento = null;
 		this.unArticulo = null;
