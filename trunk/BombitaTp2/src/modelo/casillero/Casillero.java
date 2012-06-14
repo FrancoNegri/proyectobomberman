@@ -1,6 +1,7 @@
 package modelo.casillero;
 
 import modelo.personaje.*;
+import modelo.obstaculos.*;
 import modelo.articulo.*;
 import modelo.armamento.*;
 
@@ -12,7 +13,8 @@ public class Casillero {
 	Personaje unPersonaje;
 	String identificador;
 	Armamento unArmamento;
-	Articulo unArticulo;
+	Articulable unArticulo;
+	Obstaculo unObstaculo;
 	
 	
 	public Casillero()
@@ -66,16 +68,26 @@ public class Casillero {
 		
 	}
 	
-	public void cambiarArticulo(Articulo unArticulo){
+	public void cambiarArticulo(Articulable unArticulo){
 		
 		this.unArticulo = unArticulo;
 		
 	}
 	
-	public Articulo obtenerArticulo(){
+	public Articulable obtenerArticulo(){
 		
 		return this.unArticulo;
 		
+	}
+	
+	public void cambiarObstaculo(Obstaculo unObstaculo){
+		
+		this.unObstaculo = unObstaculo;
+	}
+	
+	public Obstaculo obtenerObstaculo(){
+		
+		return this.unObstaculo;
 	}
 	
 	public boolean estaVacio(){

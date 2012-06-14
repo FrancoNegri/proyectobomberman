@@ -1,11 +1,11 @@
 package modelo.mapa;
 
-
-
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
+import modelo.errores.*;
+import modelo.coordenadas.*;
 
 public class Mapa {
 	
@@ -23,28 +23,47 @@ public class Mapa {
 		
 	}
 	
-	public Casillero obtenerCasillero(int x, int y){
+    public Casillero obtenerCasillero(int x, int y){
 		
 		return this.TableroJuego.obtenerCasillero(x, y);
 		
 	}
 	
-	public void modificarCasillero(int x, int y, Casillero unCasillero, Mapa unMapa ){
-		if (unCasillero.estaVacio()) {
-			unMapa.agregarCasillero(x, y, unCasillero);
-		//Agregar excepcion para ver cuando el casillero no esta vacio
-		}
-	}
-	
-	public void agregarPersonaje(Personaje unPersonaje, Mapa unMapa ){
+	public void agregarPersonaje(Personaje unPersonaje){
+		
+		Coordenada Coordenadas = unPersonaje.obtenerCoordenadaXY();
+		Casillero CasilleroAux = this.obtenerCasillero(Coordenadas.obtenerCoordenadaX(), Coordenadas.obtenerCoordenadaY());
+		this.verificarCasillero(CasilleroAux);		
+		CasilleroAux.agregarPersonaje(unPersonaje);
+		this.agregarCasillero(Coordenadas.obtenerCoordenadaX(), Coordenadas.obtenerCoordenadaY(), CasilleroAux);		
 		
 	}
 
-	public void agregarArticulo(int x, int y, Articulable unArticulo, Mapa unMapa ){
+	public void agregarArticulo(int x, int y, Articulable unArticulo){
+		
+		Casillero CasilleroAux = this.obtenerCasillero(x, y);
+		this.verificarCasillero(CasilleroAux);
+		CasilleroAux.cambiarArticulo(unArticulo);
+		this.agregarCasillero(x, y, CasilleroAux);
 		
 	}
 	
-	public void agregarBloque(int x, int y, Obstaculo unObstaculo, Mapa unMapa){
+	public void agregarBloque(int x, int y, Obstaculo unObstaculo){
+		
+		Casillero CasilleroAux = this.obtenerCasillero(x, y);
+		this.verificarCasillero(CasilleroAux);
+		CasilleroAux.cambiarObstaculo(unObstaculo);
+		this.agregarCasillero(x, y, CasilleroAux);
+		
+	}
+	
+	private void verificarCasillero(Casillero unCasillero){
+		
+		if(unCasillero.estaVacio() == false){
+			
+			throw new CasilleroOcupadoError(); 
+			
+		}
 		
 	}
 }
