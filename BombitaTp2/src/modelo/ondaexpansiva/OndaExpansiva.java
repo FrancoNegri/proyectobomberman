@@ -21,13 +21,13 @@ public class OndaExpansiva{
     }
     
     public void Expandirse(int x,int y,Mapa mapa){
-    	expandirseArriba(x,y,mapa);
-    	expandirseAderecha(x,y,mapa);
-    	expandirseAbajo(x,y,mapa);
-    	expandirseAizquierda(x,y,mapa);	
+    	this.expandirseArriba(x,y,mapa);
+    	this.expandirseAderecha(x,y,mapa);
+    	this.expandirseAbajo(x,y,mapa);
+    	this.expandirseAizquierda(x,y,mapa);	
     }
     
-    public void expandirseArriba(int x,int y,Mapa mapa){//A partir de la posicion donde explota la bomba,camina como un objeto la zona afectada de acuerdo al radio
+    public void expandirseArriba(int x,int y,Mapa mapa){
     	int j;
     	Casillero unCasillero;
     	boolean ataco = false;
