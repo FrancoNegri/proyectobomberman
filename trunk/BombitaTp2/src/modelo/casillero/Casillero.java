@@ -2,8 +2,6 @@ package modelo.casillero;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-
-import antlr.collections.List;
 import modelo.personaje.*;
 import modelo.obstaculos.*;
 import modelo.articulo.*;
