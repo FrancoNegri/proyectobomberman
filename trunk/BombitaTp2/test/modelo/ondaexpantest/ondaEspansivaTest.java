@@ -22,19 +22,22 @@ public class ondaEspansivaTest {
 		casilleroOcupado = mock(Casillero.class);
 		when(casilleroVacio.estaVacio()).thenReturn(true);
 		when(casilleroOcupado.estaVacio()).thenReturn(false);
+		Coordenada cord1 = new Coordenada(2,2);
+		Coordenada cord2 = new Coordenada(1,2);
+		Coordenada cord3 = new Coordenada(3,2);
+		Coordenada cord4 = new Coordenada(2,1);
+		Coordenada cord5 = new Coordenada(2,3);
 		
 		mapa = mock(Mapa.class);///Creo un Mapita Falzo para que pueda Testear
-		when(mapa.obtenerCasillero(2,2)).thenReturn(casilleroVacio);
-		when(mapa.obtenerCasillero(1,2)).thenReturn(casilleroOcupado);
-		when(mapa.obtenerCasillero(3,2)).thenReturn(casilleroOcupado);
-		when(mapa.obtenerCasillero(2,1)).thenReturn(casilleroOcupado);
-		when(mapa.obtenerCasillero(2,3)).thenReturn(casilleroOcupado);
+		when(mapa.obtenerCasillero(cord1)).thenReturn(casilleroVacio);
+		when(mapa.obtenerCasillero(cord2)).thenReturn(casilleroOcupado);
+		when(mapa.obtenerCasillero(cord3)).thenReturn(casilleroOcupado);
+		when(mapa.obtenerCasillero(cord4)).thenReturn(casilleroOcupado);
+		when(mapa.obtenerCasillero(cord5)).thenReturn(casilleroOcupado);
 	}
 	@Test
 	public void testQueVerificaLaExplocionDeLaBomba(){
-		Coordenada cord = new Coordenada();
-		cord.cambiarCoordenadaX(2);
-		cord.cambiarCoordenadaY(2);
+		Coordenada cord = new Coordenada(2,2);
 		onda.Expandirse(cord,mapa);
 	}
 	

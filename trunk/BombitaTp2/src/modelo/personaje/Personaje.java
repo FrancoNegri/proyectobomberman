@@ -13,7 +13,7 @@ public abstract class Personaje implements Caminable {
 	protected Coordenada coordenadaXY;
 
 	public Personaje() {
-		this.coordenadaXY = new Coordenada();
+		this.coordenadaXY = new Coordenada(0,0);///DondeIniciarlo? Franco. Por Ahora lo dejo en 0 0.
 	}
 
 	public void caminar(Movimiento unMovimiento){

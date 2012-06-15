@@ -5,9 +5,9 @@ public class Coordenada {
 	private int x;
 	private int y;
 	
-	public Coordenada(){
-		this.cambiarCoordenadaX(0);
-		this.cambiarCoordenadaY(0);
+	public Coordenada(int X, int Y){
+		this.cambiarCoordenadaX(X);
+		this.cambiarCoordenadaY(Y);
 	}
 
 	public int obtenerCoordenadaX() {

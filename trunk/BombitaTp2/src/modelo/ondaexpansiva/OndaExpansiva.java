@@ -34,7 +34,7 @@ public class OndaExpansiva{
     	this.expandirse(cordenada,mapa,movArriba);
     }
     private void expandirse(Coordenada cordenada,Mapa mapa,Movimiento mov){
-    	Coordenada nuevaCord = new Coordenada();
+    	Coordenada nuevaCord = new Coordenada(cordenada.obtenerCoordenadaX(),cordenada.obtenerCoordenadaY());
     	nuevaCord.cambiarCoordenadaX(cordenada.obtenerCoordenadaX());
     	nuevaCord.cambiarCoordenadaY(cordenada.obtenerCoordenadaY());
     	int j;
@@ -43,7 +43,7 @@ public class OndaExpansiva{
     	
     	for(j=1; (j<=this.radio) && (!ataco); j++){
     		nuevaCord = mov.accion(nuevaCord);
-    		unCasillero = mapa.obtenerCasillero(nuevaCord.obtenerCoordenadaX(),nuevaCord.obtenerCoordenadaY());
+    		unCasillero = mapa.obtenerCasillero(nuevaCord);
     		if (!unCasillero.estaVacio()){
     			this.atacar(unCasillero);
     		    ataco = true;

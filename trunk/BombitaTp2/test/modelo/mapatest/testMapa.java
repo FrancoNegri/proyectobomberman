@@ -3,6 +3,7 @@ package modelo.mapatest;
 import modelo.mapa.*;
 import modelo.errores.*;
 import modelo.casillero.*;
+import modelo.coordenadas.Coordenada;
 import static org.junit.Assert.*;
 import org.junit.*;
 
@@ -27,8 +28,8 @@ public class testMapa {
 	@Test
 	
 	public void testConstructor(){
-		
-		this.unCasillero = this.unMapa.obtenerCasillero(2,3);
+		Coordenada cord = new Coordenada(2,3);
+		this.unCasillero = this.unMapa.obtenerCasillero(cord);
 		assertTrue(this.unCasillero.obtenerIdentificador() == "noName");
 	}
 	
@@ -49,20 +50,20 @@ public class testMapa {
 	@Test
 	
 	public void testagregarCasillero(){
-		
+		Coordenada cord = new Coordenada(3,1);
 		this.unCasillero.cambiarIdentificador("casilleroPrueba");
-		this.unMapa.agregarCasillero(3, 1, unCasillero);
-		Casillero CasilleroPrueba = this.unMapa.obtenerCasillero(3, 1);
+		this.unMapa.agregarCasillero(cord, unCasillero);
+		Casillero CasilleroPrueba = this.unMapa.obtenerCasillero(cord);
 		assertTrue(CasilleroPrueba.obtenerIdentificador() == "casilleroPrueba");	
 	}
 	
 	@Test
 	
 	public void testagregarCasilleroTamanioNegativo(){
-		
+		Coordenada cord = new Coordenada(3,-2);
 		try{
 			
-			this.unMapa.agregarCasillero(3 , -2, this.unCasillero);
+			this.unMapa.agregarCasillero(cord, this.unCasillero);
 		}
 		catch(TamanioMatrizInvalidoError e){
 			
@@ -73,10 +74,10 @@ public class testMapa {
 	@Test
 	
 	public void testagregarCasilleroTamanioFueraDeRango(){
-		
+		Coordenada cord = new Coordenada(3,9);
 		try{
 			
-			this.unMapa.agregarCasillero(3 , 9, this.unCasillero);
+			this.unMapa.agregarCasillero(cord, this.unCasillero);
 		}
 		catch(TamanioMatrizInvalidoError e){
 			
@@ -88,8 +89,8 @@ public class testMapa {
 	@Test
 	
 	public void testObtenerCasillero(){
-		
-		Casillero casilleroPrueba = this.unMapa.obtenerCasillero(2, 4);
+		Coordenada cord = new Coordenada(3,4);
+		Casillero casilleroPrueba = this.unMapa.obtenerCasillero(cord);
 		assertTrue(casilleroPrueba.obtenerIdentificador() == "noName");
 		
 	}
@@ -97,10 +98,9 @@ public class testMapa {
 	@Test
 	
 	public void testObtenerCasilleroTamanioNegativo(){
-		
+		Coordenada cord = new Coordenada(3,-2);
 		try{
-			
-			this.unMapa.obtenerCasillero(-2, 3);
+			this.unMapa.obtenerCasillero(cord);
 		}
 		catch(TamanioMatrizInvalidoError e){
 			
@@ -111,17 +111,11 @@ public class testMapa {
 	@Test
 	
 	public void testObtenerCasilleroTamanioFueraDeRango(){
-		
+		Coordenada cord = new Coordenada(7,2);
 		try{
-			
-			this.unMapa.obtenerCasillero(7 , 2);
+			this.unMapa.obtenerCasillero(cord);
 		}
 		catch(TamanioMatrizInvalidoError e){
-			
 		}
-		
 	}
-
-
-	
 }
