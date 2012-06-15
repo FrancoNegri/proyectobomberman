@@ -3,7 +3,6 @@ package modelo.articulo;
 import modelo.armamento.Armamento;
 import modelo.personaje.Bombita;
 import modelo.errores.*;
-
 public class Timer extends Articulo {
 	
 	public Timer(){

@@ -7,7 +7,7 @@ import modelo.errores.TiempoInvalidoError;
 import modelo.personaje.*;
 import static org.junit.Assert.*;
 import org.junit.*;
-
+import static org.mockito.Mockito.*;
 public class TestTimer {
 	
 	private Bombita rodriguez;
@@ -19,19 +19,19 @@ public class TestTimer {
 	@Before
 	public void setUp()
 	{
-		this.rodriguez=new Bombita();
+		float tiempo = 3;
+		this.rodriguez= mock (Bombita.class);
 		this.unTimer = new Timer();
-		this.arma=new Molotov();
+		this.arma=  mock(Molotov.class);
+		when(rodriguez.armamentoActual()).thenReturn(this.arma);
+		when(arma.obtenerTime()).thenReturn(tiempo);
 		this.resultadotiempo=0.99;//constante para comparar el tiempo de una molotov una vez que fue mejorada por el metodo usar.
 	}
 	
 	@Test
 	public void testUsar(){
-		
 		unTimer.usar(this.rodriguez);
-		Armamento armamentoprueba = this.rodriguez.armamentoActual();
-		assertTrue(armamentoprueba.obtenerTime() == resultadotiempo);
-		
+		verify(arma).cambiarTime(anyInt());
 	}
 	
 	@Test
@@ -51,26 +51,22 @@ public class TestTimer {
 
 	@Test
 	public void testReducirTiempo(){
-		
-		float tiempo=1;
-		this.arma.cambiarTime(tiempo);
 		this.unTimer.reducirTiempo(this.arma);
-		assertTrue(this.arma.obtenerTime()==this.resultadotiempo);
-		
+		verify(arma).cambiarTime(anyInt());
 	}
 	
 	@Test
 	public void testReducirArmamentoConTiempoCero(){
-		
-		float tiempo=0;
-		this.arma.cambiarTime(0);
+		float tiempo = 0; 
+		when (arma.obtenerTime()).thenReturn(tiempo);
 		try{
 			this.unTimer.reducirTiempo(this.arma);
 		}
 		catch (TiempoInvalidoError e){
 			
-			assert(true);
+			assertTrue(true);
+			return;
 		}
-		
+		assertTrue(false);
 	}
 }
