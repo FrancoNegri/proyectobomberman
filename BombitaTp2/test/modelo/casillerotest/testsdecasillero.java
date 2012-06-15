@@ -11,17 +11,31 @@ import static org.mockito.Mockito.*;
 public class testsdecasillero {
 
 	@Test
-	public void testDondeSeAgreganLosDiferentesObjetos(){
-		Personaje pers = mock(Personaje.class);
+	public void testDondeSeAgregaCasillero(){
 		BloqueAcero miBloque = mock(BloqueAcero.class);
-		Armamento unArmamento = mock(Armamento.class);
-		Articulable unArticulo = mock(Articulable.class);
-		Casillero MiCas = new Casillero();
-		MiCas.agregar(pers);
-		MiCas.agregar(miBloque);
-		MiCas.agregar(unArmamento);
-		MiCas.agregar(unArticulo);
+		Casillero miCas = new Casillero();
+		miCas.agregar(miBloque);
+		assertTrue(miCas.obtenerObstaculo()==miBloque);	
 	}
-	
-	
+	@Test
+	public void testDondeSeAgregaUnArmamento(){
+		Armamento unArmamento = mock(Armamento.class);
+		Casillero miCas = new Casillero();
+		miCas.agregar(unArmamento);
+		assertTrue(miCas.obtenerArmamento()==unArmamento);
+	}
+	@Test
+	public void testDondeSeAgreganPersonajes(){
+		Personaje pers = mock(Personaje.class);
+		Casillero miCas = new Casillero();
+		miCas.agregar(pers);
+		assertTrue(miCas.obtenerPersonajes().getFirst()==pers);	
+	}
+	@Test
+	public void testDondeSeAgregaArticulable(){
+		Articulable unArticulo = mock(Articulable.class);
+		Casillero miCas = new Casillero();
+		miCas.agregar(unArticulo);
+		assertTrue(miCas.obtenerArticulo()==unArticulo);
+	}
 }
