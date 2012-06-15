@@ -25,5 +25,4 @@ public class Coordenada {
 	public void cambiarCoordenadaY(int y) {
 		this.y = y;
 	}
-
 }

@@ -1,5 +1,6 @@
 package modelo.armamento;
 
+import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.ondaexpansiva.OndaExpansiva;
 
@@ -20,11 +21,10 @@ public abstract class Armamento implements Armamentable {
 		this.time = tiempo;
 	}
 	
-	public void explotar(int x,int y,Mapa mapa){
+	public void explotar(Coordenada coord,Mapa mapa){
 		OndaExpansiva Onda;
-		
 		Onda = new OndaExpansiva(this.danio,this.radio);
-		Onda.Expandirse(x,y,mapa);
+		Onda.Expandirse(coord,mapa);
 	}
 
 }

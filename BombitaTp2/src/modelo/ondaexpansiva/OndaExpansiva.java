@@ -1,6 +1,8 @@
 package modelo.ondaexpansiva;
 
 import modelo.casillero.Casillero; 
+import modelo.coordenadas.Coordenada;
+import modelo.coordenadas.Movimiento;
 import modelo.mapa.Mapa;  
 
 public class OndaExpansiva{
@@ -20,77 +22,37 @@ public class OndaExpansiva{
     	return danio;
     }
     
-    public void Expandirse(int x,int y,Mapa mapa){
-    	this.expandirseArriba(x,y,mapa);
-    	this.expandirseAderecha(x,y,mapa);
-    	this.expandirseAbajo(x,y,mapa);
-    	this.expandirseAizquierda(x,y,mapa);	
+    public void Expandirse(Coordenada cordenada,Mapa mapa){
+    	Movimiento movDerecha = new Movimiento(true,false,false,false);
+    	Movimiento movIzquierda = new Movimiento(false,true,false,false);
+    	Movimiento movAbajo = new Movimiento(false,false,false,true);
+    	Movimiento movArriba = new Movimiento(false,false,true,false);//creo movimientos
+    	
+    	this.expandirse(cordenada,mapa,movDerecha);//los uso
+    	this.expandirse(cordenada,mapa,movIzquierda);
+    	this.expandirse(cordenada,mapa,movAbajo);
+    	this.expandirse(cordenada,mapa,movArriba);
     }
-    
-    private void expandirseArriba(int x,int y,Mapa mapa){
+    private void expandirse(Coordenada cordenada,Mapa mapa,Movimiento mov){
+    	Coordenada nuevaCord = new Coordenada();
+    	nuevaCord.cambiarCoordenadaX(cordenada.obtenerCoordenadaX());
+    	nuevaCord.cambiarCoordenadaY(cordenada.obtenerCoordenadaY());
     	int j;
     	Casillero unCasillero;
     	boolean ataco = false;
     	
     	for(j=1; (j<=this.radio) && (!ataco); j++){
-    		unCasillero = mapa.obtenerCasillero(x,y+j);
+    		nuevaCord = mov.accion(nuevaCord);
+    		unCasillero = mapa.obtenerCasillero(nuevaCord.obtenerCoordenadaX(),nuevaCord.obtenerCoordenadaY());
     		if (!unCasillero.estaVacio()){
     			this.atacar(unCasillero);
     		    ataco = true;
     		}
     	}
-    }
-    
-    private void expandirseAderecha(int x,int y,Mapa mapa){
-    	int j;
-    	Casillero unCasillero;
-    	boolean ataco = false;
-    	
-    	for(j=1; (j<=this.radio) && (!ataco); j++){
-    		unCasillero = mapa.obtenerCasillero(x+j,y);
-    		if (!unCasillero.estaVacio()){
-    			this.atacar(unCasillero);
-    		    ataco = true;
-    		}
-    	}
-    }
-    
-    private void expandirseAbajo(int x,int y,Mapa mapa){
-    	int j;
-    	Casillero unCasillero;
-    	boolean ataco = false;
-    	
-    	for(j=1; (j<=this.radio) && (!ataco); j++){
-    		unCasillero = mapa.obtenerCasillero(x,y-j);
-    		if (!unCasillero.estaVacio()){
-    			this.atacar(unCasillero);
-    		    ataco = true;
-    		}
-    	}
-    }			
-    	 
-    private void expandirseAizquierda(int x,int y,Mapa mapa){
-    	int j;
-    	Casillero unCasillero;
-    	boolean ataco = false;
-    	
-    	for(j=1; (j<=this.radio) && (!ataco); j++){
-    		unCasillero = mapa.obtenerCasillero(x-j,y);
-    		if (!unCasillero.estaVacio()){
-    			this.atacar(unCasillero);
-    		    ataco = true;
-    		}
-    	}
-    }
-    
-    private class movimiento{
-    	
-    	
     }
     
     public void atacar(Casillero unCasillero){//Si encuentra un bloque lo degrada.
     	
+    	
     }
-    
-
 }
