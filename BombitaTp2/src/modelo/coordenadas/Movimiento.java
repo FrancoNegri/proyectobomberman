@@ -15,9 +15,7 @@ public class Movimiento {
     	MoverAbajo = Ab;
 	}
 	public Coordenada accion(Coordenada cordenada){
-		Coordenada nuevaCord = new Coordenada();
-		nuevaCord.cambiarCoordenadaX(cordenada.obtenerCoordenadaX());
-		nuevaCord.cambiarCoordenadaY(cordenada.obtenerCoordenadaY());
+		Coordenada nuevaCord = new Coordenada(cordenada.obtenerCoordenadaX(),cordenada.obtenerCoordenadaY());
 		if(MoverDerecha){
 			nuevaCord.cambiarCoordenadaX(cordenada.obtenerCoordenadaX()+1);
 		}

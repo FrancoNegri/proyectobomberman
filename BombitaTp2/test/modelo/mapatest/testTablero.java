@@ -3,6 +3,7 @@ package modelo.mapatest;
 import modelo.mapa.*;
 import modelo.errores.*;
 import modelo.casillero.*;
+import modelo.coordenadas.Coordenada;
 import static org.junit.Assert.*;
 import org.junit.*;
 
@@ -26,10 +27,9 @@ public class testTablero {
 	@Test
 	
 	public void testConstructor(){
-		
-		this.unCasillero = this.unTablero.obtenerCasillero(3, 2);
+		Coordenada cord = new Coordenada(3,2);
+		this.unCasillero = this.unTablero.obtenerCasillero(cord);
 		assertTrue(unCasillero.obtenerIdentificador()=="noName");
-	
 	}
 	
 	@Test
@@ -50,10 +50,9 @@ public class testTablero {
 	@Test
 	
 	public void testObtenercasillero(){
-		
-		Casillero casilleroprueba = this.unTablero.obtenerCasillero(4, 2);
+		Coordenada cord = new Coordenada(4,2);
+		Casillero casilleroprueba = this.unTablero.obtenerCasillero(cord);
 		assertTrue(casilleroprueba.obtenerIdentificador()=="noName");
-		
 	}
 	
 	@Test
@@ -61,8 +60,8 @@ public class testTablero {
 	public void testObtenercasilleroTamanioNegativo(){
 		
 		try{
-			
-			this.unTablero.obtenerCasillero(-1, 2);
+			Coordenada cord = new Coordenada(-1,2);
+			this.unTablero.obtenerCasillero(cord);
 			fail("acepta posiciones negativas");
 			
 		}
@@ -77,8 +76,8 @@ public class testTablero {
 	public void testObtenercasilleroTamaniofueradeRango(){
 		
 		try{
-			
-			this.unTablero.obtenerCasillero(7, 1);
+			Coordenada cord = new Coordenada(7,1);
+			this.unTablero.obtenerCasillero(cord);
 			fail("acepta posiciones fuera de rango");
 		}
 		catch (TamanioMatrizInvalidoError e){
@@ -89,13 +88,12 @@ public class testTablero {
 	@Test
 	
     public void testCambiarcasillero(){
-		
+		Coordenada cord =  new Coordenada(4,1);
 		Casillero unCasillero = new Casillero();
 		unCasillero.cambiarIdentificador("casilleroPrueba");
-		this.unTablero.cambiarCasillero(4, 1, unCasillero);
-		Casillero casilleroPrueba = this.unTablero.obtenerCasillero(4, 1);
+		this.unTablero.cambiarCasillero(cord, unCasillero);
+		Casillero casilleroPrueba = this.unTablero.obtenerCasillero(cord);
 		assertTrue(casilleroPrueba.obtenerIdentificador()=="casilleroPrueba");
-		
 	}
 	
 	@Test
@@ -103,10 +101,10 @@ public class testTablero {
 	public void testCambiarcasilleroTamanioNegativo(){
 		
 		try{
-			
+			Coordenada cord =  new Coordenada(-3,1);
 			Casillero unCasillero = new Casillero();
 			unCasillero.cambiarIdentificador("casilleroPrueba");
-			this.unTablero.cambiarCasillero(-3, 1, unCasillero);
+			this.unTablero.cambiarCasillero(cord, unCasillero);
 			fail("acepta posiciones negativas");
 		}
 		catch(TamanioMatrizInvalidoError e){
@@ -119,19 +117,16 @@ public class testTablero {
 	
 	public void testCambiarcasilleroTamaniofueradeRango(){
 		
-try{
-			
+		try{
+			Coordenada cord =  new Coordenada(8,1);
 			Casillero unCasillero = new Casillero();
 			unCasillero.cambiarIdentificador("casilleroPrueba");
-			this.unTablero.cambiarCasillero(8, 1, unCasillero);
+			this.unTablero.cambiarCasillero(cord, unCasillero);
 			fail("acepta posiciones fuera de rango");
 		}
 		catch(TamanioMatrizInvalidoError e){
 			
 		}
-		
-		
-		
 	}
 	
 	@Test
