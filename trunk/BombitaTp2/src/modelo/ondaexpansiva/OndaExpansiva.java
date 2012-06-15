@@ -3,7 +3,11 @@ package modelo.ondaexpansiva;
 import modelo.casillero.Casillero; 
 import modelo.coordenadas.Coordenada;
 import modelo.coordenadas.Translacion;
-import modelo.mapa.Mapa;  
+import modelo.mapa.Mapa;
+import java.util.*;
+import modelo.personaje.*;
+import modelo.obstaculos.*;
+import antlr.collections.List;
 
 public class OndaExpansiva{
     private int radio;
@@ -53,5 +57,34 @@ public class OndaExpansiva{
     
     private void atacar(Casillero unCasillero){//Si encuentra un bloque lo degrada.
     	
+    	this.atacarPersonajes(unCasillero);
+    	this.atacarObstaculo(unCasillero);
+    	
     }
+    
+    private void atacarPersonajes(Casillero unCasillero){
+    	
+    	LinkedList <Personaje> Personajes = unCasillero.obtenerPersonajes();
+    	Iterator <Personaje> itPersonajes = Personajes.iterator();
+    	while(itPersonajes.hasNext()){
+    			
+    		Personaje unPersonaje = itPersonajes.next();
+    		unPersonaje.Daniar(this.getDanio());
+    		int indicePersonaje = Personajes.indexOf(unPersonaje);
+    		Personajes.set(indicePersonaje, unPersonaje);	
+    	}
+    	unCasillero.agregar(Personajes);	
+    }
+    
+    private void atacarObstaculo(Casillero unCasillero){
+    	
+    	Obstaculo unObstaculo = unCasillero.obtenerObstaculo();
+    	if (unObstaculo != null ){
+    		
+    		unObstaculo.Daniar(this.getDanio());
+    		unCasillero.agregar(unObstaculo);
+    	}
+    	
+    }
+    
 }
