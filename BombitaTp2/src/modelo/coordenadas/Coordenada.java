@@ -8,8 +8,8 @@ public class Coordenada {
 	private int y;
 	
 	public Coordenada(int X, int Y){
-		this.ComprovarCoordenadaValida(X);
-		this.ComprovarCoordenadaValida(Y);
+		this.ComprobarCoordenadaValida(X);
+		this.ComprobarCoordenadaValida(Y);
 		this.cambiarCoordenadaX(X);
 		this.cambiarCoordenadaY(Y);
 		
@@ -20,7 +20,7 @@ public class Coordenada {
 	}
 
 	public void cambiarCoordenadaX(int X) {
-		this.ComprovarCoordenadaValida(X);
+		this.ComprobarCoordenadaValida(X);
 		this.x = X;
 	}
 
@@ -29,11 +29,11 @@ public class Coordenada {
 	}
 
 	public void cambiarCoordenadaY(int Y) {
-		this.ComprovarCoordenadaValida(Y);
+		this.ComprobarCoordenadaValida(Y);
 		this.y = Y;
 	}
 	
-	private void ComprovarCoordenadaValida(int valor){
+	private void ComprobarCoordenadaValida(int valor){
 		if(valor < 0){
 			throw new coordenadaInvalida();
 		}
