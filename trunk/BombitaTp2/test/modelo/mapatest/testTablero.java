@@ -54,9 +54,11 @@ public class testTablero {
 		Casillero casilleroprueba = this.unTablero.obtenerCasillero(cord);
 		assertTrue(casilleroprueba.obtenerIdentificador()=="noName");
 	}
-	
+	/*
+	 * 
+	 * Este Test ya no es nesesario, Del Chequeo Negativo se encarga la coordenada
+	 * 
 	@Test
-	
 	public void testObtenercasilleroTamanioNegativo(){
 		
 		try{
@@ -70,7 +72,7 @@ public class testTablero {
 		}
 		
 	}
-	
+	*/
 	@Test
 	
 	public void testObtenercasilleroTamaniofueradeRango(){
@@ -95,9 +97,11 @@ public class testTablero {
 		Casillero casilleroPrueba = this.unTablero.obtenerCasillero(cord);
 		assertTrue(casilleroPrueba.obtenerIdentificador()=="casilleroPrueba");
 	}
-	
+	/*
+	 * 
+	 * test no nesesario se encarga coordenada
+	 * 
 	@Test
-	
 	public void testCambiarcasilleroTamanioNegativo(){
 		
 		try{
@@ -112,7 +116,7 @@ public class testTablero {
 		}
 		
 	}
-	
+	*/
 	@Test
 	
 	public void testCambiarcasilleroTamaniofueradeRango(){
