@@ -16,10 +16,11 @@ public class ondaEspansivaTest {
 	@Before
 	public void setUp(){
 		onda = new OndaExpansiva(2,2);
+		//Uso Mocks Para Testear Comportamiento
 		casilleroVacio = mock(Casillero.class);
 		casilleroOcupado = mock(Casillero.class);
-		when(casilleroVacio.estaVacio()).thenReturn(false);
-		when(casilleroOcupado.estaVacio()).thenReturn(true);
+		when(casilleroVacio.estaVacio()).thenReturn(true);
+		when(casilleroOcupado.estaVacio()).thenReturn(false);
 		
 		mapa = mock(Mapa.class);///Creo un Mapita Falzo para que pueda Testear
 		when(mapa.obtenerCasillero(2,2)).thenReturn(casilleroVacio);
