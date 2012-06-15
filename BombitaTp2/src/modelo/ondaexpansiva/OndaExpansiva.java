@@ -44,7 +44,7 @@ public class OndaExpansiva{
     	for(j=1; (j<=this.radio) && (!ataco); j++){
     		nuevaCord = mov.accion(nuevaCord);
     		unCasillero = mapa.obtenerCasillero(nuevaCord);
-    		if (!unCasillero.estaVacio()){
+    		if (unCasillero.esAtacable()){
     			this.atacar(unCasillero);
     		    ataco = true;
     		}

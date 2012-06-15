@@ -20,8 +20,8 @@ public class ondaEspansivaTest {
 		//Uso Mocks Para Testear Comportamiento
 		casilleroVacio = mock(Casillero.class);
 		casilleroOcupado = mock(Casillero.class);
-		when(casilleroVacio.estaVacio()).thenReturn(true);
-		when(casilleroOcupado.estaVacio()).thenReturn(false);
+		when(casilleroVacio.esAtacable()).thenReturn(false);
+		when(casilleroOcupado.esAtacable()).thenReturn(true);
 		Coordenada cord1 = new Coordenada(2,2);
 		Coordenada cord2 = new Coordenada(1,2);
 		Coordenada cord3 = new Coordenada(3,2);

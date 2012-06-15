@@ -58,7 +58,7 @@ public class Mapa {
 	}
 
 	private void verificarCasillero(Casillero unCasillero) {
-		if (unCasillero.estaVacio() == false) {
+		if (unCasillero.esCaminable() == false) {
 			throw new CasilleroOcupadoError();
 		}
 	}

@@ -77,11 +77,25 @@ public class Casillero {
 		return this.unObstaculo;
 	}
 	
-	public boolean estaVacio(){
-		if ((this.obtenerArmamento() == null) && (this.obtenerArticulo() == null) && (this.personajes.isEmpty())){
+	public boolean esCaminable(){
+		if (this.unObstaculo == null){
 			return true;
 		}
 		return false;
 	}
+	
+	public boolean esAtacable(){
+		if ((this.unObstaculo == null)&&(this.personajes==null)){
+			return false;
+		}
+		return true;
+	}
+	
+	public void actualizar(){
+		
+		
+		
+		
+	}
 }
-
+	
