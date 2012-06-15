@@ -3,6 +3,7 @@ package modelo.bloquetest;
 import modelo.errores.VidaInvalidaError;
 import modelo.obstaculos.*;
 import static org.junit.Assert.*;
+
 import org.junit.*;
 
 public class BloqueCementotest {
@@ -38,4 +39,16 @@ public class BloqueCementotest {
 		Bloque.QuitarVida(10);
 		assertTrue(Bloque.Destruido());
 	}
+	
+	
+	@Test
+	
+	public void testDaniar(){
+		
+		Obstaculo Bloque = new BloqueCemento(50);
+		Bloque.Daniar(25);
+		assertTrue(Bloque.vidaRestante()==25);
+		
+	}
+	
 }

@@ -103,4 +103,12 @@ public class BombitaTest {
 		rodriguez.caminar(abajo);
 		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 0);
 	}
+	
+	@Test
+	public void testDaniar(){
+		
+		this.rodriguez.Daniar(20);
+		assertTrue(this.rodriguez.getVida()==80);
+		
+	}
 }
