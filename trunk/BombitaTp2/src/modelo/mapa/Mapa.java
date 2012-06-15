@@ -8,13 +8,9 @@ import modelo.errores.*;
 import modelo.coordenadas.*;
 
 public class Mapa {
-
 	private Tablero TableroJuego;
-
 	public Mapa(int tamanio) {
-
 		this.TableroJuego = new Tablero(tamanio);
-
 	}
 
 	public void agregarCasillero(Coordenada coord, Casillero unCasillero) {

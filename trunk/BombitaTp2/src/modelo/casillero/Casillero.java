@@ -92,10 +92,11 @@ public class Casillero {
 	}
 	
 	public void actualizar(){
-		
-		
-		
-		
+		unArmamento.actualizar();
+		if(unObstaculo.Destruido())
+		{
+			unObstaculo = null;
+		}
 	}
 }
 	
