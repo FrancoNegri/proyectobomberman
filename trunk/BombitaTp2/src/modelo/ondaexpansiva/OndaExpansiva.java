@@ -23,7 +23,7 @@ public class OndaExpansiva{
     }
     
     public void Expandirse(Coordenada cordenada,Mapa mapa){
-    	Movimiento movDerecha = new Movimiento(true,false,false,false);
+    	Movimiento movDerecha = new Movimiento(true,false,false,false);//es feo pero no se me ocurre otra manera do hacerlo mas claro.
     	Movimiento movIzquierda = new Movimiento(false,true,false,false);
     	Movimiento movAbajo = new Movimiento(false,false,false,true);
     	Movimiento movArriba = new Movimiento(false,false,true,false);//creo movimientos
