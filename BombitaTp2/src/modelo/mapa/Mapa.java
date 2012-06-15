@@ -34,7 +34,7 @@ public class Mapa {
 		Coordenada coordenada = unPersonaje.obtenerCoordenadaXY();
 		Casillero CasilleroAux = this.obtenerCasillero(coordenada);
 		this.verificarCasillero(CasilleroAux);
-		CasilleroAux.agregarPersonaje(unPersonaje);
+		CasilleroAux.agregar(unPersonaje);
 		this.agregarCasillero(coordenada, CasilleroAux);
 
 	}
@@ -43,7 +43,7 @@ public class Mapa {
 
 		Casillero CasilleroAux = this.obtenerCasillero(coord);
 		this.verificarCasillero(CasilleroAux);
-		CasilleroAux.cambiarArticulo(unArticulo);
+		CasilleroAux.agregar(unArticulo);
 		this.agregarCasillero(coord, CasilleroAux);
 
 	}
@@ -52,7 +52,7 @@ public class Mapa {
 
 		Casillero CasilleroAux = this.obtenerCasillero(coord);
 		this.verificarCasillero(CasilleroAux);
-		CasilleroAux.cambiarObstaculo(unObstaculo);
+		CasilleroAux.agregar(unObstaculo);
 		this.agregarCasillero(coord, CasilleroAux);
 
 	}

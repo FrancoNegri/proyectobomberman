@@ -1,5 +1,9 @@
 package modelo.casillero;
 
+import java.util.LinkedList;
+
+import antlr.collections.List;
+
 import modelo.personaje.*;
 import modelo.obstaculos.*;
 import modelo.articulo.*;
@@ -9,8 +13,7 @@ import modelo.armamento.*;
 //primera vercion de casillero, va a nesesitar ajustes.
 
 public class Casillero {
-	
-	Personaje unPersonaje;
+	LinkedList <Personaje> personajes;
 	String identificador;
 	Armamento unArmamento;
 	Articulable unArticulo;
@@ -20,7 +23,7 @@ public class Casillero {
 	public Casillero()
 	{
 		this.identificador = "noName";
-		this.unPersonaje = null;
+		this.personajes = new LinkedList<Personaje>() ;
 		this.unArmamento = null;
 		this.unArticulo = null;
 		
@@ -29,21 +32,32 @@ public class Casillero {
 	public Casillero(String identificador){
 		
 		this.identificador = identificador;
-		this.unPersonaje = null;
+		this.personajes = new LinkedList<Personaje>() ;
 		this.unArmamento = null;
 		this.unArticulo = null;
 		
 	}
-	
-	public void agregarPersonaje(Personaje unPersonaje)
+	// Metodo Sobrecargado
+	public void agregar(Personaje unPersonaje)
 	{
-		this.unPersonaje = unPersonaje;
+		this.personajes.add(unPersonaje);
 	}
 	
-	public Personaje obtenerPersonaje(){
+	public void agregar(Armamento UnArmamento){
+		this.unArmamento = UnArmamento;
+	}
+	
+	public void agregar(Articulable unArticulo){
+		this.unArticulo = unArticulo;
+	}
+	public void agregar(Obstaculo unObstaculo){
 		
-		return this.unPersonaje;
-		
+		this.unObstaculo = unObstaculo;
+	}
+	// fin Metodo Sobrecargado
+	
+	public LinkedList<Personaje> obtenerPersonajes(){
+		return this.personajes;
 	}
 	
 	public void cambiarIdentificador(String Identificador){
@@ -52,15 +66,9 @@ public class Casillero {
 	}
 	
 	public String obtenerIdentificador(){
-		
 		return this.identificador;
 	}
-	
-	public void cambiarArmamento(Armamento UnArmamento){
-		
-		this.unArmamento = UnArmamento;
-		
-	}
+
 	
 	public Armamento obtenerArmamento(){
 		
@@ -68,38 +76,24 @@ public class Casillero {
 		
 	}
 	
-	public void cambiarArticulo(Articulable unArticulo){
-		
-		this.unArticulo = unArticulo;
-		
-	}
 	
 	public Articulable obtenerArticulo(){
-		
 		return this.unArticulo;
-		
-	}
-	
-	public void cambiarObstaculo(Obstaculo unObstaculo){
-		
-		this.unObstaculo = unObstaculo;
 	}
 	
 	public Obstaculo obtenerObstaculo(){
-		
 		return this.unObstaculo;
 	}
 	
 	public boolean estaVacio(){
 	
 		boolean bandera = false;
-		if ((this.obtenerArmamento() == null) && (this.obtenerArticulo() == null) && (this.obtenerPersonaje() == null)){
+		if ((this.obtenerArmamento() == null) && (this.obtenerArticulo() == null) && (this.personajes.isEmpty())){
 			
 			bandera = true;
 		}
 		return bandera;
 		
 	}
-	
 }
 
