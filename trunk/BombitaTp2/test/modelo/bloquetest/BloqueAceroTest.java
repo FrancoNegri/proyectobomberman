@@ -3,6 +3,7 @@ package modelo.bloquetest;
 import modelo.errores.VidaInvalidaError;
 import modelo.obstaculos.*;
 import static org.junit.Assert.*;
+
 import org.junit.*;
 
 public class BloqueAceroTest {
@@ -19,10 +20,13 @@ public class BloqueAceroTest {
 		try
 		{
 		Obstaculo Bloque = new BloqueAcero(-1);
+		Bloque.Destruido();
 		}catch(VidaInvalidaError e)
 		{
-			assert(true);
+			assertTrue(true);
+			return;
 		}
+		assertTrue(false);
 	}
 	@Test
 	public void testQuePruebaQuitarVida()
