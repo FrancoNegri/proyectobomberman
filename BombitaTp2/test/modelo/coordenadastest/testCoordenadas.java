@@ -20,13 +20,22 @@ public class testCoordenadas {
 	public void testQuePruebaErrorAlSetearMal(){
 		try{
 			Coordenada coord = new Coordenada(1,-1);
+			coord.obtenerCoordenadaX();
 		}catch(coordenadaInvalida e){
 			assertTrue(true);
+			return;
 		}
+		assertTrue(false);
 	}
-	
-	
-	
-	
-	
+	@Test
+	public void testQuePruebaErrorAlModificar(){
+		try{
+			Coordenada coord = new Coordenada(2,2);
+			coord.cambiarCoordenadaY(-2);
+		}catch(coordenadaInvalida e){
+			assertTrue(true);
+			return;
+		}
+		assertTrue(false);
+	}
 }

@@ -19,16 +19,18 @@ public class Coordenada {
 		return x;
 	}
 
-	public void cambiarCoordenadaX(int x) {
-		this.x = x;
+	public void cambiarCoordenadaX(int X) {
+		this.ComprovarCoordenadaValida(X);
+		this.x = X;
 	}
 
 	public int obtenerCoordenadaY() {
 		return y;
 	}
 
-	public void cambiarCoordenadaY(int y) {
-		this.y = y;
+	public void cambiarCoordenadaY(int Y) {
+		this.ComprovarCoordenadaValida(Y);
+		this.y = Y;
 	}
 	
 	private void ComprovarCoordenadaValida(int valor){
