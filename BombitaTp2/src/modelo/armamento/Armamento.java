@@ -25,5 +25,12 @@ public abstract class Armamento implements Armamentable {
 		OndaExpansiva Onda = new OndaExpansiva(this.danio,this.radio);
 		Onda.Expandirse(coord,mapa);
 	}
-
+	
+	
+	public void actualizar(){
+		this.time = this.time-1;
+	}
+	public boolean exploto(){
+		return (this.time <= 0);
+	}
 }
