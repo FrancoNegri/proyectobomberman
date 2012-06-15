@@ -56,9 +56,10 @@ public class testMapa {
 		Casillero CasilleroPrueba = this.unMapa.obtenerCasillero(cord);
 		assertTrue(CasilleroPrueba.obtenerIdentificador() == "casilleroPrueba");	
 	}
-	
+	/*
+	 * 
+	 * Test ya no es nesesario se encarga coordenada de chequear
 	@Test
-	
 	public void testagregarCasilleroTamanioNegativo(){
 		Coordenada cord = new Coordenada(3,-2);
 		try{
@@ -71,6 +72,8 @@ public class testMapa {
 		
 	}
 	
+	
+	*/
 	@Test
 	
 	public void testagregarCasilleroTamanioFueraDeRango(){
@@ -94,9 +97,11 @@ public class testMapa {
 		assertTrue(casilleroPrueba.obtenerIdentificador() == "noName");
 		
 	}
-	
+	/*
+	 * 
+	 * test no nesesario se encarga coordenada de chequear
+	 * 
 	@Test
-	
 	public void testObtenerCasilleroTamanioNegativo(){
 		Coordenada cord = new Coordenada(3,-2);
 		try{
@@ -107,7 +112,7 @@ public class testMapa {
 		}
 		
 	}
-	
+	*/
 	@Test
 	
 	public void testObtenerCasilleroTamanioFueraDeRango(){

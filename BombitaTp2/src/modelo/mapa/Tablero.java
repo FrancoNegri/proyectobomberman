@@ -30,8 +30,7 @@ public class Tablero {
 		
 	}
 	
-	public void cambiarCasillero(Coordenada coord, Casillero UnCasillero){
-		
+	public void cambiarCasillero(Coordenada coord, Casillero UnCasillero){		
 		this.verificarTamanio(coord.obtenerCoordenadaX());
 		this.verificarTamanio(coord.obtenerCoordenadaY());
 		this.casilleros[coord.obtenerCoordenadaX()][coord.obtenerCoordenadaY()] = UnCasillero;
@@ -56,24 +55,15 @@ public class Tablero {
 	}
 	
 	private void cargarMatriz(Casillero matriz[][], int tamanio){
-		
 			for(int i=0 ; i<tamanio ; i++){
-			
 					for(int j=0; j<tamanio ; j++){
-				
 					Casillero unCasillero = new Casillero();
 					matriz[i][j] = unCasillero;
-					
 					}
 			}
-		
 	}
 	
 	public int obtenerTamanio(){
-		
 		return this.tamanio;
-		
 	}
-	
-
 }

@@ -97,7 +97,6 @@ public class Casillero {
 			
 			bandera = true;
 		}
-		
 		return bandera;
 		
 	}
