@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import modelo.casillero.Casillero;
+import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.ondaexpansiva.OndaExpansiva;
 import static org.mockito.Mockito.*;
@@ -31,7 +32,11 @@ public class ondaEspansivaTest {
 	}
 	@Test
 	public void testQueVerificaLaExplocionDeLaBomba(){
-		onda.Expandirse(2,2,mapa);
+		Coordenada cord = new Coordenada();
+		cord.cambiarCoordenadaX(2);
+		cord.cambiarCoordenadaY(2);
+		onda.Expandirse(cord,mapa);
 	}
+	
 
 }
