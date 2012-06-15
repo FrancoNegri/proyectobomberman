@@ -27,8 +27,21 @@ public class testCoordenadas {
 		}
 		assertTrue(false);
 	}
+	
 	@Test
-	public void testQuePruebaErrorAlModificar(){
+	public void testQuePruebaErrorAlModificarX(){
+		try{
+			Coordenada coord = new Coordenada(2,2);
+			coord.cambiarCoordenadaX(-2);
+		}catch(coordenadaInvalida e){
+			assertTrue(true);
+			return;
+		}
+		assertTrue(false);
+	}
+	
+	@Test
+	public void testQuePruebaErrorAlModificarY(){
 		try{
 			Coordenada coord = new Coordenada(2,2);
 			coord.cambiarCoordenadaY(-2);

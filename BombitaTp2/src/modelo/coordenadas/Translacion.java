@@ -1,13 +1,13 @@
 package modelo.coordenadas;
 
-public class Movimiento {
+public class Translacion {
 	
 	private boolean MoverDerecha;
 	private boolean MoverIzquierda;
 	private boolean MoverArriba;
 	private boolean MoverAbajo;
 	
-	public Movimiento(boolean D,boolean I,boolean Arr,boolean Ab)
+	public Translacion(boolean D,boolean I,boolean Arr,boolean Ab)
 	{
 		MoverDerecha = D;
     	MoverIzquierda = I;
