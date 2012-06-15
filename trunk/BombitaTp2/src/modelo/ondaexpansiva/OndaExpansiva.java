@@ -2,7 +2,7 @@ package modelo.ondaexpansiva;
 
 import modelo.casillero.Casillero; 
 import modelo.coordenadas.Coordenada;
-import modelo.coordenadas.Movimiento;
+import modelo.coordenadas.Translacion;
 import modelo.mapa.Mapa;  
 
 public class OndaExpansiva{
@@ -23,17 +23,17 @@ public class OndaExpansiva{
     }
     
     public void Expandirse(Coordenada cordenada,Mapa mapa){
-    	Movimiento movDerecha = new Movimiento(true,false,false,false);//es feo pero no se me ocurre otra manera do hacerlo mas claro.
-    	Movimiento movIzquierda = new Movimiento(false,true,false,false);
-    	Movimiento movAbajo = new Movimiento(false,false,false,true);
-    	Movimiento movArriba = new Movimiento(false,false,true,false);//creo movimientos
+    	Translacion movDerecha = new Translacion(true,false,false,false);//es feo pero no se me ocurre otra manera do hacerlo mas claro.
+    	Translacion movIzquierda = new Translacion(false,true,false,false);
+    	Translacion movAbajo = new Translacion(false,false,false,true);
+    	Translacion movArriba = new Translacion(false,false,true,false);//creo movimientos
     	
     	this.expandirse(cordenada,mapa,movDerecha);//los uso
     	this.expandirse(cordenada,mapa,movIzquierda);
     	this.expandirse(cordenada,mapa,movAbajo);
     	this.expandirse(cordenada,mapa,movArriba);
     }
-    private void expandirse(Coordenada cordenada,Mapa mapa,Movimiento mov){
+    private void expandirse(Coordenada cordenada,Mapa mapa,Translacion mov){
     	Coordenada nuevaCord = new Coordenada(cordenada.obtenerCoordenadaX(),cordenada.obtenerCoordenadaY());
     	nuevaCord.cambiarCoordenadaX(cordenada.obtenerCoordenadaX());
     	nuevaCord.cambiarCoordenadaY(cordenada.obtenerCoordenadaY());
