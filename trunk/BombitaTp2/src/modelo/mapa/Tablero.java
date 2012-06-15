@@ -47,10 +47,8 @@ public class Tablero {
 	}
 	
 	private void verificarTamanio(int tamanio){
-		
 		this.tamanioValido(tamanio);
 		if(tamanio>=this.tamanio){
-			
 			throw new TamanioMatrizInvalidoError();
 		}
 		
