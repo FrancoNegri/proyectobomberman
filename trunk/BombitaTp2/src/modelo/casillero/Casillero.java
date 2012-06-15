@@ -24,6 +24,7 @@ public class Casillero {
 		this.personajes = new LinkedList<Personaje>() ;
 		this.unArmamento = null;
 		this.unArticulo = null;
+		this.unObstaculo = null;
 		
 	}
 	
@@ -33,12 +34,19 @@ public class Casillero {
 		this.personajes = new LinkedList<Personaje>() ;
 		this.unArmamento = null;
 		this.unArticulo = null;
+		this.unObstaculo = null;
 		
 	}
 	// Metodo Sobrecargado
 	public void agregar(Personaje unPersonaje)
 	{
 		this.personajes.add(unPersonaje);
+	}
+	
+	public void agregar(LinkedList <Personaje> Personajes){
+		
+		this.personajes = Personajes;
+		
 	}
 	
 	public void agregar(Armamento UnArmamento){
