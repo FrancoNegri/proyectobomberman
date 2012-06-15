@@ -51,8 +51,7 @@ public class OndaExpansiva{
     	}
     }
     
-    public void atacar(Casillero unCasillero){//Si encuentra un bloque lo degrada.
-    	
+    private void atacar(Casillero unCasillero){//Si encuentra un bloque lo degrada.
     	
     }
 }
