@@ -3,9 +3,10 @@ package modelo.personaje;
 import modelo.armamento.Armamento;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.movimiento.Movimiento;
+import modelo.daño.*;
 
 
-public abstract class Personaje implements Caminable {
+public abstract class Personaje implements Caminable, Daniable {
 
 	protected Armamento bomba;
 	protected float velocidad;
@@ -46,5 +47,12 @@ public abstract class Personaje implements Caminable {
 	
 	public boolean estaMuerto() {
 		return (this.vida <= 0);
+	}
+	
+	public void Daniar(int danio){
+		if(!this.estaMuerto()){
+			this.restarVida(danio);
+		}	
+		
 	}
 }
