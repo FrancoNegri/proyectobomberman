@@ -1,5 +1,6 @@
 package modelo.casillero;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 import antlr.collections.List;
@@ -92,12 +93,19 @@ public class Casillero {
 	}
 	
 	public void actualizar(){
+		Iterator<Personaje> lista;
+		Personaje personaje;
 		unArmamento.actualizar();
 		if(unObstaculo.Destruido()){
 			unObstaculo = null;
 		}
-		
-		
+		lista = personajes.iterator();
+		while(lista.hasNext()){
+			 personaje = lista.next();
+			 if(personaje.estaMuerto()){
+				 lista.remove();
+			 }
+		}
 	}
 }
 	

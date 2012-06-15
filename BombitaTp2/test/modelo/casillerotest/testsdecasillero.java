@@ -38,4 +38,21 @@ public class testsdecasillero {
 		miCas.agregar(unArticulo);
 		assertTrue(miCas.obtenerArticulo()==unArticulo);
 	}
+	@Test
+	public void testDondeSeActualizaTodo(){
+		Armamento unArmamento = mock(Armamento.class);
+		Personaje pers = mock(Personaje.class);
+		BloqueAcero miBloque = mock(BloqueAcero.class);
+		when(miBloque.Destruido()).thenReturn(true);
+		when(pers.estaMuerto()).thenReturn(true);
+		
+		Casillero casi = new Casillero();
+		casi.agregar(pers);
+		casi.agregar(miBloque);
+		casi.agregar(unArmamento);
+		casi.actualizar();
+		verify(miBloque).Destruido();
+		verify(pers).estaMuerto();
+		verify(unArmamento).actualizar();
+	}
 }
