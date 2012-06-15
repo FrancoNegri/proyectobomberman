@@ -17,57 +17,50 @@ public class Mapa {
 
 	}
 
-	public void agregarCasillero(int x, int y, Casillero unCasillero) {
+	public void agregarCasillero(Coordenada coord, Casillero unCasillero) {
 
-		this.TableroJuego.cambiarCasillero(x, y, unCasillero);
+		this.TableroJuego.cambiarCasillero(coord, unCasillero);
 
 	}
 
-	public Casillero obtenerCasillero(int x, int y) {
+	public Casillero obtenerCasillero(Coordenada coord) {
 
-		return this.TableroJuego.obtenerCasillero(x, y);
+		return this.TableroJuego.obtenerCasillero(coord);
 
 	}
 
 	public void agregarPersonaje(Personaje unPersonaje) {
 
-		Coordenada Coordenadas = unPersonaje.obtenerCoordenadaXY();
-		Casillero CasilleroAux = this.obtenerCasillero(
-				Coordenadas.obtenerCoordenadaX(),
-				Coordenadas.obtenerCoordenadaY());
+		Coordenada coordenada = unPersonaje.obtenerCoordenadaXY();
+		Casillero CasilleroAux = this.obtenerCasillero(coordenada);
 		this.verificarCasillero(CasilleroAux);
 		CasilleroAux.agregarPersonaje(unPersonaje);
-		this.agregarCasillero(Coordenadas.obtenerCoordenadaX(),
-				Coordenadas.obtenerCoordenadaY(), CasilleroAux);
+		this.agregarCasillero(coordenada, CasilleroAux);
 
 	}
 
-	public void agregarArticulo(int x, int y, Articulable unArticulo) {
+	public void agregarArticulo(Coordenada coord, Articulable unArticulo) {
 
-		Casillero CasilleroAux = this.obtenerCasillero(x, y);
+		Casillero CasilleroAux = this.obtenerCasillero(coord);
 		this.verificarCasillero(CasilleroAux);
 		CasilleroAux.cambiarArticulo(unArticulo);
-		this.agregarCasillero(x, y, CasilleroAux);
+		this.agregarCasillero(coord, CasilleroAux);
 
 	}
 
-	public void agregarBloque(int x, int y, Obstaculo unObstaculo) {
+	public void agregarBloque(Coordenada coord, Obstaculo unObstaculo) {
 
-		Casillero CasilleroAux = this.obtenerCasillero(x, y);
+		Casillero CasilleroAux = this.obtenerCasillero(coord);
 		this.verificarCasillero(CasilleroAux);
 		CasilleroAux.cambiarObstaculo(unObstaculo);
-		this.agregarCasillero(x, y, CasilleroAux);
+		this.agregarCasillero(coord, CasilleroAux);
 
 	}
 
 	private void verificarCasillero(Casillero unCasillero) {
-
 		if (unCasillero.estaVacio() == false) {
-
 			throw new CasilleroOcupadoError();
-
 		}
-
 	}
 
 	public void actualizarMapa() {
