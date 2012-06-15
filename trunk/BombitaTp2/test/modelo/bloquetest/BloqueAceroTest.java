@@ -42,4 +42,16 @@ public class BloqueAceroTest {
 		Bloque.QuitarVida(10);
 		assertTrue(Bloque.Destruido());
 	}
+	
+	@Test
+	
+	public void testDaniar(){
+		
+		Obstaculo Bloque = new BloqueAcero(50);
+		Bloque.Daniar(25);
+		assertTrue(Bloque.vidaRestante()==25);
+		
+	}
+	
+	
 }
