@@ -1,8 +1,9 @@
 package modelo.obstaculos;
 
 import modelo.errores.VidaInvalidaError;
+import modelo.daño.*;
 
-public abstract class Obstaculo {
+public abstract class Obstaculo implements Daniable{
 	int vida;
 	
 	public Obstaculo(int vidaTotal){
@@ -20,10 +21,21 @@ public abstract class Obstaculo {
 	}
 	
 	public boolean Destruido() {
-		return (vida == 0);
+		return (vida <= 0);
 	}
 
 	public int vidaRestante() {
 		return vida;
 	}
+	
+	public void Daniar(int danio){
+		
+		if(!this.Destruido()){
+			
+			this.QuitarVida(danio);
+		}
+		
+		
+	}
+	
 }
