@@ -27,7 +27,7 @@ public class OndaExpansiva{
     	this.expandirseAizquierda(x,y,mapa);	
     }
     
-    public void expandirseArriba(int x,int y,Mapa mapa){
+    private void expandirseArriba(int x,int y,Mapa mapa){
     	int j;
     	Casillero unCasillero;
     	boolean ataco = false;
@@ -41,7 +41,7 @@ public class OndaExpansiva{
     	}
     }
     
-    public void expandirseAderecha(int x,int y,Mapa mapa){
+    private void expandirseAderecha(int x,int y,Mapa mapa){
     	int j;
     	Casillero unCasillero;
     	boolean ataco = false;
@@ -55,7 +55,7 @@ public class OndaExpansiva{
     	}
     }
     
-    public void expandirseAbajo(int x,int y,Mapa mapa){
+    private void expandirseAbajo(int x,int y,Mapa mapa){
     	int j;
     	Casillero unCasillero;
     	boolean ataco = false;
@@ -69,7 +69,7 @@ public class OndaExpansiva{
     	}
     }			
     	 
-    public void expandirseAizquierda(int x,int y,Mapa mapa){
+    private void expandirseAizquierda(int x,int y,Mapa mapa){
     	int j;
     	Casillero unCasillero;
     	boolean ataco = false;
@@ -81,6 +81,11 @@ public class OndaExpansiva{
     		    ataco = true;
     		}
     	}
+    }
+    
+    private class movimiento{
+    	
+    	
     }
     
     public void atacar(Casillero unCasillero){//Si encuentra un bloque lo degrada.

@@ -7,7 +7,7 @@ import org.junit.*;
 
 public class BloqueAceroTest {
 	@Test
-	public void setUp()
+	public void testQueChequeaQueElObjetoSeCreeCorrectamente()
 	{
 		Obstaculo Bloque = new BloqueAcero(10);
 		assertEquals(Bloque.vidaRestante(), 10);
@@ -18,21 +18,21 @@ public class BloqueAceroTest {
 	{
 		try
 		{
-			Obstaculo Bloque = new BloqueAcero(-1);
+		Obstaculo Bloque = new BloqueAcero(-1);
 		}catch(VidaInvalidaError e)
 		{
 			assert(true);
 		}
 	}
 	@Test
-	public void testQuitarVida()
+	public void testQuePruebaQuitarVida()
 	{
 		Obstaculo Bloque = new BloqueAcero(10);
 		Bloque.QuitarVida(5);
 		assertTrue(Bloque.vidaRestante() == 5);
 	}
 	@Test
-	public void testBloqueDestruido()
+	public void testQuePruebaQueUnBloqueEsDestruido()
 	{
 		Obstaculo Bloque = new BloqueAcero(10);
 		Bloque.QuitarVida(10);
