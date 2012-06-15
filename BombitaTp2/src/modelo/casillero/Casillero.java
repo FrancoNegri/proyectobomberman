@@ -61,22 +61,15 @@ public class Casillero {
 	}
 	
 	public void cambiarIdentificador(String Identificador){
-		
 		this.identificador = Identificador;
 	}
 	
 	public String obtenerIdentificador(){
 		return this.identificador;
 	}
-
-	
 	public Armamento obtenerArmamento(){
-		
 		return this.unArmamento;
-		
 	}
-	
-	
 	public Articulable obtenerArticulo(){
 		return this.unArticulo;
 	}
@@ -86,14 +79,10 @@ public class Casillero {
 	}
 	
 	public boolean estaVacio(){
-	
-		boolean bandera = false;
 		if ((this.obtenerArmamento() == null) && (this.obtenerArticulo() == null) && (this.personajes.isEmpty())){
-			
-			bandera = true;
+			return true;
 		}
-		return bandera;
-		
+		return false;
 	}
 }
 
