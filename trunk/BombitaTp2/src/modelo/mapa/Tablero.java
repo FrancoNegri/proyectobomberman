@@ -1,6 +1,7 @@
 package modelo.mapa;
 
 import modelo.casillero.Casillero;
+import modelo.coordenadas.Coordenada;
 import modelo.errores.*;
 
 public class Tablero {
@@ -21,26 +22,25 @@ public class Tablero {
 		
 	}
 	
-	public Casillero obtenerCasillero(int x, int y){
+	public Casillero obtenerCasillero(Coordenada coord){
 		
-		this.verificarTamanio(x);
-		this.verificarTamanio(y);
-		return this.casilleros[x][y];
+		this.verificarTamanio(coord.obtenerCoordenadaX());
+		this.verificarTamanio(coord.obtenerCoordenadaY());
+		return this.casilleros[coord.obtenerCoordenadaX()][coord.obtenerCoordenadaY()];
 		
 	}
 	
-	public void cambiarCasillero(int x, int y, Casillero UnCasillero){
+	public void cambiarCasillero(Coordenada coord, Casillero UnCasillero){
 		
-		this.verificarTamanio(x);
-		this.verificarTamanio(y);
-		this.casilleros[x][y] = UnCasillero;
+		this.verificarTamanio(coord.obtenerCoordenadaX());
+		this.verificarTamanio(coord.obtenerCoordenadaY());
+		this.casilleros[coord.obtenerCoordenadaX()][coord.obtenerCoordenadaY()] = UnCasillero;
 		
 	}
 	
 	private void tamanioValido(int tamanio){
 		
 			if(tamanio<=0){
-			
 				throw new TamanioMatrizInvalidoError();
 			}
 		
