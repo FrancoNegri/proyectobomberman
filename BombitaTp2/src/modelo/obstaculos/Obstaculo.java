@@ -1,7 +1,7 @@
 package modelo.obstaculos;
 
 import modelo.errores.VidaInvalidaError;
-import modelo.daño.*;
+import modelo.danio.*;
 
 public abstract class Obstaculo implements Daniable{
 	int vida;

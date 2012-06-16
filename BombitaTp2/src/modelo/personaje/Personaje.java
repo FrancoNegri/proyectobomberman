@@ -3,10 +3,10 @@ package modelo.personaje;
 import modelo.armamento.Armamento;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.movimiento.Movimiento;
-import modelo.daño.*;
+import modelo.danio.*;
 
 
-public abstract class Personaje implements Caminable, Daniable {
+public abstract class Personaje implements Daniable {
 
 	protected Armamento bomba;
 	protected float velocidad;

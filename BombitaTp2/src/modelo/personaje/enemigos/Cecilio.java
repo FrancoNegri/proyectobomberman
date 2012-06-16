@@ -1,11 +1,12 @@
 package modelo.personaje.enemigos;
 
-public class Cecilio {
+import modelo.armamento.Molotov;
+import modelo.personaje.Enemigo;
 
-	public void caminar(){
-		
-		//Obtener para que lugar se mueve (retorna un objetoA)
-		//derecha.moverse(this) <- suma o resta las coordenadas del enemigo
+public class Cecilio extends Enemigo {
+
+	public Cecilio() {
+		this.bomba = new Molotov();
 		
 	}
 }
