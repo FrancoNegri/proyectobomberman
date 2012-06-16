@@ -1,4 +1,4 @@
-package modelo.daño;
+package modelo.danio;
 
 public interface Daniable {
 	
