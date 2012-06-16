@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import static org.mockito.Mockito.*;
 
-public class testsdecasillero {
+public class CasilleroTest {
 
 	@Test
 	public void testDondeSeAgregaCasillero(){

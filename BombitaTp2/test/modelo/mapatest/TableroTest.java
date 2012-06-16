@@ -7,7 +7,7 @@ import modelo.coordenadas.Coordenada;
 import static org.junit.Assert.*;
 import org.junit.*;
 
-public class testTablero {
+public class TableroTest {
 	
 	private int tamanio;
 	

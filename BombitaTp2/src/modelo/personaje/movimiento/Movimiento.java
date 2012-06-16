@@ -1,6 +1,5 @@
 package modelo.personaje.movimiento;
 
-import java.util.LinkedList;
 import modelo.personaje.Personaje;
 import modelo.Translacion.*;
 

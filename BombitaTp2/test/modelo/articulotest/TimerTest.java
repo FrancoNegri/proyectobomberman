@@ -8,11 +8,10 @@ import modelo.personaje.*;
 import static org.junit.Assert.*;
 import org.junit.*;
 import static org.mockito.Mockito.*;
-public class TestTimer {
+public class TimerTest {
 	
 	private Bombita rodriguez;
 	private Armamento arma;
-	private double resultadotiempo;
 	private Timer unTimer;
 	
 	
@@ -25,7 +24,6 @@ public class TestTimer {
 		this.arma=  mock(Molotov.class);
 		when(rodriguez.armamentoActual()).thenReturn(this.arma);
 		when(arma.obtenerTime()).thenReturn(tiempo);
-		this.resultadotiempo=0.99;//constante para comparar el tiempo de una molotov una vez que fue mejorada por el metodo usar.
 	}
 	
 	@Test

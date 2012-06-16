@@ -5,9 +5,7 @@ import modelo.obstaculos.BloqueLadrillo;
 import modelo.obstaculos.Obstaculo;
 import org.junit.Test;
 import modelo.errores.VidaInvalidaError;
-import modelo.obstaculos.*;
 import static org.junit.Assert.*;
-import org.junit.*;
 
 public class BloqueLadrilloTest {
 	@Test

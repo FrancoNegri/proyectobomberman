@@ -7,7 +7,7 @@ import modelo.errores.coordenadaInvalida;
 import org.junit.Test;
 
 
-public class testCoordenadas {
+public class CoordenadasTest {
 	
 	@Test
 	public void testQueVerificaSeteo(){
