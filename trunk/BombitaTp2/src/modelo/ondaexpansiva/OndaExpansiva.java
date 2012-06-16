@@ -4,11 +4,9 @@ import modelo.Translacion.*;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
-import modelo.mapa.Mapa;
 import java.util.*;
 import modelo.personaje.*;
 import modelo.obstaculos.*;
-import antlr.collections.List;
 
 
 public class OndaExpansiva{
