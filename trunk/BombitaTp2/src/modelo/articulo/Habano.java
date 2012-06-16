@@ -1,7 +1,8 @@
 package modelo.articulo;
 
+import modelo.errores.PersonajeNoInicializadoError;
+import modelo.errores.VelocidadMaximaError;
 import modelo.personaje.Bombita;
-import modelo.errores.*;
 
 public class Habano extends Articulo{
 	

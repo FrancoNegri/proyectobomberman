@@ -1,8 +1,9 @@
 package modelo.articulo;
 
 import modelo.armamento.Armamento;
+import modelo.errores.ArmamentoNoInicializadoError;
+import modelo.errores.TiempoInvalidoError;
 import modelo.personaje.Bombita;
-import modelo.errores.*;
 public class Timer extends Articulo {
 	
 	public Timer(){

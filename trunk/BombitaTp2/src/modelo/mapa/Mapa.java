@@ -2,13 +2,14 @@ package modelo.mapa;
 
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
+import modelo.coordenadas.Coordenada;
+import modelo.errores.CasilleroOcupadoError;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
-import modelo.errores.*;
-import modelo.coordenadas.*;
 
 public class Mapa {
 	private Tablero TableroJuego;
+
 	public Mapa(int tamanio) {
 		this.TableroJuego = new Tablero(tamanio);
 	}
@@ -20,9 +21,7 @@ public class Mapa {
 	}
 
 	public Casillero obtenerCasillero(Coordenada coord) {
-
 		return this.TableroJuego.obtenerCasillero(coord);
-
 	}
 
 	public void agregarPersonaje(Personaje unPersonaje) {
@@ -65,6 +64,6 @@ public class Mapa {
 	}
 
 	public void eliminarPersonaje(Personaje unPersonaje) {
-		//Eliminar un personaje cuando haya muerto
+		// Eliminar un personaje cuando haya muerto
 	}
 }

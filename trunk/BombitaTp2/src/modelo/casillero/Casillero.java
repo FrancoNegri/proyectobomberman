@@ -2,10 +2,11 @@ package modelo.casillero;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import modelo.personaje.*;
-import modelo.obstaculos.*;
-import modelo.articulo.*;
-import modelo.armamento.*;
+
+import modelo.armamento.Armamento;
+import modelo.articulo.Articulable;
+import modelo.obstaculos.Obstaculo;
+import modelo.personaje.Personaje;
 
 
 //primera vercion de casillero, va a nesesitar ajustes.
