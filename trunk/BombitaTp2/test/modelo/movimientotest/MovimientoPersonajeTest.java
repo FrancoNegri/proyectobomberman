@@ -5,7 +5,7 @@ import org.junit.*;
 import modelo.personaje.Bombita;
 import modelo.personaje.movimiento.*;
 
-public class testMovimientoPersonaje {
+public class MovimientoPersonajeTest {
 
 	private Bombita rodriguez;
 	private Derecha derecha;

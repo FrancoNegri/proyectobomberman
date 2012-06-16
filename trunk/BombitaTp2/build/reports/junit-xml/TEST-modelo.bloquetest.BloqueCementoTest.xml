@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Franco" name="modelo.bloquetest.BloqueCementoTest" tests="5" time="0.012" timestamp="2012-06-16T23:20:57">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
+    <property name="libs" value="C:\Users\Franco\proyectobomberman\BombitaTp2\libs" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/C:/Eclipse/eclipse/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/templates/" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler" />
+    <property name="os.name" value="Windows NT (unknown)" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre6\lib\resources.jar;C:\Program Files\Java\jre6\lib\rt.jar;C:\Program Files\Java\jre6\lib\sunrsasign.jar;C:\Program Files\Java\jre6\lib\jsse.jar;C:\Program Files\Java\jre6\lib\jce.jar;C:\Program Files\Java\jre6\lib\charsets.jar;C:\Program Files\Java\jre6\classes" />
+    <property name="reports.html.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\junit-html" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="net.sourceforge.cobertura.datafile" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\cobertura.ser" />
+    <property name="ant.home" value="C:\Eclipse\eclipse\plugins\org.apache.ant_1.7.1.v20100518-1145" />
+    <property name="java.runtime.version" value="1.6.0_18-b07" />
+    <property name="cobertura.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\libs" />
+    <property name="user.name" value="Franco" />
+    <property name="user.language" value="es" />
+    <property name="build" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre6\bin" />
+    <property name="reports.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports" />
+    <property name="ant.project.name" value="TrabajoPractico2" />
+    <property name="java.version" value="1.6.0_18" />
+    <property name="coverage.html.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-html" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre6\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="classes.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build" />
+    <property name="java.class.version" value="50.0" />
+    <property name="user.country" value="AR" />
+    <property name="java.home" value="C:\Program Files\Java\jre6" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build.xml" />
+    <property name="os.version" value="6.2" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="16.0-b13" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\Eclipse\eclipse\plugins\org.apache.ant_1.7.1.v20100518-1145\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="eclipse.pdebuild.scripts" value="/C:/Eclipse/eclipse/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/scripts/" />
+    <property name="reports.xml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\junit-xml" />
+    <property name="user.home" value="C:\Users\Franco" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="coverage.xml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-xml" />
+    <property name="java.library.path" value="C:\Program Files\Java\jre6\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\watcom-1.3\binnt;C:\watcom-1.3\binw;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\Common Files\Autodesk Shared\;C:\PROGRA~1\DISKEE~1\DISKEE~1\;C:\Program Files (x86)\Windows Live\Shared;C:\FPC\2.4.2\bin\i386-Win32;C:\Program Files\Diskeeper Corporation\Diskeeper\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\apache-ant-1.8.4\bin;c:\ant\bin;C:\Program Files\Java\jdk1.6.0_18\bin" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="java.class.path" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Franco\proyectobomberman\BombitaTp2\build;C:\Users\Franco\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Franco\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Franco\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Franco\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Franco\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Franco\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Franco\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Franco\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Franco\proyectobomberman\BombitaTp2\build\tests;C:\Users\Franco\proyectobomberman\BombitaTp2;C:\Eclipse\eclipse\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-launcher.jar;C:\Eclipse\eclipse\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant.jar;C:\Eclipse\eclipse\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-junit.jar" />
+    <property name="ant.version" value="Apache Ant version 1.7.1 compiled on June 27 2008" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="eclipse.pdebuild.home" value="/C:/Eclipse/eclipse/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/./" />
+    <property name="java.io.tmpdir" value="C:\Users\Franco\AppData\Local\Temp\" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="instrumented.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\instrumented" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre6\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2" />
+    <property name="line.separator" value="
+" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="C:\Users\Franco\proyectobomberman\BombitaTp2" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="C:\Eclipse\eclipse\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="ant.file.TrabajoPractico2" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build.xml" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
+  </properties>
+  <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.0" />
+  <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testConstructorErrorVida" time="0.0" />
+  <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQuePruebaQuitarVida" time="0.0" />
+  <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.0" />
+  <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testDaniar" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

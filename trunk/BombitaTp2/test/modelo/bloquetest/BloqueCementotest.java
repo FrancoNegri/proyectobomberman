@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 import org.junit.*;
 
-public class BloqueCementotest {
+public class BloqueCementoTest {
 
 	@Test
 	public void testQueChequeaQueElObjetoSeCreeCorrectamente() {
