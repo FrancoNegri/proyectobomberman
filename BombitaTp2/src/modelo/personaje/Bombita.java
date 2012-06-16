@@ -1,7 +1,8 @@
 package modelo.personaje;
 
-import modelo.armamento.*;
-import modelo.articulo.*;
+import modelo.armamento.Armamento;
+import modelo.armamento.Molotov;
+import modelo.articulo.Articulable;
 
 public class Bombita extends Personaje {
 

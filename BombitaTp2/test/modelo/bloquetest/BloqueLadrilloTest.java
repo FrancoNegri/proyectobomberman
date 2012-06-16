@@ -1,16 +1,20 @@
 package modelo.bloquetest;
 
+import static org.junit.Assert.assertEquals;
+import modelo.obstaculos.BloqueLadrillo;
+import modelo.obstaculos.Obstaculo;
+import org.junit.Test;
 import modelo.errores.VidaInvalidaError;
 import modelo.obstaculos.*;
 import static org.junit.Assert.*;
-
 import org.junit.*;
 
-import org.junit.Test;
-
-
 public class BloqueLadrilloTest {
-
+	@Test
+	public void testQueChequeaQueElObjetoSeCreeCorrectamente() {
+		Obstaculo Bloque = new BloqueLadrillo(10);
+		assertEquals(Bloque.vidaRestante(), 10);
+	}
 	@Test
 	public void testQueChequeaQueElObjetoSeCreeCorrectamente() {
 		Obstaculo Bloque = new BloqueLadrillo(10);

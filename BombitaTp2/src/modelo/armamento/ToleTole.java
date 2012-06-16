@@ -1,7 +1,7 @@
 package modelo.armamento;
 
 import modelo.articulo.Articulable;
-import modelo.personaje.*;
+import modelo.personaje.Bombita;
 
 public class ToleTole extends Armamento implements Articulable {
 

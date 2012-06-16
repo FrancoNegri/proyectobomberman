@@ -2,7 +2,7 @@ package modelo.mapa;
 
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
-import modelo.errores.*;
+import modelo.errores.TamanioMatrizInvalidoError;
 
 public class Tablero {
 	
