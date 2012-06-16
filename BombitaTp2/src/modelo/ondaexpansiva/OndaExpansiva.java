@@ -1,21 +1,23 @@
 package modelo.ondaexpansiva;
 
-import modelo.casillero.Casillero; 
+import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.coordenadas.Translacion;
+import modelo.mapa.Mapa;
 import modelo.mapa.Mapa;
 import java.util.*;
 import modelo.personaje.*;
 import modelo.obstaculos.*;
 import antlr.collections.List;
 
+
 public class OndaExpansiva{
     private int radio;
     private int danio;
     
-    public OndaExpansiva(int r,int d) {
-   	 	this.radio=r;
-   	 	this.danio=d;
+    public OndaExpansiva(int radioExplocion,int dañoExplocion) {
+   	 	this.radio=radioExplocion;
+   	 	this.danio=dañoExplocion;
     }
     
     public int getRadio(){
@@ -27,10 +29,10 @@ public class OndaExpansiva{
     }
     
     public void Expandirse(Coordenada cordenada,Mapa mapa){
-    	Translacion movDerecha = new Translacion(true,false,false,false);//es feo pero no se me ocurre otra manera do hacerlo mas claro.
-    	Translacion movIzquierda = new Translacion(false,true,false,false);
-    	Translacion movAbajo = new Translacion(false,false,false,true);
-    	Translacion movArriba = new Translacion(false,false,true,false);//creo movimientos
+    	Translacion movDerecha = new TranslacionDerecha();
+    	Translacion movIzquierda = new TranslacionIzquierda();
+    	Translacion movAbajo = new TranslacionArriba();
+    	Translacion movArriba = new TranslacionAbajo();//creo movimientos
     	
     	this.expandirse(cordenada,mapa,movDerecha);//los uso
     	this.expandirse(cordenada,mapa,movIzquierda);
@@ -39,18 +41,21 @@ public class OndaExpansiva{
     }
     private void expandirse(Coordenada cordenada,Mapa mapa,Translacion mov){
     	Coordenada nuevaCord = new Coordenada(cordenada.obtenerCoordenadaX(),cordenada.obtenerCoordenadaY());
-    	nuevaCord.cambiarCoordenadaX(cordenada.obtenerCoordenadaX());
-    	nuevaCord.cambiarCoordenadaY(cordenada.obtenerCoordenadaY());
     	int j;
     	Casillero unCasillero;
     	boolean ataco = false;
-    	
     	for(j=1; (j<=this.radio) && (!ataco); j++){
-    		nuevaCord = mov.accion(nuevaCord);
-    		unCasillero = mapa.obtenerCasillero(nuevaCord);
-    		if (unCasillero.esAtacable()){
-    			this.atacar(unCasillero);
-    		    ataco = true;
+    		try{
+    			//A Tener En Cuenta: el siclo no esta comprobando si se llega al final del mapa
+    			//Por eso puse el try catch ver si se puede hacer mejor. Franco
+    			nuevaCord = mov.accion(nuevaCord);
+        		unCasillero = mapa.obtenerCasillero(nuevaCord);
+        		if (unCasillero.esAtacable()){
+        			this.atacar(unCasillero);
+        		    ataco = true;
+        		}
+    		}catch(Exception e){
+    			return;
     		}
     	}
     }
