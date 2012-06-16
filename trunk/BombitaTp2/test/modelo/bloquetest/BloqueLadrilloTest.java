@@ -15,11 +15,6 @@ public class BloqueLadrilloTest {
 		Obstaculo Bloque = new BloqueLadrillo(10);
 		assertEquals(Bloque.vidaRestante(), 10);
 	}
-	@Test
-	public void testQueChequeaQueElObjetoSeCreeCorrectamente() {
-		Obstaculo Bloque = new BloqueLadrillo(10);
-		assertEquals(Bloque.vidaRestante(), 10);
-	}
 
 	@Test
 	public void testConstructorErrorVida() {

@@ -1,8 +1,8 @@
 package modelo.ondaexpansiva;
 
+import modelo.Translacion.*;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
-import modelo.coordenadas.Translacion;
 import modelo.mapa.Mapa;
 import modelo.mapa.Mapa;
 import java.util.*;

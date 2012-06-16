@@ -1,7 +1,6 @@
 package modelo.personaje.movimiento;
 
 import java.util.LinkedList;
-import modelo.coordenadas.Translacion;
 import modelo.personaje.Personaje;
 import modelo.Translacion.*;
 
