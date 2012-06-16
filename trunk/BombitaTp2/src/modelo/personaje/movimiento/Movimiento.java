@@ -1,12 +1,10 @@
 package modelo.personaje.movimiento;
 
 import java.util.LinkedList;
-
 import modelo.coordenadas.Translacion;
-import modelo.personaje.Caminable;
 import modelo.personaje.Personaje;
 
-public abstract class Movimiento implements Caminable {
+public abstract class Movimiento {
 
 	private Translacion translacion;
 	// private LinkedList<Movimiento> movimientos;

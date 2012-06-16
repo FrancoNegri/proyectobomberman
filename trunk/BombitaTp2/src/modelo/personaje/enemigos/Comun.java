@@ -1,5 +1,13 @@
 package modelo.personaje.enemigos;
 
-public class Comun {
+import modelo.armamento.Proyectil;
+import modelo.personaje.Enemigo;
+
+public class Comun extends Enemigo {
+	
+	public Comun() {
+		this.bomba = new Proyectil();
+		this.velocidad = 10;
+	}
 
 }
