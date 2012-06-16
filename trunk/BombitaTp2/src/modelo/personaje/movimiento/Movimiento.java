@@ -3,6 +3,7 @@ package modelo.personaje.movimiento;
 import java.util.LinkedList;
 import modelo.coordenadas.Translacion;
 import modelo.personaje.Personaje;
+import modelo.Translacion.*;
 
 public abstract class Movimiento {
 
@@ -15,7 +16,7 @@ public abstract class Movimiento {
 
 	public Movimiento() {
 		// this.movimientos = new LinkedList<Movimiento>();
-		this.translacion = new Translacion(true,false,false,false);
+		this.translacion = new TranslacionDerecha();
 
 		// derecha = new Derecha();
 		// izquierda = new Izquierda();
