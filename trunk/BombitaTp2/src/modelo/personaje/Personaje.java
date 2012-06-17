@@ -15,7 +15,9 @@ public abstract class Personaje implements Daniable {
 
 	public Personaje(Coordenada unaCoordenada) {
 		this.coordenadaXY = unaCoordenada;
-	}
+		velocidad = 100;/*no deverian ser pasados por parametro a el constructor? Franco*/
+		vida = 100;     /*no deverian ser pasados por parametro a el constructor?*/
+	}/*me parece un harcodeo horrible?*/
 
 	public void caminar(Movimiento unMovimiento){
 		unMovimiento.mover(this);
@@ -54,5 +56,8 @@ public abstract class Personaje implements Daniable {
 			this.restarVida(danio);
 		}	
 		
+	}
+
+	public void Chocar() {
 	}
 }
