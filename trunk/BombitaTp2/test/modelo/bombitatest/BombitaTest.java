@@ -2,6 +2,7 @@ package modelo.bombitatest;
 
 import static org.junit.Assert.*;
 import org.junit.*;
+import modelo.ArmamentoFactory.*;
 import modelo.armamento.*;
 import modelo.articulo.*;
 import modelo.coordenadas.Coordenada;
@@ -12,8 +13,9 @@ import modelo.personaje.movimiento.*;
 public class BombitaTest {
 
 	private Bombita rodriguez;
-	private Molotov molotov;
+	private ArmamentoFactory molotovFactory;
 	private Habano habano;
+	private ArmamentoFactory toleToleFactory;
 	private ToleTole toleTole;
 	private Timer timer;
 	private Derecha derecha;
@@ -24,12 +26,14 @@ public class BombitaTest {
 	public void setUp(){
 		Coordenada coordenada = new Coordenada(1,1);
 		rodriguez = new Bombita(coordenada);
-		molotov = new Molotov();
+		molotovFactory = new MolotovFactory();
 		habano = new Habano();
-		toleTole = new ToleTole();
+		toleToleFactory = new ToleToleFactory();
 		timer = new Timer();
 		derecha = new Derecha();
 		abajo = new Abajo();
+		Coordenada coordenadaTole = new Coordenada(1,1);
+		toleTole = new ToleTole(coordenadaTole);
 	}
 	
 	@Test
@@ -39,7 +43,7 @@ public class BombitaTest {
 	
 	@Test
 	public void testInicializarBomba() {
-		assertEquals(molotov.getClass(),rodriguez.armamentoActual().getClass());
+		assertEquals(molotovFactory.getClass(),rodriguez.armamentoActual().getClass());
 	}
 	
 
@@ -78,14 +82,14 @@ public class BombitaTest {
 	
 	@Test
 	public void testCambiarArmamentoInicialPorToleTole() {
-		rodriguez.cambiarArmamento(toleTole);
-		assertEquals(toleTole.getClass(),rodriguez.armamentoActual().getClass());
+		rodriguez.cambiarArmamento(toleToleFactory);
+		assertEquals(toleToleFactory.getClass(),rodriguez.armamentoActual().getClass());
 	}
 	
 	@Test
 	public void testObtenerToleToleYCambiarBomba() {
 		rodriguez.tomarArticulo(toleTole);
-		assertEquals(toleTole.getClass(),rodriguez.armamentoActual().getClass());
+		assertEquals(toleToleFactory.getClass(),rodriguez.armamentoActual().getClass());
 	}
 	
 	@Test

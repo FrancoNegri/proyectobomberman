@@ -1,6 +1,6 @@
 package modelo.personaje;
 
-import modelo.armamento.Armamento;
+import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.movimiento.Movimiento;
 import modelo.danio.*;
@@ -8,7 +8,7 @@ import modelo.danio.*;
 
 public abstract class Personaje implements Daniable {
 
-	protected Armamento bomba;
+	protected ArmamentoFactory CreadorDeBombas;
 	protected float velocidad;
 	protected int vida;
 	protected Coordenada coordenadaXY;
@@ -43,8 +43,8 @@ public abstract class Personaje implements Daniable {
 		this.velocidad = velocidad;
 	}
 	
-	public Armamento armamentoActual() {
-		return bomba;
+	public ArmamentoFactory armamentoActual() {
+		return CreadorDeBombas;
 	}
 	
 	public boolean estaMuerto() {
