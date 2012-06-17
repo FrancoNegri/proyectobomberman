@@ -5,12 +5,17 @@ import modelo.mapa.Mapa;
 import modelo.ondaexpansiva.OndaExpansiva;
 
 public abstract class Armamento implements Armamentable {
-
+	
+	protected Coordenada coordenada;
 	protected float time;
 	protected int danio;
 	protected int radio;
 	
-	public Armamento(){
+	public Armamento(Coordenada unaCoordenada){
+		coordenada = unaCoordenada;
+		time = 0;
+		danio = 0;
+		radio = 0;
 	}
 	
 	public float obtenerTime() {

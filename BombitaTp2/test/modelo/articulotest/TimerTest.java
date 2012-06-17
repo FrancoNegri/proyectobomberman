@@ -1,7 +1,7 @@
 package modelo.articulotest;
 
+import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.articulo.*;
-import modelo.armamento.*;
 import modelo.errores.ArmamentoNoInicializadoError;
 import modelo.errores.TiempoInvalidoError;
 import modelo.personaje.*;
@@ -11,31 +11,30 @@ import static org.mockito.Mockito.*;
 public class TimerTest {
 	
 	private Bombita rodriguez;
-	private Armamento arma;
+	private ArmamentoFactory armaFactory;
 	private Timer unTimer;
 	
 	
 	@Before
 	public void setUp()
 	{
-		float tiempo = 3;
 		this.rodriguez= mock (Bombita.class);
 		this.unTimer = new Timer();
-		this.arma=  mock(Molotov.class);
-		when(rodriguez.armamentoActual()).thenReturn(this.arma);
-		when(arma.obtenerTime()).thenReturn(tiempo);
+		this.armaFactory=  mock(ArmamentoFactory.class);
+		when(rodriguez.armamentoActual()).thenReturn(this.armaFactory);
+		when(armaFactory.obtenerTime()).thenReturn(3);
 	}
 	
 	@Test
 	public void testUsar(){
 		unTimer.usar(this.rodriguez);
-		verify(arma).cambiarTime(anyInt());
+		verify(armaFactory).cambiarTime(anyInt());
 	}
 	
 	@Test
 	public void testUsarSinArmamento(){
 		
-		Armamento armamentoprueba=null;
+		ArmamentoFactory armamentoprueba=null;
 		this.rodriguez.cambiarArmamento(armamentoprueba);
 		try{
 			this.unTimer.usar(this.rodriguez);
@@ -49,16 +48,15 @@ public class TimerTest {
 
 	@Test
 	public void testReducirTiempo(){
-		this.unTimer.reducirTiempo(this.arma);
-		verify(arma).cambiarTime(anyInt());
+		this.unTimer.reducirTiempo(this.armaFactory);
+		verify(armaFactory).cambiarTime(anyInt());
 	}
 	
 	@Test
 	public void testReducirArmamentoConTiempoCero(){
-		float tiempo = 0; 
-		when (arma.obtenerTime()).thenReturn(tiempo);
+		when (armaFactory.obtenerTime()).thenReturn(0);
 		try{
-			this.unTimer.reducirTiempo(this.arma);
+			this.unTimer.reducirTiempo(this.armaFactory);
 		}
 		catch (TiempoInvalidoError e){
 			
