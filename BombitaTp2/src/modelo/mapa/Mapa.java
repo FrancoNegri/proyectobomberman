@@ -36,6 +36,12 @@ public class Mapa {
 
 	}
 
+	private void verificarCasillero(Casillero unCasillero) {
+		if (unCasillero.esCaminable() == false) {
+			throw new CasilleroOcupadoError();
+		}
+	}
+	
 	public Casillero obtenerCasillero(Coordenada coord) {
 		return this.TableroJuego.obtenerCasillero(coord);
 	}
@@ -67,16 +73,11 @@ public class Mapa {
 		this.agregarCasillero(coordenada, CasilleroAux);
 	}
 
-	public void agregarArticulo(Coordenada coord, Articulable unArticulo) {
+	public void agregarAlMapa(Articulable unArticulo) {
+		Coordenada coord = unArticulo.obtenerCoordenadaXY();
 		Casillero CasilleroAux = this.obtenerCasillero(coord);
 		CasilleroAux.agregar(unArticulo);
 		this.agregarCasillero(coord, CasilleroAux);
-	}
-
-	private void verificarCasillero(Casillero unCasillero) {
-		if (unCasillero.esCaminable() == false) {
-			throw new CasilleroOcupadoError();
-		}
 	}
 
 	public void actualizarMapa() {
