@@ -49,6 +49,15 @@ public class Mapa {
 		this.agregarCasillero(coordenada, CasilleroAux);
 	}
 	
+	public void agregarAlMapa(Obstaculo obstaculo) {
+		
+		Coordenada coordenada = obstaculo.obtenerCoordenadaXY();
+		Casillero CasilleroAux = this.obtenerCasillero(coordenada);
+		this.verificarCasillero(CasilleroAux);
+		CasilleroAux.agregar(obstaculo);
+		this.agregarCasillero(coordenada, CasilleroAux);
+	}
+	
 	public void agregarAlMapa(Armamento unArmamento) {
 		
 		Coordenada coordenada = unArmamento.obtenerCoordenadaXY();
@@ -62,15 +71,6 @@ public class Mapa {
 		Casillero CasilleroAux = this.obtenerCasillero(coord);
 		CasilleroAux.agregar(unArticulo);
 		this.agregarCasillero(coord, CasilleroAux);
-	}
-
-	public void agregarBloque(Coordenada coord, Obstaculo unObstaculo) {
-	
-		Casillero CasilleroAux = this.obtenerCasillero(coord);
-		this.verificarCasillero(CasilleroAux);
-		CasilleroAux.agregar(unObstaculo);
-		this.agregarCasillero(coord, CasilleroAux);
-
 	}
 
 	private void verificarCasillero(Casillero unCasillero) {
