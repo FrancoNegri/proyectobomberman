@@ -8,6 +8,6 @@ public class Comun extends Enemigo {
 	public Comun(Coordenada unaCoordenada) {
 		super(unaCoordenada);
 		this.CreadorDeBombas = new ProyectilFactory();
-		this.velocidad = 10;
+		this.velocidad = 200;
 	}
 }

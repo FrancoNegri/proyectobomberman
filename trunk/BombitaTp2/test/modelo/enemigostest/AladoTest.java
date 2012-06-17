@@ -5,7 +5,6 @@ import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.enemigos.*;
-
 import org.junit.*;
 
 public class AladoTest {
