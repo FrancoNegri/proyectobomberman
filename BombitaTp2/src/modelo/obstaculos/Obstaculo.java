@@ -6,7 +6,7 @@ import modelo.danio.*;
 
 public abstract class Obstaculo implements Daniable{
 	Coordenada cordenadaObsaculo;
-	
+	int vida;
 	public Obstaculo(int vidaTotal,Coordenada unacoordenada){
 		if(vidaTotal <= 0)
 			throw new VidaInvalidaError();
