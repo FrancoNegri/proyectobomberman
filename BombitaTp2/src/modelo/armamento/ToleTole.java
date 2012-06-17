@@ -10,6 +10,7 @@ public class ToleTole extends Armamento implements Articulable {
 	public ToleTole(Coordenada coordenada) {
 		super(coordenada);
 		this.time = 5;
+		this.radio = 6;
 	}
 	
 	public void usar(Bombita unPersonaje){
