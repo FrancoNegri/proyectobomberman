@@ -1,8 +1,6 @@
 package modelo.mapatest;
 
-import java.awt.List;
 import java.util.LinkedList;
-
 import modelo.mapa.*;
 import modelo.obstaculos.BloqueLadrillo;
 import modelo.personaje.Personaje;
@@ -23,7 +21,6 @@ public class MapaTest {
 	private int Tamanio;
 	
 	@Before
-	
 	public void setUp(){
 		
 		this.Tamanio = 5;
