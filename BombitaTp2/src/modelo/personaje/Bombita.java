@@ -3,17 +3,16 @@ package modelo.personaje;
 import modelo.armamento.Armamento;
 import modelo.armamento.Molotov;
 import modelo.articulo.Articulable;
+import modelo.coordenadas.Coordenada;
 
 public class Bombita extends Personaje {
 
 	
-	public Bombita() {
-		
+	public Bombita(Coordenada unaCoordenada) {
+		super(unaCoordenada);//Llama Inisializador de personaje
 		this.velocidad = 5;
 		this.vida = 100;
 		this.bomba = new Molotov();
-		this.coordenadaXY.cambiarCoordenadaX(1);
-		this.coordenadaXY.cambiarCoordenadaY(1);
 	}
 	
 	public void tomarArticulo(Articulable unArticulo) {

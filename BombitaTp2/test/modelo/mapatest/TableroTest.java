@@ -10,11 +10,8 @@ import org.junit.*;
 public class TableroTest {
 	
 	private int tamanio;
-	
 	private Casillero unCasillero;
-	
 	private Tablero unTablero;
-	
 	@Before
 	
 	public void setUp(){

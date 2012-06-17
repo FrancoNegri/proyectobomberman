@@ -2,6 +2,8 @@ package modelo.movimientotest;
 
 import static org.junit.Assert.*;
 import org.junit.*;
+
+import modelo.coordenadas.Coordenada;
 import modelo.personaje.Bombita;
 import modelo.personaje.movimiento.*;
 
@@ -15,7 +17,8 @@ public class MovimientoPersonajeTest {
 	
 	@Before
 	public void setUp(){
-		rodriguez = new Bombita();
+		Coordenada coordenada = new Coordenada(1,1);
+		rodriguez = new Bombita(coordenada);
 		derecha = new Derecha();
 		izquierda = new Izquierda();
 		abajo = new Abajo();

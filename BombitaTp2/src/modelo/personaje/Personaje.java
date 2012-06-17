@@ -13,8 +13,8 @@ public abstract class Personaje implements Daniable {
 	protected int vida;
 	protected Coordenada coordenadaXY;
 
-	public Personaje() {
-		this.coordenadaXY = new Coordenada(0,0);///DondeIniciarlo? Franco. Por Ahora lo dejo en 0 0.
+	public Personaje(Coordenada unaCoordenada) {
+		this.coordenadaXY = unaCoordenada;
 	}
 
 	public void caminar(Movimiento unMovimiento){
