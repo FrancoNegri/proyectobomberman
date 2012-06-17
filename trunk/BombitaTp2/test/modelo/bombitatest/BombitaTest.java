@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import modelo.armamento.*;
 import modelo.articulo.*;
+import modelo.coordenadas.Coordenada;
 import modelo.personaje.*;
 import modelo.personaje.movimiento.*;
 
@@ -21,7 +22,8 @@ public class BombitaTest {
 	
 	@Before
 	public void setUp(){
-		rodriguez = new Bombita();
+		Coordenada coordenada = new Coordenada(1,1);
+		rodriguez = new Bombita(coordenada);
 		molotov = new Molotov();
 		habano = new Habano();
 		toleTole = new ToleTole();

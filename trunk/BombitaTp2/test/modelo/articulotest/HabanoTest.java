@@ -3,6 +3,7 @@ package modelo.articulotest;
 import static org.junit.Assert.*;
 import org.junit.*;
 import modelo.articulo.*;
+import modelo.coordenadas.Coordenada;
 import modelo.personaje.*;
 import modelo.errores.*;
 
@@ -15,8 +16,8 @@ public class HabanoTest {
 	
 	@Before
 	public void setUp(){
-		
-		this.rodriguez = new Bombita();
+		Coordenada coordenada = new Coordenada(1,1);
+		this.rodriguez = new Bombita(coordenada);
 		this.unHabano = new Habano();
 		this.VelocidadPrueba = 15;
 		

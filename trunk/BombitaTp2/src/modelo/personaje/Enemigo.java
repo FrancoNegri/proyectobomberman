@@ -1,12 +1,13 @@
 package modelo.personaje;
 
+import modelo.coordenadas.Coordenada;
+
 public class Enemigo extends Personaje {
 
-	public Enemigo (){
-		this.coordenadaXY.cambiarCoordenadaX(0);
-		this.coordenadaXY.cambiarCoordenadaY(0);
+	public Enemigo(Coordenada unaCoordenada){
+		super(unaCoordenada);//Llama al inisializador de personaje
 	}
-
+	
 	public void chocarCon(Bombita rodriguez) {
 		rodriguez.morir();
 	}
