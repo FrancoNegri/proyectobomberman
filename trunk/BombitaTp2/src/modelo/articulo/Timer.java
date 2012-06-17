@@ -1,13 +1,14 @@
 package modelo.articulo;
 
 import modelo.ArmamentoFactory.ArmamentoFactory;
+import modelo.coordenadas.Coordenada;
 import modelo.errores.ArmamentoNoInicializadoError;
 import modelo.errores.TiempoInvalidoError;
 import modelo.personaje.Bombita;
 public class Timer extends Articulo {
 	
-	public Timer(){
-		
+	public Timer(Coordenada unaCoordenada){
+		super(unaCoordenada);
 	}
 
 	public void usar(Bombita unPersonaje){
