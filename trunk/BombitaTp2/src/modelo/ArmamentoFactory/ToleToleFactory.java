@@ -8,7 +8,7 @@ public class ToleToleFactory extends ArmamentoFactory{
 	private int time = 0;
 	@Override
 	public Armamento crear(Coordenada coord) {
-		ToleTole tole = new ToleTole(coord);
+		ToleTole tole = new ToleTole(coord,time);
 		return tole;
 	}
 
