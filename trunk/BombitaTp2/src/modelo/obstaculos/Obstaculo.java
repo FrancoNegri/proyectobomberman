@@ -1,16 +1,17 @@
 package modelo.obstaculos;
 
 import modelo.errores.VidaInvalidaError;
+import modelo.coordenadas.Coordenada;
 import modelo.danio.*;
 
 public abstract class Obstaculo implements Daniable{
+	Coordenada cordenadaObsaculo;
 	
-	private int vida;
-	
-	public Obstaculo(int vidaTotal){
+	public Obstaculo(int vidaTotal,Coordenada unacoordenada){
 		if(vidaTotal <= 0)
 			throw new VidaInvalidaError();
 		this.vida = vidaTotal;
+		cordenadaObsaculo = unacoordenada;
 	}
 	
 

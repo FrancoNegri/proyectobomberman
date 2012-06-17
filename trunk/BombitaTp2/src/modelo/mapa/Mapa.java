@@ -1,5 +1,6 @@
 package modelo.mapa;
 
+import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
@@ -39,27 +40,32 @@ public class Mapa {
 		return this.TableroJuego.obtenerCasillero(coord);
 	}
 
-	public void agregarPersonaje(Personaje unPersonaje) {
-
+	public void agregarAlMapa(Personaje unPersonaje) {
+		
 		Coordenada coordenada = unPersonaje.obtenerCoordenadaXY();
 		Casillero CasilleroAux = this.obtenerCasillero(coordenada);
 		this.verificarCasillero(CasilleroAux);
 		CasilleroAux.agregar(unPersonaje);
 		this.agregarCasillero(coordenada, CasilleroAux);
-
+	}
+	
+	public void agregarAlMapa(Armamento unArmamento) {
+		
+		Coordenada coordenada = unArmamento.obtenerCoordenadaXY();
+		Casillero CasilleroAux = this.obtenerCasillero(coordenada);
+		this.verificarCasillero(CasilleroAux);
+		CasilleroAux.agregar(unArmamento);
+		this.agregarCasillero(coordenada, CasilleroAux);
 	}
 
 	public void agregarArticulo(Coordenada coord, Articulable unArticulo) {
-
 		Casillero CasilleroAux = this.obtenerCasillero(coord);
-		this.verificarCasillero(CasilleroAux);
 		CasilleroAux.agregar(unArticulo);
 		this.agregarCasillero(coord, CasilleroAux);
-
 	}
 
 	public void agregarBloque(Coordenada coord, Obstaculo unObstaculo) {
-
+	
 		Casillero CasilleroAux = this.obtenerCasillero(coord);
 		this.verificarCasillero(CasilleroAux);
 		CasilleroAux.agregar(unObstaculo);
