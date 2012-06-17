@@ -26,4 +26,7 @@ public class Bombita extends Personaje {
 	public void morir() {
 		this.vida = 0;
 	}
+	public void Chocar() {
+		this.vida = this.vida -1;// O Cuanto saca?
+	}
 }
