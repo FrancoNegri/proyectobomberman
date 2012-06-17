@@ -13,9 +13,9 @@ public class OndaExpansiva{
     private int radio;
     private int danio;
     
-    public OndaExpansiva(int radioExplocion,int dañoExplocion) {
+    public OndaExpansiva(int radioExplocion,int danioExplocion) {
    	 	this.radio=radioExplocion;
-   	 	this.danio=dañoExplocion;
+   	 	this.danio=danioExplocion;
     }
     
     public int getRadio(){
