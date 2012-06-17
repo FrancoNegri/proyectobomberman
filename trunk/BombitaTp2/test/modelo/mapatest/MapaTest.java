@@ -51,17 +51,24 @@ public class MapaTest {
 		
 	}
 	
-	@Test
 	
-	public void testagregarCasillero(){
+	
+	/*Ya no es nesesario, nadie puede agregar casilleros.
+	 * 
+	 * @Test
+	 * public void testagregarCasillero(){
 		Coordenada cord = new Coordenada(3,1);
 		this.unCasillero.cambiarIdentificador("casilleroPrueba");
 		this.unMapa.agregarCasillero(cord, unCasillero);
 		Casillero CasilleroPrueba = this.unMapa.obtenerCasillero(cord);
 		assertTrue(CasilleroPrueba.obtenerIdentificador() == "casilleroPrueba");	
-	}
-	@Test
+	}*/
 	
+	/*
+	 * no es nesesario nadie puede agregar casilleros
+	 * 
+	 * @Test
+	 * 
 	public void testagregarCasilleroTamanioFueraDeRango(){
 		Coordenada cord = new Coordenada(3,9);
 		try{
@@ -73,7 +80,7 @@ public class MapaTest {
 		}
 		
 		
-	}
+	}*/
 	
 	@Test
 	
