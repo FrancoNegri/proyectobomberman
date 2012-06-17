@@ -1,8 +1,11 @@
 package modelo.personaje.enemigos;
 
-public class LopezReggae {
+import modelo.coordenadas.Coordenada;
+import modelo.personaje.Enemigo;
 
-	public LopezReggae() {
-		
+public class LopezReggae extends Enemigo {
+
+	public LopezReggae(Coordenada unaCoordenada) {
+		super(unaCoordenada);
 	}
 }

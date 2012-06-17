@@ -26,8 +26,4 @@ public class Bombita extends Personaje {
 	public void morir() {
 		this.vida = 0;
 	}
-	
-	public void chocarCon(Enemigo unEnemigo) {
-		this.morir();
-	}
 }
