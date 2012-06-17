@@ -1,7 +1,8 @@
 package modelo.enemigostest;
 
 import static org.junit.Assert.*;
-import modelo.armamento.Molotov;
+import modelo.ArmamentoFactory.ArmamentoFactory;
+import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.enemigos.*;
 
@@ -11,13 +12,13 @@ public class AladoTest {
 
 	private Alado lopez;
 	private Coordenada coordenadaC;
-	private Molotov molotov;
+	private ArmamentoFactory molotov;
 	
 	@Before
 	public void setUp(){
 		coordenadaC = new Coordenada(8,2);
 		lopez = new Alado(coordenadaC);
-		molotov = new Molotov();
+		molotov = new MolotovFactory();
 	}
 	
 	@Test
