@@ -4,7 +4,7 @@ import java.util.List;
 
 import modelo.personaje.Personaje;
 
-public class Coalisionador {
+public class Colisionador {
 	/**********************************************************
 	 *La Super Colisionadora de PERSONAJES ESTA VIVAAAAA!!!!***
 	 *														***
@@ -15,7 +15,9 @@ public class Coalisionador {
 	 *.\_@_@_@_@_@_@_@_@_@_/                                ***
 	**********************************************************/
 
-
+	public Colisionador() {
+		
+	}
 
 	public void Colicionar(List<Personaje> personajes) {
 		if(personajes.size() > 1){// Si tengo mas de un personaje chequeo coliciones.
