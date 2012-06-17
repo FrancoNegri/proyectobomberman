@@ -43,13 +43,13 @@ public class BombitaTest {
 	
 	@Test
 	public void testInicializarBomba() {
-		assertEquals(molotovFactory.getClass(),rodriguez.armamentoActual().getClass());
+		assertEquals(molotovFactory.getClass(),rodriguez.tirarArmamento().getClass());
 	}
 	
 
 	@Test
 	public void testInicializarVida() {
-		assertTrue(rodriguez.getVida() == 100);
+		assertTrue(rodriguez.obtenerVida() == 100);
 	}
 	
 	@Test
@@ -65,7 +65,7 @@ public class BombitaTest {
 	@Test
 	public void testRestarVida() {
 		rodriguez.restarVida(10);
-		assertTrue(rodriguez.getVida() == 90);
+		assertTrue(rodriguez.obtenerVida() == 90);
 	}
 	
 	@Test
@@ -83,20 +83,20 @@ public class BombitaTest {
 	@Test
 	public void testCambiarArmamentoInicialPorToleTole() {
 		rodriguez.cambiarArmamento(toleToleFactory);
-		assertEquals(toleToleFactory.getClass(),rodriguez.armamentoActual().getClass());
+		assertEquals(toleToleFactory.getClass(),rodriguez.tirarArmamento().getClass());
 	}
 	
 	@Test
 	public void testObtenerToleToleYCambiarBomba() {
 		rodriguez.tomarArticulo(toleTole);
-		assertEquals(toleToleFactory.getClass(),rodriguez.armamentoActual().getClass());
+		assertEquals(toleToleFactory.getClass(),rodriguez.tirarArmamento().getClass());
 	}
 	
 	@Test
 	//Aca esta andando mal el resultado obtenido, habria que ver con el test unitario de obtenerTime
 	public void testObtenerTimerYCambiarTiempoRetraso() {
 		rodriguez.tomarArticulo(timer);
-		assertEquals(0,0, rodriguez.armamentoActual().obtenerTime() );
+		assertEquals(0,0, rodriguez.tirarArmamento().obtenerTime() );
 	}
 	
 	@Test
@@ -112,9 +112,13 @@ public class BombitaTest {
 	
 	@Test
 	public void testDaniar(){
-		
 		this.rodriguez.Daniar(20);
-		assertTrue(this.rodriguez.getVida()==80);
-		
+		assertTrue(rodriguez.obtenerVida() == 80);
+	}
+	
+	@Test
+	public void testchocar(){
+		rodriguez.chocar();
+		assertTrue(rodriguez.obtenerVida() == 0);
 	}
 }

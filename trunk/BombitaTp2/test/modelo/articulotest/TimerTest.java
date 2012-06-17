@@ -21,7 +21,7 @@ public class TimerTest {
 		this.rodriguez= mock (Bombita.class);
 		this.unTimer = new Timer();
 		this.armaFactory=  mock(ArmamentoFactory.class);
-		when(rodriguez.armamentoActual()).thenReturn(this.armaFactory);
+		when(rodriguez.tirarArmamento()).thenReturn(this.armaFactory);
 		when(armaFactory.obtenerTime()).thenReturn(3);
 	}
 	

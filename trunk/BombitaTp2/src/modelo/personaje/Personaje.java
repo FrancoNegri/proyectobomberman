@@ -15,19 +15,22 @@ public abstract class Personaje implements Daniable {
 
 	public Personaje(Coordenada unaCoordenada) {
 		this.coordenadaXY = unaCoordenada;
-		velocidad = 100;/*no deverian ser pasados por parametro a el constructor? Franco*/
-		vida = 100;     /*no deverian ser pasados por parametro a el constructor?*/
-	}/*me parece un harcodeo horrible?*/
+		this.velocidad = 100;
+		this.vida = 100;     
+	} //Esto lo corregiria con algunas constantes que tenga el mapa por ej 
+	  //Velocidad.Juego asi todos tienen la misma velocidad al empezar
 
 	public void caminar(Movimiento unMovimiento){
+		//if (casilleroAUnMovimiento.estaLibre()) {
 		unMovimiento.mover(this);
+		//else { no hace nada }
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
 		return coordenadaXY;
 	}
 
-	public int getVida() {
+	public int obtenerVida() {
 		return vida;
 	}
 
@@ -43,7 +46,8 @@ public abstract class Personaje implements Daniable {
 		this.velocidad = velocidad;
 	}
 	
-	public ArmamentoFactory armamentoActual() {
+
+	public ArmamentoFactory tirarArmamento() {
 		return CreadorDeBombas;
 	}
 	
@@ -57,7 +61,7 @@ public abstract class Personaje implements Daniable {
 		}	
 		
 	}
-
-	public void Chocar() {
-	}
+	
+	public abstract void chocar();
+	
 }

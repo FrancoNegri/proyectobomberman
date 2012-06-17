@@ -11,8 +11,7 @@ public class Timer extends Articulo {
 	}
 
 	public void usar(Bombita unPersonaje){
-		
-		ArmamentoFactory ArmaPersonaje = unPersonaje.armamentoActual();
+		ArmamentoFactory ArmaPersonaje = unPersonaje.tirarArmamento();
 		
 		if (ArmaPersonaje==null){
 			throw new ArmamentoNoInicializadoError();
