@@ -14,7 +14,7 @@ public class ProyectilFactory extends ArmamentoFactory {
 
 	@Override
 	public void cambiarTime(int unTime) {
-		time = unTime;
+		this.time = unTime;
 	}
 
 	@Override
