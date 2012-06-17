@@ -4,8 +4,10 @@ import java.awt.List;
 import java.util.LinkedList;
 
 import modelo.mapa.*;
+import modelo.obstaculos.BloqueLadrillo;
 import modelo.personaje.Personaje;
 import modelo.errores.*;
+import modelo.armamento.Armamento;
 import modelo.casillero.*;
 import modelo.coordenadas.Coordenada;
 import static org.junit.Assert.*;
@@ -102,7 +104,20 @@ public class MapaTest {
 		LinkedList<Personaje> lista = unMapa.obtenerCasillero(cord).obtenerPersonajes();
 		assertTrue(lista.contains(pers));
 	}
-	
-	
-	
+	@Test
+	public void testObtenerObstaculoDelMapa(){
+		Coordenada coord = new Coordenada(3,4);
+		BloqueLadrillo bloque = mock(BloqueLadrillo.class);
+		when(bloque.obtenerCoordenadaXY()).thenReturn(coord);
+		unMapa.agregarAlMapa(bloque);
+		assertTrue(unMapa.obtenerCasillero(coord).obtenerObstaculo() == bloque);
+	}
+	@Test
+	public void testObtenerArmamentoDelMapa(){
+		Coordenada coord = new Coordenada(3,4);
+		Armamento arma = mock(Armamento.class);
+		when(arma.obtenerCoordenadaXY()).thenReturn(coord);
+		unMapa.agregarAlMapa(arma);
+		assertTrue(unMapa.obtenerCasillero(coord).obtenerArmamento() == arma);
+	}
 }
