@@ -5,7 +5,7 @@ import modelo.coordenadas.Coordenada;
 
 public class Proyectil extends Armamento {
 	
-	private Translacion transladador;
+	private Translacion transladador;//para que lado se va a mover.
 	
 	public Proyectil(Coordenada coordenada, Translacion trans) {
 		super(coordenada);
