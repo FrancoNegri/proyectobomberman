@@ -11,7 +11,6 @@ import modelo.personaje.movimiento.*;
 
 
 public class BombitaTest {
-
 	private Bombita rodriguez;
 	private ArmamentoFactory molotovFactory;
 	private Habano habano;
@@ -21,7 +20,6 @@ public class BombitaTest {
 	private Derecha derecha;
 	private Abajo abajo;
 
-	
 	@Before
 	public void setUp(){
 		Coordenada coordenada = new Coordenada(1,1);

@@ -18,6 +18,10 @@ public abstract class Armamento implements Armamentable {
 		radio = 0;
 	}
 	
+	public Coordenada obtenerCoordenadaXY(){
+		return coordenada;
+	}
+	
 	public float obtenerTime() {
 		return time;
 	}

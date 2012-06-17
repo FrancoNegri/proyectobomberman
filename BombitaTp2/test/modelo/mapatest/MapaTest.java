@@ -1,12 +1,16 @@
 package modelo.mapatest;
 
+import java.awt.List;
+import java.util.LinkedList;
+
 import modelo.mapa.*;
+import modelo.personaje.Personaje;
 import modelo.errores.*;
 import modelo.casillero.*;
 import modelo.coordenadas.Coordenada;
 import static org.junit.Assert.*;
 import org.junit.*;
-
+import static org.mockito.Mockito.*;
 public class MapaTest {
 
 	private Mapa unMapa;
@@ -56,24 +60,6 @@ public class MapaTest {
 		Casillero CasilleroPrueba = this.unMapa.obtenerCasillero(cord);
 		assertTrue(CasilleroPrueba.obtenerIdentificador() == "casilleroPrueba");	
 	}
-	/*
-	 * 
-	 * Test ya no es nesesario se encarga coordenada de chequear
-	@Test
-	public void testagregarCasilleroTamanioNegativo(){
-		Coordenada cord = new Coordenada(3,-2);
-		try{
-			
-			this.unMapa.agregarCasillero(cord, this.unCasillero);
-		}
-		catch(TamanioMatrizInvalidoError e){
-			
-		}			
-		
-	}
-	
-	
-	*/
 	@Test
 	
 	public void testagregarCasilleroTamanioFueraDeRango(){
@@ -97,22 +83,6 @@ public class MapaTest {
 		assertTrue(casilleroPrueba.obtenerIdentificador() == "noName");
 		
 	}
-	/*
-	 * 
-	 * test no nesesario se encarga coordenada de chequear
-	 * 
-	@Test
-	public void testObtenerCasilleroTamanioNegativo(){
-		Coordenada cord = new Coordenada(3,-2);
-		try{
-			this.unMapa.obtenerCasillero(cord);
-		}
-		catch(TamanioMatrizInvalidoError e){
-			
-		}
-		
-	}
-	*/
 	@Test
 	
 	public void testObtenerCasilleroTamanioFueraDeRango(){
@@ -123,4 +93,16 @@ public class MapaTest {
 		catch(TamanioMatrizInvalidoError e){
 		}
 	}
+	@Test
+	public void testObtenerPersonajeDelMapa(){
+		Coordenada cord = new Coordenada(3,4);
+		Personaje pers = mock(Personaje.class);
+		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
+		unMapa.agregarAlMapa(pers);
+		LinkedList<Personaje> lista = unMapa.obtenerCasillero(cord).obtenerPersonajes();
+		assertTrue(lista.contains(pers));
+	}
+	
+	
+	
 }
