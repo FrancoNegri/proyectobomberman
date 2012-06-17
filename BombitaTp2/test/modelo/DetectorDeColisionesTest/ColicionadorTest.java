@@ -3,7 +3,7 @@ package modelo.DetectorDeColisionesTest;
 import static org.junit.Assert.*;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
-import modelo.detectorcolision.Coalisionador;
+import modelo.detectorcolision.Colisionador;
 import modelo.personaje.*;
 import modelo.personaje.enemigos.Comun;
 
@@ -13,7 +13,7 @@ public class ColicionadorTest {
 
 	@Test
 	public void testQuePruevaUnaColicion(){
-		Coalisionador coli = new Coalisionador();
+		Colisionador coli = new Colisionador();
 		Casillero miCasi = new Casillero();
 		Coordenada miCord = new Coordenada(1,1);
 		Personaje enemigo = new Comun(miCord);
