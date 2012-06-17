@@ -5,7 +5,12 @@ import modelo.coordenadas.Coordenada;
 public class Enemigo extends Personaje {
 
 	public Enemigo(Coordenada unaCoordenada){
-		super(unaCoordenada);//Llama al inisializador de personaje. Franco
+		super(unaCoordenada);
+	}
+	
+	public void chocar() {
+		this.vida = vida - 1; //Como para que le pase algo al enemigo, igual si choca con alguien es 
+							  //con Bombita asique se termina el juego
 	}
 	
 	//public void perseguirABombita(Bombita rodriguez) {

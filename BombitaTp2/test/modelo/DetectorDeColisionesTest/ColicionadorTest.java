@@ -3,7 +3,7 @@ package modelo.DetectorDeColisionesTest;
 import static org.junit.Assert.*;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
-import modelo.detectorcoalision.Coalisionador;
+import modelo.detectorcolision.Coalisionador;
 import modelo.personaje.*;
 import modelo.personaje.enemigos.Comun;
 
@@ -21,7 +21,7 @@ public class ColicionadorTest {
 		miCasi.agregar(enemigo);
 		miCasi.agregar(bomb);
 		coli.Colicionar(miCasi.obtenerPersonajes());
-		assertTrue(enemigo.getVida() == 100);
-		assertTrue(bomb.getVida() == 99);
+		assertTrue(enemigo.obtenerVida() == 99);
+		assertTrue(bomb.obtenerVida() == 0);
 	}
 }
