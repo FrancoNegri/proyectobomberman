@@ -5,7 +5,6 @@ import modelo.ArmamentoFactory.ToleToleFactory;
 import modelo.armamento.Armamento;
 import modelo.armamento.ToleTole;
 import modelo.coordenadas.Coordenada;
-
 import org.junit.Test;
 
 

@@ -30,7 +30,7 @@ public class BombitaTest {
 		timer = new Timer(coordenada);
 		derecha = new Derecha();
 		abajo = new Abajo();
-		toleTole = new ToleTole(coordenada);
+		toleTole = new ToleTole(coordenada,0);
 	}
 	
 	@Test

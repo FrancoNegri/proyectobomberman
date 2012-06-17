@@ -2,7 +2,6 @@ package modelo.ondaexpantest;
 import org.junit.Before;
 import org.junit.Test;
 
-import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueCemento;

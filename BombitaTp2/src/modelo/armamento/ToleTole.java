@@ -7,9 +7,9 @@ import modelo.personaje.Bombita;
 
 public class ToleTole extends Armamento implements Articulable {
 
-	public ToleTole(Coordenada coordenada) {
+	public ToleTole(Coordenada coordenada,int unTime) {
 		super(coordenada);
-		this.time = 5;
+		this.time = unTime;
 		this.radio = 6;
 	}
 	
