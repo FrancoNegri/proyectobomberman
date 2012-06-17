@@ -15,10 +15,10 @@ public class OndaExpansiva{
     
     public OndaExpansiva(int radioExplocion,int danioExplocion) {
    	 	this.radio=radioExplocion;
-   	 	this.danio=danioExplocion;
+   	 	this.danio=danioExplocion;	
     }
     
-    public int getRadio(){
+    public int getRadio(){																						
    	 	return radio;
     }
     

@@ -80,5 +80,5 @@ public class Mapa {
 
 	public void eliminarPersonaje(Personaje unPersonaje) {
 		// Eliminar un personaje cuando haya muerto
-	}
+	}	
 }

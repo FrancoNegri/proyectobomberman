@@ -4,7 +4,8 @@ import modelo.errores.VidaInvalidaError;
 import modelo.danio.*;
 
 public abstract class Obstaculo implements Daniable{
-	int vida;
+	
+	private int vida;
 	
 	public Obstaculo(int vidaTotal){
 		if(vidaTotal <= 0)

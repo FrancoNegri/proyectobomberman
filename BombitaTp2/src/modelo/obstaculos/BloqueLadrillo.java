@@ -6,3 +6,4 @@ public class BloqueLadrillo extends Obstaculo{
 		super(vidaTotal);
 	}
 }
+	
