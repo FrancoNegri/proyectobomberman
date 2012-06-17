@@ -44,7 +44,7 @@ public class OndaExpansiva{
     	boolean ataco = false;
     	for(j=1; (j<=this.radio) && (!ataco); j++){
     		try{
-    			//A Tener En Cuenta: el siclo no esta comprobando si se llega al final del mapa
+    			//A Tener En Cuenta: el ciclo no esta comprobando si se llega al final del mapa
     			//Por eso puse el try catch ver si se puede hacer mejor. Franco
     			nuevaCord = mov.accion(nuevaCord);
         		unCasillero = mapa.obtenerCasillero(nuevaCord);

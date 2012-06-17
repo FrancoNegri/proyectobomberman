@@ -8,5 +8,6 @@ public class Proyectil extends Armamento {
 	public Proyectil(Coordenada coordenada, Translacion trans) {
 		super(coordenada);
 		transladador = trans;
+		this.danio = 10;
 	}
 }
