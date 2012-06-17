@@ -1,4 +1,4 @@
-package modelo.ArmamentoFactory;
+		package modelo.ArmamentoFactory;
 
 import modelo.armamento.*;
 import modelo.coordenadas.Coordenada;
