@@ -2,6 +2,7 @@ package modelo.articulotest;
 
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.articulo.*;
+import modelo.coordenadas.Coordenada;
 import modelo.errores.ArmamentoNoInicializadoError;
 import modelo.errores.TiempoInvalidoError;
 import modelo.personaje.*;
@@ -19,7 +20,8 @@ public class TimerTest {
 	public void setUp()
 	{
 		this.rodriguez= mock (Bombita.class);
-		this.unTimer = new Timer();
+		Coordenada coordenada = mock (Coordenada.class);
+		this.unTimer = new Timer(coordenada);
 		this.armaFactory=  mock(ArmamentoFactory.class);
 		when(rodriguez.tirarArmamento()).thenReturn(this.armaFactory);
 		when(armaFactory.obtenerTime()).thenReturn(3);

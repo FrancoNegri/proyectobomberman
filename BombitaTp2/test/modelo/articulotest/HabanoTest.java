@@ -6,7 +6,7 @@ import modelo.articulo.*;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.*;
 import modelo.errores.*;
-
+import static org.mockito.Mockito.*;
 
 public class HabanoTest {
 
@@ -18,7 +18,8 @@ public class HabanoTest {
 	public void setUp(){
 		Coordenada coordenada = new Coordenada(1,1);
 		this.rodriguez = new Bombita(coordenada);
-		this.unHabano = new Habano();
+		Coordenada coord = mock(Coordenada.class);
+		this.unHabano = new Habano(coord);
 		this.VelocidadPrueba = 15;
 		
 	}

@@ -1,5 +1,6 @@
 package modelo.articulo;
 
+import modelo.coordenadas.Coordenada;
 import modelo.errores.PersonajeNoInicializadoError;
 import modelo.errores.VelocidadMaximaError;
 import modelo.personaje.Bombita;
@@ -8,8 +9,8 @@ public class Habano extends Articulo{
 	
 	private float velocidadmaxima;
 	
-	public Habano(){
-		
+	public Habano(Coordenada unaCoordenada){
+		super(unaCoordenada);
 		this.velocidadmaxima=35;
 	}
 	

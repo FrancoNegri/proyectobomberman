@@ -27,13 +27,12 @@ public class BombitaTest {
 		Coordenada coordenada = new Coordenada(1,1);
 		rodriguez = new Bombita(coordenada);
 		molotovFactory = new MolotovFactory();
-		habano = new Habano();
+		habano = new Habano(coordenada);
 		toleToleFactory = new ToleToleFactory();
-		timer = new Timer();
+		timer = new Timer(coordenada);
 		derecha = new Derecha();
 		abajo = new Abajo();
-		Coordenada coordenadaTole = new Coordenada(1,1);
-		toleTole = new ToleTole(coordenadaTole);
+		toleTole = new ToleTole(coordenada);
 	}
 	
 	@Test
