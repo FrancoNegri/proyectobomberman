@@ -8,6 +8,7 @@ import modelo.obstaculos.BloqueLadrillo;
 import modelo.personaje.Personaje;
 import modelo.errores.*;
 import modelo.armamento.Armamento;
+import modelo.articulo.Articulo;
 import modelo.casillero.*;
 import modelo.coordenadas.Coordenada;
 import static org.junit.Assert.*;
@@ -119,5 +120,13 @@ public class MapaTest {
 		when(arma.obtenerCoordenadaXY()).thenReturn(coord);
 		unMapa.agregarAlMapa(arma);
 		assertTrue(unMapa.obtenerCasillero(coord).obtenerArmamento() == arma);
+	}
+	@Test
+	public void testObtenerArticuloDelMapa(){
+		Coordenada coord = new Coordenada(3,4);
+		Articulo articulo = mock(Articulo.class);
+		when(articulo.obtenerCoordenadaXY()).thenReturn(coord);
+		unMapa.agregarAlMapa(articulo);
+		assertTrue(unMapa.obtenerCasillero(coord).obtenerArticulo() == articulo);
 	}
 }
