@@ -14,4 +14,5 @@ public class Proyectil extends Armamento {
 	}
 	
 	//Como se mueve el proyectil? Deberia tener un metodo mover? Fede.
+	//yo habia pensado que podia moverse igual que la bomba
 }

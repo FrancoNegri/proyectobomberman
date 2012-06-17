@@ -29,8 +29,8 @@ public class Mapa {
 	public Mapa(int tamanio) {
 		this.TableroJuego = new Tablero(tamanio);
 	}
-
-	public void agregarCasillero(Coordenada coord, Casillero unCasillero) {
+	
+	private void agregarCasillero(Coordenada coord, Casillero unCasillero) {
 
 		this.TableroJuego.cambiarCasillero(coord, unCasillero);
 
