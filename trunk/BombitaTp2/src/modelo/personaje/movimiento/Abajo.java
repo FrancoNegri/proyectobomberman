@@ -1,13 +1,11 @@
 package modelo.personaje.movimiento;
 
-import modelo.personaje.Personaje;
+import modelo.Translacion.TranslacionAbajo;
 
 public class Abajo extends Movimiento{
 
-	public void mover(Personaje unPersonaje) {
-		int coordenadaNueva = unPersonaje.obtenerCoordenadaXY().obtenerCoordenadaY() - 1;
-		//translacion.accion
-		unPersonaje.obtenerCoordenadaXY().cambiarCoordenadaY(coordenadaNueva);
+	public Abajo() {
+		this.translacion = new TranslacionAbajo();
 	}
 
 }

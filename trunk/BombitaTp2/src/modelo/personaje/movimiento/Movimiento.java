@@ -1,11 +1,12 @@
 package modelo.personaje.movimiento;
 
+import modelo.coordenadas.Coordenada;
 import modelo.personaje.Personaje;
 import modelo.Translacion.*;
 
 public abstract class Movimiento {
 
-	private Translacion translacion;
+	protected Translacion translacion;
 	// private LinkedList<Movimiento> movimientos;
 	// private Derecha derecha;
 	// private Izquierda izquierda;
@@ -14,7 +15,6 @@ public abstract class Movimiento {
 
 	public Movimiento() {
 		// this.movimientos = new LinkedList<Movimiento>();
-		this.translacion = new TranslacionDerecha();
 
 		// derecha = new Derecha();
 		// izquierda = new Izquierda();
@@ -34,6 +34,10 @@ public abstract class Movimiento {
 		return ((numero % 3) + 1);
 	}
 
-	public abstract void mover(Personaje unPersonaje);
+	public void mover(Personaje unPersonaje){
+		Coordenada coordenadaActual = unPersonaje.obtenerCoordenadaXY();
+		Coordenada nuevaCoordenada = translacion.accion(coordenadaActual);
+		unPersonaje.cambiarCoordenadaXY(nuevaCoordenada);
+	}
 
 }

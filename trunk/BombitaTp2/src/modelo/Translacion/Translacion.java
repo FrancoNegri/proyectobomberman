@@ -6,7 +6,7 @@ public abstract class Translacion {
 	public Coordenada accion(Coordenada cordenada) {
 		Coordenada nuevaCord = new Coordenada(cordenada.obtenerCoordenadaX(),
 				cordenada.obtenerCoordenadaY());
-		nuevaCord = actuar(cordenada, nuevaCord); // Como llama por polimorfismo al actuar correcto? Fede.
+		nuevaCord = this.actuar(cordenada, nuevaCord); // Agregue el .this para poder usar polimorfimo en la clase movimiento. Fede
 		return nuevaCord;
 	}
 
