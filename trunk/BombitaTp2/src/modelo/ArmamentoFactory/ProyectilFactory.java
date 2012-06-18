@@ -9,7 +9,7 @@ public class ProyectilFactory extends ArmamentoFactory{
 	@Override
 	public Armamento crear(Personaje pers) {
 		// nesesito pasarle alguna translacion para que se mueva de la manera correcta
-		Proyectil proyectil = new Proyectil(pers.obtenerCoordenadaXY(),null);
+		Proyectil proyectil = new Proyectil(pers.obtenerCoordenadaXY(),time);
 		return proyectil;
 	}
 
