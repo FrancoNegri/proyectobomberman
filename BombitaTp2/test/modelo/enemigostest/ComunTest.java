@@ -1,9 +1,17 @@
 package modelo.enemigostest;
 
 import static org.junit.Assert.*;
+
+import java.util.LinkedList;
+
 import modelo.ArmamentoFactory.*;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.enemigos.*;
+import modelo.personaje.movimiento.Abajo;
+import modelo.personaje.movimiento.Arriba;
+import modelo.personaje.movimiento.Derecha;
+import modelo.personaje.movimiento.Izquierda;
+import modelo.personaje.movimiento.Movimiento;
 
 import org.junit.*;
 
@@ -12,13 +20,21 @@ public class ComunTest {
 
 	private Comun lopez;
 	private Coordenada coordenadaL;
-	private ProyectilFactory proyectil;
+	private Derecha derecha;
+	private Izquierda izquierda;
+	private Arriba arriba;
+	private Abajo abajo;
+	private Movimiento movimiento;
 	
 	@Before
 	public void setUp(){
 		coordenadaL = new Coordenada(2,4);
 		lopez = new Comun(coordenadaL);
-		proyectil = new ProyectilFactory();
+		derecha = new Derecha();
+		izquierda = new Izquierda();
+		arriba = new Arriba();
+		abajo = new Abajo();
+		movimiento = new Movimiento();
 	}
 	
 	@Test
@@ -71,5 +87,18 @@ public class ComunTest {
 	public void testchocar(){
 		lopez.chocar();
 		assertTrue(lopez.obtenerVida() == 99);
+	}
+	
+	@Test
+	public void testListaDeMovimientosInicializadoCorrectamente() {
+		LinkedList<Movimiento> lista = lopez.obtenerMovimientos();
+		assertTrue(lista.size() == 4);
+	}
+	
+	@Test
+	public void testobtenerMovimientoRandom(){
+		movimiento = lopez.obtenerDireccionDeMovimiento();
+		assertTrue(movimiento.getClass() == derecha.getClass() | movimiento.getClass() == izquierda.getClass() 
+				  | movimiento.getClass() == arriba.getClass() | movimiento.getClass() == abajo.getClass());
 	}
 }
