@@ -1,6 +1,5 @@
 package modelo.articulotest;
 
-import modelo.Translacion.*;
 import modelo.armamento.*;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
@@ -17,10 +16,9 @@ public class ProyoctilTest {
 	private Coordenada coord;
 	@Before
 	public void SetUp(){
-		Translacion trans = new TranslacionArriba();
 		coord = new Coordenada(1,1);
 		mapa = new Mapa(3);
-		arma = new Proyectil(coord,trans);
+		arma = new Proyectil(coord,2);
 		Casillero casillero = mapa.obtenerCasillero(coord);
 		casillero.agregar(arma);
 	}
