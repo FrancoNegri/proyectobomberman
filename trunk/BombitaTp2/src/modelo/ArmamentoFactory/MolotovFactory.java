@@ -5,7 +5,7 @@ import modelo.coordenadas.Coordenada;
 
 public class MolotovFactory extends ArmamentoFactory{
 
-	private int time = 0;
+	private int time = 1;
 	public Molotov crear(Coordenada coord) {
 		Molotov molotov = new Molotov(coord,time);
 		return molotov;
