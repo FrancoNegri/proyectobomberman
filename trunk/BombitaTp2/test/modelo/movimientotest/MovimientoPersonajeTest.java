@@ -1,6 +1,9 @@
 package modelo.movimientotest;
 
 import static org.junit.Assert.*;
+
+import java.util.LinkedList;
+
 import org.junit.*;
 
 import modelo.coordenadas.Coordenada;
@@ -14,6 +17,7 @@ public class MovimientoPersonajeTest {
 	private Izquierda izquierda;
 	private Abajo abajo;
 	private Arriba arriba;
+	private Movimiento movimiento;
 	
 	@Before
 	public void setUp(){
@@ -23,6 +27,7 @@ public class MovimientoPersonajeTest {
 		izquierda = new Izquierda();
 		abajo = new Abajo();
 		arriba = new Arriba();
+		movimiento = new Movimiento();
 	}
 		
 	@Test
@@ -58,6 +63,12 @@ public class MovimientoPersonajeTest {
 	@Test
 	public void testObtenerNumeroRandom() {
 		int numero = derecha.obtenerNumeroRandom();
-		assertTrue(numero == 0 | numero == 1 | numero == 2 | numero == 3);
+		assertTrue(numero == 1 | numero == 2 | numero == 3 | numero == 4);
+	}
+	
+	@Test
+	public void testListaDeMovimientosInicializadoCorrectamente() {
+		LinkedList<Movimiento> lista = movimiento.inicializarMovimientos();
+		assertTrue(lista.size() == 4);
 	}
 }

@@ -1,8 +1,10 @@
 package modelo.personaje;
 
+import java.util.LinkedList;
+
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.coordenadas.Coordenada;
-import modelo.personaje.movimiento.Movimiento;
+import modelo.personaje.movimiento.*;
 import modelo.danio.*;
 
 
@@ -12,13 +14,17 @@ public abstract class Personaje implements Daniable {
 	protected float velocidad;
 	protected int vida;
 	protected Coordenada coordenadaXY;
+	protected LinkedList<Movimiento> movimientos;
+	protected Movimiento movimiento;
 
 	public Personaje(Coordenada unaCoordenada) {
 		this.coordenadaXY = unaCoordenada;
 		this.velocidad = 100;
-		this.vida = 100;     
-	} //Esto lo corregiria con algunas constantes que tenga el mapa por ej 
-	  //Velocidad.Juego asi todos tienen la misma velocidad al empezar
+		this.vida = 100;
+		this.movimientos = new LinkedList<Movimiento>();
+		this.movimiento = new Movimiento();
+		this.movimientos = movimiento.inicializarMovimientos();
+	} 
 
 	public void caminar(Movimiento unMovimiento) {
 		//if (casilleroAUnMovimiento.estaLibre()) {
@@ -68,4 +74,12 @@ public abstract class Personaje implements Daniable {
 	
 	public abstract void chocar();
 	
+	public LinkedList<Movimiento> obtenerMovimientos() {
+		return movimientos;
+	}
+	
+	public Movimiento obtenerDireccionDeMovimiento() {
+		int posicion = movimiento.obtenerNumeroRandom();
+		return (movimientos.get(posicion-1));
+	}
 }
