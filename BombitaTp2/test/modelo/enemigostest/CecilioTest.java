@@ -76,7 +76,35 @@ public class CecilioTest {
 		assertTrue(cecilio.estaMuerto() == true);
 	}
 	
-	//Agregar test de caminar (los agrego cuando modifique la clase movimiento usando la de translacion)
+	@Test
+	public void testCaminarHaciaLaDerecha() {
+		cecilio.caminar(derecha);
+		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaX() == 9);
+	}
+	
+	@Test
+	public void testCaminarHaciaLaIzquierda() {
+		cecilio.caminar(izquierda);
+		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaX() == 7);
+	}
+	
+	@Test
+	public void testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda() {
+		cecilio.caminar(derecha);
+		cecilio.caminar(izquierda);
+		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaX() == 8);
+	}
+	
+	@Test
+	public void testCaminarHaciaArriba() {
+		cecilio.caminar(arriba);
+		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaY() == 3);
+	}
+
+	public void testCaminarHaciaAbajo() {
+		cecilio.caminar(abajo);
+		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaY() == 1);
+	}
 	
 	@Test
 	public void testDaniar(){

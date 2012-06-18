@@ -77,7 +77,35 @@ public class AladoTest {
 		assertTrue(lopez.estaMuerto() == true);
 	}
 	
-	//Agregar test de caminar (los agrego cuando modifique la clase movimiento usando la de translacion)
+	@Test
+	public void testCaminarHaciaLaDerecha() {
+		lopez.caminar(derecha);
+		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaX() == 9);
+	}
+	
+	@Test
+	public void testCaminarHaciaLaIzquierda() {
+		lopez.caminar(izquierda);
+		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaX() == 7);
+	}
+	
+	@Test
+	public void testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda() {
+		lopez.caminar(derecha);
+		lopez.caminar(izquierda);
+		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaX() == 8);
+	}
+	
+	@Test
+	public void testCaminarHaciaArriba() {
+		lopez.caminar(arriba);
+		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaY() == 3);
+	}
+
+	public void testCaminarHaciaAbajo() {
+		lopez.caminar(abajo);
+		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaY() == 1);
+	}
 	
 	@Test
 	public void testDaniar(){
