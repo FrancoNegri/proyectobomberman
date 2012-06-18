@@ -20,14 +20,18 @@ public abstract class Personaje implements Daniable {
 	} //Esto lo corregiria con algunas constantes que tenga el mapa por ej 
 	  //Velocidad.Juego asi todos tienen la misma velocidad al empezar
 
-	public void caminar(Movimiento unMovimiento){
+	public void caminar(Movimiento unMovimiento) {
 		//if (casilleroAUnMovimiento.estaLibre()) {
 		unMovimiento.mover(this);
 		//else { no hace nada }
 	}
 	
-	public Coordenada obtenerCoordenadaXY(){
+	public Coordenada obtenerCoordenadaXY() {
 		return coordenadaXY;
+	}
+	
+	public void cambiarCoordenadaXY(Coordenada unaCoordenada) {
+		this.coordenadaXY = unaCoordenada;
 	}
 
 	public int obtenerVida() {
