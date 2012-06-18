@@ -5,7 +5,7 @@ import modelo.armamento.ToleTole;
 import modelo.coordenadas.Coordenada;
 
 public class ToleToleFactory extends ArmamentoFactory{
-	private int time = 0;
+	private int time = 5;
 	@Override
 	public Armamento crear(Coordenada coord) {
 		ToleTole tole = new ToleTole(coord,time);

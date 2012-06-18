@@ -12,7 +12,7 @@ public class ComunTest {
 
 	private Comun lopez;
 	private Coordenada coordenadaL;
-	private ArmamentoFactory proyectil;
+	private ProyectilFactory proyectil;
 	
 	@Before
 	public void setUp(){
@@ -28,7 +28,7 @@ public class ComunTest {
 	
 	@Test
 	public void testInicializarBomba() {
-		assertEquals(proyectil.getClass(),lopez.tirarArmamento().getClass());
+		assertEquals(ProyectilFactory.class,lopez.tirarArmamento().getClass());
 	}
 	
 

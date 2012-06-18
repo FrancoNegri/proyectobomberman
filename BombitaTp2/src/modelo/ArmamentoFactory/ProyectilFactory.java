@@ -1,20 +1,26 @@
 package modelo.ArmamentoFactory;
 
+import modelo.Translacion.Translacion;
 import modelo.armamento.Armamento;
 import modelo.armamento.Proyectil;
 import modelo.coordenadas.Coordenada;
 
-public class ProyectilFactory extends ArmamentoFactory {
+public class ProyectilFactory extends ArmamentoFactory{
 	private int time = 0;
-	@Override
-	public Armamento crear(Coordenada coord) {
-		Proyectil proyectil = new Proyectil(coord,null);//a solucionar
+	//tendria que ser algo asi
+	public Armamento crear(Coordenada coord,Translacion trans) {
+		Proyectil proyectil = new Proyectil(coord,trans);
 		return proyectil;
 	}
 
 	@Override
-	public void cambiarTime(int unTime) {
-		this.time = unTime;
+	public Armamento crear(Coordenada coord) {
+		return null;
+	}
+
+	@Override
+	public void cambiarTime(int tiempo) {
+		time = tiempo;
 	}
 
 	@Override

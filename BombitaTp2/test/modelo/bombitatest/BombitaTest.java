@@ -93,7 +93,7 @@ public class BombitaTest {
 	//Aca esta andando mal el resultado obtenido, habria que ver con el test unitario de obtenerTime
 	public void testObtenerTimerYCambiarTiempoRetraso() {
 		rodriguez.tomarArticulo(timer);
-		assertEquals(0,0, rodriguez.tirarArmamento().obtenerTime() );
+		assertEquals(0, rodriguez.tirarArmamento().obtenerTime(), 5 );
 	}
 	
 	@Test

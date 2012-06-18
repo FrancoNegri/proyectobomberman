@@ -2,6 +2,8 @@ package modelo.armamentoFactoryTest;
 
 import static org.junit.Assert.assertTrue;
 import modelo.ArmamentoFactory.ProyectilFactory;
+import modelo.Translacion.Translacion;
+import modelo.Translacion.TranslacionArriba;
 import modelo.armamento.Armamento;
 import modelo.armamento.Proyectil;
 import modelo.coordenadas.Coordenada;
@@ -14,15 +16,8 @@ public class ProyectilFactoryTest {
 	public void testQueChequeaLaContruccionDeUnProyectil(){
 		ProyectilFactory proyFac = new ProyectilFactory();
 		Coordenada coord = new Coordenada(1,1);
-		Armamento proyectil = proyFac.crear(coord);
+		Translacion trans = new TranslacionArriba(); 
+		Armamento proyectil = proyFac.crear(coord,trans);
 		assertTrue(proyectil.getClass() == Proyectil.class);
-	}
-	@Test
-	public void testQueCambiaElTiempoAUnProyectil(){
-		ProyectilFactory proyFac = new ProyectilFactory();
-		proyFac.cambiarTime(4);
-		Coordenada coord = new Coordenada(1,1);
-		Armamento proyectil = proyFac.crear(coord);
-		assertTrue(proyectil.obtenerTime()==4);
 	}
 }
