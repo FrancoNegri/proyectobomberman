@@ -1,21 +1,16 @@
 package modelo.ArmamentoFactory;
 
-import modelo.Translacion.Translacion;
 import modelo.armamento.Armamento;
 import modelo.armamento.Proyectil;
-import modelo.coordenadas.Coordenada;
+import modelo.personaje.Personaje;
 
 public class ProyectilFactory extends ArmamentoFactory{
 	private int time = 0;
-	//tendria que ser algo asi
-	public Armamento crear(Coordenada coord,Translacion trans) {
-		Proyectil proyectil = new Proyectil(coord,trans);
-		return proyectil;
-	}
-
 	@Override
-	public Armamento crear(Coordenada coord) {
-		return null;
+	public Armamento crear(Personaje pers) {
+		// nesesito pasarle alguna translacion para que se mueva de la manera correcta
+		Proyectil proyectil = new Proyectil(pers.obtenerCoordenadaXY(),null);
+		return proyectil;
 	}
 
 	@Override

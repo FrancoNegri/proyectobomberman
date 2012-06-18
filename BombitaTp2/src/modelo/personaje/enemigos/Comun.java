@@ -1,6 +1,5 @@
 package modelo.personaje.enemigos;
 
-import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.ArmamentoFactory.ProyectilFactory;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.Enemigo;
