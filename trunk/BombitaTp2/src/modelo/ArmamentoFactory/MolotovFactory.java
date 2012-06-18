@@ -1,13 +1,13 @@
 		package modelo.ArmamentoFactory;
 
 import modelo.armamento.*;
-import modelo.coordenadas.Coordenada;
+import modelo.personaje.Personaje;
 
 public class MolotovFactory extends ArmamentoFactory{
 
 	private int time = 1;
-	public Molotov crear(Coordenada coord) {
-		Molotov molotov = new Molotov(coord,time);
+	public Molotov crear(Personaje pers) {
+		Molotov molotov = new Molotov(pers.obtenerCoordenadaXY(),time);
 		return molotov;
 	}
 
