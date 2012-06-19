@@ -102,7 +102,6 @@ public class Casillero {
 	public void actualizar(){
 		Iterator<Personaje> lista;
 		Personaje personaje;
-		unArmamento.actualizar();
 		if(unObstaculo.Destruido()){
 			unObstaculo = null;
 		}
@@ -112,6 +111,10 @@ public class Casillero {
 			 if(personaje.estaMuerto()){
 				 lista.remove();
 			 }
+		if(unArmamento.exploto()){
+			unArmamento = null;
+		}
+		unArmamento.actualizar();
 		}
 	}
 }
