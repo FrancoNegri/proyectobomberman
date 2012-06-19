@@ -1,10 +1,12 @@
 package modelo.personaje;
 
-import java.util.LinkedList;
+import java.util.LinkedList; 
 
 import modelo.ArmamentoFactory.ArmamentoFactory;
+import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
 import modelo.personaje.movimiento.*;
 import modelo.danio.*;
 
@@ -25,10 +27,13 @@ public abstract class Personaje implements Daniable , Coordenable {
 		this.movimientos = movimiento.inicializarMovimientos();
 	} 
 
-	public void caminar(Movimiento unMovimiento) {
-		//if (casilleroAUnMovimiento.estaLibre()) {
+	public void caminar(Movimiento unMovimiento) { //Habria que pasarle el mapa como parametro tmb.
+		
+		//if (this.verificarA(unMovimiento,mapa).esCaminable()){ Lo pongo como comenario porque habria que
+															  // cambiar en todas las pruebas los parametros de caminar y no queria hacer cagadas
+															  // si les parece lo hago asi y cambio en los test tambien. 
 			unMovimiento.mover(this);
-			this.setUltimoMovimiento(unMovimiento); 
+			this.setUltimoMovimiento(unMovimiento);
 		//else { no hace nada }
 	}
 	
@@ -72,9 +77,8 @@ public abstract class Personaje implements Daniable , Coordenable {
 		
 	}
 	
-	public abstract void chocar();{
-		
-	}
+	public abstract void chocar();
+	
 	
 	public LinkedList<Movimiento> obtenerMovimientos() {
 		return movimientos;
@@ -91,5 +95,15 @@ public abstract class Personaje implements Daniable , Coordenable {
 	
 	public void setUltimoMovimiento(Movimiento unMovimiento){
 		this.movimiento = unMovimiento;
+	}
+	
+	public Casillero verificarA(Movimiento unMovimiento,Mapa mapa){
+		Coordenada coord;
+		Personaje aux;
+		aux = this;
+		unMovimiento.mover(aux);
+		coord = aux.obtenerCoordenadaXY();
+		return (mapa.obtenerCasillero(coord));	
+		
 	}
 }
