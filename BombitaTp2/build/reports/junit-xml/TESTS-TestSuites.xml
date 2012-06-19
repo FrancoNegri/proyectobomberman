@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Franco" id="0" name="ColicionadorTest" package="modelo.DetectorDeColisionesTest" tests="1" time="0.092" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="0" name="ColicionadorTest" package="modelo.DetectorDeColisionesTest" tests="1" time="0.1" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -158,14 +158,14 @@
 
       </properties>
 
-      <testcase classname="modelo.DetectorDeColisionesTest.ColicionadorTest" name="testQuePruevaUnaColicion" time="0.017" />
+      <testcase classname="modelo.DetectorDeColisionesTest.ColicionadorTest" name="testQuePruebaUnaColicion" time="0.02" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="1" name="TranslacionAbajoTest" package="modelo.Translaciontests" tests="1" time="0.249" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="1" name="TranslacionAbajoTest" package="modelo.Translaciontests" tests="1" time="0.24" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -323,14 +323,14 @@
 
       </properties>
 
-      <testcase classname="modelo.Translaciontests.TranslacionAbajoTest" name="TestQueChequeaLaAccion" time="0.243" />
+      <testcase classname="modelo.Translaciontests.TranslacionAbajoTest" name="TestQueChequeaLaAccion" time="0.24" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="2" name="TranslacionArribaTest" package="modelo.Translaciontests" tests="1" time="0.0070" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="2" name="TranslacionArribaTest" package="modelo.Translaciontests" tests="1" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -488,14 +488,14 @@
 
       </properties>
 
-      <testcase classname="modelo.Translaciontests.TranslacionArribaTest" name="TestQueChequeaLaAccion" time="0.0010" />
+      <testcase classname="modelo.Translaciontests.TranslacionArribaTest" name="TestQueChequeaLaAccion" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="3" name="TranslacionDerechaTest" package="modelo.Translaciontests" tests="1" time="0.0070" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="3" name="TranslacionDerechaTest" package="modelo.Translaciontests" tests="1" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -653,14 +653,14 @@
 
       </properties>
 
-      <testcase classname="modelo.Translaciontests.TranslacionDerechaTest" name="TestQueChequeaLaAccion" time="0.0010" />
+      <testcase classname="modelo.Translaciontests.TranslacionDerechaTest" name="TestQueChequeaLaAccion" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="4" name="TranslacionIzquierdaTest" package="modelo.Translaciontests" tests="1" time="0.0070" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="4" name="TranslacionIzquierdaTest" package="modelo.Translaciontests" tests="1" time="0.0" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -818,14 +818,14 @@
 
       </properties>
 
-      <testcase classname="modelo.Translaciontests.TranslacionIzquierdaTest" name="TestQueChequeaLaAccion" time="0.0010" />
+      <testcase classname="modelo.Translaciontests.TranslacionIzquierdaTest" name="TestQueChequeaLaAccion" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="5" name="MolovFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.026" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="5" name="MolovFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.03" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -983,7 +983,7 @@
 
       </properties>
 
-      <testcase classname="modelo.armamentoFactoryTest.MolovFactoryTest" name="testQueChequeaLaContruccionDeUnaMolotov" time="0.0010" />
+      <testcase classname="modelo.armamentoFactoryTest.MolovFactoryTest" name="testQueChequeaLaContruccionDeUnaMolotov" time="0.01" />
 
       <testcase classname="modelo.armamentoFactoryTest.MolovFactoryTest" name="testQueCambiaElTiempoAUnaMolotov" time="0.0" />
 
@@ -992,7 +992,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="6" name="ProyectilFactoryTest" package="modelo.armamentoFactoryTest" tests="1" time="0.0080" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="6" name="ProyectilFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -1150,14 +1150,16 @@
 
       </properties>
 
-      <testcase classname="modelo.armamentoFactoryTest.ProyectilFactoryTest" name="testQueChequeaLaContruccionDeUnProyectil" time="0.0010" />
+      <testcase classname="modelo.armamentoFactoryTest.ProyectilFactoryTest" name="testQueChequeaLaContruccionDeUnProyectil" time="0.0" />
+
+      <testcase classname="modelo.armamentoFactoryTest.ProyectilFactoryTest" name="testQueCambiaElTiempoAUnProyectil" time="0.01" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="7" name="ToleToleFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.011" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="7" name="ToleToleFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -1315,16 +1317,16 @@
 
       </properties>
 
-      <testcase classname="modelo.armamentoFactoryTest.ToleToleFactoryTest" name="testQueChequeaLaContruccionDeUnToleTole" time="0.0010" />
+      <testcase classname="modelo.armamentoFactoryTest.ToleToleFactoryTest" name="testQueChequeaLaContruccionDeUnToleTole" time="0.0" />
 
-      <testcase classname="modelo.armamentoFactoryTest.ToleToleFactoryTest" name="testQueCambiaElTiempoAUnProyectil" time="0.0010" />
+      <testcase classname="modelo.armamentoFactoryTest.ToleToleFactoryTest" name="testQueCambiaElTiempoAUnToleTole" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="8" name="HabanoTest" package="modelo.articulotest" tests="4" time="0.015" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="8" name="HabanoTest" package="modelo.articulotest" tests="4" time="0.02" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -1482,20 +1484,20 @@
 
       </properties>
 
-      <testcase classname="modelo.articulotest.HabanoTest" name="testUsar" time="0.0010" />
+      <testcase classname="modelo.articulotest.HabanoTest" name="testUsar" time="0.0" />
 
-      <testcase classname="modelo.articulotest.HabanoTest" name="testUsarconBombitaNull" time="0.0010" />
+      <testcase classname="modelo.articulotest.HabanoTest" name="testUsarconBombitaNull" time="0.0" />
 
       <testcase classname="modelo.articulotest.HabanoTest" name="testaumentarVelocidad" time="0.0" />
 
-      <testcase classname="modelo.articulotest.HabanoTest" name="testaumentarVelocidadsuperandoVelocidadMaxima" time="0.0010" />
+      <testcase classname="modelo.articulotest.HabanoTest" name="testaumentarVelocidadsuperandoVelocidadMaxima" time="0.01" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="9" name="ProyoctilTest" package="modelo.articulotest" tests="1" time="0.0090" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="9" name="ProyoctilTest" package="modelo.articulotest" tests="1" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -1653,14 +1655,14 @@
 
       </properties>
 
-      <testcase classname="modelo.articulotest.ProyoctilTest" name="testQueVerificaPonerUnProyectilEnUnMapaYloActualiza" time="0.0040" />
+      <testcase classname="modelo.articulotest.ProyoctilTest" name="testQueVerificaPonerUnProyectilEnUnMapaYloActualiza" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="10" name="TimerTest" package="modelo.articulotest" tests="4" time="0.039" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="10" name="TimerTest" package="modelo.articulotest" tests="4" time="0.03" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -1818,20 +1820,20 @@
 
       </properties>
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testUsar" time="0.024" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testUsar" time="0.03" />
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testUsarSinArmamento" time="0.0010" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testUsarSinArmamento" time="0.0" />
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testReducirTiempo" time="0.0010" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testReducirTiempo" time="0.0" />
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testReducirArmamentoConTiempoCero" time="0.0010" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testReducirArmamentoConTiempoCero" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="11" name="BloqueAceroTest" package="modelo.bloquetest" tests="5" time="0.042" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="11" name="BloqueAceroTest" package="modelo.bloquetest" tests="5" time="0.03" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -1989,7 +1991,7 @@
 
       </properties>
 
-      <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.0010" />
+      <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.0" />
 
       <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testConstructorErrorVida" time="0.0" />
 
@@ -2004,7 +2006,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="12" name="BloqueCementoTest" package="modelo.bloquetest" tests="5" time="0.012" timestamp="2012-06-18T00:53:46">
+  <testsuite errors="0" failures="0" hostname="Franco" id="12" name="BloqueCementoTest" package="modelo.bloquetest" tests="5" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -2162,7 +2164,7 @@
 
       </properties>
 
-      <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.0010" />
+      <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.0" />
 
       <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testConstructorErrorVida" time="0.0" />
 
@@ -2177,7 +2179,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="13" name="BloqueLadrilloTest" package="modelo.bloquetest" tests="5" time="0.013" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="13" name="BloqueLadrilloTest" package="modelo.bloquetest" tests="5" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -2335,13 +2337,13 @@
 
       </properties>
 
-      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.0010" />
+      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.0" />
 
       <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testConstructorErrorVida" time="0.0" />
 
       <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQuePruebaQuitarVida" time="0.0" />
 
-      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.0010" />
+      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.0" />
 
       <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testDaniar" time="0.0" />
 
@@ -2350,7 +2352,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="14" name="BombitaTest" package="modelo.bombitatest" tests="14" time="0.039" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="14" name="BombitaTest" package="modelo.bombitatest" tests="16" time="0.04" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -2510,9 +2512,9 @@
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testDaniar" time="0.0" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarVelocidad" time="0.0010" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarVelocidad" time="0.0" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarBomba" time="0.0010" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarBomba" time="0.0" />
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarVida" time="0.0" />
 
@@ -2520,28 +2522,32 @@
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarCoordenadaY" time="0.0" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testRestarVida" time="0.0010" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testRestarVida" time="0.0" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testSinVida" time="0.0010" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testSinVida" time="0.0" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerHabanoYAumentarVelocidad" time="0.0" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerHabanoYAumentarVelocidad" time="0.01" />
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testCambiarArmamentoInicialPorToleTole" time="0.0" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerToleToleYCambiarBomba" time="0.0010" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerToleToleYCambiarBomba" time="0.0" />
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerTimerYCambiarTiempoRetraso" time="0.0" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testCaminarHaciaLaDerecha" time="0.0010" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testCaminarHaciaLaDerecha" time="0.0" />
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testchocar" time="0.0" />
 
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.0" />
+
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testobtenerMovimientoRandom" time="0.0" />
+
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="15" name="CasilleroTest" package="modelo.casillerotest" tests="5" time="0.038" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="15" name="CasilleroTest" package="modelo.casillerotest" tests="5" time="0.03" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -2699,22 +2705,22 @@
 
       </properties>
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaCasillero" time="0.0060" />
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaCasillero" time="0.0" />
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaUnArmamento" time="0.0050" />
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaUnArmamento" time="0.01" />
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgreganPersonajes" time="0.0070" />
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgreganPersonajes" time="0.0" />
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaArticulable" time="0.0050" />
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaArticulable" time="0.01" />
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeActualizaTodo" time="0.0010" />
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeActualizaTodo" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="16" name="CoordenadasTest" package="modelo.coordenadastest" tests="4" time="0.013" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="16" name="CoordenadasTest" package="modelo.coordenadastest" tests="4" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -2872,7 +2878,7 @@
 
       </properties>
 
-      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQueVerificaSeteo" time="0.0010" />
+      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQueVerificaSeteo" time="0.0" />
 
       <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaErrorAlSetearMal" time="0.0" />
 
@@ -2885,7 +2891,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="17" name="TranslacionTest" package="modelo.coordenadastest" tests="1" time="0.0050" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="17" name="TranslacionTest" package="modelo.coordenadastest" tests="1" time="0.0" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -3050,7 +3056,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="18" name="AladoTest" package="modelo.enemigostest" tests="9" time="0.019" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="18" name="AladoTest" package="modelo.enemigostest" tests="15" time="0.03" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -3212,26 +3218,38 @@
 
       <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVelocidad" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarBomba" time="0.0010" />
+      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarBomba" time="0.0" />
 
       <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVida" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaX" time="0.0010" />
+      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaX" time="0.0" />
 
       <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaY" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.AladoTest" name="testRestarVida" time="0.0010" />
+      <testcase classname="modelo.enemigostest.AladoTest" name="testRestarVida" time="0.0" />
 
       <testcase classname="modelo.enemigostest.AladoTest" name="testSinVida" time="0.0" />
 
+      <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarHaciaLaDerecha" time="0.0" />
+
       <testcase classname="modelo.enemigostest.AladoTest" name="testchocar" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testobtenerMovimientoRandom" time="0.01" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarHaciaLaIzquierda" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarHaciaArriba" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="19" name="CecilioTest" package="modelo.enemigostest" tests="9" time="0.019" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="19" name="CecilioTest" package="modelo.enemigostest" tests="15" time="0.03" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -3391,11 +3409,11 @@
 
       <testcase classname="modelo.enemigostest.CecilioTest" name="testDaniar" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVelocidad" time="0.0010" />
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVelocidad" time="0.0" />
 
       <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarBomba" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVida" time="0.0010" />
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVida" time="0.0" />
 
       <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarCoordenadaX" time="0.0" />
 
@@ -3405,14 +3423,26 @@
 
       <testcase classname="modelo.enemigostest.CecilioTest" name="testSinVida" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testchocar" time="0.0010" />
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarHaciaLaDerecha" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testchocar" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testobtenerMovimientoRandom" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarHaciaLaIzquierda" time="0.01" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarHaciaArriba" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="20" name="ComunTest" package="modelo.enemigostest" tests="9" time="0.019" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="20" name="ComunTest" package="modelo.enemigostest" tests="16" time="0.03" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -3572,28 +3602,42 @@
 
       <testcase classname="modelo.enemigostest.ComunTest" name="testDaniar" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVelocidad" time="0.0010" />
+      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVelocidad" time="0.0" />
 
       <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarBomba" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVida" time="0.0010" />
+      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVida" time="0.0" />
 
       <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaX" time="0.0" />
 
       <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaY" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.ComunTest" name="testRestarVida" time="0.0010" />
+      <testcase classname="modelo.enemigostest.ComunTest" name="testRestarVida" time="0.0" />
 
       <testcase classname="modelo.enemigostest.ComunTest" name="testSinVida" time="0.0" />
 
-      <testcase classname="modelo.enemigostest.ComunTest" name="testchocar" time="0.0010" />
+      <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarHaciaLaDerecha" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarHaciaAbajo" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testchocar" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testobtenerMovimientoRandom" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarHaciaLaIzquierda" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda" time="0.0" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarHaciaArriba" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="21" name="MapaTest" package="modelo.mapatest" tests="8" time="0.036" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="21" name="MapaTest" package="modelo.mapatest" tests="8" time="0.03" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -3751,28 +3795,28 @@
 
       </properties>
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testConstructor" time="0.0010" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testConstructor" time="0.0" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testConstructorTamanioInvalido" time="0.0010" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testConstructorTamanioInvalido" time="0.0" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerCasillero" time="0.0010" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerCasillero" time="0.0" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerCasilleroTamanioFueraDeRango" time="0.0010" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerCasilleroTamanioFueraDeRango" time="0.0" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerPersonajeDelMapa" time="0.0010" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerPersonajeDelMapa" time="0.0" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerObstaculoDelMapa" time="0.0060" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerObstaculoDelMapa" time="0.01" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerArmamentoDelMapa" time="0.0010" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerArmamentoDelMapa" time="0.0" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerArticuloDelMapa" time="0.0050" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerArticuloDelMapa" time="0.01" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="22" name="TableroTest" package="modelo.mapatest" tests="7" time="0.02" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="22" name="TableroTest" package="modelo.mapatest" tests="7" time="0.01" timestamp="2012-06-19T02:49:03">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -3932,15 +3976,15 @@
 
       <testcase classname="modelo.mapatest.TableroTest" name="testConstructor" time="0.0" />
 
-      <testcase classname="modelo.mapatest.TableroTest" name="testConstructorconTamanioInvalido" time="0.0010" />
+      <testcase classname="modelo.mapatest.TableroTest" name="testConstructorconTamanioInvalido" time="0.0" />
 
       <testcase classname="modelo.mapatest.TableroTest" name="testObtenercasillero" time="0.0" />
 
-      <testcase classname="modelo.mapatest.TableroTest" name="testObtenercasilleroTamaniofueradeRango" time="0.0010" />
+      <testcase classname="modelo.mapatest.TableroTest" name="testObtenercasilleroTamaniofueradeRango" time="0.0" />
 
-      <testcase classname="modelo.mapatest.TableroTest" name="testCambiarcasillero" time="0.0010" />
+      <testcase classname="modelo.mapatest.TableroTest" name="testCambiarcasillero" time="0.0" />
 
-      <testcase classname="modelo.mapatest.TableroTest" name="testCambiarcasilleroTamaniofueradeRango" time="0.0010" />
+      <testcase classname="modelo.mapatest.TableroTest" name="testCambiarcasilleroTamaniofueradeRango" time="0.0" />
 
       <testcase classname="modelo.mapatest.TableroTest" name="testObtenerTamanio" time="0.0" />
 
@@ -3949,7 +3993,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="23" name="MovimientoPersonajeTest" package="modelo.movimientotest" tests="6" time="0.016" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="23" name="MovimientoPersonajeTest" package="modelo.movimientotest" tests="7" time="0.02" timestamp="2012-06-19T02:49:04">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -4106,6 +4150,8 @@
           <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
 
       </properties>
+
+      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.0" />
 
       <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverDerecha" time="0.0" />
 
@@ -4124,7 +4170,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Franco" id="24" name="ondaEspansivaTest" package="modelo.ondaexpantest" tests="3" time="0.02" timestamp="2012-06-18T00:53:47">
+  <testsuite errors="0" failures="0" hostname="Franco" id="24" name="ondaEspansivaTest" package="modelo.ondaexpantest" tests="3" time="0.03" timestamp="2012-06-19T02:49:04">
       <properties>
           <property name="java.vendor" value="Sun Microsystems Inc." />
 
@@ -4282,11 +4328,11 @@
 
       </properties>
 
-      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombaConMocks" time="0.0080" />
+      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombaConMocks" time="0.02" />
 
-      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnElMedio" time="0.0010" />
+      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnElMedio" time="0.0" />
 
-      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnUnLateral" time="0.0010" />
+      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnUnLateral" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
