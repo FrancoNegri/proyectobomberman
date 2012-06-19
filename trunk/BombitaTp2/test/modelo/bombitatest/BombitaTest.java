@@ -35,13 +35,13 @@ public class BombitaTest {
 		izquierda = new Izquierda();
 		arriba = new Arriba();
 		abajo = new Abajo();
-		toleTole = new ToleTole(coordenada, 0);
+		toleTole = new ToleTole(coordenada,0);
 		movimiento = new Movimiento();
 	}
 
 	@Test
 	public void testInicializarVelocidad() {
-		assertTrue(rodriguez.getVelocidad() == 5);
+		assertTrue(rodriguez.getVelocidad() == 10);
 	}
 
 	@Test
@@ -52,7 +52,7 @@ public class BombitaTest {
 
 	@Test
 	public void testInicializarVida() {
-		assertTrue(rodriguez.obtenerVida() == 100);
+		assertTrue(rodriguez.obtenerVida() == 10);
 	}
 
 	@Test
@@ -67,8 +67,8 @@ public class BombitaTest {
 
 	@Test
 	public void testRestarVida() {
-		rodriguez.restarVida(10);
-		assertTrue(rodriguez.obtenerVida() == 90);
+		rodriguez.restarVida(1);
+		assertTrue(rodriguez.obtenerVida() == 9);
 	}
 
 	@Test
@@ -80,7 +80,7 @@ public class BombitaTest {
 	@Test
 	public void testObtenerHabanoYAumentarVelocidad() {
 		rodriguez.tomarArticulo(habano);
-		assertTrue(rodriguez.getVelocidad() == 15);
+		assertTrue(rodriguez.getVelocidad() == 20);
 	}
 
 	@Test
@@ -116,8 +116,8 @@ public class BombitaTest {
 
 	@Test
 	public void testDaniar() {
-		this.rodriguez.Daniar(20);
-		assertTrue(rodriguez.obtenerVida() == 80);
+		this.rodriguez.Daniar(2);
+		assertTrue(rodriguez.obtenerVida() == 8);
 	}
 
 	@Test

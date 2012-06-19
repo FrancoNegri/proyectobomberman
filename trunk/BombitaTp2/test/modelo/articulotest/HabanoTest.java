@@ -20,7 +20,7 @@ public class HabanoTest {
 		this.rodriguez = new Bombita(coordenada);
 		Coordenada coord = mock(Coordenada.class);
 		this.unHabano = new Habano(coord);
-		this.VelocidadPrueba = 15;
+		this.VelocidadPrueba = 20;
 		
 	}
 	@Test

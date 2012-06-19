@@ -12,7 +12,7 @@ import org.junit.Test;
 public class ColicionadorTest {
 
 	@Test
-	public void testQuePruevaUnaColicion(){
+	public void testQuePruebaUnaColicion(){
 		Colisionador coli = new Colisionador();
 		Casillero miCasi = new Casillero();
 		Coordenada miCord = new Coordenada(1,1);
@@ -21,7 +21,7 @@ public class ColicionadorTest {
 		miCasi.agregar(enemigo);
 		miCasi.agregar(bomb);
 		coli.Colicionar(miCasi.obtenerPersonajes());
-		assertTrue(enemigo.obtenerVida() == 99);
+		assertTrue(enemigo.obtenerVida() == 9);
 		assertTrue(bomb.obtenerVida() == 0);
 	}
 }

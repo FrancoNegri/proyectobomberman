@@ -39,7 +39,7 @@ public class ComunTest {
 	
 	@Test
 	public void testInicializarVelocidad() {
-		assertTrue(lopez.getVelocidad() == 200);
+		assertTrue(lopez.getVelocidad() == 20);
 	}
 	
 	@Test
@@ -50,7 +50,7 @@ public class ComunTest {
 
 	@Test
 	public void testInicializarVida() {
-		assertTrue(lopez.obtenerVida() == 100);
+		assertTrue(lopez.obtenerVida() == 10);
 	}
 	
 	@Test
@@ -65,8 +65,8 @@ public class ComunTest {
 	
 	@Test
 	public void testRestarVida() {
-		lopez.restarVida(10);
-		assertTrue(lopez.obtenerVida() == 90);
+		lopez.restarVida(1);
+		assertTrue(lopez.obtenerVida() == 9);
 	}
 	
 	@Test
@@ -108,14 +108,14 @@ public class ComunTest {
 	
 	@Test
 	public void testDaniar(){
-		this.lopez.Daniar(20);
-		assertTrue(lopez.obtenerVida() == 80);
+		this.lopez.Daniar(2);
+		assertTrue(lopez.obtenerVida() == 8);
 	}
 	
 	@Test
 	public void testchocar(){
 		lopez.chocar();
-		assertTrue(lopez.obtenerVida() == 99);
+		assertTrue(lopez.obtenerVida() == 9);
 	}
 	
 	@Test

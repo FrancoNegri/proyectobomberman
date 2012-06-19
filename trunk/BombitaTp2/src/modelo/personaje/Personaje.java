@@ -19,8 +19,6 @@ public abstract class Personaje implements Daniable {
 
 	public Personaje(Coordenada unaCoordenada) {
 		this.coordenadaXY = unaCoordenada;
-		this.velocidad = 100;
-		this.vida = 100;
 		this.movimientos = new LinkedList<Movimiento>();
 		this.movimiento = new Movimiento();
 		this.movimientos = movimiento.inicializarMovimientos();

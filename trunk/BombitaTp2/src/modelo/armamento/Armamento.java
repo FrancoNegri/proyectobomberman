@@ -12,10 +12,10 @@ public abstract class Armamento implements Armamentable {
 	protected int radio;
 	
 	public Armamento(Coordenada unaCoordenada){
-		coordenada = unaCoordenada;
-		time = 0;
-		danio = 0;
-		radio = 0;
+		this.coordenada = unaCoordenada;
+		this.time = 0;
+		this.danio = 0;
+		this.radio = 0;
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
