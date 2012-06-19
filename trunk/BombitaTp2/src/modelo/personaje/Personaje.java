@@ -26,7 +26,7 @@ public abstract class Personaje implements Daniable {
 
 	public void caminar(Movimiento unMovimiento) {
 		//if (casilleroAUnMovimiento.estaLibre()) {
-		unMovimiento.mover(this);
+			unMovimiento.mover(this);
 		//else { no hace nada }
 	}
 	
