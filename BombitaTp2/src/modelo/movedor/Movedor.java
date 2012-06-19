@@ -1,12 +1,13 @@
 package modelo.movedor;
 
+import modelo.Translacion.Translacion;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 
 public class Movedor {
 	
-	public void mover(Mapa mapa,Coordenada unaCoordenada,Coordenable coord){
+	public void mover(Mapa mapa,Translacion Trans,Coordenable coord){
 		
 		
 	}
