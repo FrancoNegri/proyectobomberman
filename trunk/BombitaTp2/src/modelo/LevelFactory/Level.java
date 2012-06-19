@@ -61,6 +61,7 @@ public class Level implements Runnable
 		while(it.hasNext()){
 			Personaje pers = it.next();
 			//pers.actualizar();
+			/* tendria que hacer que los personajes pongan bombas y caminin*/
 			if(pers.estaMuerto()){
 				it.remove();
 			}
