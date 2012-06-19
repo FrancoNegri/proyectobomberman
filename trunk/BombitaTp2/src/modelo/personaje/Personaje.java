@@ -27,6 +27,7 @@ public abstract class Personaje implements Daniable {
 	public void caminar(Movimiento unMovimiento) {
 		//if (casilleroAUnMovimiento.estaLibre()) {
 			unMovimiento.mover(this);
+			this.setUltimoMovimiento(unMovimiento); 
 		//else { no hace nada }
 	}
 	
@@ -70,7 +71,9 @@ public abstract class Personaje implements Daniable {
 		
 	}
 	
-	public abstract void chocar();
+	public abstract void chocar();{
+		
+	}
 	
 	public LinkedList<Movimiento> obtenerMovimientos() {
 		return movimientos;
@@ -78,6 +81,14 @@ public abstract class Personaje implements Daniable {
 	
 	public Movimiento obtenerDireccionDeMovimiento() {
 		int posicion = movimiento.obtenerNumeroRandom();
-		return (movimientos.get(posicion-1));
+		return movimientos.get(posicion-1);
+	}
+	
+	public Movimiento getUltimoMovimiento(){
+		return this.movimiento;	
+	}
+	
+	public void setUltimoMovimiento(Movimiento unMovimiento){
+		this.movimiento = unMovimiento;
 	}
 }
