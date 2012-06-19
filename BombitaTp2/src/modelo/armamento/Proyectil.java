@@ -2,16 +2,17 @@ package modelo.armamento;
 
 import modelo.Translacion.Translacion;
 import modelo.coordenadas.Coordenada;
+import modelo.constantesjuego.ConstantesJuego;
 
 public class Proyectil extends Armamento {
 	
 	private Translacion transladador;//para que lado se va a mover??? tendria que consultarselo al personaje
-	final int distancia = 4;
+	private int distancia = ConstantesJuego.distancia_proyectil;
 	
 	public Proyectil(Coordenada coordenada,int unTime) {
 		super(coordenada);
-		this.danio = 10;
-		time = unTime;
+		this.danio = ConstantesJuego.danio_proyectil;
+		this.time = unTime;
 		
 	}
 	public void actualizar(){

@@ -8,7 +8,8 @@ public abstract class Obstaculo implements Daniable{
 	Coordenada cordenadaObsaculo;
 	int vida;
 	
-	public Obstaculo(int vidaTotal,Coordenada unacoordenada){
+	public Obstaculo(int vidaTotal,Coordenada unacoordenada){ //No seria mejor que siempre se cree con la misma vida 
+															//y no pasarsela por parametro? Fede
 		if(vidaTotal <= 0)
 			throw new VidaInvalidaError();
 		this.vida = vidaTotal;

@@ -3,6 +3,7 @@ package modelo.personaje;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.articulo.Articulable;
+import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 
 public class Bombita extends Personaje {
@@ -10,8 +11,8 @@ public class Bombita extends Personaje {
 	
 	public Bombita(Coordenada unaCoordenada) {
 		super(unaCoordenada);
-		this.velocidad = 5;
-		this.vida = 100;
+		this.velocidad = ConstantesJuego.velocidad_bombita;
+		this.vida = ConstantesJuego.velocidad_bombita;
 		this.CreadorDeBombas = new MolotovFactory();
 	}
 	

@@ -40,7 +40,7 @@ public class CecilioTest {
 	
 	@Test
 	public void testInicializarVelocidad() {
-		assertTrue(cecilio.getVelocidad() == 100);
+		assertTrue(cecilio.getVelocidad() == 10);
 	}
 	
 	@Test
@@ -51,7 +51,7 @@ public class CecilioTest {
 
 	@Test
 	public void testInicializarVida() {
-		assertTrue(cecilio.obtenerVida() == 100);
+		assertTrue(cecilio.obtenerVida() == 5);
 	}
 	
 	@Test
@@ -66,8 +66,8 @@ public class CecilioTest {
 	
 	@Test
 	public void testRestarVida() {
-		cecilio.restarVida(10);
-		assertTrue(cecilio.obtenerVida() == 90);
+		cecilio.restarVida(1);
+		assertTrue(cecilio.obtenerVida() == 4);
 	}
 	
 	@Test
@@ -108,14 +108,14 @@ public class CecilioTest {
 	
 	@Test
 	public void testDaniar(){
-		this.cecilio.Daniar(20);
-		assertTrue(cecilio.obtenerVida() == 80);
+		this.cecilio.Daniar(2);
+		assertTrue(cecilio.obtenerVida() == 3);
 	}
 	
 	@Test
 	public void testchocar(){
 		cecilio.chocar();
-		assertTrue(cecilio.obtenerVida() == 99);
+		assertTrue(cecilio.obtenerVida() == 4);
 	}
 	
 	@Test
