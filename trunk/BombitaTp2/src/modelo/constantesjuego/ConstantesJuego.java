@@ -13,6 +13,7 @@ public class ConstantesJuego {
 	public static final int vida_lopez_cecilio = 5;
 	public static final int resistencia_bloque_cemento = 10;
 	public static final int resistencia_bloque_ladrillo = 5;
+	public static final int resistencia_bloque_Acero = 1000;
 	public static final int radio_molotov = 3;
 	public static final int radio_toletole = 6;
 	public static final int danio_molotov = 5;

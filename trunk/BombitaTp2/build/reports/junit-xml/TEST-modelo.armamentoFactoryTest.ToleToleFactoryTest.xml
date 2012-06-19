@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Franco" name="modelo.armamentoFactoryTest.ToleToleFactoryTest" tests="2" time="0.01" timestamp="2012-06-19T02:49:03">
+<testsuite errors="0" failures="0" hostname="Franco" name="modelo.armamentoFactoryTest.ToleToleFactoryTest" tests="2" time="0.01" timestamp="2012-06-19T12:09:34">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
