@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Franco" name="modelo.ondaexpantest.ondaEspansivaTest" tests="3" time="0.03" timestamp="2012-06-19T02:49:04">
+<testsuite errors="0" failures="0" hostname="Franco" name="modelo.ondaexpantest.ondaEspansivaTest" tests="3" time="0.02" timestamp="2012-06-19T12:09:35">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -80,7 +80,7 @@
     <property name="java.specification.version" value="1.6" />
     <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
   </properties>
-  <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombaConMocks" time="0.02" />
+  <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombaConMocks" time="0.01" />
   <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnElMedio" time="0.0" />
   <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnUnLateral" time="0.0" />
   <system-out><![CDATA[]]></system-out>

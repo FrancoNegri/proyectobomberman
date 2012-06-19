@@ -14,32 +14,20 @@ public class BloqueLadrilloTest {
 	Coordenada coord = mock(Coordenada.class);
 	@Test
 	public void testQueChequeaQueElObjetoSeCreeCorrectamente() {
-		Obstaculo Bloque = new BloqueLadrillo(10,coord);
-		assertEquals(Bloque.vidaRestante(), 10);
-	}
-
-	@Test
-	public void testConstructorErrorVida() {
-		try {
-			Obstaculo Bloque = new BloqueLadrillo(-1,coord);
-			Bloque.Destruido();//para que no moleste
-		} catch (VidaInvalidaError e) {
-			assertTrue(true);
-			return;
-		}
-		assertTrue(false);
+		Obstaculo Bloque = new BloqueLadrillo(coord);
+		assertEquals(Bloque.vidaRestante(), 5);
 	}
 
 	@Test
 	public void testQuePruebaQuitarVida() {
-		Obstaculo Bloque = new BloqueLadrillo(10,coord);
+		Obstaculo Bloque = new BloqueLadrillo(coord);
 		Bloque.QuitarVida(5);
-		assertTrue(Bloque.vidaRestante() == 5);
+		assertTrue(Bloque.vidaRestante() == 0);
 	}
 
 	@Test
 	public void testQuePruebaQueUnBloqueEsDestruido() {
-		Obstaculo Bloque = new BloqueLadrillo(10,coord);
+		Obstaculo Bloque = new BloqueLadrillo(coord);
 		Bloque.QuitarVida(10);
 		assertTrue(Bloque.Destruido());
 	}
@@ -49,9 +37,9 @@ public class BloqueLadrilloTest {
 	
 	public void testDaniar(){
 		
-		Obstaculo Bloque = new BloqueLadrillo(50,coord);
+		Obstaculo Bloque = new BloqueLadrillo(coord);
 		Bloque.Daniar(25);
-		assertTrue(Bloque.vidaRestante()==25);
+		assertTrue(Bloque.vidaRestante()<0);
 		
 	}
 	

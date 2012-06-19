@@ -14,36 +14,22 @@ public class BloqueAceroTest {
 	public void testQueChequeaQueElObjetoSeCreeCorrectamente()
 	{
 		
-		Obstaculo Bloque = new BloqueAcero(10,coord);
-		assertEquals(Bloque.vidaRestante(), 10);
+		Obstaculo Bloque = new BloqueAcero(coord);
+		assertEquals(Bloque.vidaRestante(), 1000);
 	}
 	
 	@Test
-	public void testConstructorErrorVida()
-	{
-		try
-		{
-		Obstaculo Bloque = new BloqueAcero(-1,coord);
-		Bloque.Destruido();
-		}catch(VidaInvalidaError e)
-		{
-			assertTrue(true);
-			return;
-		}
-		assertTrue(false);
-	}
-	@Test
 	public void testQuePruebaQuitarVida()
 	{
-		Obstaculo Bloque = new BloqueAcero(10,coord);
+		Obstaculo Bloque = new BloqueAcero(coord);
 		Bloque.QuitarVida(5);
-		assertTrue(Bloque.vidaRestante() == 5);
+		assertTrue(Bloque.vidaRestante() == 995);
 	}
 	@Test
 	public void testQuePruebaQueUnBloqueEsDestruido()
 	{
-		Obstaculo Bloque = new BloqueAcero(10,coord);
-		Bloque.QuitarVida(10);
+		Obstaculo Bloque = new BloqueAcero(coord);
+		Bloque.QuitarVida(1000);
 		assertTrue(Bloque.Destruido());
 	}
 	
@@ -51,10 +37,9 @@ public class BloqueAceroTest {
 	
 	public void testDaniar(){
 		
-		Obstaculo Bloque = new BloqueAcero(50,coord);
+		Obstaculo Bloque = new BloqueAcero(coord);
 		Bloque.Daniar(25);
-		assertTrue(Bloque.vidaRestante()==25);
-		
+		assertTrue(Bloque.vidaRestante()==975);
 	}
 	
 	
