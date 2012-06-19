@@ -1,10 +1,11 @@
 package modelo.armamento;
 
+import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.ondaexpansiva.OndaExpansiva;
 
-public abstract class Armamento implements Armamentable {
+public abstract class Armamento implements Armamentable , Coordenable {
 	
 	protected Coordenada coordenada;
 	protected float time;

@@ -1,10 +1,11 @@
 package modelo.obstaculos;
 
 import modelo.errores.VidaInvalidaError;
+import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.danio.*;
 
-public abstract class Obstaculo implements Daniable{
+public abstract class Obstaculo implements Daniable,Coordenable{
 	Coordenada cordenadaObsaculo;
 	int vida;
 	
