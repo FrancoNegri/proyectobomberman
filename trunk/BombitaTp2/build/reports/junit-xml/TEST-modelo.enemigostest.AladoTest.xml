@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Franco" name="modelo.enemigostest.AladoTest" tests="9" time="0.019" timestamp="2012-06-18T00:53:47">
+<testsuite errors="0" failures="0" hostname="Franco" name="modelo.enemigostest.AladoTest" tests="15" time="0.03" timestamp="2012-06-19T02:49:03">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -82,13 +82,19 @@
   </properties>
   <testcase classname="modelo.enemigostest.AladoTest" name="testDaniar" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVelocidad" time="0.0" />
-  <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarBomba" time="0.0010" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarBomba" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVida" time="0.0" />
-  <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaX" time="0.0010" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaX" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaY" time="0.0" />
-  <testcase classname="modelo.enemigostest.AladoTest" name="testRestarVida" time="0.0010" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testRestarVida" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testSinVida" time="0.0" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarHaciaLaDerecha" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testchocar" time="0.0" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.0" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testobtenerMovimientoRandom" time="0.01" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarHaciaLaIzquierda" time="0.0" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda" time="0.0" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarHaciaArriba" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
