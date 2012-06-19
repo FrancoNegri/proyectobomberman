@@ -24,7 +24,7 @@ public class Colisionador {
 			Iterator <Personaje>iter = personajes.iterator();
 			Personaje pers;
 			while(iter.hasNext()){
-				//if (colicionProducida(pers1, pers2) == true) , donde pers2 seria el iter.next(). Fede
+				//por polimorfismo sabe que hacer
 				pers = iter.next();
 				pers.chocar();
 			}
