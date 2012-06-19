@@ -3,12 +3,13 @@ package modelo.personaje;
 import java.util.LinkedList;
 
 import modelo.ArmamentoFactory.ArmamentoFactory;
+import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.movimiento.*;
 import modelo.danio.*;
 
 
-public abstract class Personaje implements Daniable {
+public abstract class Personaje implements Daniable , Coordenable {
 
 	protected ArmamentoFactory CreadorDeBombas;
 	protected float velocidad;
