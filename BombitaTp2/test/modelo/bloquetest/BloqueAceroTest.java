@@ -1,7 +1,6 @@
 package modelo.bloquetest;
 
 import modelo.coordenadas.Coordenada;
-import modelo.errores.VidaInvalidaError;
 import modelo.obstaculos.*;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;

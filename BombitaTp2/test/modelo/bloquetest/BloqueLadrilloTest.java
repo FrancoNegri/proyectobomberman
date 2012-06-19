@@ -6,7 +6,6 @@ import modelo.obstaculos.Obstaculo;
 import org.junit.Test;
 
 import modelo.coordenadas.Coordenada;
-import modelo.errores.VidaInvalidaError;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 

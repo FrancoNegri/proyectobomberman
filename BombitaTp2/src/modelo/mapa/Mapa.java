@@ -16,7 +16,6 @@ public class Mapa {
 	}
 	
 	private void agregarCasillero(Coordenada coord, Casillero unCasillero) {
-
 		this.TableroJuego.cambiarCasillero(coord, unCasillero);
 
 	}
@@ -66,11 +65,17 @@ public class Mapa {
 	}
 
 	public void actualizarMapa() {
-		//Mientras Bombita este vivo,
-		//Hacer un for y borrar todos los personajes muertos
-	}
-
-	public void eliminarPersonaje(Personaje unPersonaje) {
-		// Eliminar un personaje cuando haya muerto
+		int j,k;
+		for(j=0;j == TableroJuego.obtenerTamanio(); j++){
+			for(k=0;k == TableroJuego.obtenerTamanio(); k++){
+				Coordenada unaCoordenada = new Coordenada(j,k);
+				Casillero casillero = TableroJuego.obtenerCasillero(unaCoordenada);
+				casillero.actualizar();
+				Armamento arma = casillero.obtenerArmamento();
+				if(arma.exploto()){
+					arma.explotar(unaCoordenada, this);
+				}
+			}
+		}
 	}	
 }
