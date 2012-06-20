@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="Franco" name="modelo.enemigostest.ComunTest" tests="11" time="0.082" timestamp="2012-06-20T14:46:36">
+<testsuite errors="0" failures="0" hostname="Franco" name="modelo.enemigostest.ComunTest" tests="11" time="0.044" timestamp="2012-06-20T15:15:08">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -80,38 +80,17 @@
     <property name="java.specification.version" value="1.6" />
     <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
   </properties>
-  <testcase classname="modelo.enemigostest.ComunTest" name="testDaniar" time="0.0" />
+  <testcase classname="modelo.enemigostest.ComunTest" name="testDaniar" time="0.0010" />
   <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVelocidad" time="0.0" />
-  <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarBomba" time="0.0010" />
-  <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVida" time="0.0010" />
-  <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaX" time="0.0010" />
+  <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarBomba" time="0.0" />
+  <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVida" time="0.0" />
+  <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaX" time="0.0" />
   <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaY" time="0.0010" />
   <testcase classname="modelo.enemigostest.ComunTest" name="testRestarVida" time="0.0010" />
   <testcase classname="modelo.enemigostest.ComunTest" name="testSinVida" time="0.0" />
   <testcase classname="modelo.enemigostest.ComunTest" name="testchocar" time="0.0" />
-  <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarRandom" time="0.043" />
-  <testcase classname="modelo.enemigostest.ComunTest" name="testEnemigoAtacar" time="0.013">
-    <error message="
-Wanted but not invoked:
-mapa.agregarAlMapa(&lt;any&gt;);
--&gt; at modelo.enemigostest.ComunTest.testEnemigoAtacar(ComunTest.java:88)
-
-However, there were other interactions with this mock:
--&gt; at modelo.personaje.Personaje.caminar(Personaje.java:30)
--&gt; at modelo.personaje.Personaje.caminar(Personaje.java:32)
--&gt; at modelo.personaje.Personaje.caminar(Personaje.java:35)
-" type="org.mockito.exceptions.verification.WantedButNotInvoked">Wanted but not invoked:
-mapa.agregarAlMapa(&lt;any&gt;);
--&gt; at modelo.enemigostest.ComunTest.testEnemigoAtacar(ComunTest.java:88)
-
-However, there were other interactions with this mock:
--&gt; at modelo.personaje.Personaje.caminar(Personaje.java:30)
--&gt; at modelo.personaje.Personaje.caminar(Personaje.java:32)
--&gt; at modelo.personaje.Personaje.caminar(Personaje.java:35)
-
-	at modelo.enemigostest.ComunTest.testEnemigoAtacar(ComunTest.java:88)
-</error>
-  </testcase>
+  <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarRandom" time="0.017" />
+  <testcase classname="modelo.enemigostest.ComunTest" name="testEnemigoAtacar" time="0.0020" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

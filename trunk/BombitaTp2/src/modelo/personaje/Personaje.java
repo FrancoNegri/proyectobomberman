@@ -3,7 +3,6 @@ package modelo.personaje;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
-import modelo.armamento.Armamento;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
