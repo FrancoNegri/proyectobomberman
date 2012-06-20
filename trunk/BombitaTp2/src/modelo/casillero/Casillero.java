@@ -13,7 +13,6 @@ import modelo.personaje.Personaje;
 
 public class Casillero {
 	LinkedList <Personaje> personajes;
-	String identificador;
 	Armamento unArmamento;
 	Articulable unArticulo;
 	Obstaculo unObstaculo;
@@ -21,17 +20,6 @@ public class Casillero {
 	
 	public Casillero()
 	{
-		this.identificador = "noName";
-		this.personajes = new LinkedList<Personaje>() ;
-		this.unArmamento = null;
-		this.unArticulo = null;
-		this.unObstaculo = null;
-		
-	}
-	
-	public Casillero(String identificador){
-		
-		this.identificador = identificador;
 		this.personajes = new LinkedList<Personaje>() ;
 		this.unArmamento = null;
 		this.unArticulo = null;
@@ -67,13 +55,6 @@ public class Casillero {
 		return this.personajes;
 	}
 	
-	public void cambiarIdentificador(String Identificador){
-		this.identificador = Identificador;
-	}
-	
-	public String obtenerIdentificador(){
-		return this.identificador;
-	}
 	public Armamento obtenerArmamento(){
 		return this.unArmamento;
 	}
