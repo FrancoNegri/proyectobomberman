@@ -8,9 +8,9 @@ import modelo.danio.*;
 public abstract class Obstaculo implements Daniable,Coordenable{
 	Coordenada cordenadaObsaculo;
 	int vida;
+	protected int puntaje;
 	
-	public Obstaculo(int vidaTotal,Coordenada unacoordenada){ //No seria mejor que siempre se cree con la misma vida 
-															//y no pasarsela por parametro? Fed
+	public Obstaculo(int vidaTotal,Coordenada unacoordenada){ 
 		this.vida = vidaTotal;
 		cordenadaObsaculo = unacoordenada;
 	}
@@ -44,4 +44,9 @@ public abstract class Obstaculo implements Daniable,Coordenable{
 		
 	}
 	
+	public int obtenerPuntaje() {
+		if ( this.Destruido() ) {
+			return puntaje;
+		}
+	}
 }
