@@ -35,13 +35,13 @@ public abstract class Armamento implements Armamentable , Coordenable {
 	}
 	
 	public void explotar(Coordenada coord,Mapa mapa){
-		OndaExpansiva Onda = new OndaExpansiva(this.danio,this.radio);
+		OndaExpansiva Onda = new OndaExpansiva(radio,danio);
 		Onda.Expandirse(coord,mapa);
 	}
 	
 	
 	public void actualizar(){
-		if(time>0){
+		if(time>=0){
 			this.time = this.time-1;
 		}else{
 			this.explotar(coordenada, mapaAutilizar);
