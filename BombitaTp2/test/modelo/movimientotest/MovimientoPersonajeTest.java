@@ -71,10 +71,4 @@ public class MovimientoPersonajeTest {
 		LinkedList<Movimiento> lista = movimiento.inicializarMovimientos();
 		assertTrue(lista.size() == 4);
 	}
-	
-	@Test
-	public void testGuardaElUltimoMovimiento() {
-		rodriguez.caminar(izquierda);
-		assertTrue(rodriguez.getUltimoMovimiento() == izquierda);
-	}
 }
