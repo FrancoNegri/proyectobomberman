@@ -83,6 +83,8 @@ public class ComunTest {
 		Casillero casi = mock(Casillero.class);
 		when(casi.esCaminable()).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
+		lopez = spy(lopez);
+		when(lopez.decideAtacar()).thenReturn(true);
 		lopez.setMapa(mapa);
 		lopez.actualizar();
 		verify(mapa).agregarAlMapa((Armamento)anyObject());

@@ -1,9 +1,11 @@
 package modelo.enemigostest;
 
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.*;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.ArmamentoFactory.MolotovFactory;
+import modelo.armamento.Armamento;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
@@ -62,7 +64,8 @@ public class AladoTest {
 	}
 	@Test
 	public void testCaminarRandom() {
-		
+		lopez = spy(lopez);
+		when(lopez.decideAtacar()).thenReturn(true);
 		Mapa mapa = mock(Mapa.class);
 		Casillero casi = mock(Casillero.class);
 		when(casi.esCaminable()).thenReturn(true);
@@ -71,6 +74,19 @@ public class AladoTest {
 		lopez.actualizar();
 		verify(casi).eliminar(lopez);
 		verify(mapa).agregarAlMapa(lopez);
+	}
+	
+	@Test
+	public void testEnemigoAtacar() {
+		Mapa mapa = mock(Mapa.class);
+		Casillero casi = mock(Casillero.class);
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
+		lopez = spy(lopez);
+		when(lopez.decideAtacar()).thenReturn(true);
+		lopez.setMapa(mapa);
+		lopez.actualizar();
+		verify(mapa).agregarAlMapa((Armamento)anyObject());
 	}
 	
 	@Test
