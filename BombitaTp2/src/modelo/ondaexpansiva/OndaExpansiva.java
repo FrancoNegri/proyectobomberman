@@ -75,8 +75,7 @@ public class OndaExpansiva{
     		unPersonaje.Daniar(this.getDanio());
     		int indicePersonaje = Personajes.indexOf(unPersonaje);
     		Personajes.set(indicePersonaje, unPersonaje);	
-    	}
-    	unCasillero.agregar(Personajes);	
+    	}	
     }
     
     private void atacarObstaculo(Casillero unCasillero){
