@@ -3,7 +3,7 @@ package modelo.articulo;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
-import modelo.personaje.Bombita;
+import modelo.personaje.*;
 
 public abstract class Articulo implements Articulable, Coordenable {
 
@@ -22,7 +22,18 @@ public abstract class Articulo implements Articulable, Coordenable {
 		return coordenadaXY;
 	}
 	
-	public abstract void usar(Bombita unPersonaje);
+	public abstract boolean usar(Personaje unPersonaje);
+	
+	public boolean esBombita(Personaje unPersonaje){
+		
+		boolean esBombita = false;
+		if ( unPersonaje instanceof Bombita)
+			esBombita = true;
+		
+		return esBombita;
+		
+		
+	}
 	
 	public int obtenerPuntaje() {
 		return puntaje;

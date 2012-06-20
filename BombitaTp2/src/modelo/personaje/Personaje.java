@@ -69,6 +69,10 @@ public abstract class Personaje implements Daniable, Coordenable, Punteable {
 	public ArmamentoFactory tirarArmamento() {
 		return CreadorDeBombas;
 	}
+	
+	public void cambiarArmamento(ArmamentoFactory nuevoCreador) {
+		this.CreadorDeBombas = nuevoCreador;
+	}
 
 	public boolean estaMuerto() {
 		return (this.vida <= 0);
