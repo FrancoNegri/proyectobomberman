@@ -18,16 +18,16 @@ public class ArmamentoTest {
 	Coordenada coordenada;
 	Mapa mapa;
 	Armamento arma;
-	Casillero casilleroADañar = mock(Casillero.class);
+	Casillero casilleroADaniar = mock(Casillero.class);
 	@Before
 	public void SetUp(){
 		coordenada = new Coordenada(1,2);
 		mapa = mock(Mapa.class);
 		arma = new ToleTole(coordenada,mapa,4);
-		when(casilleroADañar.obtenerPersonajes()).thenReturn(new LinkedList<Personaje>());
-		when(casilleroADañar.obtenerObstaculo()).thenReturn(null);
-		when(casilleroADañar.esAtacable()).thenReturn(true);
-		when(mapa.obtenerCasillero((Coordenada)anyObject())).thenReturn(casilleroADañar);
+		when(casilleroADaniar.obtenerPersonajes()).thenReturn(new LinkedList<Personaje>());
+		when(casilleroADaniar.obtenerObstaculo()).thenReturn(null);
+		when(casilleroADaniar.esAtacable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada)anyObject())).thenReturn(casilleroADaniar);
 	}
 	
 	
@@ -44,8 +44,8 @@ public class ArmamentoTest {
 			arma.actualizar();
 		}
 		arma.actualizar();
-		verify(casilleroADañar,times(4)).obtenerPersonajes();
-		verify(casilleroADañar,times(4)).obtenerObstaculo();
+		verify(casilleroADaniar,times(4)).obtenerPersonajes();
+		verify(casilleroADaniar,times(4)).obtenerObstaculo();
 	}
 	
 }
