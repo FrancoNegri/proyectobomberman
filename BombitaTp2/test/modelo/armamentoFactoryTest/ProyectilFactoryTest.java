@@ -19,7 +19,7 @@ import static org.mockito.Mockito.*;
 public class ProyectilFactoryTest {
 	
 	Mapa mapa = mock(Mapa.class);
-	ArmamentoFactory moloFac = new ProyectilFactory();
+	ArmamentoFactory ProyFac = new ProyectilFactory();
 	Coordenada coord = new Coordenada(1,1);
 	Personaje pers = mock(Personaje.class);
 	@Before
@@ -30,9 +30,16 @@ public class ProyectilFactoryTest {
 	
 	@Test
 	public void testQueChequeaLaContruccionDeUnaMolotov(){
-		Armamento arma = moloFac.crear(pers);
+		Armamento arma = ProyFac.crear(pers);
 		verify(mapa).agregarAlMapa((Molotov)anyObject());
 		assertTrue(arma.getClass()== Proyectil.class);
 	}
+	
+	@Test
+	public void testQueCambiaElTiempo(){
+		ProyFac.cambiarTime(3);
+		assertTrue(ProyFac.obtenerTime()==3);
+	}
+	
 	
 }
