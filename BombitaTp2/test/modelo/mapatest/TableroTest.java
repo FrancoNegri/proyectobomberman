@@ -23,14 +23,6 @@ public class TableroTest {
 	
 	@Test
 	
-	public void testConstructor(){
-		Coordenada cord = new Coordenada(3,2);
-		this.unCasillero = this.unTablero.obtenerCasillero(cord);
-		assertTrue(unCasillero.obtenerIdentificador()=="noName");
-	}
-	
-	@Test
-	
 	public void testConstructorconTamanioInvalido(){
 		
 		try{
@@ -49,7 +41,7 @@ public class TableroTest {
 	public void testObtenercasillero(){
 		Coordenada cord = new Coordenada(4,2);
 		Casillero casilleroprueba = this.unTablero.obtenerCasillero(cord);
-		assertTrue(casilleroprueba.obtenerIdentificador()=="noName");
+		assertTrue(casilleroprueba.getClass() == Casillero.class);
 	}
 	/*
 	 * 
@@ -83,17 +75,6 @@ public class TableroTest {
 			
 		}
 	}
-	
-	@Test
-	
-    public void testCambiarcasillero(){
-		Coordenada cord =  new Coordenada(4,1);
-		Casillero unCasillero = new Casillero();
-		unCasillero.cambiarIdentificador("casilleroPrueba");
-		this.unTablero.cambiarCasillero(cord, unCasillero);
-		Casillero casilleroPrueba = this.unTablero.obtenerCasillero(cord);
-		assertTrue(casilleroPrueba.obtenerIdentificador()=="casilleroPrueba");
-	}
 	/*
 	 * 
 	 * test no nesesario se encarga coordenada
@@ -121,7 +102,6 @@ public class TableroTest {
 		try{
 			Coordenada cord =  new Coordenada(8,1);
 			Casillero unCasillero = new Casillero();
-			unCasillero.cambiarIdentificador("casilleroPrueba");
 			this.unTablero.cambiarCasillero(cord, unCasillero);
 			fail("acepta posiciones fuera de rango");
 		}

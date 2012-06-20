@@ -34,7 +34,6 @@ public class MapaTest {
 	public void testConstructor(){
 		Coordenada cord = new Coordenada(2,3);
 		this.unCasillero = this.unMapa.obtenerCasillero(cord);
-		assertTrue(this.unCasillero.obtenerIdentificador() == "noName");
 	}
 	
 	@Test
@@ -87,7 +86,7 @@ public class MapaTest {
 	public void testObtenerCasillero(){
 		Coordenada cord = new Coordenada(3,4);
 		Casillero casilleroPrueba = this.unMapa.obtenerCasillero(cord);
-		assertTrue(casilleroPrueba.obtenerIdentificador() == "noName");
+		assertTrue(casilleroPrueba.getClass() == Casillero.class);
 		
 	}
 	@Test
