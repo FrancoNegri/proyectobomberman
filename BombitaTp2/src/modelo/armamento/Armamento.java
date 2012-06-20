@@ -11,12 +11,15 @@ public abstract class Armamento implements Armamentable , Coordenable {
 	protected float time;
 	protected int danio;
 	protected int radio;
+	protected Mapa mapaAutilizar;
 	
-	public Armamento(Coordenada unaCoordenada){
+	public Armamento(Coordenada unaCoordenada,Mapa mapa){
 		this.coordenada = unaCoordenada;
 		this.time = 0;
 		this.danio = 0;
 		this.radio = 0;
+		mapaAutilizar = mapa;
+		mapa.agregarAlMapa(this);
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
@@ -38,9 +41,10 @@ public abstract class Armamento implements Armamentable , Coordenable {
 	
 	
 	public void actualizar(){
-		this.time = this.time-1;
-	}
-	public boolean exploto(){
-		return (this.time <= 0);
+		if(time>0){
+			this.time = this.time-1;
+		}else{
+			this.explotar(coordenada, mapaAutilizar);
+		}
 	}
 }

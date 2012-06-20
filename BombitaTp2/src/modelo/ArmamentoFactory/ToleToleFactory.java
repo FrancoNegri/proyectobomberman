@@ -10,7 +10,7 @@ public class ToleToleFactory extends ArmamentoFactory{
 	
 	@Override
 	public Armamento crear(Personaje pers) {
-		ToleTole tole = new ToleTole(pers.obtenerCoordenadaXY(),time);
+		ToleTole tole = new ToleTole(pers.obtenerCoordenadaXY(),pers.getMapa(),time);
 		return tole;
 	}
 

@@ -8,8 +8,8 @@ public class MolotovFactory extends ArmamentoFactory{
 
 	private int time = ConstantesJuego.timer_molotov;
 	
-	public Molotov crear(Personaje pers) {
-		Molotov molotov = new Molotov(pers.obtenerCoordenadaXY(),time);
+	public Armamento crear(Personaje pers) {
+		Molotov molotov = new Molotov(pers.obtenerCoordenadaXY(),pers.getMapa(),time);
 		return molotov;
 	}
 

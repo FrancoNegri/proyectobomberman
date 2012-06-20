@@ -84,7 +84,5 @@ public class CasilleroTest {
 		casi.agregar(unArmamento);
 		casi.actualizar();
 		verify(miBloque).Destruido();
-		verify(pers).estaMuerto();
-		verify(unArmamento).actualizar();
 	}
 }

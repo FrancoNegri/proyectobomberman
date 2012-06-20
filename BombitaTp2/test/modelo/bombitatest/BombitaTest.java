@@ -1,14 +1,14 @@
 package modelo.bombitatest;
 
 import static org.junit.Assert.*;
-import java.util.LinkedList;
 import org.junit.*;
 import modelo.ArmamentoFactory.*;
 import modelo.armamento.*;
 import modelo.articulo.*;
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
 import modelo.personaje.*;
-import modelo.personaje.movimiento.*;
+import static org.mockito.Mockito.*;
 
 public class BombitaTest {
 	private Bombita rodriguez;
@@ -17,12 +17,7 @@ public class BombitaTest {
 	private ArmamentoFactory toleToleFactory;
 	private ToleTole toleTole;
 	private Timer timer;
-	private Derecha derecha;
-	private Izquierda izquierda;
-	private Arriba arriba;
-	private Abajo abajo;
-	private Movimiento movimiento;
-
+	
 	@Before
 	public void setUp() {
 		Coordenada coordenada = new Coordenada(1, 1);
@@ -31,12 +26,8 @@ public class BombitaTest {
 		habano = new Habano(coordenada);
 		toleToleFactory = new ToleToleFactory();
 		timer = new Timer(coordenada);
-		derecha = new Derecha();
-		izquierda = new Izquierda();
-		arriba = new Arriba();
-		abajo = new Abajo();
-		toleTole = new ToleTole(coordenada,0);
-		movimiento = new Movimiento();
+		Mapa mapa = mock(Mapa.class);
+		toleTole = new ToleTole(coordenada,mapa,1);
 	}
 
 	@Test
@@ -124,18 +115,5 @@ public class BombitaTest {
 	public void testchocar() {
 		rodriguez.chocar();
 		assertTrue(rodriguez.obtenerVida() == 0);
-	}
-
-	@Test
-	public void testListaDeMovimientosInicializadoCorrectamente() {
-		LinkedList<Movimiento> lista = rodriguez.obtenerMovimientos();
-		assertTrue(lista.size() == 4);
-	}
-	
-	@Test
-	public void testobtenerMovimientoRandom(){
-		movimiento = rodriguez.obtenerDireccionDeMovimiento();
-		assertTrue(movimiento.getClass() == derecha.getClass() | movimiento.getClass() == izquierda.getClass() 
-				  | movimiento.getClass() == arriba.getClass() | movimiento.getClass() == abajo.getClass());
 	}
 }

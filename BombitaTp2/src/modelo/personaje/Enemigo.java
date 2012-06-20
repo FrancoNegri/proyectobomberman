@@ -1,6 +1,5 @@
 package modelo.personaje;
 
-import java.util.LinkedList;
 
 import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionAbajo;
@@ -9,7 +8,6 @@ import modelo.Translacion.TranslacionDerecha;
 import modelo.Translacion.TranslacionIzquierda;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
-import modelo.personaje.movimiento.Movimiento;
 import java.util.Random;
 public class Enemigo extends Personaje {
 
@@ -17,23 +15,19 @@ public class Enemigo extends Personaje {
 		super(unaCoordenada);
 	}
 	
-	protected void caminar() {
-		Translacion translasionRandom= this.obtenerTranslacion();
-		Coordenada movimientoPlaneado = translasionRandom.accion(coordenadaXY);
-		Casillero casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
-		if(casilleroAlQueMoverse.esCaminable()){
-			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
-			casilleroAntiguo.eliminar(this);
-			coordenadaXY = movimientoPlaneado;
-			mapa.agregarAlMapa(this);
+	protected void Atacar() {
+		if(this.decideAtacar()){
+			CreadorDeBombas.crear(this);
 		}
 	}
 	
-	public void actualizar(){
-		this.caminar();
-		
+	private boolean decideAtacar(){
+		Random generator = new Random();
+		// un 50% de chances de plantar una bomba
+		return(generator.nextInt(10) < 4);
 	}
-	private Translacion obtenerTranslacion(){
+
+	protected Translacion obtenerTranslacion(){
 		Random generator = new Random();
 		Translacion translacion [] = {new TranslacionArriba(),new TranslacionAbajo(),new TranslacionDerecha(),new TranslacionIzquierda() }; 
 		return translacion[generator.nextInt(4)];

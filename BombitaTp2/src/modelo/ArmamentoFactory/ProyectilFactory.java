@@ -9,13 +9,14 @@ public class ProyectilFactory extends ArmamentoFactory{
 	private int time = ConstantesJuego.timer_proyectil;
 	@Override
 	public Armamento crear(Personaje pers) {
-		// nesesito pasarle alguna translacion para que se mueva de la manera correcta
-		Proyectil proyectil = new Proyectil(pers.obtenerCoordenadaXY(),time,pers.getUltimoMovimiento());
+		// Creo una bomba y la pasa al mapa
+		Proyectil proyectil = new Proyectil(pers.obtenerCoordenadaXY(),pers.getMapa(),pers.obtenerUltimaTranslacion());
 		return proyectil;
 	}
 
 	@Override
 	public void cambiarTime(int tiempo) {
+		// no tiene mayor sentido solo para respetar el contrato
 		this.time = tiempo;
 	}
 

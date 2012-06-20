@@ -2,6 +2,7 @@ package modelo.personaje;
 
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.ArmamentoFactory.MolotovFactory;
+import modelo.Translacion.Translacion;
 import modelo.articulo.Articulable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
@@ -33,15 +34,14 @@ public class Bombita extends Personaje {
 	}
 
 	@Override
-	public void actualizar() {
+	protected void Atacar() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	protected void caminar() {
+	protected Translacion obtenerTranslacion() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
-	
 }
