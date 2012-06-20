@@ -2,7 +2,9 @@ package modelo.mapatest;
 
 import java.util.LinkedList;
 import modelo.mapa.*;
+import modelo.obstaculos.BloqueCemento;
 import modelo.obstaculos.BloqueLadrillo;
+import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
 import modelo.errores.*;
 import modelo.armamento.Armamento;
@@ -51,36 +53,26 @@ public class MapaTest {
 		
 	}
 	
+@Test
 	
-	
-	/*Ya no es nesesario, nadie puede agregar casilleros.
-	 * 
-	 * @Test
-	 * public void testagregarCasillero(){
-		Coordenada cord = new Coordenada(3,1);
-		this.unCasillero.cambiarIdentificador("casilleroPrueba");
-		this.unMapa.agregarCasillero(cord, unCasillero);
-		Casillero CasilleroPrueba = this.unMapa.obtenerCasillero(cord);
-		assertTrue(CasilleroPrueba.obtenerIdentificador() == "casilleroPrueba");	
-	}*/
-	
-	/*
-	 * no es nesesario nadie puede agregar casilleros
-	 * 
-	 * @Test
-	 * 
-	public void testagregarCasilleroTamanioFueraDeRango(){
-		Coordenada cord = new Coordenada(3,9);
+	public void testErrorCasilleroInvalido(){
+		
+		
+			Coordenada coord = new Coordenada(1,1);
+			Obstaculo obs = mock(BloqueCemento.class);
+			when(obs.obtenerCoordenadaXY()).thenReturn(coord);
+			Personaje pers = mock(Personaje.class);
+			when(pers.obtenerCoordenadaXY()).thenReturn(coord);
+			this.unMapa = new Mapa(3);
+			unMapa.agregarAlMapa(obs);
 		try{
-			
-			this.unMapa.agregarCasillero(cord, this.unCasillero);
+			unMapa.agregarAlMapa(pers);
 		}
-		catch(TamanioMatrizInvalidoError e){
+		catch(CasilleroOcupadoError e){
 			
 		}
 		
-		
-	}*/
+	}
 	
 	@Test
 	
