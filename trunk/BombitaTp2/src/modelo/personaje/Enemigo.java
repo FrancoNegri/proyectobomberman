@@ -6,13 +6,17 @@ import modelo.Translacion.TranslacionAbajo;
 import modelo.Translacion.TranslacionArriba;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.Translacion.TranslacionIzquierda;
+import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import java.util.Random;
 
 public class Enemigo extends Personaje {
 
+	protected int puntaje;
+	
 	public Enemigo(Coordenada unaCoordenada){
 		super(unaCoordenada);
+		this.puntaje = ConstantesJuego.puntaje_enemigo_muerto;
 	}
 	
 	protected void Atacar() {
@@ -35,11 +39,29 @@ public class Enemigo extends Personaje {
 	
 	
 	public void chocar() {
-		this.vida = vida - 1; //Como para que le pase algo al enemigo, igual si choca con alguien es 
-							  //con Bombita asique se termina el juego
+		this.vida = vida - 1; 
 	}
 	
-	//public void perseguirABombita(Bombita rodriguez) {
-		//Metodo que habria que ver en detalle cuando ya el programa ande asi persigue a bombita. Fede
-	//}
+	/*public void perseguirABombita(Bombita rodriguez) {
+		if (Bombita esta vivo) {
+			double distanciaX = Math.abs(rodriguez.obtenerX()-this.obtenerX());
+			double distanciaY = Math.abs(rodriguez.obtenerY()-this.obtenerY());
+			}
+			if (distanciaX > distanciaY) {
+				this moverse hacia arriba o hacia abajo (dependiendo de la coordenada de bombita)
+				}
+				if (distanciaX < distanciaY) {
+				this moverse hacia derecha o izquierda (dependiendo de la coordenada de bombita)
+				}
+					if (distanciaX = distanciaY) {
+						this que se mueva para donde quiera
+						}
+
+	}*/
+	
+	public int obtenerPuntaje() {
+		if ( this.estaMuerto() ) {
+		return puntaje;
+		}
+	}
 }

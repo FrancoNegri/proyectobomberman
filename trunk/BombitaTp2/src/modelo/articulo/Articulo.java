@@ -1,5 +1,6 @@
 package modelo.articulo;
 
+import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.Bombita;
@@ -10,9 +11,11 @@ public abstract class Articulo implements Articulable, Coordenable {
 	 * de acuerdo al articulo que sea.
 	 */
 	protected Coordenada coordenadaXY;
+	protected int puntaje;
 	
 	public Articulo(Coordenada unaCoordenada){
-		coordenadaXY =  unaCoordenada;
+		this.coordenadaXY =  unaCoordenada;
+		this.puntaje = ConstantesJuego.puntaje_articulos;
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
@@ -20,4 +23,8 @@ public abstract class Articulo implements Articulable, Coordenable {
 	}
 	
 	public abstract void usar(Bombita unPersonaje);
+	
+	public int obtenerPuntaje() {
+		return puntaje;
+	}
 }
