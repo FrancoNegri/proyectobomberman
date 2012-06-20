@@ -6,7 +6,6 @@ import modelo.articulo.*;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.*;
 import modelo.errores.*;
-import static org.mockito.Mockito.*;
 
 public class HabanoTest {
 
