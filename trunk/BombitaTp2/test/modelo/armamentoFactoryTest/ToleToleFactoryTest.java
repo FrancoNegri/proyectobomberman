@@ -19,7 +19,7 @@ import org.junit.Test;
 
 public class ToleToleFactoryTest {
 	Mapa mapa = mock(Mapa.class);
-	ArmamentoFactory moloFac = new ToleToleFactory();
+	ArmamentoFactory ToleFac = new ToleToleFactory();
 	Coordenada coord = new Coordenada(1,1);
 	Personaje pers = mock(Personaje.class);
 	@Before
@@ -30,8 +30,14 @@ public class ToleToleFactoryTest {
 	
 	@Test
 	public void testQueChequeaLaContruccionDeUnaMolotov(){
-		Armamento arma = moloFac.crear(pers);
+		Armamento arma = ToleFac.crear(pers);
 		verify(mapa).agregarAlMapa((Armamento)anyObject());
 		assertTrue(arma.getClass()== ToleTole.class);
 	}
+	@Test
+	public void testQueCambiaElTiempo(){
+		ToleFac.cambiarTime(3);
+		assertTrue(ToleFac.obtenerTime()==3);
+	}
+	
 }

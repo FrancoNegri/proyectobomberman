@@ -34,4 +34,10 @@ public class MolovFactoryTest {
 		verify(mapa).agregarAlMapa((Armamento)anyObject());
 		assertTrue(arma.getClass()== Molotov.class);
 	}
+	@Test
+	public void testQueCambiaElTiempo(){
+		moloFac.cambiarTime(3);
+		assertTrue(moloFac.obtenerTime()==3);
+	}
+	
 }
