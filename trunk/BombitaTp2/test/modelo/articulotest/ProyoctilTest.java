@@ -1,5 +1,7 @@
 package modelo.articulotest;
 
+import modelo.Translacion.Translacion;
+import modelo.Translacion.TranslacionArriba;
 import modelo.armamento.*;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
@@ -18,7 +20,8 @@ public class ProyoctilTest {
 	public void SetUp(){
 		coord = new Coordenada(1,1);
 		mapa = new Mapa(3);
-		arma = new Proyectil(coord,2);
+		Translacion trans = new TranslacionArriba();
+		arma = new Proyectil(coord,mapa,trans);
 		Casillero casillero = mapa.obtenerCasillero(coord);
 		casillero.agregar(arma);
 	}
@@ -26,12 +29,6 @@ public class ProyoctilTest {
 	
 	@Test
 	public void testQueVerificaPonerUnProyectilEnUnMapaYloActualiza(){
-		
-		
-		
-		
-		
-		
-		
+		arma.actualizar();
 	}
 }

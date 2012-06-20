@@ -5,19 +5,11 @@ import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-
-import java.util.LinkedList;
-
 import modelo.ArmamentoFactory.*;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.enemigos.*;
-import modelo.personaje.movimiento.Abajo;
-import modelo.personaje.movimiento.Arriba;
-import modelo.personaje.movimiento.Derecha;
-import modelo.personaje.movimiento.Izquierda;
-import modelo.personaje.movimiento.Movimiento;
 
 import org.junit.*;
 
@@ -26,22 +18,12 @@ public class CecilioTest {
 	private Cecilio cecilio;
 	private Coordenada coordenadaC;
 	private ArmamentoFactory molotov;
-	private Derecha derecha;
-	private Izquierda izquierda;
-	private Arriba arriba;
-	private Abajo abajo;
-	private Movimiento movimiento;
 	
 	@Before
 	public void setUp(){
 		coordenadaC = new Coordenada(8,2);
 		cecilio = new Cecilio(coordenadaC);
 		molotov = new MolotovFactory();
-		derecha = new Derecha();
-		izquierda = new Izquierda();
-		arriba = new Arriba();
-		abajo = new Abajo();
-		movimiento = new Movimiento();
 	}
 	
 	@Test
@@ -104,18 +86,5 @@ public class CecilioTest {
 	public void testchocar(){
 		cecilio.chocar();
 		assertTrue(cecilio.obtenerVida() == 4);
-	}
-	
-	@Test
-	public void testListaDeMovimientosInicializadoCorrectamente() {
-		LinkedList<Movimiento> lista = cecilio.obtenerMovimientos();
-		assertTrue(lista.size() == 4);
-	}
-	
-	@Test
-	public void testobtenerMovimientoRandom(){
-		movimiento = cecilio.obtenerDireccionDeMovimiento();
-		assertTrue(movimiento.getClass() == derecha.getClass() | movimiento.getClass() == izquierda.getClass() 
-				  | movimiento.getClass() == arriba.getClass() | movimiento.getClass() == abajo.getClass());
 	}
 }

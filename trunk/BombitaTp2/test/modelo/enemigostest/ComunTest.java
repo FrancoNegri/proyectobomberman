@@ -5,19 +5,13 @@ import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-
-import java.util.LinkedList;
-
+import static org.mockito.Mockito.spy;
 import modelo.ArmamentoFactory.*;
+import modelo.armamento.Armamento;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.enemigos.*;
-import modelo.personaje.movimiento.Abajo;
-import modelo.personaje.movimiento.Arriba;
-import modelo.personaje.movimiento.Derecha;
-import modelo.personaje.movimiento.Izquierda;
-import modelo.personaje.movimiento.Movimiento;
 
 import org.junit.*;
 
@@ -26,21 +20,11 @@ public class ComunTest {
 
 	private Comun lopez;
 	private Coordenada coordenadaL;
-	private Derecha derecha;
-	private Izquierda izquierda;
-	private Arriba arriba;
-	private Abajo abajo;
-	private Movimiento movimiento;
 	
 	@Before
 	public void setUp(){
 		coordenadaL = new Coordenada(2,4);
 		lopez = new Comun(coordenadaL);
-		derecha = new Derecha();
-		izquierda = new Izquierda();
-		arriba = new Arriba();
-		abajo = new Abajo();
-		movimiento = new Movimiento();
 	}
 	
 	@Test
@@ -87,12 +71,22 @@ public class ComunTest {
 		Casillero casi = mock(Casillero.class);
 		when(casi.esCaminable()).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
+		lopez = spy(lopez);
 		lopez.setMapa(mapa);
 		lopez.actualizar();
 		verify(casi).eliminar(lopez);
 		verify(mapa).agregarAlMapa(lopez);
 	}
-	
+	@Test
+	public void testEnemigoAtacar() {
+		Mapa mapa = mock(Mapa.class);
+		Casillero casi = mock(Casillero.class);
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
+		lopez.setMapa(mapa);
+		lopez.actualizar();
+		verify(mapa).agregarAlMapa((Armamento)anyObject());
+	}
 	@Test
 	public void testDaniar(){
 		this.lopez.Daniar(2);
@@ -103,18 +97,5 @@ public class ComunTest {
 	public void testchocar(){
 		lopez.chocar();
 		assertTrue(lopez.obtenerVida() == 9);
-	}
-	
-	@Test
-	public void testListaDeMovimientosInicializadoCorrectamente() {
-		LinkedList<Movimiento> lista = lopez.obtenerMovimientos();
-		assertTrue(lista.size() == 4);
-	}
-	
-	@Test
-	public void testobtenerMovimientoRandom(){
-		movimiento = lopez.obtenerDireccionDeMovimiento();
-		assertTrue(movimiento.getClass() == derecha.getClass() | movimiento.getClass() == izquierda.getClass() 
-				  | movimiento.getClass() == arriba.getClass() | movimiento.getClass() == abajo.getClass());
 	}
 }

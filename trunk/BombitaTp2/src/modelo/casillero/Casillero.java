@@ -81,21 +81,8 @@ public class Casillero {
 	}
 	
 	public void actualizar(){
-		Iterator<Personaje> lista;
-		Personaje personaje;
 		if(unObstaculo.Destruido()){
 			unObstaculo = null;
-		}
-		lista = personajes.iterator();
-		while(lista.hasNext()){
-			 personaje = lista.next();
-			 if(personaje.estaMuerto()){
-				 lista.remove();
-			 }
-		if(unArmamento.exploto()){
-			unArmamento = null;
-		}
-		unArmamento.actualizar();
 		}
 	}
 

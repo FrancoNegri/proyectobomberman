@@ -72,9 +72,6 @@ public class Mapa {
 				Casillero casillero = TableroJuego.obtenerCasillero(unaCoordenada);
 				casillero.actualizar();
 				Armamento arma = casillero.obtenerArmamento();
-				if(arma.exploto()){
-					arma.explotar(unaCoordenada, this);
-				}
 			}
 		}
 	}	

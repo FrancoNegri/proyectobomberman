@@ -1,8 +1,8 @@
 package modelo.personaje;
 
-import java.util.LinkedList; 
-
 import modelo.ArmamentoFactory.ArmamentoFactory;
+import modelo.Translacion.Translacion;
+import modelo.Translacion.TranslacionDerecha;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
@@ -12,25 +12,40 @@ import modelo.danio.*;
 
 
 public abstract class Personaje implements Daniable , Coordenable {
-
+	protected Translacion ultimaTranslacion;
 	protected ArmamentoFactory CreadorDeBombas;
 	protected float velocidad;
 	protected int vida;
 	protected Coordenada coordenadaXY;
-	protected LinkedList<Movimiento> movimientos;
-	protected Movimiento movimiento;
 	protected Mapa mapa;
 	
 	public Personaje(Coordenada unaCoordenada) {
 		this.coordenadaXY = unaCoordenada;
-		this.movimientos = new LinkedList<Movimiento>();
-		this.movimiento = new Movimiento();
-		this.movimientos = movimiento.inicializarMovimientos();
+		ultimaTranslacion = new TranslacionDerecha();
 	} 
 
-	protected abstract void caminar();
+	protected  void caminar(){
+		Translacion translasionRandom= this.obtenerTranslacion();
+		Coordenada movimientoPlaneado = translasionRandom.accion(coordenadaXY);
+		Casillero casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
+		if(casilleroAlQueMoverse.esCaminable()){
+			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
+			casilleroAntiguo.eliminar(this);
+			coordenadaXY = movimientoPlaneado;
+			mapa.agregarAlMapa(this);
+		}
+	}
 	
-	public abstract void actualizar();
+	protected abstract Translacion obtenerTranslacion();
+	
+	public abstract void chocar();
+	
+	protected abstract void Atacar();
+	
+	public void actualizar(){
+		this.caminar();
+		this.Atacar();
+	}
 	
 	public Coordenada obtenerCoordenadaXY() {
 		return coordenadaXY;
@@ -39,9 +54,17 @@ public abstract class Personaje implements Daniable , Coordenable {
 	public void cambiarCoordenadaXY(Coordenada unaCoordenada) {
 		this.coordenadaXY = unaCoordenada;
 	}
+	
+	public Translacion obtenerUltimaTranslacion() {
+		return ultimaTranslacion;
+	}
 
 	public void setMapa(Mapa nuevoMapa){
 		mapa = nuevoMapa;
+	}
+	
+	public Mapa getMapa(){
+		return mapa;
 	}
 	
 	public int obtenerVida() {
@@ -74,26 +97,6 @@ public abstract class Personaje implements Daniable , Coordenable {
 			this.restarVida(danio);
 		}	
 		
-	}
-	
-	public abstract void chocar();
-	
-	
-	public LinkedList<Movimiento> obtenerMovimientos() {
-		return movimientos;
-	}
-	
-	public Movimiento obtenerDireccionDeMovimiento() {
-		int posicion = movimiento.obtenerNumeroRandom();
-		return movimientos.get(posicion-1);
-	}
-	
-	public Movimiento getUltimoMovimiento(){
-		return this.movimiento;	
-	}
-	
-	public void setUltimoMovimiento(Movimiento unMovimiento){
-		this.movimiento = unMovimiento;
 	}
 	
 	public Casillero verificarA(Movimiento unMovimiento,Mapa mapa){
