@@ -85,4 +85,24 @@ public class CasilleroTest {
 		casi.actualizar();
 		verify(miBloque).Destruido();
 	}
+	@Test
+	public void testQueCompruevaSiEsCaminable(){
+		Casillero casi = new Casillero();
+		assertTrue(casi.esCaminable()==true);
+		BloqueAcero miBloque = mock(BloqueAcero.class);
+		casi.agregar(miBloque);
+		assertTrue(casi.esCaminable()==false);
+	}
+	@Test
+	public void testQueCompruevaSiEsAtacable(){
+		Casillero casi = new Casillero();
+		assertTrue(casi.esAtacable()==false);
+		BloqueAcero miBloque = mock(BloqueAcero.class);
+		casi.agregar(miBloque);
+		assertTrue(casi.esAtacable()==true);
+		casi = new Casillero();
+		Personaje pers = mock(Personaje.class);
+		casi.agregar(pers);
+		assertTrue(casi.esAtacable()==true);
+	}
 }
