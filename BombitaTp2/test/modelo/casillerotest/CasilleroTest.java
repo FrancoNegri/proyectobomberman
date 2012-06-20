@@ -18,11 +18,27 @@ public class CasilleroTest {
 		assertTrue(miCas.obtenerObstaculo()==miBloque);	
 	}
 	@Test
+	public void testDondeSeEliminaCasillero(){
+		BloqueAcero miBloque = mock(BloqueAcero.class);
+		Casillero miCas = new Casillero();
+		miCas.agregar(miBloque);
+		miCas.eliminar(miBloque);
+		assertTrue(miCas.obtenerObstaculo()==null);	
+	}
+	@Test
 	public void testDondeSeAgregaUnArmamento(){
 		Armamento unArmamento = mock(Armamento.class);
 		Casillero miCas = new Casillero();
 		miCas.agregar(unArmamento);
 		assertTrue(miCas.obtenerArmamento()==unArmamento);
+	}
+	@Test
+	public void testDondeSeEliminaUnArmamento(){
+		Armamento unArmamento = mock(Armamento.class);
+		Casillero miCas = new Casillero();
+		miCas.agregar(unArmamento);
+		miCas.eliminar(unArmamento);
+		assertTrue(miCas.obtenerArmamento()==null);
 	}
 	@Test
 	public void testDondeSeAgreganPersonajes(){
@@ -32,11 +48,27 @@ public class CasilleroTest {
 		assertTrue(miCas.obtenerPersonajes().getFirst()==pers);	
 	}
 	@Test
+	public void testDondeSeEliminanPersonajes(){
+		Personaje pers = mock(Personaje.class);
+		Casillero miCas = new Casillero();
+		miCas.agregar(pers);
+		miCas.eliminar(pers);
+		assertTrue(miCas.obtenerPersonajes().isEmpty());	
+	}
+	@Test
 	public void testDondeSeAgregaArticulable(){
 		Articulable unArticulo = mock(Articulable.class);
 		Casillero miCas = new Casillero();
 		miCas.agregar(unArticulo);
 		assertTrue(miCas.obtenerArticulo()==unArticulo);
+	}
+	@Test
+	public void testDondeSeEliminaArticulable(){
+		Articulable unArticulo = mock(Articulable.class);
+		Casillero miCas = new Casillero();
+		miCas.agregar(unArticulo);
+		miCas.eliminar(unArticulo);
+		assertTrue(miCas.obtenerArticulo()==null);
 	}
 	@Test
 	public void testDondeSeActualizaTodo(){

@@ -117,5 +117,25 @@ public class Casillero {
 		unArmamento.actualizar();
 		}
 	}
+
+	public void eliminar(Articulable Articulo) {
+		if(Articulo == unArticulo){
+			unArticulo = null;
+		}
+	}
+	public void eliminar(Armamento arma) {
+			if(arma == unArmamento){
+				unArmamento = null;
+			}
+	}
+	public void eliminar(Personaje pers) {
+		personajes.remove(pers);
+	}
+	
+	public void eliminar(Obstaculo obstaculo) {
+		if(obstaculo == unObstaculo){
+			unObstaculo = null;
+		}
+	}
 }
 	
