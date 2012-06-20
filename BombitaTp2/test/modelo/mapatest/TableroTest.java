@@ -10,6 +10,7 @@ import org.junit.*;
 public class TableroTest {
 	
 	private int tamanio;
+	@SuppressWarnings("unused")
 	private Casillero unCasillero;
 	private Tablero unTablero;
 	@Before

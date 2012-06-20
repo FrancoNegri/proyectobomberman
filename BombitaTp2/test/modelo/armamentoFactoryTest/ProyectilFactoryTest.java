@@ -2,7 +2,6 @@ package modelo.armamentoFactoryTest;
 
 import static org.junit.Assert.assertTrue;
 import modelo.ArmamentoFactory.ArmamentoFactory;
-import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.ArmamentoFactory.ProyectilFactory;
 import modelo.armamento.Armamento;
 import modelo.armamento.Molotov;

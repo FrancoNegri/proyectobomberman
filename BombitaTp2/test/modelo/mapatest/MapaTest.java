@@ -16,6 +16,7 @@ public class MapaTest {
 
 	private Mapa unMapa;
 	
+	@SuppressWarnings("unused")
 	private Casillero unCasillero;
 	
 	private int Tamanio;
