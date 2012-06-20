@@ -1,6 +1,7 @@
 package modelo.obstaculos;
 
 
+import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.danio.*;
@@ -13,6 +14,7 @@ public abstract class Obstaculo implements Daniable,Coordenable{
 	public Obstaculo(int vidaTotal,Coordenada unacoordenada){ 
 		this.vida = vidaTotal;
 		cordenadaObsaculo = unacoordenada;
+		this.puntaje = ConstantesJuego.puntaje_obstaculo_destruido;
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
