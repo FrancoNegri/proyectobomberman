@@ -32,6 +32,18 @@ public class TimerTest {
 		unTimer.usar(this.rodriguez);
 		verify(armaFactory).cambiarTime(anyInt());
 	}
+	@Test
+	public void testErrorAlUsar(){
+		rodriguez = mock(Bombita.class);
+		when(rodriguez.tirarArmamento()).thenReturn(null);
+		try{
+			unTimer.usar(this.rodriguez);
+		}catch (ArmamentoNoInicializadoError e){
+			assert(true);
+			return;
+		}
+		assert(false);
+	}
 	
 	@Test
 	public void testUsarSinArmamento(){
@@ -42,10 +54,10 @@ public class TimerTest {
 			this.unTimer.usar(this.rodriguez);
 		}
 		catch (ArmamentoNoInicializadoError e){
-			
 			assert(true);
+			return;
 		}
-	
+		assert(false);
 	}
 
 	@Test

@@ -1,6 +1,6 @@
 package modelo.obstaculos;
 
-import modelo.errores.VidaInvalidaError;
+
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.danio.*;
@@ -10,9 +10,7 @@ public abstract class Obstaculo implements Daniable,Coordenable{
 	int vida;
 	
 	public Obstaculo(int vidaTotal,Coordenada unacoordenada){ //No seria mejor que siempre se cree con la misma vida 
-															//y no pasarsela por parametro? Fede
-		if(vidaTotal <= 0)
-			throw new VidaInvalidaError();
+															//y no pasarsela por parametro? Fed
 		this.vida = vidaTotal;
 		cordenadaObsaculo = unacoordenada;
 	}
