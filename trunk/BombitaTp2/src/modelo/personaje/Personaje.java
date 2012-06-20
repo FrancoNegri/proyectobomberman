@@ -3,6 +3,7 @@ package modelo.personaje;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
+import modelo.armamento.Armamento;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
@@ -23,29 +24,12 @@ public abstract class Personaje implements Daniable , Coordenable {
 		this.coordenadaXY = unaCoordenada;
 		ultimaTranslacion = new TranslacionDerecha();
 	} 
-
-	protected  void caminar(){
-		Translacion translasionRandom= this.obtenerTranslacion();
-		Coordenada movimientoPlaneado = translasionRandom.accion(coordenadaXY);
-		Casillero casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
-		if(casilleroAlQueMoverse.esCaminable()){
-			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
-			casilleroAntiguo.eliminar(this);
-			coordenadaXY = movimientoPlaneado;
-			mapa.agregarAlMapa(this);
-		}
-	}
 	
 	protected abstract Translacion obtenerTranslacion();
 	
 	public abstract void chocar();
 	
 	protected abstract void Atacar();
-	
-	public void actualizar(){
-		this.caminar();
-		this.Atacar();
-	}
 	
 	public Coordenada obtenerCoordenadaXY() {
 		return coordenadaXY;
@@ -98,6 +82,24 @@ public abstract class Personaje implements Daniable , Coordenable {
 		}	
 		
 	}
+	
+	public void actualizar(){
+		this.caminar();
+		this.Atacar();
+	}
+	
+	protected  void caminar(){
+		Translacion translasionRandom= this.obtenerTranslacion();
+		Coordenada movimientoPlaneado = translasionRandom.accion(coordenadaXY);
+		Casillero casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
+		if(casilleroAlQueMoverse.esCaminable()){
+			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
+			casilleroAntiguo.eliminar(this);
+			coordenadaXY = movimientoPlaneado;
+			mapa.agregarAlMapa(this);
+		}
+	}
+	
 	
 	public Casillero verificarA(Movimiento unMovimiento,Mapa mapa){
 		Coordenada coord;
