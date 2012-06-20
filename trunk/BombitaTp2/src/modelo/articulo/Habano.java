@@ -4,7 +4,7 @@ import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.errores.PersonajeNoInicializadoError;
 import modelo.errores.VelocidadMaximaError;
-import modelo.personaje.Bombita;
+import modelo.personaje.*;
 
 public class Habano extends Articulo{
 	
@@ -15,20 +15,22 @@ public class Habano extends Articulo{
 		this.velocidadmaxima=35;
 	}
 	
-	public void usar(Bombita unPersonaje){
+	public boolean usar(Personaje unPersonaje){
 		
+		boolean bandera = false;
 		if(unPersonaje==null){
 			
 			throw new PersonajeNoInicializadoError();
 		}
-		else{
-			
-			this.aumentarVelocidad(unPersonaje);
-		}
 		
+		if( this.esBombita(unPersonaje)){	
+			this.aumentarVelocidad(unPersonaje);
+			bandera = true;
+		}
+		return bandera;
 	}
 	
-	public void aumentarVelocidad(Bombita unPersonaje){
+	public void aumentarVelocidad(Personaje unPersonaje){
 		
 		float velocidad = unPersonaje.getVelocidad();
 		/*como convencion aumenta la velocidad del personaje en 10 unidades.

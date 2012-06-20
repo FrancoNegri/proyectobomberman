@@ -5,7 +5,7 @@ import modelo.articulo.Articulable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
-import modelo.personaje.Bombita;
+import modelo.personaje.*;
 
 public class ToleTole extends Armamento implements Articulable {
 
@@ -15,8 +15,25 @@ public class ToleTole extends Armamento implements Articulable {
 		radio = ConstantesJuego.radio_toletole;
 	}
 	
-	public void usar(Bombita unPersonaje){
-		ToleToleFactory nuevaFactory = new ToleToleFactory();
-		unPersonaje.cambiarArmamento(nuevaFactory);
+	public boolean usar(Personaje unPersonaje){
+		
+		boolean bandera = false;
+		if(this.esBombita(unPersonaje)){
+			
+			ToleToleFactory nuevaFactory = new ToleToleFactory();
+			unPersonaje.cambiarArmamento(nuevaFactory);
+			bandera = true;
+		}
+		return bandera;
+	}
+	
+	public boolean esBombita(Personaje unPersonaje){
+		
+		boolean esBombita = false;
+		if ( unPersonaje instanceof Bombita)
+			esBombita = true;
+		
+		return esBombita;
+		
 	}
 }

@@ -1,11 +1,12 @@
 package modelo.casillero;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.detectorcolision.Colisionador;
 import modelo.obstaculos.Obstaculo;
-import modelo.personaje.Personaje;
+import modelo.personaje.*;
 
 
 //primera vercion de casillero, va a nesesitar ajustes.
@@ -79,12 +80,22 @@ public class Casillero {
 		return true;
 	}
 	
+	/*
+	 *  #verifica si un obstaculo fue destruido
+	 *  # chequea las colisiones.
+	 *  # si bombita esta en el casillero y si hay un articulo, lo utiliza.
+	 */
+	
 	public void actualizar(){
 		if(unObstaculo.Destruido()){
 			unObstaculo = null;
 		}
 		Colisionador coli = new Colisionador();
 		coli.Colicionar(personajes);
+		if (this.usarArticulo()){
+			this.unArticulo = null; //si se uso el articulo lo pongo en null.
+		}
+		
 	}
 
 	public void eliminar(Articulable Articulo) {
@@ -105,6 +116,32 @@ public class Casillero {
 		if(obstaculo == unObstaculo){
 			unObstaculo = null;
 		}
+	}
+	
+	// devuelve true si el articulo fue utilizado.
+	
+	private boolean usarArticulo(){
+		
+		boolean fueUtilizado = false;
+		Articulable articulo = this.obtenerArticulo();
+		if (articulo != null){
+			
+			LinkedList <Personaje> Personajes = this.obtenerPersonajes();
+			Iterator <Personaje> itPersonajes = Personajes.iterator();
+			while(itPersonajes.hasNext()){
+				
+				Personaje unPersonaje = itPersonajes.next();
+				// el mismo metodo usar del articulo verifica que el personaje sea bombita.
+				if (articulo.usar(unPersonaje)){
+					int indicePersonaje = Personajes.indexOf(unPersonaje);
+					Personajes.set(indicePersonaje, unPersonaje);
+					fueUtilizado = true;
+				}
+			}
+    			
+		}	
+		return fueUtilizado;	
+	
 	}
 }
 	

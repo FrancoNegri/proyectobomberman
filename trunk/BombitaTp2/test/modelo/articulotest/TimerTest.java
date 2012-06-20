@@ -7,7 +7,9 @@ import modelo.errores.ArmamentoNoInicializadoError;
 import modelo.errores.TiempoInvalidoError;
 import modelo.personaje.*;
 import static org.junit.Assert.*;
+
 import org.junit.*;
+
 import static org.mockito.Mockito.*;
 public class TimerTest {
 	
@@ -78,5 +80,22 @@ public class TimerTest {
 			return;
 		}
 		assertTrue(false);
+	}
+	
+	@Test
+	public void testUsarconPersonajequeNoesBombita(){
+		
+		Coordenada coordenada = mock (Coordenada.class);
+		ArmamentoFactory unArmamento = mock(ArmamentoFactory.class);
+		Enemigo unEnemigo = new Enemigo(coordenada);
+		unEnemigo.cambiarArmamento(unArmamento);
+		assertFalse(this.unTimer.usar(unEnemigo));
+	}
+	
+	@Test
+	public void testUsarconBombita(){
+		
+		assertTrue(this.unTimer.usar(rodriguez));
+		
 	}
 }

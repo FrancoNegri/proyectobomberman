@@ -23,9 +23,6 @@ public class Bombita extends Personaje {
 		unArticulo.usar(this);
 	}
 
-	public void cambiarArmamento(ArmamentoFactory nuevoCreador) {
-		this.CreadorDeBombas = nuevoCreador;
-	}
 	
 	public void morir() {
 		this.vida = 0;
