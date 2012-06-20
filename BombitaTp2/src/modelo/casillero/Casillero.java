@@ -72,7 +72,7 @@ public class Casillero {
 	}
 	
 	public boolean esAtacable(){
-		if ((this.unObstaculo == null)&&(this.personajes==null)){
+		if ((this.unObstaculo == null)&&(personajes.isEmpty())){
 			return false;
 		}
 		return true;
