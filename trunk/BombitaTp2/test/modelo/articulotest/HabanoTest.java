@@ -13,13 +13,13 @@ public class HabanoTest {
 	private Bombita rodriguez;
 	private Habano unHabano;
 	private float VelocidadPrueba;
-	
+	Coordenada coordenada;
 	@Before
 	public void setUp(){
-		Coordenada coordenada = new Coordenada(1,1);
+		
 		this.rodriguez = new Bombita(coordenada);
-		Coordenada coord = mock(Coordenada.class);
-		this.unHabano = new Habano(coord);
+		coordenada = new Coordenada(1,2);
+		this.unHabano = new Habano(coordenada);
 		this.VelocidadPrueba = 20;
 		
 	}
@@ -30,6 +30,11 @@ public class HabanoTest {
 		float velocidad= this.rodriguez.getVelocidad();
 		assertTrue(velocidad==this.VelocidadPrueba);
 		
+	}
+	@Test
+	public void testObtenerCoordenadas(){
+		assertTrue(unHabano.obtenerCoordenadaXY().obtenerCoordenadaX()== coordenada.obtenerCoordenadaX());
+		assertTrue(unHabano.obtenerCoordenadaXY().obtenerCoordenadaY()== coordenada.obtenerCoordenadaY());
 	}
 	@Test
 	public void testUsarconBombitaNull(){
@@ -63,7 +68,6 @@ public class HabanoTest {
 		catch (VelocidadMaximaError e){
 		
 			assert(true);
-		}
-		
-}
+		}	
+	}
 }

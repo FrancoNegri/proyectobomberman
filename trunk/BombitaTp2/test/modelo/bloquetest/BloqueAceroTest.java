@@ -17,12 +17,17 @@ public class BloqueAceroTest {
 		assertEquals(Bloque.vidaRestante(), 1000);
 	}
 	
+	
 	@Test
 	public void testQuePruebaQuitarVida()
 	{
 		Obstaculo Bloque = new BloqueAcero(coord);
 		Bloque.QuitarVida(5);
 		assertTrue(Bloque.vidaRestante() == 995);
+		Bloque.QuitarVida(995);
+		assertTrue(Bloque.vidaRestante() == 0);
+		Bloque.QuitarVida(995);
+		assertTrue(Bloque.vidaRestante() == 0);
 	}
 	@Test
 	public void testQuePruebaQueUnBloqueEsDestruido()
