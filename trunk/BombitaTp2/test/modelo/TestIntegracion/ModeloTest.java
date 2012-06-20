@@ -1,7 +1,6 @@
 package modelo.TestIntegracion;
 
 import modelo.LevelFactory.Level;
-
 import org.junit.Test;
 
 

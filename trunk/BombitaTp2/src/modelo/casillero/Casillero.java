@@ -1,8 +1,6 @@
 package modelo.casillero;
 
-import java.util.Iterator;
 import java.util.LinkedList;
-
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.obstaculos.Obstaculo;

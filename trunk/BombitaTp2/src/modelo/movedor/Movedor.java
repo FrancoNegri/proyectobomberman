@@ -2,7 +2,6 @@ package modelo.movedor;
 
 import modelo.Translacion.Translacion;
 import modelo.coordenadas.Coordenable;
-import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 
 public class Movedor {
