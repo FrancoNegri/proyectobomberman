@@ -6,6 +6,7 @@ import modelo.Translacion.TranslacionAbajo;
 import modelo.Translacion.TranslacionArriba;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.Translacion.TranslacionIzquierda;
+import modelo.armamento.Armamento;
 import modelo.coordenadas.Coordenada;
 import java.util.Random;
 public class Enemigo extends Personaje {
