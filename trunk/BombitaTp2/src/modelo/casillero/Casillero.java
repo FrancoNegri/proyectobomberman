@@ -3,6 +3,7 @@ package modelo.casillero;
 import java.util.LinkedList;
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
+import modelo.detectorcolision.Colisionador;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
 
@@ -82,6 +83,8 @@ public class Casillero {
 		if(unObstaculo.Destruido()){
 			unObstaculo = null;
 		}
+		Colisionador coli = new Colisionador();
+		coli.Colicionar(personajes);
 	}
 
 	public void eliminar(Articulable Articulo) {
