@@ -6,7 +6,6 @@ import modelo.coordenadas.Coordenada;
 import modelo.detectorcolision.Colisionador;
 import modelo.personaje.*;
 import modelo.personaje.enemigos.Comun;
-
 import org.junit.Test;
 
 public class ColicionadorTest {
