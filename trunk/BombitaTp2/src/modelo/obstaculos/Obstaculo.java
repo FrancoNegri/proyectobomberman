@@ -45,8 +45,11 @@ public abstract class Obstaculo implements Daniable,Coordenable{
 	}
 	
 	public int obtenerPuntaje() {
+	
+		int puntajeAux=0;
 		if ( this.Destruido() ) {
-			return puntaje;
+			puntajeAux = this.puntaje;
 		}
+		return puntajeAux;
 	}
 }
