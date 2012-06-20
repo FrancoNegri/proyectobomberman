@@ -103,7 +103,7 @@ public class BombitaTest {
 		assertEquals(0, rodriguez.tirarArmamento().obtenerTime(), 5);
 	}
 
-	@Test
+	/*@Test
 	public void testCaminarHaciaLaDerecha() {
 		rodriguez.caminar(derecha);
 		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 2);
@@ -112,7 +112,7 @@ public class BombitaTest {
 	public void testCaminarHaciaAbajo() {
 		rodriguez.caminar(abajo);
 		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 0);
-	}
+	}*/
 
 	@Test
 	public void testDaniar() {

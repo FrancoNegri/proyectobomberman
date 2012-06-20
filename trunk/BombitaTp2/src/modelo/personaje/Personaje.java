@@ -19,7 +19,8 @@ public abstract class Personaje implements Daniable , Coordenable {
 	protected Coordenada coordenadaXY;
 	protected LinkedList<Movimiento> movimientos;
 	protected Movimiento movimiento;
-
+	protected Mapa mapa;
+	
 	public Personaje(Coordenada unaCoordenada) {
 		this.coordenadaXY = unaCoordenada;
 		this.movimientos = new LinkedList<Movimiento>();
@@ -27,15 +28,9 @@ public abstract class Personaje implements Daniable , Coordenable {
 		this.movimientos = movimiento.inicializarMovimientos();
 	} 
 
-	public void caminar(Movimiento unMovimiento) { //Habria que pasarle el mapa como parametro tmb.
-		
-		//if (this.verificarA(unMovimiento,mapa).esCaminable()){ Lo pongo como comenario porque habria que
-															  // cambiar en todas las pruebas los parametros de caminar y no queria hacer cagadas
-															  // si les parece lo hago asi y cambio en los test tambien. 
-			unMovimiento.mover(this);
-			this.setUltimoMovimiento(unMovimiento);
-		//else { no hace nada }
-	}
+	protected abstract void caminar();
+	
+	public abstract void actualizar();
 	
 	public Coordenada obtenerCoordenadaXY() {
 		return coordenadaXY;
@@ -45,6 +40,10 @@ public abstract class Personaje implements Daniable , Coordenable {
 		this.coordenadaXY = unaCoordenada;
 	}
 
+	public void setMapa(Mapa nuevoMapa){
+		mapa = nuevoMapa;
+	}
+	
 	public int obtenerVida() {
 		return vida;
 	}

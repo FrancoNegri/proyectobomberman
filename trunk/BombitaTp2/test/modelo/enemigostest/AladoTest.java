@@ -1,12 +1,16 @@
 package modelo.enemigostest;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 import java.util.LinkedList;
 
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.ArmamentoFactory.MolotovFactory;
+import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
+import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.*;
 import modelo.personaje.movimiento.Abajo;
 import modelo.personaje.movimiento.Arriba;
@@ -76,35 +80,17 @@ public class AladoTest {
 		lopez.restarVida(100);
 		assertTrue(lopez.estaMuerto() == true);
 	}
-	
 	@Test
-	public void testCaminarHaciaLaDerecha() {
-		lopez.caminar(derecha);
-		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaX() == 9);
-	}
-	
-	@Test
-	public void testCaminarHaciaLaIzquierda() {
-		lopez.caminar(izquierda);
-		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaX() == 7);
-	}
-	
-	@Test
-	public void testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda() {
-		lopez.caminar(derecha);
-		lopez.caminar(izquierda);
-		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaX() == 8);
-	}
-	
-	@Test
-	public void testCaminarHaciaArriba() {
-		lopez.caminar(arriba);
-		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaY() == 3);
-	}
-
-	public void testCaminarHaciaAbajo() {
-		lopez.caminar(abajo);
-		assertTrue(lopez.obtenerCoordenadaXY().obtenerCoordenadaY() == 1);
+	public void testCaminarRandom() {
+		
+		Mapa mapa = mock(Mapa.class);
+		Casillero casi = mock(Casillero.class);
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
+		lopez.setMapa(mapa);
+		lopez.actualizar();
+		verify(casi).eliminar(lopez);
+		verify(mapa).agregarAlMapa(lopez);
 	}
 	
 	@Test

@@ -31,5 +31,17 @@ public class Bombita extends Personaje {
 	public void chocar() {
 		this.morir();
 	}
+
+	@Override
+	public void actualizar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void caminar() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

@@ -1,11 +1,17 @@
 package modelo.enemigostest;
 
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.anyObject;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import java.util.LinkedList;
 
 import modelo.ArmamentoFactory.*;
+import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
 import modelo.personaje.enemigos.*;
 import modelo.personaje.movimiento.Abajo;
 import modelo.personaje.movimiento.Arriba;
@@ -77,33 +83,15 @@ public class CecilioTest {
 	}
 	
 	@Test
-	public void testCaminarHaciaLaDerecha() {
-		cecilio.caminar(derecha);
-		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaX() == 9);
-	}
-	
-	@Test
-	public void testCaminarHaciaLaIzquierda() {
-		cecilio.caminar(izquierda);
-		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaX() == 7);
-	}
-	
-	@Test
-	public void testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda() {
-		cecilio.caminar(derecha);
-		cecilio.caminar(izquierda);
-		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaX() == 8);
-	}
-	
-	@Test
-	public void testCaminarHaciaArriba() {
-		cecilio.caminar(arriba);
-		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaY() == 3);
-	}
-
-	public void testCaminarHaciaAbajo() {
-		cecilio.caminar(abajo);
-		assertTrue(cecilio.obtenerCoordenadaXY().obtenerCoordenadaY() == 1);
+	public void testCaminarRandom() {
+		Mapa mapa = mock(Mapa.class);
+		Casillero casi = mock(Casillero.class);
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
+		cecilio.setMapa(mapa);
+		cecilio.actualizar();
+		verify(casi).eliminar(cecilio);
+		verify(mapa).agregarAlMapa(cecilio);
 	}
 	
 	@Test
