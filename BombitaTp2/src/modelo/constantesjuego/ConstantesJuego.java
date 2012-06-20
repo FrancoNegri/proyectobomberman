@@ -24,4 +24,7 @@ public class ConstantesJuego {
 	public static final int timer_proyectil = 0;
 	public static final int velocidad_aumento_habano = 10;
 	public static final int distancia_proyectil = 4;
+	public static final int puntaje_articulos = 100;
+	public static final int puntaje_enemigo_muerto = 300;
+	public static final int puntaje_obstaculo_destruido = 200;
 }
