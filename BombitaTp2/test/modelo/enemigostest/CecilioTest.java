@@ -3,9 +3,11 @@ package modelo.enemigostest;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import modelo.ArmamentoFactory.*;
+import modelo.armamento.Armamento;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
@@ -74,6 +76,18 @@ public class CecilioTest {
 		cecilio.actualizar();
 		verify(casi).eliminar(cecilio);
 		verify(mapa).agregarAlMapa(cecilio);
+	}
+	@Test
+	public void testEnemigoAtacar() {
+		Mapa mapa = mock(Mapa.class);
+		Casillero casi = mock(Casillero.class);
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
+		cecilio = spy(cecilio);
+		when(cecilio.decideAtacar()).thenReturn(true);
+		cecilio.setMapa(mapa);
+		cecilio.actualizar();
+		verify(mapa).agregarAlMapa((Armamento)anyObject());
 	}
 	
 	@Test

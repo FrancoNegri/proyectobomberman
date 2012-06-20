@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Franco" name="modelo.enemigostest.CecilioTest" tests="15" time="0.03" timestamp="2012-06-19T12:09:34">
+<testsuite errors="0" failures="0" hostname="Franco" name="modelo.enemigostest.CecilioTest" tests="10" time="0.025" timestamp="2012-06-20T14:46:36">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -80,21 +80,16 @@
     <property name="java.specification.version" value="1.6" />
     <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
   </properties>
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testDaniar" time="0.0" />
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVelocidad" time="0.0" />
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarBomba" time="0.0" />
+  <testcase classname="modelo.enemigostest.CecilioTest" name="testDaniar" time="0.0010" />
+  <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVelocidad" time="0.0010" />
+  <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarBomba" time="0.0010" />
   <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVida" time="0.0" />
   <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarCoordenadaX" time="0.0" />
   <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarCoordenadaY" time="0.0" />
   <testcase classname="modelo.enemigostest.CecilioTest" name="testRestarVida" time="0.0" />
   <testcase classname="modelo.enemigostest.CecilioTest" name="testSinVida" time="0.0" />
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarHaciaLaDerecha" time="0.0" />
   <testcase classname="modelo.enemigostest.CecilioTest" name="testchocar" time="0.0" />
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.0" />
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testobtenerMovimientoRandom" time="0.0" />
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarHaciaLaIzquierda" time="0.0" />
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarHaciaLaDerechaYLuegoHaciaLaIzquierda" time="0.0" />
-  <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarHaciaArriba" time="0.0" />
+  <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarRandom" time="0.0010" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
