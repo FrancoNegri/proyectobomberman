@@ -55,6 +55,8 @@ public class PuntajeTest {
 		ladrillo.Daniar(5);
 		casillero.actualizar();
 		assertTrue(casillero.obtenerPuntaje() == 200); //Devuelve 300 y no se porque!!!
+														//hay un articulo que le esta sumando +100
+														//(en el casillero hay un habano). Franco
 	}
 	
 	@Test
