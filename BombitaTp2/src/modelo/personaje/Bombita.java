@@ -9,14 +9,12 @@ import modelo.coordenadas.Coordenada;
 
 public class Bombita extends Personaje {
 
-	private int puntaje;
 	
 	public Bombita(Coordenada unaCoordenada) {
 		super(unaCoordenada);
 		this.velocidad = ConstantesJuego.velocidad_bombita;
 		this.vida = ConstantesJuego.velocidad_bombita;
 		this.CreadorDeBombas = new MolotovFactory();
-		this.puntaje = 0;
 	}
 	
 	public void tomarArticulo(Articulable unArticulo) {
@@ -31,17 +29,11 @@ public class Bombita extends Personaje {
 	public void chocar() {
 		this.morir();
 	}
-	
-	public void actualizarPuntaje(int unPuntaje){
-		this.puntaje = puntaje + unPuntaje;
-	}
-	
-	public int obtenerPuntaje() {
-		return puntaje;
-	}
 
 	@Override
 	protected void Atacar() {
+		//Aca iria la accion de plantar la bomba por parte del teclado
+		//En este momento bombita no ataca
 	}
 
 	@Override

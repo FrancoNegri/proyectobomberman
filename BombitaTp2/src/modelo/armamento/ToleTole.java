@@ -9,10 +9,13 @@ import modelo.personaje.*;
 
 public class ToleTole extends Armamento implements Articulable {
 
+	private int puntaje;
+	
 	public ToleTole(Coordenada coordenada,Mapa mapa ,int unTime) {
 		super(coordenada,mapa);
-		time = unTime;
-		radio = ConstantesJuego.radio_toletole;
+		this.time = unTime;
+		this.radio = ConstantesJuego.radio_toletole;
+		this.puntaje = ConstantesJuego.puntaje_articulos;
 	}
 	
 	public boolean usar(Personaje unPersonaje){
@@ -32,8 +35,10 @@ public class ToleTole extends Armamento implements Articulable {
 		boolean esBombita = false;
 		if ( unPersonaje instanceof Bombita)
 			esBombita = true;
-		
 		return esBombita;
-		
+	}
+	
+	public int obtenerPuntaje() {
+		return puntaje;
 	}
 }

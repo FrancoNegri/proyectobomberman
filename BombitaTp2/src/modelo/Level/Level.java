@@ -8,7 +8,6 @@ import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
 import modelo.obstaculos.BloqueLadrillo;
 import modelo.obstaculos.Obstaculo;
-import modelo.personaje.Bombita;
 import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Alado;
 import modelo.personaje.enemigos.Comun;

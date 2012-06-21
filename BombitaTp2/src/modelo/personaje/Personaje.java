@@ -7,11 +7,10 @@ import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
-import modelo.puntaje.Punteable;
 import modelo.danio.*;
 import modelo.errores.TamanioMatrizInvalidoError;
 
-public abstract class Personaje implements Daniable, Coordenable, Punteable {
+public abstract class Personaje implements Daniable, Coordenable {
 	protected Translacion ultimaTranslacion;
 	protected ArmamentoFactory CreadorDeBombas;
 	protected float velocidad;

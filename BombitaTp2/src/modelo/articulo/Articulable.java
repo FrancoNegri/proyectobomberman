@@ -16,4 +16,6 @@ public interface Articulable {
 	public boolean esBombita(Personaje unPersonaje);
 	
 	public Coordenada obtenerCoordenadaXY();
+	
+	public int obtenerPuntaje();
 }

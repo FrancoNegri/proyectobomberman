@@ -9,13 +9,12 @@ import modelo.obstaculos.Obstaculo;
 import modelo.personaje.*;
 
 
-//primera vercion de casillero, va a nesesitar ajustes.
-
 public class Casillero {
 	LinkedList <Personaje> personajes;
 	Armamento unArmamento;
 	Articulable unArticulo;
 	Obstaculo unObstaculo;
+	int puntaje;
 	
 	
 	public Casillero()
@@ -24,8 +23,18 @@ public class Casillero {
 		this.unArmamento = null;
 		this.unArticulo = null;
 		this.unObstaculo = null;
+		this.puntaje = 0;
 		
 	}
+	
+	public void actualizarPuntaje(int unPuntaje){
+		this.puntaje = puntaje + unPuntaje;
+	}
+	
+	public int obtenerPuntaje() {
+		return puntaje;
+	}
+	
 	// Metodo Sobrecargado
 	public void agregar(Personaje unPersonaje)
 	{
@@ -86,18 +95,20 @@ public class Casillero {
 	 *  # si bombita esta en el casillero y si hay un articulo, lo utiliza.
 	 */
 	
-	public void actualizar(){
+	public void actualizar() {
 		if(unObstaculo!=null){
-			if(unObstaculo.Destruido()){
+			if(unObstaculo.Destruido()) {
+				this.puntaje = puntaje + unObstaculo.obtenerPuntaje();
 				unObstaculo = null;
 			}
 		}
-		if(unArmamento!=null){
+		if(unArmamento!=null) {
 			unArmamento.actualizar();
 		}
 		Colisionador coli = new Colisionador();
 		coli.Colicionar(personajes);
-		if (this.usarArticulo()){
+		if (this.usarArticulo()) {
+			this.puntaje = puntaje + unArticulo.obtenerPuntaje();
 			this.unArticulo = null; //si se uso el articulo lo pongo en null.
 		}
 		
