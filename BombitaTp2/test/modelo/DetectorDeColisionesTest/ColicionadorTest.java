@@ -5,7 +5,7 @@ import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.detectorcolision.Colisionador;
 import modelo.personaje.*;
-import modelo.personaje.enemigos.Comun;
+import modelo.personaje.enemigos.LopezComun;
 import org.junit.Test;
 
 public class ColicionadorTest {
@@ -15,7 +15,7 @@ public class ColicionadorTest {
 		Colisionador coli = new Colisionador();
 		Casillero miCasi = new Casillero();
 		Coordenada miCord = new Coordenada(1,1);
-		Personaje enemigo = new Comun(miCord);
+		Personaje enemigo = new LopezComun(miCord);
 		Personaje bomb = new Bombita(miCord);
 		miCasi.agregar(enemigo);
 		miCasi.agregar(bomb);

@@ -11,8 +11,8 @@ import modelo.obstaculos.BloqueAcero;
 import modelo.obstaculos.BloqueLadrillo;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
-import modelo.personaje.enemigos.Alado;
-import modelo.personaje.enemigos.Comun;
+import modelo.personaje.enemigos.LopezAlado;
+import modelo.personaje.enemigos.LopezComun;
 
 
 //Crea un nivel y lo deja listo para arrancar a jugar.
@@ -37,14 +37,14 @@ public class Level implements Runnable
 		
 		for(j=1; j<3;  j++){
 			Coordenada coord = new Coordenada(j*2,j+3);
-			Personaje pers = new Alado(coord);
+			Personaje pers = new LopezAlado(coord);
 			pers.setMapa(mapa);
 			personajes.add(pers);
 		}
 		
 		for(j=5; j<8;  j++){
 			Coordenada coord = new Coordenada(j-3,j-1);
-			Personaje pers = new Comun(coord);
+			Personaje pers = new LopezComun(coord);
 			pers.setMapa(mapa);
 			personajes.add(pers);
 		}

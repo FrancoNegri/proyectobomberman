@@ -14,14 +14,14 @@ import org.junit.*;
 
 public class AladoTest {
 
-	private Alado lopez;
+	private LopezAlado lopez;
 	private Coordenada coordenadaC;
 	private ArmamentoFactory molotov;
 	
 	@Before
 	public void setUp(){
 		coordenadaC = new Coordenada(8,2);
-		lopez = new Alado(coordenadaC);
+		lopez = new LopezAlado(coordenadaC);
 		molotov = new MolotovFactory();
 	}
 	

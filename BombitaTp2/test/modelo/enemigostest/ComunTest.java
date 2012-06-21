@@ -14,13 +14,13 @@ import org.junit.*;
 
 public class ComunTest {
 
-	private Comun lopez;
+	private LopezComun lopez;
 	private Coordenada coordenadaL;
 	
 	@Before
 	public void setUp(){
 		coordenadaL = new Coordenada(2,4);
-		lopez = new Comun(coordenadaL);
+		lopez = new LopezComun(coordenadaL);
 	}
 	
 	@Test
