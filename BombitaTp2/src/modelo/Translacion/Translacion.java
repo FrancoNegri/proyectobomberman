@@ -1,12 +1,17 @@
 package modelo.Translacion;
 
 import modelo.coordenadas.Coordenada;
+import modelo.errores.coordenadaInvalida;
 
 public abstract class Translacion {
 	public Coordenada accion(Coordenada cordenada) {
 		Coordenada nuevaCord = new Coordenada(cordenada.obtenerCoordenadaX(),
 				cordenada.obtenerCoordenadaY());
-		nuevaCord = this.actuar(cordenada, nuevaCord); // Agregue el .this para poder usar polimorfimo en la clase movimiento. Fede
+		try{
+		nuevaCord = this.actuar(cordenada, nuevaCord);
+		}catch(coordenadaInvalida e){
+			nuevaCord = cordenada;
+		}
 		return nuevaCord;
 	}
 
