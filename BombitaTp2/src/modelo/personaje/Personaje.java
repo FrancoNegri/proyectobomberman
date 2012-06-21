@@ -107,14 +107,4 @@ public abstract class Personaje implements Daniable, Coordenable, Punteable {
 			mapa.agregarAlMapa(this);
 		}
 	}
-
-	public Casillero verificarA(Movimiento unMovimiento, Mapa mapa) {
-		Coordenada coord;
-		Personaje aux;
-		aux = this;
-		unMovimiento.mover(aux);
-		coord = aux.obtenerCoordenadaXY();
-		return (mapa.obtenerCasillero(coord));
-
-	}
 }
