@@ -16,7 +16,7 @@ public abstract class Armamento implements Armamentable , Coordenable {
 	public Armamento(Coordenada unaCoordenada,Mapa mapa){
 		this.coordenada = unaCoordenada;
 		this.time = 0;
-		this.danio = 0;
+		this.danio = 100;
 		this.radio = 0;
 		mapaAutilizar = mapa;
 		mapa.agregarAlMapa(this);

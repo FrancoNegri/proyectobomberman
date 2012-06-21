@@ -90,6 +90,9 @@ public class Casillero {
 		if(unObstaculo.Destruido()){
 			unObstaculo = null;
 		}
+		if(unArmamento!=null){
+			unArmamento.actualizar();
+		}
 		Colisionador coli = new Colisionador();
 		coli.Colicionar(personajes);
 		if (this.usarArticulo()){
