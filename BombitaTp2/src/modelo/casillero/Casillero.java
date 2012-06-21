@@ -31,19 +31,15 @@ public class Casillero {
 	}
 	
 	public int obtenerPuntaje() {
-		return puntaje;
+		int puntajeDeRonda = puntaje;
+		puntaje = 0;
+		return puntajeDeRonda;
 	}
 	
 	// Metodo Sobrecargado
 	public void agregar(Personaje unPersonaje)
 	{
 		this.personajes.add(unPersonaje);
-	}
-	
-	public void agregar(LinkedList <Personaje> Personajes){
-		
-		this.personajes = Personajes;
-		
 	}
 	
 	public void agregar(Armamento UnArmamento){

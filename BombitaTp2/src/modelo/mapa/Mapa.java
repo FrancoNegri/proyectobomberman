@@ -10,7 +10,7 @@ import modelo.personaje.Personaje;
 
 public class Mapa {
 	private Tablero TableroJuego;
-	
+	int puntajeTotal;
 	public Mapa(int tamanio) {
 		this.TableroJuego = new Tablero(tamanio);
 	}
@@ -71,6 +71,7 @@ public class Mapa {
 				Coordenada unaCoordenada = new Coordenada(j,k);
 				Casillero casillero = TableroJuego.obtenerCasillero(unaCoordenada);
 				casillero.actualizar();
+				puntajeTotal = puntajeTotal + casillero.obtenerPuntaje();
 			}
 		}
 	}	
