@@ -5,9 +5,9 @@ import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.Enemigo;
 
-public class Comun extends Enemigo {
+public class LopezComun extends Enemigo {
 	
-	public Comun(Coordenada unaCoordenada) {
+	public LopezComun(Coordenada unaCoordenada) {
 		super(unaCoordenada);
 		CreadorDeBombas = new ProyectilFactory();
 		this.velocidad = ConstantesJuego.velocidad_lopez_reggae_comun;

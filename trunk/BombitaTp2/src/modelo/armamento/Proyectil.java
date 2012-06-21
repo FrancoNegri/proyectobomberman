@@ -18,8 +18,9 @@ public class Proyectil extends Armamento {
 	}
 	@Override
 	public void actualizar(){
-		if(distancia<0){
-			transladador.accion(coordenada);
+		if(distancia>0){
+			coordenada = transladador.accion(coordenada);
+			distancia =distancia-1;
 		}else{
 			this.explotar(coordenada, mapaAutilizar);
 		}
