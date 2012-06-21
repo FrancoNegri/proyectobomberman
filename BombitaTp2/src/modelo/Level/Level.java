@@ -1,4 +1,4 @@
-package modelo.LevelFactory;
+package modelo.Level;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -22,46 +22,40 @@ public class Level implements Runnable
 	public void Crear(){
 		
 		int j = 0;
-		for(j=0; j==10;  j++){
+		for(j=1; j<10;  j++){
 			Coordenada coord = new Coordenada(j,j);
 			Obstaculo obst = new BloqueLadrillo(coord);
 			mapa.agregarAlMapa(obst);
 		}
 		
-		for(j=4; j==10;  j++){
+		for(j=4; j<10;  j++){
 			Coordenada coord = new Coordenada(j,3);
 			Obstaculo obst = new BloqueAcero(coord);
 			mapa.agregarAlMapa(obst);
 		}
 		
-		for(j=1; j==3;  j++){
+		for(j=1; j<3;  j++){
 			Coordenada coord = new Coordenada(j*2,j+3);
 			Personaje pers = new Alado(coord);
-			mapa.agregarAlMapa(pers);
+			pers.setMapa(mapa);
 			personajes.add(pers);
 		}
 		
-		for(j=5; j==8;  j++){
+		for(j=5; j<8;  j++){
 			Coordenada coord = new Coordenada(j,j-3);
 			Personaje pers = new Comun(coord);
-			mapa.agregarAlMapa(pers);
+			pers.setMapa(mapa);
 			personajes.add(pers);
 		}
-		
-		Coordenada coord = new Coordenada(5,5);
-		Personaje bombita = new Bombita(coord); 
-		mapa.agregarAlMapa(bombita);
-		personajes.add(bombita);
 	}
 
 	public void run() {
 		
-		while(!personajes.isEmpty()){
+		while(personajes.size() > 3){
 		Iterator<Personaje> it = personajes.iterator();
 		while(it.hasNext()){
 			Personaje pers = it.next();
-			//pers.actualizar();
-			/* tendria que hacer que los personajes pongan bombas, caminen*/
+			pers.actualizar();
 			if(pers.estaMuerto()){
 				it.remove();
 			}

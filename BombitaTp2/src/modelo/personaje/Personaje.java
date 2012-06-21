@@ -10,6 +10,7 @@ import modelo.mapa.Mapa;
 import modelo.personaje.movimiento.*;
 import modelo.puntaje.Punteable;
 import modelo.danio.*;
+import modelo.errores.TamanioMatrizInvalidoError;
 
 public abstract class Personaje implements Daniable, Coordenable, Punteable {
 	protected Translacion ultimaTranslacion;
@@ -91,11 +92,13 @@ public abstract class Personaje implements Daniable, Coordenable, Punteable {
 	}
 
 	protected void caminar() {
+		Casillero casilleroAlQueMoverse;
 		Translacion translasionRandom = this.obtenerTranslacion();
 		Coordenada movimientoPlaneado = translasionRandom.accion(coordenadaXY);
-		Casillero casilleroAlQueMoverse = mapa
-				.obtenerCasillero(movimientoPlaneado);
-		if (casilleroAlQueMoverse.esCaminable()) {
+		try{
+		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
+		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa
+		if (casilleroAlQueMoverse.esCaminable()){
 			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
 			casilleroAntiguo.eliminar(this);
 			coordenadaXY = movimientoPlaneado;
