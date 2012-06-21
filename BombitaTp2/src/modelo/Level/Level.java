@@ -3,6 +3,8 @@ package modelo.Level;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import modelo.articulo.Articulo;
+import modelo.articulo.Habano;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
@@ -46,11 +48,14 @@ public class Level implements Runnable
 			pers.setMapa(mapa);
 			personajes.add(pers);
 		}
+		Coordenada coord = new Coordenada(4,6);
+		Articulo articulo = new Habano(coord);
+		mapa.agregarAlMapa(articulo);
 	}
 
 	public void run() {
 		
-		while(personajes.size() > 3){
+		while(personajes.size() > 2){
 		Iterator<Personaje> it = personajes.iterator();
 		while(it.hasNext()){
 			Personaje pers = it.next();
