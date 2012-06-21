@@ -66,8 +66,8 @@ public class Mapa {
 
 	public void actualizarMapa() {
 		int j,k;
-		for(j=0;j == TableroJuego.obtenerTamanio(); j++){
-			for(k=0;k == TableroJuego.obtenerTamanio(); k++){
+		for(j=0;j < TableroJuego.obtenerTamanio(); j++){
+			for(k=0;k < TableroJuego.obtenerTamanio(); k++){
 				Coordenada unaCoordenada = new Coordenada(j,k);
 				Casillero casillero = TableroJuego.obtenerCasillero(unaCoordenada);
 				casillero.actualizar();
