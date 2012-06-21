@@ -18,25 +18,13 @@ public class ToleTole extends Armamento implements Articulable {
 		this.puntaje = ConstantesJuego.puntaje_articulos;
 	}
 	
-	public boolean usar(Personaje unPersonaje){
+	public void usar(Personaje unPersonaje){
 		
-		boolean bandera = false;
-		if(this.esBombita(unPersonaje)){
-			
 			ToleToleFactory nuevaFactory = new ToleToleFactory();
 			unPersonaje.cambiarArmamento(nuevaFactory);
-			bandera = true;
-		}
-		return bandera;
 	}
 	
-	public boolean esBombita(Personaje unPersonaje){
-		
-		boolean esBombita = false;
-		if ( unPersonaje instanceof Bombita)
-			esBombita = true;
-		return esBombita;
-	}
+
 	
 	public int obtenerPuntaje() {
 		return puntaje;
