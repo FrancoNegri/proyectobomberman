@@ -82,20 +82,5 @@ public class TimerTest {
 		assertTrue(false);
 	}
 	
-	@Test
-	public void testUsarconPersonajequeNoesBombita(){
-		
-		Coordenada coordenada = mock (Coordenada.class);
-		ArmamentoFactory unArmamento = mock(ArmamentoFactory.class);
-		Enemigo unEnemigo = new Enemigo(coordenada);
-		unEnemigo.cambiarArmamento(unArmamento);
-		assertFalse(this.unTimer.usar(unEnemigo));
-	}
-	
-	@Test
-	public void testUsarconBombita(){
-		
-		assertTrue(this.unTimer.usar(rodriguez));
-		
-	}
+
 }

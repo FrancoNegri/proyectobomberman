@@ -11,9 +11,8 @@ public interface Articulable {
 	 * devuelve true si se uso el articulo.
 	 */
 	
-	public boolean usar(Personaje unPersonaje);
+	public void usar(Personaje unPersonaje);
 	
-	public boolean esBombita(Personaje unPersonaje);
 	
 	public Coordenada obtenerCoordenadaXY();
 	
