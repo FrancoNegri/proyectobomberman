@@ -3,6 +3,7 @@ package modelo.personaje;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
+import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
@@ -28,6 +29,8 @@ public abstract class Personaje implements Daniable, Coordenable {
 	public abstract void chocar();
 
 	protected abstract void Atacar();
+	
+	public abstract void tomarArticulo(Articulable unArticulo);
 
 	public Coordenada obtenerCoordenadaXY() {
 		return coordenadaXY;

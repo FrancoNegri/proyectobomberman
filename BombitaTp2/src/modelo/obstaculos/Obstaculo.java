@@ -13,7 +13,7 @@ public abstract class Obstaculo implements Daniable,Coordenable{
 	
 	public Obstaculo(int vidaTotal,Coordenada unacoordenada){ 
 		this.vida = vidaTotal;
-		cordenadaObsaculo = unacoordenada;
+		this.cordenadaObsaculo = unacoordenada;
 		this.puntaje = ConstantesJuego.puntaje_obstaculo_destruido;
 	}
 	

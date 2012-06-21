@@ -6,6 +6,7 @@ import modelo.Translacion.TranslacionAbajo;
 import modelo.Translacion.TranslacionArriba;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.Translacion.TranslacionIzquierda;
+import modelo.articulo.Articulable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import java.util.Random;
@@ -65,5 +66,10 @@ public class Enemigo extends Personaje {
 		 puntajeAux = this.puntaje;	
 		}
 		return puntajeAux;
+	}
+
+	@Override
+	public void tomarArticulo(Articulable unArticulo) {
+		
 	}
 }
