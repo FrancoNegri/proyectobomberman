@@ -28,6 +28,7 @@ public class PuntajeTest {
 		casillero.agregar(cecilio);
 		casillero.agregar(habano);
 		casillero.agregar(ladrillo);
+		casillero.agregar(rodriguez);
 	}
 	
 	@Test
@@ -43,23 +44,23 @@ public class PuntajeTest {
 	}
 	
 	@Test
-	public void testAumentarPuntajeLuegoDeMatarEnemigo() {
+	public void testAumentarPuntajeLuegoDeMatarEnemigo() { //Pensar en que momento se peude sumar el puntaje al morir un enemigo
 		/*cecilio.Daniar(5);
-		rodriguez.actualizarPuntaje(cecilio.obtenerPuntaje());
-		assertTrue(rodriguez.obtenerPuntaje() == 300);*/
+		casillero.actualizar();
+		assertTrue(casillero.obtenerPuntaje() == 300);*/
 	}
 	
 	@Test
 	public void testAumentarPuntajeLuegoDeDestruirObstaculo() {
 		ladrillo.Daniar(5);
 		casillero.actualizar();
-		assertTrue(casillero.obtenerPuntaje() == 200);
+		assertTrue(casillero.obtenerPuntaje() == 200); //Devuelve 300 y no se porque!!!
 	}
 	
 	@Test
-	public void testAumentarPuntajeBombitaLuegoDeObtenerArticulo() {
-		
-		casillero.actualizarPuntaje(habano.obtenerPuntaje());
+	public void testAumentarPuntajeLuegoDeObtenerArticulo() {
+		rodriguez.tomarArticulo(habano);
+		casillero.actualizar();
 		assertTrue(casillero.obtenerPuntaje() == 100);
 	}
 }

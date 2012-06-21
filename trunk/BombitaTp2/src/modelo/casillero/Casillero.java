@@ -17,8 +17,7 @@ public class Casillero {
 	int puntaje;
 	
 	
-	public Casillero()
-	{
+	public Casillero() {
 		this.personajes = new LinkedList<Personaje>() ;
 		this.unArmamento = null;
 		this.unArticulo = null;
@@ -135,27 +134,18 @@ public class Casillero {
 	}
 	
 	// devuelve true si el articulo fue utilizado.
-	
 	private boolean usarArticulo(){
-		
 		boolean fueUtilizado = false;
 		Articulable articulo = this.obtenerArticulo();
-		if (articulo != null){
-			
+		if (articulo != null) {
 			LinkedList <Personaje> Personajes = this.obtenerPersonajes();
 			Iterator <Personaje> itPersonajes = Personajes.iterator();
-			while(itPersonajes.hasNext()){
-				
+			while (itPersonajes.hasNext()) {
 				Personaje unPersonaje = itPersonajes.next();
-				// el mismo metodo usar del articulo verifica que el personaje sea bombita.
-				if (articulo.usar(unPersonaje)){
-					int indicePersonaje = Personajes.indexOf(unPersonaje);
-					Personajes.set(indicePersonaje, unPersonaje);
-					fueUtilizado = true;
+				unPersonaje.tomarArticulo(articulo);
+				fueUtilizado = true;
 				}
 			}
-    			
-		}	
 		return fueUtilizado;	
 	
 	}
