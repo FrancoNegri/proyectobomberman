@@ -87,8 +87,10 @@ public abstract class Personaje implements Daniable, Coordenable, Punteable {
 	}
 
 	public void actualizar() {
-		this.caminar();
-		this.Atacar();
+		if(!this.estaMuerto()){
+			this.caminar();
+			this.Atacar();
+		}
 	}
 
 	protected void caminar() {
