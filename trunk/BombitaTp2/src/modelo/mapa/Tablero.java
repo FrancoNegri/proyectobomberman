@@ -38,11 +38,9 @@ public class Tablero {
 	}
 	
 	private void tamanioValido(int tamanio){
-		
-			if(tamanio<=0){
+			if(tamanio<0){
 				throw new TamanioMatrizInvalidoError();
 			}
-		
 	}
 	
 	private void verificarTamanio(int tamanio){
@@ -50,8 +48,6 @@ public class Tablero {
 		if(tamanio>=this.tamanio){
 			throw new TamanioMatrizInvalidoError();
 		}
-		
-		
 	}
 	
 	private void cargarMatriz(Casillero matriz[][], int tamanio){
