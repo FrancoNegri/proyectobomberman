@@ -29,10 +29,7 @@ public abstract class Articulo implements Articulable, Coordenable {
 		boolean esBombita = false;
 		if ( unPersonaje instanceof Bombita)
 			esBombita = true;
-		
 		return esBombita;
-		
-		
 	}
 	
 	public int obtenerPuntaje() {

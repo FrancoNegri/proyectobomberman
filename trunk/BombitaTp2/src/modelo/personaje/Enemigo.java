@@ -60,12 +60,10 @@ public class Enemigo extends Personaje {
 	}*/
 	
 	public int obtenerPuntaje() {
-		
 		int puntajeAux = 0;
 		if ( this.estaMuerto() ){
 		 puntajeAux = this.puntaje;	
-	}
-	
-	return puntajeAux;
+		}
+		return puntajeAux;
 	}
 }
