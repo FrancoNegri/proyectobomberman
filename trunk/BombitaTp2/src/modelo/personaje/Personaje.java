@@ -7,7 +7,6 @@ import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
-import modelo.personaje.movimiento.*;
 import modelo.puntaje.Punteable;
 import modelo.danio.*;
 import modelo.errores.TamanioMatrizInvalidoError;
@@ -45,6 +44,7 @@ public abstract class Personaje implements Daniable, Coordenable, Punteable {
 
 	public void setMapa(Mapa nuevoMapa) {
 		mapa = nuevoMapa;
+		mapa.agregarAlMapa(this);
 	}
 
 	public Mapa getMapa() {

@@ -73,7 +73,7 @@ public class AladoTest {
 		lopez.setMapa(mapa);
 		lopez.actualizar();
 		verify(casi).eliminar(lopez);
-		verify(mapa).agregarAlMapa(lopez);
+		verify(mapa,times(2)).agregarAlMapa(lopez);
 	}
 	
 	@Test
