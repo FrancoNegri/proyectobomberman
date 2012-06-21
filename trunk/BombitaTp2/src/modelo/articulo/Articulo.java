@@ -22,16 +22,10 @@ public abstract class Articulo implements Articulable, Coordenable {
 		return coordenadaXY;
 	}
 	
-	public abstract boolean usar(Personaje unPersonaje);
+	public abstract void usar(Personaje unPersonaje);
 	
-	public boolean esBombita(Personaje unPersonaje){
-		
-		boolean esBombita = false;
-		if ( unPersonaje instanceof Bombita)
-			esBombita = true;
-		return esBombita;
-	}
-	
+
+
 	public int obtenerPuntaje() {
 		return puntaje;
 	}
