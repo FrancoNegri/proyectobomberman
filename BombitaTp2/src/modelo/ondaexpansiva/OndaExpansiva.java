@@ -18,14 +18,6 @@ public class OndaExpansiva{
    	 	this.danio=danioExplocion;	
     }
     
-    public int getRadio(){																						
-   	 	return radio;
-    }
-    
-    public int getDanio(){
-    	return danio;
-    }
-    
     public void Expandirse(Coordenada cordenada,Mapa mapa){
     	Translacion movDerecha = new TranslacionDerecha();
     	Translacion movIzquierda = new TranslacionIzquierda();
@@ -72,7 +64,7 @@ public class OndaExpansiva{
     	while(itPersonajes.hasNext()){
     			
     		Personaje unPersonaje = itPersonajes.next();
-    		unPersonaje.Daniar(this.getDanio());
+    		unPersonaje.Daniar(danio);
     		int indicePersonaje = Personajes.indexOf(unPersonaje);
     		Personajes.set(indicePersonaje, unPersonaje);	
     	}	
@@ -83,7 +75,7 @@ public class OndaExpansiva{
     	Obstaculo unObstaculo = unCasillero.obtenerObstaculo();
     	if (unObstaculo != null ){
     		
-    		unObstaculo.Daniar(this.getDanio());
+    		unObstaculo.Daniar(danio);
     		unCasillero.agregar(unObstaculo);
     	}
     	
