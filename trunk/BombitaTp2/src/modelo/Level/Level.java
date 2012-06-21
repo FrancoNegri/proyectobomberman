@@ -54,7 +54,7 @@ public class Level implements Runnable
 	}
 
 	public void run() {
-		
+		System.out.println("Prueva Integracion");
 		while(personajes.size() > 2){
 		Iterator<Personaje> it = personajes.iterator();
 		while(it.hasNext()){
@@ -63,6 +63,7 @@ public class Level implements Runnable
 			if(pers.estaMuerto()){
 				it.remove();
 			}
+			System.out.println("Puntaje :" + mapa.obtenerPuntajeTotal());
 		}
 		mapa.actualizarMapa();
 		}

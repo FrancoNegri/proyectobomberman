@@ -75,4 +75,8 @@ public class Mapa {
 			}
 		}
 	}	
+	public int obtenerPuntajeTotal(){
+		return puntajeTotal;
+	}
+	
 }
