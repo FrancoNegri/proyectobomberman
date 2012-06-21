@@ -71,7 +71,7 @@ public class Mapa {
 				Coordenada unaCoordenada = new Coordenada(j,k);
 				Casillero casillero = TableroJuego.obtenerCasillero(unaCoordenada);
 				casillero.actualizar();
-				puntajeTotal = puntajeTotal + casillero.obtenerPuntaje();
+				this.puntajeTotal = puntajeTotal + casillero.obtenerPuntaje();
 			}
 		}
 	}	
