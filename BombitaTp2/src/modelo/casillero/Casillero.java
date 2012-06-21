@@ -87,8 +87,10 @@ public class Casillero {
 	 */
 	
 	public void actualizar(){
-		if(unObstaculo.Destruido()){
-			unObstaculo = null;
+		if(unObstaculo!=null){
+			if(unObstaculo.Destruido()){
+				unObstaculo = null;
+			}
 		}
 		if(unArmamento!=null){
 			unArmamento.actualizar();
