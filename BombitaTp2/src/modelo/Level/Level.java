@@ -42,7 +42,7 @@ public class Level implements Runnable
 		}
 		
 		for(j=5; j<8;  j++){
-			Coordenada coord = new Coordenada(j-1,j-1);
+			Coordenada coord = new Coordenada(j-3,j-1);
 			Personaje pers = new Comun(coord);
 			pers.setMapa(mapa);
 			personajes.add(pers);

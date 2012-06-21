@@ -1,11 +1,7 @@
 package modelo.enemigostest;
 
 import static org.junit.Assert.*;
-import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.*;
 import modelo.ArmamentoFactory.*;
 import modelo.armamento.Armamento;
 import modelo.casillero.Casillero;
@@ -75,7 +71,7 @@ public class ComunTest {
 		lopez.setMapa(mapa);
 		lopez.actualizar();
 		verify(casi).eliminar(lopez);
-		verify(mapa).agregarAlMapa(lopez);
+		verify(mapa,times(2)).agregarAlMapa(lopez);
 	}
 	@Test
 	public void testEnemigoAtacar() {

@@ -2,10 +2,7 @@ package modelo.enemigostest;
 
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import modelo.ArmamentoFactory.*;
 import modelo.armamento.Armamento;
 import modelo.casillero.Casillero;
@@ -75,7 +72,7 @@ public class CecilioTest {
 		cecilio.setMapa(mapa);
 		cecilio.actualizar();
 		verify(casi).eliminar(cecilio);
-		verify(mapa).agregarAlMapa(cecilio);
+		verify(mapa,times(2)).agregarAlMapa(cecilio);
 	}
 	@Test
 	public void testEnemigoAtacar() {
