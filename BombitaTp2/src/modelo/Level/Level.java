@@ -17,8 +17,8 @@ import modelo.personaje.enemigos.Comun;
 //Crea un nivel y lo deja listo para arrancar a jugar.
 public class Level implements Runnable
 {
-	Mapa mapa = new Mapa(10);
-	LinkedList <Personaje> personajes = new LinkedList<Personaje>();
+	private Mapa mapa = new Mapa(10);
+	private LinkedList <Personaje> personajes = new LinkedList<Personaje>();
 	public void Crear(){
 		
 		int j = 0;
@@ -42,7 +42,7 @@ public class Level implements Runnable
 		}
 		
 		for(j=5; j<8;  j++){
-			Coordenada coord = new Coordenada(j,j-3);
+			Coordenada coord = new Coordenada(j-1,j-1);
 			Personaje pers = new Comun(coord);
 			pers.setMapa(mapa);
 			personajes.add(pers);
