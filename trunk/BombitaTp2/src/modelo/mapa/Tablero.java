@@ -7,7 +7,6 @@ import modelo.errores.TamanioMatrizInvalidoError;
 public class Tablero {
 	
 	private Casillero casilleros[][];
-	private int puntajeTotal;
 	private int tamanio;
 	
 	/*como dijimos el mapa va a ser cuadrado por lo tanto
