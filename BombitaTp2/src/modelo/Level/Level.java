@@ -51,6 +51,8 @@ public class Level implements Runnable
 		Coordenada coord = new Coordenada(4,6);
 		Articulo articulo = new Habano(coord);
 		mapa.agregarAlMapa(articulo);
+	
+		//Falta agregar la salida del juego hacia el proximo nivel
 	}
 
 	public void run() {
