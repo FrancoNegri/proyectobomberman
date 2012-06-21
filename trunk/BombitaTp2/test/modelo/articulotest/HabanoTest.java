@@ -69,33 +69,8 @@ public class HabanoTest {
 			assert(true);
 		}	
 	}
-	@Test
-	public void testUsarconPersonajequeNoesBombita(){
-		Enemigo unEnemigo = new Enemigo(this.coordenada);
-		assertFalse(this.unHabano.usar(unEnemigo));
-	}
-	
-	@Test
-	public void testUsarconBombita(){
+
 		
-		assertTrue(this.unHabano.usar(rodriguez));
-		
-	}
-	
-	@Test
-	public void testesBombitaconEnemigo(){
-		
-		Enemigo unEnemigo = new Enemigo(coordenada);
-		assertFalse(this.unHabano.esBombita(unEnemigo));
-		
-	}
-	
-	@Test
-	public void testesBombita(){
-		
-		assertTrue(this.unHabano.esBombita(rodriguez));
-		
-	}
 	
 	
 }

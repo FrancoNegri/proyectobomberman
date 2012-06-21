@@ -15,19 +15,18 @@ public class Habano extends Articulo{
 		this.velocidadmaxima=35;
 	}
 	
-	public boolean usar(Personaje unPersonaje){
+	public void usar(Personaje unPersonaje){
 		
-		boolean bandera = false;
 		if(unPersonaje==null){
 			
 			throw new PersonajeNoInicializadoError();
 		}
 		
-		if( this.esBombita(unPersonaje)){	
+		else{	
 			this.aumentarVelocidad(unPersonaje);
-			bandera = true;
+			
 		}
-		return bandera;
+		
 	}
 	
 	public void aumentarVelocidad(Personaje unPersonaje){
