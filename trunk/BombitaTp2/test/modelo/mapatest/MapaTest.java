@@ -40,7 +40,7 @@ public class MapaTest {
 	}
 	
 	@Test
-	public void testTamaño(){
+	public void testTamanio(){
 		assertTrue(5 == unMapa.obtenerTamanio());
 	}
 	
