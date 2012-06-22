@@ -10,10 +10,14 @@ import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import modelo.armamento.Armamento;
+import modelo.armamento.ToleTole;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.LopezComun;
+import vista.Armamento.VistaArmamento;
 import vista.Personaje.vistaPersonaje;
 import vista.fiuba.algo3.titiritero.dibujables.Circulo;
 import vista.fiuba.algo3.titiritero.dibujables.Figura;
@@ -60,6 +64,7 @@ public class VentanaPrincipal {
 	 * @throws IOException 
 	 */
 	private void initialize() throws IOException {
+		/////////////Inicializacion grafica
 		frame = new JFrame();
 		frame.setForeground(new Color(0, 0, 0));
 		frame.setBounds(100, 100, 450, 300);
@@ -89,12 +94,19 @@ public class VentanaPrincipal {
 		panel.setBounds(42, 53, 375, 187);
 		frame.getContentPane().add(panel);
 	
-		this.gameLoop = new GameLoop((SuperficieDeDibujo) panel);
+		this.gameLoop = new GameLoop(100,(SuperficieDeDibujo) panel);
+		/////////////Inicializacion grafica Completa
+		
+		
+		
 		Mapa mapa = new Mapa(100); 
-		Coordenada coord = new Coordenada(50,50);
-		Personaje modelo3 = new LopezComun(coord,mapa);
-		this.gameLoop.agregar(modelo3);
-		vistaPersonaje imagen = new vistaPersonaje(modelo3);
-		this.gameLoop.agregar(imagen);
-			};
+		Personaje modelo3;
+		for(int j = 0; j < 20;j++){
+			Coordenada coord = new Coordenada(j+10,(j+4)^2);
+			modelo3 = new LopezComun(coord,mapa);
+			this.gameLoop.agregar(modelo3);
+			vistaPersonaje imagen = new vistaPersonaje(modelo3);
+			this.gameLoop.agregar(imagen);
+		}
+		};
 	}
