@@ -1,5 +1,6 @@
 package modelo.mapa;
 
+import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
@@ -8,7 +9,7 @@ import modelo.errores.CasilleroOcupadoError;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
 
-public class Mapa {
+public class Mapa implements ObjetoVivo{
 	private Tablero TableroJuego;
 	int puntajeTotal;
 	public Mapa(int tamanio) {
@@ -17,7 +18,6 @@ public class Mapa {
 	
 	private void agregarCasillero(Coordenada coord, Casillero unCasillero) {
 		this.TableroJuego.cambiarCasillero(coord, unCasillero);
-
 	}
 
 	private void verificarCasillero(Casillero unCasillero) {
@@ -64,7 +64,7 @@ public class Mapa {
 		this.agregarCasillero(coord, CasilleroAux);
 	}
 
-	public void actualizarMapa() {
+	public void vivir() {
 		int j,k;
 		for(j=0;j < TableroJuego.obtenerTamanio(); j++){
 			for(k=0;k < TableroJuego.obtenerTamanio(); k++){
@@ -78,5 +78,11 @@ public class Mapa {
 	public int obtenerPuntajeTotal(){
 		return puntajeTotal;
 	}
+	
+	
+	public int obtenerTamanio(){
+		return TableroJuego.obtenerTamanio();
+	}
+	
 	
 }

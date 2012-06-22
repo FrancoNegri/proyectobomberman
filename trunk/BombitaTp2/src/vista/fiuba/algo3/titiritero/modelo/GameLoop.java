@@ -53,12 +53,7 @@ public class GameLoop implements Runnable{
 			Iterator<ObjetoVivo> iterator = objetosVivos.iterator();
 			while(iterator.hasNext()){
 				ObjetoVivo objetoVivo = iterator.next();
-				if(objetoVivo.estaMuerto()){
-					iterator.remove();
-					System.out.println("muerto!");
-				}else{
-					objetoVivo.vivir();
-				}
+				objetoVivo.vivir();
 			}
 			for(ObjetoDibujable objetoDibujable : this.objetosDibujables) {
 				objetoDibujable.dibujar(this.superficieDeDibujo);

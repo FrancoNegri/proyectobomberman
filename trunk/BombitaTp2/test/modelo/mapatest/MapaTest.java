@@ -40,6 +40,12 @@ public class MapaTest {
 	}
 	
 	@Test
+	public void testTamaño(){
+		assertTrue(5 == unMapa.obtenerTamanio());
+	}
+	
+	
+	@Test
 	
 	public void testConstructorTamanioInvalido(){
 		

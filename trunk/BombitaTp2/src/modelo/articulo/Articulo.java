@@ -1,5 +1,6 @@
 package modelo.articulo;
 
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
@@ -28,5 +29,13 @@ public abstract class Articulo implements Articulable, Coordenable {
 
 	public int obtenerPuntaje() {
 		return puntaje;
+	}
+	
+	public int getX() {
+		return this.coordenadaXY.obtenerCoordenadaX();
+	}
+
+	public int getY() {
+		return this.coordenadaXY.obtenerCoordenadaY();
 	}
 }
