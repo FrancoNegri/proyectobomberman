@@ -16,8 +16,8 @@ public class HabanoTest {
 	@Before
 	public void setUp(){
 		
-		this.rodriguez = new Bombita(coordenada);
 		coordenada = new Coordenada(1,2);
+		this.rodriguez = new Bombita(coordenada);
 		this.unHabano = new Habano(coordenada);
 		this.VelocidadPrueba = 20;
 		

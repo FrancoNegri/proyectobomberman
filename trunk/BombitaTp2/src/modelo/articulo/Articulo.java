@@ -14,12 +14,12 @@ public abstract class Articulo implements Articulable, Coordenable {
 	protected int puntaje;
 	
 	public Articulo(Coordenada unaCoordenada){
-		this.coordenadaXY =  unaCoordenada;
+		this.coordenadaXY =  unaCoordenada.copiar();
 		this.puntaje = ConstantesJuego.puntaje_articulos;
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
-		return coordenadaXY;
+		return coordenadaXY.copiar();
 	}
 	
 	public abstract void usar(Personaje unPersonaje);

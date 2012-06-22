@@ -20,7 +20,7 @@ public abstract class Personaje implements Daniable, Coordenable {
 	protected Mapa mapa;
 
 	public Personaje(Coordenada unaCoordenada) {
-		this.coordenadaXY = unaCoordenada;
+		this.coordenadaXY = unaCoordenada.copiar();
 		ultimaTranslacion = new TranslacionDerecha();
 	}
 
@@ -33,7 +33,7 @@ public abstract class Personaje implements Daniable, Coordenable {
 	public abstract void tomarArticulo(Articulable unArticulo);
 
 	public Coordenada obtenerCoordenadaXY() {
-		return coordenadaXY;
+		return coordenadaXY.copiar();
 	}
 
 	public void cambiarCoordenadaXY(Coordenada unaCoordenada) {
@@ -97,8 +97,8 @@ public abstract class Personaje implements Daniable, Coordenable {
 
 	protected void caminar() {
 		Casillero casilleroAlQueMoverse;
-		Translacion translasionRandom = this.obtenerTranslacion();
-		Coordenada movimientoPlaneado = translasionRandom.accion(coordenadaXY);
+		ultimaTranslacion = this.obtenerTranslacion();
+		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
 		try{
 		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
 		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa

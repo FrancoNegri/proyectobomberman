@@ -15,6 +15,11 @@ public class Coordenada {
 		
 	}
 
+	public Coordenada copiar(){
+		Coordenada nuevaCoordenada = new Coordenada(x,y);
+		return nuevaCoordenada;
+	}
+	
 	public int obtenerCoordenadaX() {
 		return x;
 	}

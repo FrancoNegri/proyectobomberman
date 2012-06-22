@@ -14,7 +14,7 @@ public abstract class Armamento implements Armamentable , Coordenable {
 	protected Mapa mapaAutilizar;
 	
 	public Armamento(Coordenada unaCoordenada,Mapa mapa){
-		this.coordenada = unaCoordenada;
+		this.coordenada = unaCoordenada.copiar();
 		this.time = 0;
 		this.danio = 100;
 		this.radio = 0;
@@ -23,7 +23,7 @@ public abstract class Armamento implements Armamentable , Coordenable {
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
-		return coordenada;
+		return coordenada.copiar();
 	}
 	
 	public float obtenerTime() {
@@ -36,7 +36,7 @@ public abstract class Armamento implements Armamentable , Coordenable {
 	
 	public void explotar(Coordenada coord,Mapa mapa){
 		OndaExpansiva Onda = new OndaExpansiva(radio,danio);
-		Onda.Expandirse(coord,mapa);
+		Onda.Expandirse(coord.copiar(),mapa);
 	}
 	
 	

@@ -13,12 +13,12 @@ public abstract class Obstaculo implements Daniable,Coordenable{
 	
 	public Obstaculo(int vidaTotal,Coordenada unacoordenada){ 
 		this.vida = vidaTotal;
-		this.cordenadaObsaculo = unacoordenada;
+		this.cordenadaObsaculo = unacoordenada.copiar();
 		this.puntaje = ConstantesJuego.puntaje_obstaculo_destruido;
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
-		return cordenadaObsaculo;
+		return cordenadaObsaculo.copiar();
 	}
 
 	public void QuitarVida(int danio) {
