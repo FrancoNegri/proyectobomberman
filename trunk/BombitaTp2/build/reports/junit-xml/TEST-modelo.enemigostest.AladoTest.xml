@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Franco" name="modelo.enemigostest.AladoTest" tests="11" time="0.074" timestamp="2012-06-21T14:16:43">
+<testsuite errors="0" failures="0" hostname="Franco" name="modelo.enemigostest.AladoTest" tests="11" time="0.063" timestamp="2012-06-22T02:45:55">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -80,17 +80,17 @@
     <property name="java.specification.version" value="1.6" />
     <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
   </properties>
-  <testcase classname="modelo.enemigostest.AladoTest" name="testDaniar" time="0.0010" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testDaniar" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVelocidad" time="0.0" />
-  <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarBomba" time="0.0" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarBomba" time="0.0010" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVida" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaX" time="0.0" />
-  <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaY" time="0.0010" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaY" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testRestarVida" time="0.0010" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testSinVida" time="0.0" />
   <testcase classname="modelo.enemigostest.AladoTest" name="testchocar" time="0.0" />
-  <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarRandom" time="0.049" />
-  <testcase classname="modelo.enemigostest.AladoTest" name="testEnemigoAtacar" time="0.0020" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarRandom" time="0.044" />
+  <testcase classname="modelo.enemigostest.AladoTest" name="testEnemigoAtacar" time="0.0010" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,19 +1,15 @@
-package fiuba.algo3.titiritero.dibujables;
-
-import static org.junit.Assert.*;
+package vista.fiuba.algo3.titiritero.dibujables;
 
 import java.awt.Graphics;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 import java.io.IOException;
 import java.net.URL;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 
 public class ImagenTest {
 
@@ -25,7 +21,7 @@ public class ImagenTest {
 		ObjetoPosicionable objeto = Mockito.mock(ObjetoPosicionable.class);
 		Mockito.when(objeto.getX()).thenReturn(5);
 		Mockito.when(objeto.getY()).thenReturn(5);
-		URL imagenUrl = this.getClass().getResource("/res/imagen.png");
+		URL imagenUrl = this.getClass().getResource("/vista/res/imagen.png");
 		Imagen imagen = new Imagen(imagenUrl, objeto);
 		imagen.dibujar(unaSuperficie);
 		

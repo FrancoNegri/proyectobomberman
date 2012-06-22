@@ -1,9 +1,10 @@
-package fiuba.algo3.titiritero.dibujables;
+package vista.fiuba.algo3.titiritero.dibujables;
 
 import java.awt.Graphics;
 
-import fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
-import fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
+import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
+
 
 public class Circulo extends Figura {
 

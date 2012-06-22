@@ -1,10 +1,10 @@
-package fiuba.algo3.titiritero.dibujables;
+package vista.fiuba.algo3.titiritero.dibujables;
 
 import java.awt.Color;
 
-import fiuba.algo3.titiritero.modelo.ObjetoDibujable;
-import fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
-import fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
+import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
+import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 
 public abstract class Figura implements ObjetoDibujable {
 
