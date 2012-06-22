@@ -1,6 +1,5 @@
 package modelo.Level;
 
-import java.awt.EventQueue;
 import java.util.Iterator;
 import java.util.LinkedList;
 

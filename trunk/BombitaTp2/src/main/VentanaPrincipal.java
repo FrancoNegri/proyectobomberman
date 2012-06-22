@@ -31,6 +31,7 @@ import vista.fiuba.algo3.titiritero.dibujables.SuperficiePanel;
 import vista.fiuba.algo3.titiritero.modelo.GameLoop;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 
+@SuppressWarnings("unused")
 public class VentanaPrincipal {
 
 	private JFrame frame;
