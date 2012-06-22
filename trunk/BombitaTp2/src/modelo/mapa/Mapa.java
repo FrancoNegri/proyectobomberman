@@ -30,7 +30,7 @@ public class Mapa implements ObjetoVivo{
 		return this.TableroJuego.obtenerCasillero(coord);
 	}
 
-	public void agregarAlMapa(Personaje unPersonaje) {
+	public synchronized void agregarAlMapa(Personaje unPersonaje) {
 		
 		Coordenada coordenada = unPersonaje.obtenerCoordenadaXY();
 		Casillero CasilleroAux = this.obtenerCasillero(coordenada);
@@ -39,7 +39,7 @@ public class Mapa implements ObjetoVivo{
 		this.agregarCasillero(coordenada, CasilleroAux);
 	}
 	
-	public void agregarAlMapa(Obstaculo obstaculo) {
+	public synchronized void agregarAlMapa(Obstaculo obstaculo) {
 		
 		Coordenada coordenada = obstaculo.obtenerCoordenadaXY();
 		Casillero CasilleroAux = this.obtenerCasillero(coordenada);
@@ -48,7 +48,7 @@ public class Mapa implements ObjetoVivo{
 		this.agregarCasillero(coordenada, CasilleroAux);
 	}
 	
-	public void agregarAlMapa(Armamento unArmamento) {
+	public synchronized void agregarAlMapa(Armamento unArmamento) {
 		
 		Coordenada coordenada = unArmamento.obtenerCoordenadaXY();
 		Casillero CasilleroAux = this.obtenerCasillero(coordenada);
@@ -57,14 +57,14 @@ public class Mapa implements ObjetoVivo{
 		this.agregarCasillero(coordenada, CasilleroAux);
 	}
 
-	public void agregarAlMapa(Articulable unArticulo) {
+	public synchronized void agregarAlMapa(Articulable unArticulo) {
 		Coordenada coord = unArticulo.obtenerCoordenadaXY();
 		Casillero CasilleroAux = this.obtenerCasillero(coord);
 		CasilleroAux.agregar(unArticulo);
 		this.agregarCasillero(coord, CasilleroAux);
 	}
 
-	public void vivir() {
+	public synchronized void vivir() {
 		int j,k;
 		for(j=0;j < TableroJuego.obtenerTamanio(); j++){
 			for(k=0;k < TableroJuego.obtenerTamanio(); k++){
