@@ -89,6 +89,7 @@ public class VentanaPrincipal {
 		panel.setBounds(42, 53, 375, 187);
 		frame.getContentPane().add(panel);
 	
+		this.gameLoop = new GameLoop((SuperficieDeDibujo) panel);
 		Mapa mapa = new Mapa(100); 
 		Coordenada coord = new Coordenada(50,50);
 		Personaje modelo3 = new LopezComun(coord,mapa);
