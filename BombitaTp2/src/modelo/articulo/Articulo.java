@@ -1,6 +1,5 @@
 package modelo.articulo;
 
-import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;

@@ -111,14 +111,17 @@ public class Casillero {
 	}
 	
 	
-	
+	/* No es implementable por cuestiones de axceso a las variables
+	 * 
+	 * 
+	 * 
 	private void VivirPersonajes() {
 		Iterator<Personaje> IteradorPersonajes = personajes.iterator();
 		while (IteradorPersonajes.hasNext()) {
 			Personaje personaje = IteradorPersonajes.next();
 			personaje.vivir();
 		}
-	}
+	}*/
 
 	public void actualizarObstaculos(){
 		if (unObstaculo != null) {

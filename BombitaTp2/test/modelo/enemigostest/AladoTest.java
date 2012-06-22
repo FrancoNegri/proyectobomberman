@@ -3,17 +3,14 @@ package modelo.enemigostest;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.*;
-import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.armamento.Armamento;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.enemigos.*;
-
 import org.junit.*;
 
-import static org.mockito.Mockito.*;
 
 
 public class AladoTest {

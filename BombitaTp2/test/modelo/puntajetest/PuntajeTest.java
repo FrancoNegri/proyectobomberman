@@ -1,8 +1,5 @@
 package modelo.puntajetest;
 
-import java.util.Timer;
-import modelo.armamento.ToleTole;
-import modelo.articulo.Articulable;
 import modelo.articulo.Habano;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
@@ -27,7 +24,6 @@ public class PuntajeTest {
 	public void setUp() {
 		mapa = new Mapa(10);
 		Coordenada coordenada = new Coordenada(1,1);
-		Coordenada otraCoor = new Coordenada(2,2);
 		cecilio = new Cecilio(coordenada,mapa);
 		ladrillo = new BloqueLadrillo(coordenada);
 		habano = new Habano(coordenada);

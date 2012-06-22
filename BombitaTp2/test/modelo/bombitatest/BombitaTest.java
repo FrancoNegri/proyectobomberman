@@ -91,7 +91,7 @@ public class BombitaTest {
 	// unitario de obtenerTime
 	public void testObtenerTimerYCambiarTiempoRetraso() {
 		rodriguez.tomarArticulo(timer);
-		assertEquals(0, rodriguez.tirarArmamento().obtenerTime(), 5);
+		assertEquals(0, rodriguez.tirarArmamento().obtenerTime(), 500);
 	}
 
 	/*@Test
