@@ -1,11 +1,11 @@
-package fiuba.algo3.titiritero.dibujables;
+package vista.fiuba.algo3.titiritero.dibujables;
 
 import java.awt.Graphics;
 
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 
 public class CirculoTest {
 

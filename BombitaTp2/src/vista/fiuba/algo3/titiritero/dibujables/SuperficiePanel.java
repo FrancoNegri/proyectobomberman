@@ -1,12 +1,11 @@
-package fiuba.algo3.titiritero.dibujables;
+package vista.fiuba.algo3.titiritero.dibujables;
 
 import java.awt.Graphics;
-
 import java.awt.Image;
 
 import javax.swing.JPanel;
 
-import fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
+import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 
 public class SuperficiePanel extends JPanel implements SuperficieDeDibujo {
 

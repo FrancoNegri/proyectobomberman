@@ -1,4 +1,4 @@
-package fiuba.algo3.titiritero.modelo;
+package vista.fiuba.algo3.titiritero.modelo;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -40,7 +40,7 @@ public class GameLoop implements Runnable{
 		this.objetosDibujables.remove(objetoDibujable);
 	}
 	
-	@Override
+	/*@Override*/
 	public void run() {
 		while(this.estaEjecutando) {
 			for(ObjetoVivo objetoVivo : this.objetosVivos) {

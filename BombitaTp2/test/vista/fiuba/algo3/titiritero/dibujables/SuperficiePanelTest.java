@@ -1,4 +1,4 @@
-package fiuba.algo3.titiritero.dibujables;
+package vista.fiuba.algo3.titiritero.dibujables;
 
 import java.awt.Graphics;
 import java.awt.Image;
