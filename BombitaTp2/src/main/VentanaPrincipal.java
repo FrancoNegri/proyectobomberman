@@ -102,26 +102,23 @@ public class VentanaPrincipal {
 
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
 		// ///////////Inicializacion grafica Completa
-
-		
-		
 		
 		Mapa mapa = new Mapa(100);
 		Personaje modelo3;
 		
-		/*Coordenada coord = new Coordenada(99, 99);
+		Coordenada coord = new Coordenada(99, 99);
 		Articulo articulo = new Habano(coord);
-		mapa.agregarAlMapa(articulo);*/
-		for (int j = 4; j < 10; j++) {
-			Coordenada coord = new Coordenada(j, 3);
+		mapa.agregarAlMapa(articulo);
+		for (int j = 4; j < 20; j++) {
+			coord = new Coordenada(j, j*3);
 			Obstaculo obst = new BloqueAcero(coord);
 			mapa.agregarAlMapa(obst);
 		}
-		/*for (int j = 0; j < 30; j++) {
+		for (int j = 0; j < 30; j++) {
 			coord = new Coordenada(j*3,j^2);
 			modelo3 = new Cecilio(coord, mapa);
-			this.gameLoop.agregar(modelo3);
-		}*/
+			gameLoop.agregar(modelo3);
+		}
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapa = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapa);

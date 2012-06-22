@@ -89,26 +89,59 @@ public class Casillero {
 	 * bombita esta en el casillero y si hay un articulo, lo utiliza.
 	 */
 
-	public void actualizar() {
+	public synchronized void actualizar() {
+		this.actualizarPersonajes();
+		this.actualizarArmamento();
+		this.eliminarPersonajesMuertos();
+		this.Colicionar();
+		this.actualizarObstaculos();
+	}
+
+	private void actualizarArmamento(){
+		this.VivirArmamento();
+		if(unArmamento!=null){
+			if(unArmamento.estaMuerto()){
+				unArmamento=null;
+			}
+		}
+	}
+	private void actualizarPersonajes(){
+		/*this.VivirPersonajes();*/
+		this.eliminarPersonajesMuertos();
+	}
+	
+	
+	
+	private void VivirPersonajes() {
+		Iterator<Personaje> IteradorPersonajes = personajes.iterator();
+		while (IteradorPersonajes.hasNext()) {
+			Personaje personaje = IteradorPersonajes.next();
+			personaje.vivir();
+		}
+	}
+
+	public void actualizarObstaculos(){
 		if (unObstaculo != null) {
 			if (unObstaculo.Destruido()) {
 				this.puntaje = puntaje + unObstaculo.obtenerPuntaje();
 				unObstaculo = null;
 			}
 		}
-
-		this.VivirArmamento();
-		this.eliminarPersonajesMuertos();
-
+	}
+	
+	private void Colicionar(){
 		Colisionador coli = new Colisionador();
 		coli.Colicionar(personajes);
 		if (this.usarArticulo()) {
 			this.puntaje = puntaje + unArticulo.obtenerPuntaje();
 			this.unArticulo = null; // si se uso el articulo lo pongo en null.
 		}
-
 	}
-
+	
+	
+	
+	
+	
 	private void VivirArmamento() {
 		if (unArmamento != null) {
 			unArmamento.vivir();
