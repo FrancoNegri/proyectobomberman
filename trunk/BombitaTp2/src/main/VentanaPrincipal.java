@@ -16,6 +16,7 @@ import modelo.armamento.ToleTole;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.Personaje;
+import modelo.personaje.enemigos.Cecilio;
 import modelo.personaje.enemigos.LopezComun;
 import vista.Armamento.VistaArmamento;
 import vista.Personaje.vistaPersonaje;
@@ -102,8 +103,8 @@ public class VentanaPrincipal {
 		Mapa mapa = new Mapa(100); 
 		Personaje modelo3;
 		for(int j = 0; j < 20;j++){
-			Coordenada coord = new Coordenada(j+10,(j+4)^2);
-			modelo3 = new LopezComun(coord,mapa);
+			Coordenada coord = new Coordenada(j*3,(j+4)^2);
+			modelo3 = new Cecilio(coord,mapa);
 			this.gameLoop.agregar(modelo3);
 			vistaPersonaje imagen = new vistaPersonaje(modelo3);
 			this.gameLoop.agregar(imagen);

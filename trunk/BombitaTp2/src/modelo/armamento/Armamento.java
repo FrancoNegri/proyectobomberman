@@ -14,6 +14,7 @@ public abstract class Armamento implements Armamentable , Coordenable,ObjetoVivo
 	protected int danio;
 	protected int radio;
 	protected Mapa mapaAutilizar;
+	boolean muerto;
 	
 	public Armamento(Coordenada unaCoordenada,Mapa mapa){
 		this.coordenada = unaCoordenada.copiar();
@@ -22,6 +23,7 @@ public abstract class Armamento implements Armamentable , Coordenable,ObjetoVivo
 		this.radio = 0;
 		mapaAutilizar = mapa;
 		mapa.agregarAlMapa(this);
+		muerto = false;
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
@@ -43,10 +45,13 @@ public abstract class Armamento implements Armamentable , Coordenable,ObjetoVivo
 	
 	
 	public void vivir(){
-		if(time>=0){
+		if((time>=0)&(!muerto)){
 			this.time = this.time-1;
 		}else{
-			this.explotar(coordenada, mapaAutilizar);
+			if(!muerto){
+				this.explotar(coordenada, mapaAutilizar);
+				muerto = true;
+			}
 		}
 	}
 	
@@ -56,5 +61,9 @@ public abstract class Armamento implements Armamentable , Coordenable,ObjetoVivo
 
 		public int getY() {
 		return this.coordenada.obtenerCoordenadaY();
+		}
+		
+		public boolean estaMuerto() {
+			return muerto;
 		}
 }
