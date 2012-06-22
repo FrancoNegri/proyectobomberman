@@ -65,7 +65,7 @@ public class Level implements Runnable {
 				}
 				System.out.println("Puntaje :" + mapa.obtenerPuntajeTotal());
 			}
-			mapa.actualizarMapa();
+			mapa.vivir();
 		}
 	}
 }

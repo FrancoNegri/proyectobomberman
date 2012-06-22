@@ -4,6 +4,4 @@ public interface ObjetoVivo {
 	
 	void vivir();
 	
-	boolean estaMuerto();
-	
 }

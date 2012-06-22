@@ -1,9 +1,10 @@
 package modelo.articulo;
 
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.*;
 
-public interface Articulable {
+public interface Articulable extends ObjetoPosicionable {
 
 	/*como solo bombita puede utilizar los articulos, se utiliza el metodo esBombita que lo verifica.
 	 * lo implemente asi para facilitar el metodo actualizar del casillero.

@@ -1,33 +1,33 @@
 package modelo.obstaculos;
 
-
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.danio.*;
 
-public abstract class Obstaculo implements Daniable,Coordenable{
+public abstract class Obstaculo implements Daniable, Coordenable,
+		ObjetoPosicionable {
 	Coordenada cordenadaObsaculo;
 	int vida;
 	protected int puntaje;
-	
-	public Obstaculo(int vidaTotal,Coordenada unacoordenada){ 
+
+	public Obstaculo(int vidaTotal, Coordenada unacoordenada) {
 		this.vida = vidaTotal;
 		this.cordenadaObsaculo = unacoordenada.copiar();
 		this.puntaje = ConstantesJuego.puntaje_obstaculo_destruido;
 	}
-	
-	public Coordenada obtenerCoordenadaXY(){
+
+	public Coordenada obtenerCoordenadaXY() {
 		return cordenadaObsaculo.copiar();
 	}
 
 	public void QuitarVida(int danio) {
-		if((vida > 0)&&(danio > 0))
-		{
+		if ((vida > 0) && (danio > 0)) {
 			vida = vida - danio;
 		}
 	}
-	
+
 	public boolean Destruido() {
 		return (vida <= 0);
 	}
@@ -35,22 +35,30 @@ public abstract class Obstaculo implements Daniable,Coordenable{
 	public int vidaRestante() {
 		return vida;
 	}
-	
-	public void Daniar(int danio){
-		
-		if(!this.Destruido()){
-			
+
+	public void Daniar(int danio) {
+
+		if (!this.Destruido()) {
+
 			this.QuitarVida(danio);
 		}
-		
-		
+
 	}
-	
+
 	public int obtenerPuntaje() {
-		int puntajeAux=0;
-		if ( this.Destruido() ) {
+		int puntajeAux = 0;
+		if (this.Destruido()) {
 			puntajeAux = this.puntaje;
 		}
 		return puntajeAux;
 	}
+
+	public int getX() {
+		return this.cordenadaObsaculo.obtenerCoordenadaX();
+	}
+
+	public int getY() {
+		return this.cordenadaObsaculo.obtenerCoordenadaY();
+	}
+
 }
