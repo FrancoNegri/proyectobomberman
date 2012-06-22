@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Franco" name="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" tests="4" time="0.622" timestamp="2012-06-22T02:45:56">
+<testsuite errors="0" failures="0" hostname="Franco" name="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" tests="4" time="0.62" timestamp="2012-06-22T03:08:05">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -81,8 +81,8 @@
     <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
   </properties>
   <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarVivir" time="0.207" />
-  <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarDibujar" time="0.207" />
-  <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarLimpiar" time="0.2" />
+  <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarDibujar" time="0.204" />
+  <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarLimpiar" time="0.201" />
   <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="agregarNoDeberiaAgregarDuplicador" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[java.lang.InterruptedException: sleep interrupted

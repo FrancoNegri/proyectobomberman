@@ -5,12 +5,13 @@ import modelo.Translacion.Translacion;
 import modelo.articulo.Articulable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
 
 public class Bombita extends Personaje {
 
 	
-	public Bombita(Coordenada unaCoordenada) {
-		super(unaCoordenada);
+	public Bombita(Coordenada unaCoordenada,Mapa nuevoMapa) {
+		super(unaCoordenada,nuevoMapa);
 		this.velocidad = ConstantesJuego.velocidad_bombita;
 		this.vida = ConstantesJuego.velocidad_bombita;
 		this.CreadorDeBombas = new MolotovFactory();

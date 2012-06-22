@@ -17,7 +17,7 @@ public class Proyectil extends Armamento {
 		transladador = trans;
 	}
 	@Override
-	public void actualizar(){
+	public void vivir(){
 		if(distancia>0){
 			coordenada = transladador.accion(coordenada);
 			distancia =distancia-1;

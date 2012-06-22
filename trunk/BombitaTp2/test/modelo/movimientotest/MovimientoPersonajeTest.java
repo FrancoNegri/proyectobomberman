@@ -1,12 +1,14 @@
 package modelo.movimientotest;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
 
 import java.util.LinkedList;
 
 import org.junit.*;
 
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
 import modelo.personaje.Bombita;
 import modelo.personaje.movimiento.*;
 
@@ -21,8 +23,9 @@ public class MovimientoPersonajeTest {
 	
 	@Before
 	public void setUp(){
+		Mapa mapa = mock(Mapa.class);
 		Coordenada coordenada = new Coordenada(1,1);
-		rodriguez = new Bombita(coordenada);
+		rodriguez = new Bombita(coordenada,mapa);
 		derecha = new Derecha();
 		izquierda = new Izquierda();
 		abajo = new Abajo();
