@@ -1,13 +1,15 @@
 package vista.fiuba.algo3.titiritero.modelo;
 
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Set;
 
 public class GameLoop implements Runnable{
 
 	private static final int FRECUENCIA_DEFAULT = 500;
-	private Set<ObjetoVivo> objetosVivos;
-	private Set<ObjetoDibujable> objetosDibujables;
+	private LinkedList<ObjetoVivo> objetosVivos;
+	private LinkedList<ObjetoDibujable> objetosDibujables;
 	private boolean estaEjecutando;
 	private int frecuencia;
 	private SuperficieDeDibujo superficieDeDibujo;
@@ -16,8 +18,8 @@ public class GameLoop implements Runnable{
 	public GameLoop(int frecuencia, SuperficieDeDibujo superficieDeDibujo) {
 		this.frecuencia = frecuencia;
 		this.superficieDeDibujo = superficieDeDibujo;
-		this.objetosVivos = new HashSet<ObjetoVivo>();
-		this.objetosDibujables= new HashSet<ObjetoDibujable>();
+		this.objetosVivos = new LinkedList<ObjetoVivo>();
+		this.objetosDibujables= new LinkedList<ObjetoDibujable>();
 	}
 
 	public GameLoop(SuperficieDeDibujo superficieDeDibujo) {
@@ -25,7 +27,9 @@ public class GameLoop implements Runnable{
 	}
 
 	public void agregar(ObjetoVivo objetoVivo) {
-		this.objetosVivos.add(objetoVivo);
+		if(!this.objetosVivos.contains(objetoVivo)){
+			this.objetosVivos.add(objetoVivo);
+		}
 	}
 
 	public void remover(ObjetoVivo objetoVivo) {
@@ -33,7 +37,10 @@ public class GameLoop implements Runnable{
 	}
 
 	public void agregar(ObjetoDibujable objetoDibujable) {
-		this.objetosDibujables.add(objetoDibujable);
+		if(!this.objetosDibujables.contains(objetoDibujable)){
+			this.objetosDibujables.add(objetoDibujable);
+		}
+		
 	}
 
 	public void remover(ObjetoDibujable objetoDibujable) {
@@ -43,9 +50,12 @@ public class GameLoop implements Runnable{
 	/*@Override*/
 	public void run() {
 		while(this.estaEjecutando) {
-			for(ObjetoVivo objetoVivo : this.objetosVivos) {
+			Iterator<ObjetoVivo> iterator = objetosVivos.iterator();
+			while(iterator.hasNext()){
+				ObjetoVivo objetoVivo = iterator.next();
 				if(objetoVivo.estaMuerto()){
-					this.objetosVivos.remove(objetoVivo);
+					iterator.remove();
+					System.out.println("muerto!");
 				}else{
 					objetoVivo.vivir();
 				}
