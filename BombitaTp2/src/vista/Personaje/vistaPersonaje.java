@@ -9,7 +9,7 @@ import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 
 public class vistaPersonaje extends Cuadrado {
 	public vistaPersonaje(ObjetoPosicionable modelo) throws IOException {
-		super(30, 10, modelo);
+		super(10, 10, modelo);
 		this.setColor(Color.GREEN);
 	}
 }

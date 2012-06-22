@@ -1,12 +1,13 @@
 package modelo.armamento;
 
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.ondaexpansiva.OndaExpansiva;
 
-public abstract class Armamento implements Armamentable , Coordenable {
+public abstract class Armamento implements Armamentable , Coordenable,ObjetoVivo,ObjetoPosicionable {
 	
 	protected Coordenada coordenada;
 	protected float time;
@@ -48,4 +49,12 @@ public abstract class Armamento implements Armamentable , Coordenable {
 			this.explotar(coordenada, mapaAutilizar);
 		}
 	}
+	
+	public int getX() {
+		return this.coordenada.obtenerCoordenadaX();
+		}
+
+		public int getY() {
+		return this.coordenada.obtenerCoordenadaY();
+		}
 }
