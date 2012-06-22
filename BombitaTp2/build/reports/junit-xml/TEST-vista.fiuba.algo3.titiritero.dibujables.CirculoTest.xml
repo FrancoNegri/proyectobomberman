@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Franco" name="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" tests="1" time="0.167" timestamp="2012-06-22T02:45:56">
+<testsuite errors="0" failures="0" hostname="Franco" name="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" tests="1" time="0.138" timestamp="2012-06-22T03:08:05">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -80,7 +80,7 @@
     <property name="java.specification.version" value="1.6" />
     <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
   </properties>
-  <testcase classname="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" name="testDibujar" time="0.163" />
+  <testcase classname="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" name="testDibujar" time="0.134" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

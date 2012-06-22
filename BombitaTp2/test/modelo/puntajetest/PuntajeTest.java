@@ -25,15 +25,15 @@ public class PuntajeTest {
 	
 	@Before
 	public void setUp() {
+		mapa = new Mapa(10);
 		Coordenada coordenada = new Coordenada(1,1);
 		Coordenada otraCoor = new Coordenada(2,2);
-		cecilio = new Cecilio(coordenada);
+		cecilio = new Cecilio(coordenada,mapa);
 		ladrillo = new BloqueLadrillo(coordenada);
 		habano = new Habano(coordenada);
 		casillero = new Casillero();
 		otroCasillero = new Casillero();
-		mapa = new Mapa(10);
-		rodriguez = new Bombita(coordenada);
+		rodriguez = new Bombita(coordenada,mapa);
 		casillero.agregar(cecilio);
 		casillero.agregar(habano);
 		casillero.agregar(ladrillo);

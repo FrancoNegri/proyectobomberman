@@ -1,5 +1,7 @@
 package modelo.personaje;
 
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
+import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
@@ -11,7 +13,7 @@ import modelo.mapa.Mapa;
 import modelo.danio.*;
 import modelo.errores.TamanioMatrizInvalidoError;
 
-public abstract class Personaje implements Daniable, Coordenable {
+public abstract class Personaje implements ObjetoPosicionable, Daniable, Coordenable, ObjetoVivo {
 	protected Translacion ultimaTranslacion;
 	protected ArmamentoFactory CreadorDeBombas;
 	protected float velocidad;
@@ -19,9 +21,11 @@ public abstract class Personaje implements Daniable, Coordenable {
 	protected Coordenada coordenadaXY;
 	protected Mapa mapa;
 
-	public Personaje(Coordenada unaCoordenada) {
+	public Personaje(Coordenada unaCoordenada,Mapa nuevoMapa) {
 		this.coordenadaXY = unaCoordenada.copiar();
 		ultimaTranslacion = new TranslacionDerecha();
+		mapa = nuevoMapa;
+		mapa.agregarAlMapa(this);
 	}
 
 	protected abstract Translacion obtenerTranslacion();
@@ -42,11 +46,6 @@ public abstract class Personaje implements Daniable, Coordenable {
 
 	public Translacion obtenerUltimaTranslacion() {
 		return ultimaTranslacion;
-	}
-
-	public void setMapa(Mapa nuevoMapa) {
-		mapa = nuevoMapa;
-		mapa.agregarAlMapa(this);
 	}
 
 	public Mapa getMapa() {
@@ -88,13 +87,6 @@ public abstract class Personaje implements Daniable, Coordenable {
 
 	}
 
-	public void actualizar() {
-		if(!this.estaMuerto()){
-			this.caminar();
-			this.Atacar();
-		}
-	}
-
 	protected void caminar() {
 		Casillero casilleroAlQueMoverse;
 		ultimaTranslacion = this.obtenerTranslacion();
@@ -109,4 +101,23 @@ public abstract class Personaje implements Daniable, Coordenable {
 			mapa.agregarAlMapa(this);
 		}
 	}
+
+	
+	public void vivir() {
+		if(!this.estaMuerto()){
+			this.caminar();
+			this.Atacar();
+		}
+	}
+	
+
+	public int getX() {
+	return this.coordenadaXY.obtenerCoordenadaX();
+	}
+
+	public int getY() {
+	return this.coordenadaXY.obtenerCoordenadaY();
+	}
 }
+
+

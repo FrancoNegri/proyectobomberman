@@ -1,5 +1,6 @@
 package modelo.armamento;
 
+import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
@@ -40,7 +41,7 @@ public abstract class Armamento implements Armamentable , Coordenable {
 	}
 	
 	
-	public void actualizar(){
+	public void vivir(){
 		if(time>=0){
 			this.time = this.time-1;
 		}else{

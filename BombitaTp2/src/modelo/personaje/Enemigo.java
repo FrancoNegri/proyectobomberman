@@ -9,14 +9,16 @@ import modelo.Translacion.TranslacionIzquierda;
 import modelo.articulo.Articulable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
+
 import java.util.Random;
 
 public class Enemigo extends Personaje {
 
 	protected int puntaje;
 	
-	public Enemigo(Coordenada unaCoordenada){
-		super(unaCoordenada);
+	public Enemigo(Coordenada unaCoordenada,Mapa nuevoMapa){
+		super(unaCoordenada,nuevoMapa);
 		this.puntaje = ConstantesJuego.puntaje_enemigo_muerto;
 	}
 	

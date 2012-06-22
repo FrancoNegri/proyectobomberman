@@ -41,9 +41,9 @@ public class ArmamentoTest {
 	@Test
 	public void testActualizarLaBomba(){
 		while(arma.obtenerTime() >= 0){
-			arma.actualizar();
+			arma.vivir();
 		}
-		arma.actualizar();
+		arma.vivir();
 		verify(casilleroADaniar,times(4)).obtenerPersonajes();
 		verify(casilleroADaniar,times(4)).obtenerObstaculo();
 	}

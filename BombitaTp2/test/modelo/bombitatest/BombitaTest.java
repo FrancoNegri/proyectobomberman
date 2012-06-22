@@ -21,12 +21,12 @@ public class BombitaTest {
 	@Before
 	public void setUp() {
 		Coordenada coordenada = new Coordenada(1, 1);
-		rodriguez = new Bombita(coordenada);
 		molotovFactory = new MolotovFactory();
 		habano = new Habano(coordenada);
 		toleToleFactory = new ToleToleFactory();
 		timer = new Timer(coordenada);
 		Mapa mapa = mock(Mapa.class);
+		rodriguez = new Bombita(coordenada,mapa);
 		toleTole = new ToleTole(coordenada,mapa,1);
 	}
 

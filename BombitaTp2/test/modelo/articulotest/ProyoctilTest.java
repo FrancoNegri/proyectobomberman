@@ -29,6 +29,6 @@ public class ProyoctilTest {
 	
 	@Test
 	public void testQueVerificaPonerUnProyectilEnUnMapaYloActualiza(){
-		arma.actualizar();
+		arma.vivir();
 	}
 }

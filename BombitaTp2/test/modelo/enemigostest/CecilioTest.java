@@ -16,12 +16,16 @@ public class CecilioTest {
 
 	private Cecilio cecilio;
 	private Coordenada coordenadaC;
-	private ArmamentoFactory molotov;
+	MolotovFactory molotov;
+	Mapa mapa = mock(Mapa.class);
+	Casillero casi = mock(Casillero.class);
 	
 	@Before
 	public void setUp(){
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
 		coordenadaC = new Coordenada(8,2);
-		cecilio = new Cecilio(coordenadaC);
+		cecilio = new Cecilio(coordenadaC,mapa);
 		molotov = new MolotovFactory();
 	}
 	
@@ -67,10 +71,10 @@ public class CecilioTest {
 	public void testCaminarRandom() {
 		Mapa mapa = mock(Mapa.class);
 		Casillero casi = mock(Casillero.class);
+		cecilio = new Cecilio(coordenadaC,mapa);
 		when(casi.esCaminable()).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
-		cecilio.setMapa(mapa);
-		cecilio.actualizar();
+		cecilio.vivir();
 		verify(casi).eliminar(cecilio);
 		verify(mapa,times(2)).agregarAlMapa(cecilio);
 	}
@@ -78,12 +82,12 @@ public class CecilioTest {
 	public void testEnemigoAtacar() {
 		Mapa mapa = mock(Mapa.class);
 		Casillero casi = mock(Casillero.class);
+		cecilio = new Cecilio(coordenadaC,mapa);
 		when(casi.esCaminable()).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
 		cecilio = spy(cecilio);
 		when(cecilio.decideAtacar()).thenReturn(true);
-		cecilio.setMapa(mapa);
-		cecilio.actualizar();
+		cecilio.vivir();
 		verify(mapa).agregarAlMapa((Armamento)anyObject());
 	}
 	

@@ -13,14 +13,18 @@ import org.junit.*;
 
 
 public class ComunTest {
-
+	
 	private LopezComun lopez;
 	private Coordenada coordenadaL;
+	Mapa mapa = mock(Mapa.class);
+	Casillero casi = mock(Casillero.class);
 	
 	@Before
 	public void setUp(){
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
 		coordenadaL = new Coordenada(2,4);
-		lopez = new LopezComun(coordenadaL);
+		lopez = new LopezComun(coordenadaL,mapa);
 	}
 	
 	@Test
@@ -64,25 +68,26 @@ public class ComunTest {
 	@Test
 	public void testCaminarRandom() {
 		Mapa mapa = mock(Mapa.class);
-		Casillero casi = mock(Casillero.class);
+		lopez = new LopezComun(coordenadaL,mapa);
 		when(casi.esCaminable()).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
 		lopez = spy(lopez);
-		lopez.setMapa(mapa);
-		lopez.actualizar();
+		lopez.vivir();
 		verify(casi).eliminar(lopez);
-		verify(mapa,times(2)).agregarAlMapa(lopez);
+		verify(mapa,times(1)).agregarAlMapa(lopez);
 	}
 	@Test
 	public void testEnemigoAtacar() {
 		Mapa mapa = mock(Mapa.class);
+		lopez = new LopezComun(coordenadaL,mapa);
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
 		Casillero casi = mock(Casillero.class);
 		when(casi.esCaminable()).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
 		lopez = spy(lopez);
 		when(lopez.decideAtacar()).thenReturn(true);
-		lopez.setMapa(mapa);
-		lopez.actualizar();
+		lopez.vivir();
 		verify(mapa).agregarAlMapa((Armamento)anyObject());
 	}
 	@Test

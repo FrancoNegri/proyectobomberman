@@ -98,7 +98,7 @@ public class Casillero {
 			}
 		}
 		if(unArmamento!=null) {
-			unArmamento.actualizar();
+			unArmamento.vivir();
 		}
 		Colisionador coli = new Colisionador();
 		coli.Colicionar(personajes);

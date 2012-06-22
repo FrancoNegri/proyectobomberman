@@ -10,18 +10,26 @@ import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.enemigos.*;
+
 import org.junit.*;
+
+import static org.mockito.Mockito.*;
+
 
 public class AladoTest {
 
 	private LopezAlado lopez;
 	private Coordenada coordenadaC;
-	private ArmamentoFactory molotov;
+	MolotovFactory molotov;
+	Mapa mapa = mock(Mapa.class);
+	Casillero casi = mock(Casillero.class);
 	
 	@Before
 	public void setUp(){
+		when(casi.esCaminable()).thenReturn(true);
+		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
 		coordenadaC = new Coordenada(8,2);
-		lopez = new LopezAlado(coordenadaC);
+		lopez = new LopezAlado(coordenadaC,mapa);
 		molotov = new MolotovFactory();
 	}
 	
@@ -64,28 +72,29 @@ public class AladoTest {
 	}
 	@Test
 	public void testCaminarRandom() {
+		
+		Mapa mapa = mock(Mapa.class);
+		lopez = new LopezAlado(coordenadaC, mapa);
 		lopez = spy(lopez);
 		when(lopez.decideAtacar()).thenReturn(true);
-		Mapa mapa = mock(Mapa.class);
 		Casillero casi = mock(Casillero.class);
 		when(casi.esCaminable()).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
-		lopez.setMapa(mapa);
-		lopez.actualizar();
+		lopez.vivir();
 		verify(casi).eliminar(lopez);
-		verify(mapa,times(2)).agregarAlMapa(lopez);
+		verify(mapa).agregarAlMapa(lopez);
 	}
 	
 	@Test
 	public void testEnemigoAtacar() {
 		Mapa mapa = mock(Mapa.class);
 		Casillero casi = mock(Casillero.class);
+		lopez = new LopezAlado(coordenadaC, mapa);
 		when(casi.esCaminable()).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada) anyObject())).thenReturn(casi);
 		lopez = spy(lopez);
 		when(lopez.decideAtacar()).thenReturn(true);
-		lopez.setMapa(mapa);
-		lopez.actualizar();
+		lopez.vivir();
 		verify(mapa).agregarAlMapa((Armamento)anyObject());
 	}
 	

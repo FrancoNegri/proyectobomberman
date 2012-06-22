@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import modelo.articulo.*;
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
 import modelo.personaje.*;
 import modelo.errores.*;
 
@@ -17,7 +18,8 @@ public class HabanoTest {
 	public void setUp(){
 		
 		coordenada = new Coordenada(1,2);
-		this.rodriguez = new Bombita(coordenada);
+		Mapa mapa = new Mapa(5);
+		this.rodriguez = new Bombita(coordenada,mapa);
 		this.unHabano = new Habano(coordenada);
 		this.VelocidadPrueba = 20;
 		

@@ -3,10 +3,13 @@ package modelo.puntaje;
 import modelo.articulo.Habano;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueLadrillo;
 import modelo.personaje.Bombita;
 import modelo.personaje.enemigos.Cecilio;
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+
 import org.junit.*;
 
 public class PuntajeTest {
@@ -20,11 +23,12 @@ public class PuntajeTest {
 	@Before
 	public void setUp() {
 		Coordenada coordenada = new Coordenada(1,1);
-		cecilio = new Cecilio(coordenada);
+		Mapa mapa = mock(Mapa.class);
+		cecilio = new Cecilio(coordenada,mapa);
 		ladrillo = new BloqueLadrillo(coordenada);
 		habano = new Habano(coordenada);
 		casillero = new Casillero();
-		rodriguez = new Bombita(coordenada);
+		rodriguez = new Bombita(coordenada,mapa);
 		casillero.agregar(cecilio);
 		casillero.agregar(habano);
 		casillero.agregar(ladrillo);
