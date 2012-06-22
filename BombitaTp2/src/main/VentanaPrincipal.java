@@ -10,7 +10,6 @@ import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 import modelo.armamento.Armamento;
 import modelo.armamento.ToleTole;
 import modelo.articulo.Articulo;
@@ -104,14 +103,17 @@ public class VentanaPrincipal {
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
 		// ///////////Inicializacion grafica Completa
 
+		
+		
+		
 		Mapa mapa = new Mapa(100);
 		Personaje modelo3;
 		
-		Coordenada coord = new Coordenada(99, 99);
+		/*Coordenada coord = new Coordenada(99, 99);
 		Articulo articulo = new Habano(coord);
-		mapa.agregarAlMapa(articulo);
+		mapa.agregarAlMapa(articulo);*/
 		for (int j = 4; j < 10; j++) {
-			coord = new Coordenada(j, 3);
+			Coordenada coord = new Coordenada(j, 3);
 			Obstaculo obst = new BloqueAcero(coord);
 			mapa.agregarAlMapa(obst);
 		}
