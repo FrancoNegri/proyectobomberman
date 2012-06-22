@@ -22,7 +22,7 @@ public class Proyectil extends Armamento {
 			coordenada = transladador.accion(coordenada);
 			distancia =distancia-1;
 		}else{
-			this.explotar(coordenada, mapaAutilizar);
+			this.explotar(coordenada.copiar(), mapaAutilizar);
 		}
 	}
 }
