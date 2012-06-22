@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Franco" name="modelo.Translaciontests.TranslacionAbajoTest" tests="1" time="0.032" timestamp="2012-06-22T21:52:55">
+<testsuite errors="0" failures="0" hostname="Franco" name="modelo.Translaciontests.TranslacionAbajoTest" tests="1" time="0.029" timestamp="2012-06-22T22:30:41">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.summaryxml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -8,7 +8,7 @@
     <property name="eclipse.pdebuild.templates" value="/C:/Eclipse/eclipse/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/templates/" />
     <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler" />
     <property name="os.name" value="Windows NT (unknown)" />
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre6\lib\resources.jar;C:\Program Files\Java\jre6\lib\rt.jar;C:\Program Files\Java\jre6\lib\sunrsasign.jar;C:\Program Files\Java\jre6\lib\jsse.jar;C:\Program Files\Java\jre6\lib\jce.jar;C:\Program Files\Java\jre6\lib\charsets.jar;C:\Program Files\Java\jre6\classes" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_18\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_18\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_18\jre\classes" />
     <property name="reports.html.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\junit-html" />
     <property name="sun.desktop" value="windows" />
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
@@ -19,14 +19,14 @@
     <property name="user.name" value="Franco" />
     <property name="user.language" value="es" />
     <property name="build" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build" />
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre6\bin" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_18\jre\bin" />
     <property name="reports.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports" />
     <property name="ant.project.name" value="TrabajoPractico2" />
     <property name="java.version" value="1.6.0_18" />
     <property name="coverage.html.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-html" />
     <property name="user.timezone" value="" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre6\lib\endorsed" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_18\jre\lib\endorsed" />
     <property name="sun.cpu.isalist" value="amd64" />
     <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="file.encoding.pkg" value="sun.io" />
@@ -35,7 +35,7 @@
     <property name="classes.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build" />
     <property name="java.class.version" value="50.0" />
     <property name="user.country" value="AR" />
-    <property name="java.home" value="C:\Program Files\Java\jre6" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_18\jre" />
     <property name="java.vm.info" value="mixed mode" />
     <property name="ant.file" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build.xml" />
     <property name="os.version" value="6.2" />
@@ -51,7 +51,7 @@
     <property name="user.home" value="C:\Users\Franco" />
     <property name="java.specification.vendor" value="Sun Microsystems Inc." />
     <property name="coverage.xml.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\reports\cobertura-xml" />
-    <property name="java.library.path" value="C:\Program Files\Java\jre6\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\watcom-1.3\binnt;C:\watcom-1.3\binw;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\Common Files\Autodesk Shared\;C:\PROGRA~1\DISKEE~1\DISKEE~1\;C:\Program Files (x86)\Windows Live\Shared;C:\FPC\2.4.2\bin\i386-Win32;C:\Program Files\Diskeeper Corporation\Diskeeper\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\apache-ant-1.8.4\bin;c:\ant\bin;C:\Program Files\Java\jdk1.6.0_18\bin" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_18\jre\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\watcom-1.3\binnt;C:\watcom-1.3\binw;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\Common Files\Autodesk Shared\;C:\PROGRA~1\DISKEE~1\DISKEE~1\;C:\Program Files (x86)\Windows Live\Shared;C:\FPC\2.4.2\bin\i386-Win32;C:\Program Files\Diskeeper Corporation\Diskeeper\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\apache-ant-1.8.4\bin;c:\ant\bin;C:\Program Files\Java\jdk1.6.0_18\bin" />
     <property name="java.vendor.url" value="http://java.sun.com/" />
     <property name="java.vm.vendor" value="Sun Microsystems Inc." />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
@@ -67,7 +67,7 @@
     <property name="os.arch" value="amd64" />
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
     <property name="instrumented.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\build\instrumented" />
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jre6\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_18\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
     <property name="user.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2" />
     <property name="line.separator" value="
 " />
@@ -80,7 +80,7 @@
     <property name="java.specification.version" value="1.6" />
     <property name="src.dir" value="C:\Users\Franco\proyectobomberman\BombitaTp2\src" />
   </properties>
-  <testcase classname="modelo.Translaciontests.TranslacionAbajoTest" name="TestQueChequeaLaAccion" time="0.016" />
+  <testcase classname="modelo.Translaciontests.TranslacionAbajoTest" name="TestQueChequeaLaAccion" time="0.023" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

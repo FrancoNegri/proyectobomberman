@@ -1,0 +1,13 @@
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at vista.fiuba.algo3.titiritero.modelo.GameLoop.run(GameLoop.java:61)
+	at java.lang.Thread.run(Thread.java:619)
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at vista.fiuba.algo3.titiritero.modelo.GameLoop.run(GameLoop.java:61)
+	at java.lang.Thread.run(Thread.java:619)
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at vista.fiuba.algo3.titiritero.modelo.GameLoop.run(GameLoop.java:61)
+	at java.lang.Thread.run(Thread.java:619)
+
