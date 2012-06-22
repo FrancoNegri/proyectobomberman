@@ -37,13 +37,13 @@ public class Level implements Runnable {
 
 		for (j = 1; j < 3; j++) {
 			Coordenada coord = new Coordenada(j * 2, j + 3);
-			Personaje pers = new LopezAlado(coord,mapa);
+			Personaje pers = new LopezAlado(coord, mapa);
 			personajes.add(pers);
 		}
 
 		for (j = 5; j < 8; j++) {
 			Coordenada coord = new Coordenada(j - 3, j - 1);
-			Personaje pers = new LopezComun(coord,mapa);
+			Personaje pers = new LopezComun(coord, mapa);
 			personajes.add(pers);
 		}
 		Coordenada coord = new Coordenada(4, 6);
@@ -54,13 +54,18 @@ public class Level implements Runnable {
 	}
 
 	public void run() {
-		
+		System.out.println("Prueva Integracion");
+		while (personajes.size() > 2) {
+			Iterator<Personaje> it = personajes.iterator();
+			while (it.hasNext()) {
+				Personaje pers = it.next();
+				pers.vivir();
+				if (pers.estaMuerto()) {
+					it.remove();
+				}
+				System.out.println("Puntaje :" + mapa.obtenerPuntajeTotal());
+			}
+			mapa.actualizarMapa();
+		}
 	}
 }
-		/*
-		 * System.out.println("Prueva Integracion"); while(personajes.size() >
-		 * 2){ Iterator<Personaje> it = personajes.iterator();
-		 * while(it.hasNext()){ Personaje pers = it.next(); pers.vivir();
-		 * if(pers.estaMuerto()){ it.remove(); } System.out.println("Puntaje :"
-		 * + mapa.obtenerPuntajeTotal()); } mapa.actualizarMapa(); }
-		 */

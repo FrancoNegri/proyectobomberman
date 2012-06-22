@@ -100,10 +100,10 @@ public class VentanaPrincipal {
 		
 		
 		
-		Mapa mapa = new Mapa(100); 
+		Mapa mapa = new Mapa(10); 
 		Personaje modelo3;
-		for(int j = 0; j < 20;j++){
-			Coordenada coord = new Coordenada(j*3,(j+4)^2);
+		for(int j = 0; j < 10;j++){
+			Coordenada coord = new Coordenada(j,j);
 			modelo3 = new Cecilio(coord,mapa);
 			this.gameLoop.agregar(modelo3);
 			vistaPersonaje imagen = new vistaPersonaje(modelo3);
