@@ -1,17 +1,12 @@
 package vista.ArticuloTest;
 
 import java.awt.Graphics;
-import java.io.IOException;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-
 import vista.Articulo.VistaArticulo;
-import vista.Personaje.vistaPersonaje;
 import vista.fiuba.algo3.titiritero.dibujables.SuperficiePanel;
 import modelo.articulo.Articulo;
-import modelo.personaje.Personaje;
 import static org.mockito.Mockito.*;
 
 public class ArticuloTest {

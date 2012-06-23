@@ -1,18 +1,13 @@
 package vista.MapaTest;
 import static org.mockito.Mockito.*;
-
-import java.awt.Graphics;
 import java.util.LinkedList;
-
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.Personaje;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-
 import vista.Mapa.VistaMapa;
 import vista.fiuba.algo3.titiritero.dibujables.SuperficiePanel;
 
