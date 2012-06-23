@@ -1,5 +1,6 @@
 package modelo.armamento;
 
+import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.ToleToleFactory;
 import modelo.articulo.Articulable;
 import modelo.constantesjuego.ConstantesJuego;
@@ -28,5 +29,10 @@ public class ToleTole extends Armamento implements Articulable {
 	
 	public int obtenerPuntaje() {
 		return puntaje;
+	}
+
+	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
+		vistaObjeto.InteractuarConToleTole(this);
+		
 	}
 }

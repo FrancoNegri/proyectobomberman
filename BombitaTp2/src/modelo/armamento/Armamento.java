@@ -2,12 +2,13 @@ package modelo.armamento;
 
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
+import vista.objeto.ObjetoVisible;
 import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.ondaexpansiva.OndaExpansiva;
 
-public abstract class Armamento implements Armamentable , Coordenable,ObjetoVivo,ObjetoPosicionable {
+public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 	
 	protected Coordenada coordenada;
 	protected float time;

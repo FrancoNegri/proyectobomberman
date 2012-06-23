@@ -1,5 +1,6 @@
 package modelo.armamento;
 
+import vista.objeto.VistaObjeto;
 import modelo.Translacion.Translacion;
 import modelo.coordenadas.Coordenada;
 import modelo.constantesjuego.ConstantesJuego;
@@ -25,5 +26,8 @@ public class Proyectil extends Armamento {
 			muerto = true;
 			this.explotar(coordenada.copiar(), mapaAutilizar);
 		}
+	}
+	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
+		vistaObjeto.InteractuarConProyectil(this);
 	}
 }

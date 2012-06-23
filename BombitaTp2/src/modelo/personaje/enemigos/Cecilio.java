@@ -1,5 +1,6 @@
 package modelo.personaje.enemigos;
 
+import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
@@ -14,4 +15,11 @@ public class Cecilio extends Enemigo {
 		this.vida = ConstantesJuego.vida_lopez_cecilio;
 		this.velocidad = ConstantesJuego.velocidad_cecilio;
 	}
+
+	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
+		vistaObjeto.interactuarConCecilio(this);
+	}
+	
+	
+	
 }
