@@ -147,6 +147,15 @@ public class VistaObjetoTest {
 		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
 	}
 	
+	@Test
+	public void testQuePruevaLaVistaDelFuegoDeExplocion(){
+		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
+		vistaO.InteractuarConFuegoDeExplocion(objeto);
+		vistaO.dibujar(unaSuperficie);
+		//A Determinar
+		//Mockito.verify(graphics).setColor(circulo.getColor());
+		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+	}
 	
 	
 }
