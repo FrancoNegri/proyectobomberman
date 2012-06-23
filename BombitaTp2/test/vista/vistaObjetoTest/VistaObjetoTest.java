@@ -1,20 +1,12 @@
 package vista.vistaObjetoTest;
 
-import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
 import java.awt.Graphics;
-
 import modelo.casillero.Casillero;
-import modelo.coordenadas.Coordenada;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-
 import vista.fiuba.algo3.titiritero.dibujables.SuperficiePanel;
-import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.objeto.ObjetoVisible;
 import vista.objeto.VistaObjeto;

@@ -43,5 +43,11 @@ public class Coordenada {
 			throw new coordenadaInvalida();
 		}
 	}
+	public boolean equals(Coordenada otraCoord){
+		if((otraCoord.obtenerCoordenadaX()==this.x)&&(otraCoord.obtenerCoordenadaY()==this.y)){
+			return true;
+		}
+		return false;
+	}
 }
 
