@@ -3,13 +3,17 @@ package modelo.ondaexpansiva;
 import modelo.Translacion.*;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
+import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.mapa.Mapa;
 import java.util.*;
+
+import vista.objeto.ObjetoVisible;
+import vista.objeto.VistaObjeto;
 import modelo.personaje.*;
 import modelo.obstaculos.*;
 
 
-public class OndaExpansiva{
+public class OndaExpansiva {
     private int radio;
     private int danio;
     
@@ -18,34 +22,28 @@ public class OndaExpansiva{
    	 	this.danio=danioExplocion;	
     }
     
-    public void Expandirse(Coordenada cordenada,Mapa mapa){
-    	Translacion movDerecha = new TranslacionDerecha();
-    	Translacion movIzquierda = new TranslacionIzquierda();
-    	Translacion movAbajo = new TranslacionArriba();
-    	Translacion movArriba = new TranslacionAbajo();//creo movimientos
-    	
-    	this.expandirse(cordenada,mapa,movDerecha);//los uso
-    	this.expandirse(cordenada,mapa,movIzquierda);
-    	this.expandirse(cordenada,mapa,movAbajo);
-    	this.expandirse(cordenada,mapa,movArriba);
+    public void Expandirse(Coordenada cordenada,Mapa mapa){    	
+    	this.expandirse(cordenada,mapa,new TranslacionDerecha());//los uso
+    	this.expandirse(cordenada,mapa,new TranslacionIzquierda());
+    	this.expandirse(cordenada,mapa,new TranslacionAbajo());
+    	this.expandirse(cordenada,mapa,new TranslacionArriba());
     }
     private void expandirse(Coordenada cordenada,Mapa mapa,Translacion mov){
-    	Coordenada nuevaCord = new Coordenada(cordenada.obtenerCoordenadaX(),cordenada.obtenerCoordenadaY());
-    	int j;
+    	Coordenada nuevaCord = cordenada.copiar();
     	Casillero unCasillero;
     	boolean ataco = false;
-    	for(j=1; (j<=this.radio) && (!ataco); j++){
+    	for(int j=1; (j<=this.radio) && (!ataco); j++){
+    		nuevaCord = mov.accion(nuevaCord);
     		try{
-    			//A Tener En Cuenta: el ciclo no esta comprobando si se llega al final del mapa
-    			//Por eso puse el try catch ver si se puede hacer mejor. Franco
-    			nuevaCord = mov.accion(nuevaCord);
-        		unCasillero = mapa.obtenerCasillero(nuevaCord);
-        		if (unCasillero.esAtacable()){
-        			this.atacar(unCasillero);
-        		    ataco = true;
-        		}
+    		unCasillero = mapa.obtenerCasillero(nuevaCord);
     		}catch(Exception e){
     			return;
+    		}
+    		if(unCasillero.esAtacable()){
+    			this.atacar(unCasillero);
+    			return;
+    		}else{
+    			unCasillero.agregar(new FuegoDeExplocion(nuevaCord));
     		}
     	}
     }
@@ -78,7 +76,6 @@ public class OndaExpansiva{
     		unObstaculo.Daniar(danio);
     		unCasillero.agregar(unObstaculo);
     	}
-    	
     }
     
 }

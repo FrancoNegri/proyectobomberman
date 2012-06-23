@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
+import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;
@@ -26,6 +27,15 @@ public class VistaCasillero implements ObjetoDibujable {
 		this.dibujarArticulo(superficieDeDibujo);
 		this.dibujarBloque(superficieDeDibujo);
 		this.dibujarPersonajes(superficieDeDibujo);
+		this.dibujarFuegoDeExplocion(superficieDeDibujo);
+	}
+
+	private void dibujarFuegoDeExplocion(SuperficieDeDibujo superficieDeDibujo) {
+		FuegoDeExplocion fuegoDeLaExplocion = CasilleroADibujar.obtenerFuegoDeExplocion();
+		if (fuegoDeLaExplocion != null) {
+			VistaObjeto vistaFuego = new VistaObjeto(fuegoDeLaExplocion);
+			vistaFuego.dibujar(superficieDeDibujo);
+		}
 	}
 
 	private void dibujarBloque(SuperficieDeDibujo superficieDeDibujo) {

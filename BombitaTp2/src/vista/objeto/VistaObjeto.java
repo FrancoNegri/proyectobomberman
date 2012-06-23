@@ -2,6 +2,8 @@ package vista.objeto;
 
 import java.awt.Color;
 import java.io.IOException;
+
+import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import vista.fiuba.algo3.titiritero.dibujables.Circulo;
 import vista.fiuba.algo3.titiritero.dibujables.Cuadrado;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;
@@ -120,6 +122,14 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
+	public void InteractuarConFuegoDeExplocion(FuegoDeExplocion fuegoDeExplocion) {
+		try {
+			objetoDibujable = new VistaFuegoDeExplocion(fuegoDeExplocion);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	private class VistaMolotov extends Circulo {
 		public  VistaMolotov(ObjetoPosicionable modelo){
@@ -206,4 +216,10 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
+	private class VistaFuegoDeExplocion extends Cuadrado {
+		public  VistaFuegoDeExplocion(ObjetoPosicionable modelo) throws IOException {
+			super(10,15, modelo);
+			this.setColor(Color.ORANGE);
+		}
+	}
 }
