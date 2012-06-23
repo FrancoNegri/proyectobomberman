@@ -2,20 +2,6 @@ package vista.objeto;
 
 import java.awt.Color;
 import java.io.IOException;
-
-import modelo.armamento.Armamento;
-import modelo.armamento.Molotov;
-import modelo.armamento.Proyectil;
-import modelo.armamento.ToleTole;
-import modelo.articulo.Habano;
-import modelo.articulo.Timer;
-import modelo.obstaculos.BloqueAcero;
-import modelo.obstaculos.BloqueCemento;
-import modelo.obstaculos.BloqueLadrillo;
-import modelo.personaje.Bombita;
-import modelo.personaje.enemigos.Cecilio;
-import modelo.personaje.enemigos.LopezAlado;
-import modelo.personaje.enemigos.LopezComun;
 import vista.fiuba.algo3.titiritero.dibujables.Circulo;
 import vista.fiuba.algo3.titiritero.dibujables.Cuadrado;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;

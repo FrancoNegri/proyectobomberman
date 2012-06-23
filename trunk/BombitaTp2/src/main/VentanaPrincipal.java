@@ -10,6 +10,8 @@ import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import control.Teclado.Teclado;
 import modelo.armamento.Armamento;
 import modelo.armamento.ToleTole;
 import modelo.articulo.Articulo;
@@ -72,7 +74,7 @@ public class VentanaPrincipal {
 		// ///////////Inicializacion grafica
 		frame = new JFrame();
 		frame.setForeground(new Color(0, 0, 0));
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 700, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
@@ -82,6 +84,7 @@ public class VentanaPrincipal {
 				gameLoop.iniciarEjecucion();
 			}
 		});
+		
 		btnIniciar.setBounds(42, 16, 77, 25);
 		frame.getContentPane().add(btnIniciar);
 
@@ -96,7 +99,7 @@ public class VentanaPrincipal {
 
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(new Color(0, 0, 0));
-		panel.setBounds(42, 53, 375, 187);
+		panel.setBounds(42, 53, 500, 500);
 		frame.getContentPane().add(panel);
 
 		this.gameLoop = new GameLoop(200, (SuperficieDeDibujo) panel);

@@ -17,13 +17,13 @@ public class ConstantesJuego {
 	public static final int radio_molotov = 3;
 	public static final int radio_toletole = 6;
 	public static final int danio_molotov = 5;
-	public static final int danio_proyectil = 10;
+	public static final int danio_proyectil = 100;
 	public static final int danio_toletole = 1000;
 	public static final int timer_molotov = 10;
 	public static final int timer_toletole = 50;
 	public static final int timer_proyectil = 0;
 	public static final int velocidad_aumento_habano = 10;
-	public static final int distancia_proyectil = 4;
+	public static final int distancia_proyectil = 400;
 	public static final int puntaje_articulos = 100;
 	public static final int puntaje_enemigo_muerto = 300;
 	public static final int puntaje_obstaculo_destruido = 200;
