@@ -36,11 +36,16 @@ public class Casillero {
 
 	// Metodo Sobrecargado
 	public void agregar(Personaje unPersonaje) {
-		this.personajes.add(unPersonaje);
+		if (!personajes.contains(unPersonaje)) {
+			this.personajes.add(unPersonaje);
+		}
+
 	}
 
 	public void agregar(Armamento UnArmamento) {
-		this.unArmamento = UnArmamento;
+		if (this.unArmamento == null) {
+			this.unArmamento = UnArmamento;
+		}
 	}
 
 	public void agregar(Articulable unArticulo) {
@@ -90,40 +95,45 @@ public class Casillero {
 	 */
 
 	public synchronized void actualizar() {
-		this.actualizarPersonajes();
 		this.actualizarArmamento();
-		this.eliminarPersonajesMuertos();
-		this.Colicionar();
+		this.actualizarPersonajes();
 		this.actualizarObstaculos();
+		this.Colicionar();
+		this.ActualizarArticulo();
 	}
 
-	private void actualizarArmamento(){
+	private void ActualizarArticulo(){
+		if (this.usarArticulo()) {
+			this.puntaje = puntaje + unArticulo.obtenerPuntaje();
+			this.unArticulo = null; // si se uso el articulo lo pongo en null.
+		}
+	}
+	
+	private void actualizarArmamento() {
 		this.VivirArmamento();
-		if(unArmamento!=null){
-			if(unArmamento.estaMuerto()){
-				unArmamento=null;
+		if (unArmamento != null) {
+			if (unArmamento.estaMuerto()) {
+				unArmamento = null;
 			}
 		}
 	}
-	private void actualizarPersonajes(){
-		/*this.VivirPersonajes();*/
+
+	private void actualizarPersonajes() {
+		/* this.VivirPersonajes(); */
 		this.eliminarPersonajesMuertos();
 	}
-	
-	
-	/* No es implementable por cuestiones de axceso a las variables
-	 * 
-	 * 
-	 * 
-	private void VivirPersonajes() {
-		Iterator<Personaje> IteradorPersonajes = personajes.iterator();
-		while (IteradorPersonajes.hasNext()) {
-			Personaje personaje = IteradorPersonajes.next();
-			personaje.vivir();
-		}
-	}*/
 
-	public void actualizarObstaculos(){
+	/*
+	 * No es implementable por cuestiones de axceso a las variables
+	 * 
+	 * 
+	 * 
+	 * private void VivirPersonajes() { Iterator<Personaje> IteradorPersonajes =
+	 * personajes.iterator(); while (IteradorPersonajes.hasNext()) { Personaje
+	 * personaje = IteradorPersonajes.next(); personaje.vivir(); } }
+	 */
+
+	public void actualizarObstaculos() {
 		if (unObstaculo != null) {
 			if (unObstaculo.Destruido()) {
 				this.puntaje = puntaje + unObstaculo.obtenerPuntaje();
@@ -131,20 +141,12 @@ public class Casillero {
 			}
 		}
 	}
-	
-	private void Colicionar(){
+
+	private void Colicionar() {
 		Colisionador coli = new Colisionador();
 		coli.Colicionar(personajes);
-		if (this.usarArticulo()) {
-			this.puntaje = puntaje + unArticulo.obtenerPuntaje();
-			this.unArticulo = null; // si se uso el articulo lo pongo en null.
-		}
 	}
-	
-	
-	
-	
-	
+
 	private void VivirArmamento() {
 		if (unArmamento != null) {
 			unArmamento.vivir();

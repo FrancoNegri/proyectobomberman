@@ -27,7 +27,7 @@ public class ArticuloTest {
 	public void testDibujarPersonaje(){
 		vistaDelArmamento.dibujar(unaSuperficie);
 		Mockito.verify(graphics).setColor(vistaDelArmamento.getColor());
-		Mockito.verify(graphics).fillRect(articulo.getX(), articulo.getY(),10,4);
+		Mockito.verify(graphics).fillRect(articulo.getX()*5, articulo.getY()*5,10,4);
 	}
 	
 }

@@ -22,7 +22,7 @@ public abstract class Obstaculo implements Daniable, Coordenable,
 		return cordenadaObsaculo.copiar();
 	}
 
-	public void QuitarVida(int danio) {
+	private void QuitarVida(int danio) {
 		if ((vida > 0) && (danio > 0)) {
 			vida = vida - danio;
 		}
@@ -37,9 +37,7 @@ public abstract class Obstaculo implements Daniable, Coordenable,
 	}
 
 	public void Daniar(int danio) {
-
 		if (!this.Destruido()) {
-
 			this.QuitarVida(danio);
 		}
 

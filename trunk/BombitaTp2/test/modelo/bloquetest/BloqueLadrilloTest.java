@@ -20,14 +20,14 @@ public class BloqueLadrilloTest {
 	@Test
 	public void testQuePruebaQuitarVida() {
 		Obstaculo Bloque = new BloqueLadrillo(coord);
-		Bloque.QuitarVida(5);
+		Bloque.Daniar(5);
 		assertTrue(Bloque.vidaRestante() == 0);
 	}
 
 	@Test
 	public void testQuePruebaQueUnBloqueEsDestruido() {
 		Obstaculo Bloque = new BloqueLadrillo(coord);
-		Bloque.QuitarVida(10);
+		Bloque.Daniar(10);
 		assertTrue(Bloque.Destruido());
 	}
 	
