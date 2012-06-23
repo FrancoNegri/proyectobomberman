@@ -22,18 +22,18 @@ public class BloqueAceroTest {
 	public void testQuePruebaQuitarVida()
 	{
 		Obstaculo Bloque = new BloqueAcero(coord);
-		Bloque.QuitarVida(5);
+		Bloque.Daniar(5);
 		assertTrue(Bloque.vidaRestante() == 995);
-		Bloque.QuitarVida(995);
+		Bloque.Daniar(995);
 		assertTrue(Bloque.vidaRestante() == 0);
-		Bloque.QuitarVida(995);
+		Bloque.Daniar(995);
 		assertTrue(Bloque.vidaRestante() == 0);
 	}
 	@Test
 	public void testQuePruebaQueUnBloqueEsDestruido()
 	{
 		Obstaculo Bloque = new BloqueAcero(coord);
-		Bloque.QuitarVida(1000);
+		Bloque.Daniar(1000);
 		assertTrue(Bloque.Destruido());
 	}
 	

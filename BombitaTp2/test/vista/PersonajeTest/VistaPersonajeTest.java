@@ -37,7 +37,7 @@ public class VistaPersonajeTest {
 	public void testDibujarPersonaje(){
 		vistaDelPersonaje.dibujar(unaSuperficie);
 		Mockito.verify(graphics).setColor(vistaDelPersonaje.getColor());
-		Mockito.verify(graphics).fillRect(personaje.getX(), personaje.getY(),10,10);
+		Mockito.verify(graphics).fillRect(personaje.getX()*5, personaje.getY()*5,10,10);
 	}
 	
 }

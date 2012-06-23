@@ -22,7 +22,7 @@ public class CuadradoTest {
 		cuadrado.dibujar(unaSuperficie);
 		
 		Mockito.verify(graphics).setColor(cuadrado.getColor());
-		Mockito.verify(graphics).fillRect(objeto.getX(), objeto.getY(),5,5);
+		Mockito.verify(graphics).fillRect(objeto.getX()*5, objeto.getY()*5,5,5);
 	}
 
 }

@@ -120,6 +120,11 @@ public class VentanaPrincipal {
 			modelo3 = new Cecilio(coord, mapa);
 			gameLoop.agregar(modelo3);
 		}
+		for (int j = 0; j < 30; j++) {
+			coord = new Coordenada(j*3,j^2);
+			modelo3 = new LopezComun(coord, mapa);
+			gameLoop.agregar(modelo3);
+		}
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapa = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapa);

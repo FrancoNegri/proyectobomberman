@@ -38,7 +38,7 @@ public class VistaArmamentoTest {
 	public void testDibujarArma(){
 		vistaArma.dibujar(unaSuperficie);
 		Mockito.verify(graphics).setColor(vistaArma.getColor());
-		Mockito.verify(graphics).fillOval(arma.getX(), arma.getY(),vistaArma.getRadio(),vistaArma.getRadio());
+		Mockito.verify(graphics).fillOval(arma.getX()*5, arma.getY()*5,vistaArma.getRadio(),vistaArma.getRadio());
 
 	}
 	

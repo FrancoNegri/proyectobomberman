@@ -7,7 +7,7 @@ import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 
 public class VistaBloque extends Cuadrado{
 	public VistaBloque(ObjetoPosicionable obstaculoAMostrar){
-		super(2,4,obstaculoAMostrar);
+		super(5,5,obstaculoAMostrar);
 		this.setColor(Color.YELLOW);
 	}
 }
