@@ -8,40 +8,39 @@ import java.util.LinkedList;
 import modelo.armamento.Armamento;
 import modelo.armamento.ToleTole;
 import modelo.articulo.Articulo;
+import modelo.articulo.Habano;
 import modelo.casillero.Casillero;
+import modelo.coordenadas.Coordenada;
+import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
 import modelo.personaje.Personaje;
+import modelo.personaje.enemigos.Cecilio;
+
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import vista.Casillero.VistaCasillero;
 import vista.fiuba.algo3.titiritero.dibujables.SuperficiePanel;
 import vista.objeto.VistaObjeto;
 
 public class VistaCasilleroTest {
-
 	Graphics graphics = Mockito.mock(Graphics.class);
 	SuperficiePanel unaSuperficie = Mockito.mock(SuperficiePanel.class);
 	Casillero casillero = mock(Casillero.class);
-	Armamento arma = mock(ToleTole.class);
-	Personaje pers = mock(Personaje.class);
-	BloqueAcero bloque = mock(BloqueAcero.class);
-	Articulo articulo = mock(Articulo.class);
+	Armamento arma = new ToleTole(new Coordenada(1,1),mock(Mapa.class),4);
+	Personaje pers = new Cecilio(new Coordenada(1,1),mock(Mapa.class));
+	BloqueAcero bloque = new BloqueAcero(new Coordenada(1,1));
+	Articulo articulo = new Habano(new Coordenada(1,1));
 
 	@Before
 	public void SetUp(){
 		Mockito.when(unaSuperficie.getBuffer()).thenReturn(graphics);
 		
-		when(arma.getX()).thenReturn(4);
-		when(arma.getY()).thenReturn(4);
-		when(pers.getX()).thenReturn(5);
-		when(pers.getY()).thenReturn(5);
-		when(bloque.getX()).thenReturn(6);
-		when(bloque.getY()).thenReturn(6);
-		when(articulo.getX()).thenReturn(7);
-		when(articulo.getY()).thenReturn(7);
-		
-		answers();
+		arma = spy(arma);
+		pers = spy(pers);
+		bloque = spy(bloque);
+		articulo = spy(articulo);
 		
 		LinkedList<Personaje> personajes = new LinkedList<Personaje>();
 		personajes.add(pers);
@@ -54,6 +53,7 @@ public class VistaCasilleroTest {
 	}
 	@Test
 	public void testVistaMapaDibujar(){
+		
 		VistaCasillero vistaDelCasillero = new VistaCasillero(casillero);
 		vistaDelCasillero.dibujar(unaSuperficie);
 		
