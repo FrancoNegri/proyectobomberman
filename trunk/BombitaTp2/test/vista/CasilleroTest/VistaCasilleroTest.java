@@ -1,11 +1,12 @@
 package vista.CasilleroTest;
 
-import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import java.awt.Graphics;
 import java.util.LinkedList;
 import modelo.armamento.Armamento;
+import modelo.armamento.ToleTole;
 import modelo.articulo.Articulo;
 import modelo.casillero.Casillero;
 import modelo.obstaculos.BloqueAcero;
@@ -15,13 +16,14 @@ import org.junit.Test;
 import org.mockito.Mockito;
 import vista.Casillero.VistaCasillero;
 import vista.fiuba.algo3.titiritero.dibujables.SuperficiePanel;
+import vista.objeto.VistaObjeto;
 
 public class VistaCasilleroTest {
 
 	Graphics graphics = Mockito.mock(Graphics.class);
 	SuperficiePanel unaSuperficie = Mockito.mock(SuperficiePanel.class);
 	Casillero casillero = mock(Casillero.class);
-	Armamento arma = mock(Armamento.class);
+	Armamento arma = mock(ToleTole.class);
 	Personaje pers = mock(Personaje.class);
 	BloqueAcero bloque = mock(BloqueAcero.class);
 	Articulo articulo = mock(Articulo.class);
@@ -38,6 +40,8 @@ public class VistaCasilleroTest {
 		when(bloque.getY()).thenReturn(6);
 		when(articulo.getX()).thenReturn(7);
 		when(articulo.getY()).thenReturn(7);
+		
+		answers();
 		
 		LinkedList<Personaje> personajes = new LinkedList<Personaje>();
 		personajes.add(pers);

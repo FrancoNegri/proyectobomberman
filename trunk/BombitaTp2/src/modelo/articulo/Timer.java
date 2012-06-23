@@ -1,5 +1,6 @@
 package modelo.articulo;
 
+import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.coordenadas.Coordenada;
 import modelo.errores.ArmamentoNoInicializadoError;
@@ -38,6 +39,10 @@ public class Timer extends Articulo {
 		int reduccion = (int) ((tiempo*15)/100);
 		tiempo = tiempo - reduccion;
 		unArmamento.cambiarTime(tiempo);
+	}
+
+	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
+		vistaObjeto.InteractuarTimer(this);
 	}
 
 }
