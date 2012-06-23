@@ -101,7 +101,7 @@ public class VentanaPrincipal {
 		panel.setBounds(42, 53, 375, 187);
 		frame.getContentPane().add(panel);
 
-		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
+		this.gameLoop = new GameLoop(200, (SuperficieDeDibujo) panel);
 		// ///////////Inicializacion grafica Completa
 		
 		Mapa mapa = new Mapa(100);
