@@ -5,7 +5,9 @@ import java.util.LinkedList;
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.detectorcolision.Colisionador;
+import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.obstaculos.Obstaculo;
+import modelo.ondaexpansiva.OndaExpansiva;
 import modelo.personaje.*;
 
 public class Casillero {
@@ -13,7 +15,9 @@ public class Casillero {
 	Armamento unArmamento;
 	Articulable unArticulo;
 	Obstaculo unObstaculo;
+	FuegoDeExplocion fuegoDeLaExplocion;
 	int puntaje;
+	
 
 	public Casillero() {
 		this.personajes = new LinkedList<Personaje>();
@@ -48,6 +52,12 @@ public class Casillero {
 		}
 	}
 
+	public void agregar(FuegoDeExplocion fuego) {
+		if (this.fuegoDeLaExplocion == null) {
+			this.fuegoDeLaExplocion = fuego;
+		}
+	}
+	
 	public void agregar(Articulable unArticulo) {
 		this.unArticulo = unArticulo;
 	}
@@ -75,6 +85,10 @@ public class Casillero {
 		return this.unObstaculo;
 	}
 
+	public FuegoDeExplocion obtenerFuegoDeExplocion() {
+		return fuegoDeLaExplocion;
+	}
+	
 	public boolean esCaminable() {
 		if (this.unObstaculo == null) {
 			return true;
@@ -100,6 +114,8 @@ public class Casillero {
 		this.actualizarObstaculos();
 		this.Colicionar();
 		this.ActualizarArticulo();
+		//Retocar
+		this.fuegoDeLaExplocion = null;
 	}
 
 	private void ActualizarArticulo(){
