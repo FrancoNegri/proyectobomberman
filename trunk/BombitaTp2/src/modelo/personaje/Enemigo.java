@@ -13,7 +13,7 @@ import modelo.mapa.Mapa;
 
 import java.util.Random;
 
-public class Enemigo extends Personaje {
+public abstract class Enemigo extends Personaje {
 
 	protected int puntaje;
 	

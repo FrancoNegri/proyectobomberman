@@ -1,5 +1,6 @@
 package modelo.personaje.enemigos;
 
+import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.ProyectilFactory;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
@@ -13,5 +14,9 @@ public class LopezComun extends Enemigo {
 		CreadorDeBombas = new ProyectilFactory();
 		this.velocidad = ConstantesJuego.velocidad_lopez_reggae_comun;
 		this.vida = ConstantesJuego.vida_lopez_reggae_comun;
+	}
+
+	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
+		vistaObjeto.InteractuarConLopezComun(this);
 	}
 }

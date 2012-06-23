@@ -1,5 +1,6 @@
 package modelo.personaje.enemigos;
 
+import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
@@ -13,5 +14,9 @@ public class LopezAlado extends Enemigo {
 		this.CreadorDeBombas = new MolotovFactory();
 		this.vida = ConstantesJuego.vida_lopez_reggae_alado;
 		this.velocidad = ConstantesJuego.velocidad_lopez_reggae_alado;
+	}
+
+	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
+		vistaObjeto.InteractuarConLopezAlado(this);
 	}
 }

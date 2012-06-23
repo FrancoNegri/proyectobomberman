@@ -1,5 +1,6 @@
 package modelo.personaje;
 
+import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.*;
 import modelo.Translacion.Translacion;
 import modelo.articulo.Articulable;
@@ -40,6 +41,10 @@ public class Bombita extends Personaje {
 	protected Translacion obtenerTranslacion() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
+		vistaObjeto.InteractuarConBombita(this);
 	}
 
 	/*public void caminar(char unaLetra) {

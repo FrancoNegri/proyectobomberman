@@ -15,6 +15,7 @@ import vista.Bloque.VistaBloque;
 import vista.Personaje.vistaPersonaje;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
+import vista.objeto.VistaObjeto;
 
 public class VistaCasillero implements ObjetoDibujable {
 
@@ -50,12 +51,8 @@ public class VistaCasillero implements ObjetoDibujable {
 	private void dibujarArmamento(SuperficieDeDibujo superficieDeDibujo) {
 		Armamento arma = CasilleroADibujar.obtenerArmamento();
 		if (arma != null) {
-			try {
-				VistaArmamento vistaArma = new VistaArmamento(arma);
-				vistaArma.dibujar(superficieDeDibujo);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			VistaObjeto vistaArma = new VistaObjeto(arma);
+			vistaArma.dibujar(superficieDeDibujo);
 		}
 	}
 
@@ -64,13 +61,9 @@ public class VistaCasillero implements ObjetoDibujable {
 				.obtenerPersonajes();
 		Iterator<Personaje> iteradorDePersonajes = personajes.iterator();
 		while (iteradorDePersonajes.hasNext()) {
-			try {
-				vistaPersonaje vistaDelPersonaje = new vistaPersonaje(
+				VistaObjeto vistaDelPersonaje = new VistaObjeto(
 						iteradorDePersonajes.next());
 				vistaDelPersonaje.dibujar(superficieDeDibujo);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
 	}
 }

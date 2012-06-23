@@ -2,6 +2,7 @@ package modelo.personaje;
 
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
+import vista.objeto.ObjetoVisible;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
@@ -13,7 +14,7 @@ import modelo.mapa.Mapa;
 import modelo.danio.*;
 import modelo.errores.TamanioMatrizInvalidoError;
 
-public abstract class Personaje implements ObjetoPosicionable, Daniable, Coordenable, ObjetoVivo {
+public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicionable , ObjetoVivo {
 	protected Translacion ultimaTranslacion;
 	protected ArmamentoFactory CreadorDeBombas;
 	protected float velocidad;
