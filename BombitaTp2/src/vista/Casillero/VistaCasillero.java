@@ -9,10 +9,6 @@ import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
-import vista.Armamento.VistaArmamento;
-import vista.Articulo.VistaArticulo;
-import vista.Bloque.VistaBloque;
-import vista.Personaje.vistaPersonaje;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 import vista.objeto.VistaObjeto;
@@ -35,7 +31,7 @@ public class VistaCasillero implements ObjetoDibujable {
 	private void dibujarBloque(SuperficieDeDibujo superficieDeDibujo) {
 		Obstaculo ObstaculoAmostrar = CasilleroADibujar.obtenerObstaculo();
 		if (ObstaculoAmostrar != null) {
-			VistaBloque vistaBloque = new VistaBloque(ObstaculoAmostrar);
+			VistaObjeto vistaBloque = new VistaObjeto(ObstaculoAmostrar);
 			vistaBloque.dibujar(superficieDeDibujo);
 		}
 	}
@@ -43,7 +39,7 @@ public class VistaCasillero implements ObjetoDibujable {
 	private void dibujarArticulo(SuperficieDeDibujo superficieDeDibujo) {
 		Articulable articuloADibujar = CasilleroADibujar.obtenerArticulo();
 		if (articuloADibujar != null) {
-			VistaArticulo vistaArma = new VistaArticulo(articuloADibujar);
+			VistaObjeto vistaArma = new VistaObjeto(articuloADibujar);
 			vistaArma.dibujar(superficieDeDibujo);
 		}
 	}

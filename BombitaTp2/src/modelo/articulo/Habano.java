@@ -1,5 +1,6 @@
 package modelo.articulo;
 
+import vista.objeto.VistaObjeto;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.errores.PersonajeNoInicializadoError;
@@ -46,6 +47,10 @@ public class Habano extends Articulo{
 			unPersonaje.cambiarVelocidad(velocidad);
 		}
 		
+	}
+
+	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
+		vistaObjeto.InteractuarConHabano(this);		
 	}
 
 }

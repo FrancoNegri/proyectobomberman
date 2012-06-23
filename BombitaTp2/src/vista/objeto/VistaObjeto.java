@@ -7,6 +7,11 @@ import modelo.armamento.Armamento;
 import modelo.armamento.Molotov;
 import modelo.armamento.Proyectil;
 import modelo.armamento.ToleTole;
+import modelo.articulo.Habano;
+import modelo.articulo.Timer;
+import modelo.obstaculos.BloqueAcero;
+import modelo.obstaculos.BloqueCemento;
+import modelo.obstaculos.BloqueLadrillo;
 import modelo.personaje.Bombita;
 import modelo.personaje.enemigos.Cecilio;
 import modelo.personaje.enemigos.LopezAlado;
@@ -84,6 +89,51 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
+	public void InteractuarConHabano(ObjetoPosicionable habano) {
+		try {
+			objetoDibujable = new VistaHabano(habano);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void InteractuarTimer(ObjetoPosicionable timer) {
+		try {
+			objetoDibujable = new VistaTimer(timer);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void InteractuarConBloqueAcero(BloqueAcero bloqueAcero) {
+		try {
+			objetoDibujable = new VistaBloqueAcero(bloqueAcero);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void InteractuarConBloqueCemento(BloqueCemento bloqueCemento) {
+		try {
+			objetoDibujable = new VistaBloqueCemento(bloqueCemento);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void InteractuarConBloqueLadrillo(BloqueLadrillo bloqueLadrillo) {
+		try {
+			objetoDibujable = new VistaBloqueLadrillo(bloqueLadrillo);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	
 	private class VistaMolotov extends Circulo {
 		public  VistaMolotov(ObjetoPosicionable modelo){
@@ -91,6 +141,7 @@ public class VistaObjeto implements ObjetoDibujable {
 			this.setColor(Color.blue);
 		}
 	}
+	
 	
 	private class VistaProyectil extends Circulo {
 		public  VistaProyectil(ObjetoPosicionable modelo){
@@ -134,5 +185,39 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
+	private class VistaHabano extends Cuadrado {
+		public  VistaHabano(ObjetoPosicionable modelo) throws IOException {
+			super(10,15, modelo);
+			this.setColor(Color.BLUE);
+		}
+	}
+	
+	private class VistaTimer extends Cuadrado {
+		public  VistaTimer(ObjetoPosicionable modelo) throws IOException {
+			super(10,15, modelo);
+			this.setColor(Color.BLUE);
+		}
+	}
+	
+	private class VistaBloqueAcero extends Cuadrado {
+		public  VistaBloqueAcero(ObjetoPosicionable modelo) throws IOException {
+			super(10,15, modelo);
+			this.setColor(Color.BLUE);
+		}
+	}
+	
+	private class VistaBloqueCemento extends Cuadrado {
+		public  VistaBloqueCemento(ObjetoPosicionable modelo) throws IOException {
+			super(10,15, modelo);
+			this.setColor(Color.BLUE);
+		}
+	}
+
+	private class VistaBloqueLadrillo extends Cuadrado {
+		public  VistaBloqueLadrillo(ObjetoPosicionable modelo) throws IOException {
+			super(10,15, modelo);
+			this.setColor(Color.BLUE);
+		}
+	}
 	
 }
