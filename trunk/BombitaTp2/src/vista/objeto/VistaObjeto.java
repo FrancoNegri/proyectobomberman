@@ -122,9 +122,9 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	public void InteractuarConFuegoDeExplocion(FuegoDeExplocion fuegoDeExplocion) {
+	public void InteractuarConFuegoDeExplocion(ObjetoPosicionable objeto) {
 		try {
-			objetoDibujable = new VistaFuegoDeExplocion(fuegoDeExplocion);
+			objetoDibujable = new VistaFuegoDeExplocion(objeto);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
