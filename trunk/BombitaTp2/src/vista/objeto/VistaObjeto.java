@@ -107,7 +107,7 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	public void InteractuarConBloqueAcero(BloqueAcero bloqueAcero) {
+	public void InteractuarConBloqueAcero(ObjetoPosicionable bloqueAcero) {
 		try {
 			objetoDibujable = new VistaBloqueAcero(bloqueAcero);
 		} catch (IOException e) {
@@ -116,7 +116,7 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	public void InteractuarConBloqueCemento(BloqueCemento bloqueCemento) {
+	public void InteractuarConBloqueCemento(ObjetoPosicionable bloqueCemento) {
 		try {
 			objetoDibujable = new VistaBloqueCemento(bloqueCemento);
 		} catch (IOException e) {
@@ -125,7 +125,7 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	public void InteractuarConBloqueLadrillo(BloqueLadrillo bloqueLadrillo) {
+	public void InteractuarConBloqueLadrillo(ObjetoPosicionable bloqueLadrillo) {
 		try {
 			objetoDibujable = new VistaBloqueLadrillo(bloqueLadrillo);
 		} catch (IOException e) {
