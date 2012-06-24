@@ -67,4 +67,17 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 		public boolean estaMuerto() {
 			return muerto;
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }

@@ -14,6 +14,7 @@ import modelo.obstaculos.*;
 
 
 public class OndaExpansiva {
+	private final int  VIDADELFUEGO = 3;
     private int radio;
     private int danio;
     
@@ -23,7 +24,7 @@ public class OndaExpansiva {
     }
     
     public void Expandirse(Coordenada cordenada,Mapa mapa){    	
-    	this.expandirse(cordenada,mapa,new TranslacionDerecha());//los uso
+    	this.expandirse(cordenada,mapa,new TranslacionDerecha());
     	this.expandirse(cordenada,mapa,new TranslacionIzquierda());
     	this.expandirse(cordenada,mapa,new TranslacionAbajo());
     	this.expandirse(cordenada,mapa,new TranslacionArriba());
@@ -43,7 +44,7 @@ public class OndaExpansiva {
     			this.atacar(unCasillero);
     			return;
     		}else{
-    			unCasillero.agregar(new FuegoDeExplocion(nuevaCord));
+    			unCasillero.agregar(new FuegoDeExplocion(nuevaCord,VIDADELFUEGO));
     		}
     	}
     }
@@ -63,8 +64,6 @@ public class OndaExpansiva {
     			
     		Personaje unPersonaje = itPersonajes.next();
     		unPersonaje.Daniar(danio);
-    		int indicePersonaje = Personajes.indexOf(unPersonaje);
-    		Personajes.set(indicePersonaje, unPersonaje);	
     	}	
     }
     

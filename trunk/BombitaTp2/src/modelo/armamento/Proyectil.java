@@ -17,9 +17,10 @@ public class Proyectil extends Armamento {
 		super(coordenada, mapa);
 		this.danio = ConstantesJuego.danio_proyectil;
 		this.time = 0;
+		this.radio = 4;
 		transladador = trans;
 	}
-	// REFACTORIZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARR!!!
+	
 	@Override
 	public void vivir() {
 		if (distancia > 0) {
@@ -31,7 +32,7 @@ public class Proyectil extends Armamento {
 					Casillero casilleroAntiguo = mapaAutilizar.obtenerCasillero(coordenada);
 					casilleroAntiguo.eliminar(this);
 					coordenada = coordenadaPlaneada;
-					casilleroAlQueMoverse.agregar(this);
+					mapaAutilizar.agregarAlMapa(this);
 					return;
 				}
 				}catch(Exception e){}
