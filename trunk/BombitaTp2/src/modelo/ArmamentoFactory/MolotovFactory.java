@@ -1,5 +1,9 @@
 		package modelo.ArmamentoFactory;
 
+import org.dom4j.Attribute;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
 import modelo.armamento.*;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.personaje.Personaje;
@@ -18,5 +22,12 @@ public class MolotovFactory extends ArmamentoFactory{
 	}
 	public int obtenerTime() {
 		return time;
+	}
+
+	@Override
+	public Element guardar() {
+		Element ElemArmamFactory = super.guardar();
+		ElemArmamFactory.addAttribute("Tipo", "ArmamentoFactory");
+		return ElemArmamFactory;
 	}
 }

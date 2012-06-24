@@ -1,7 +1,7 @@
 package modelo.personaje;
 
-import org.dom4j.Attribute;
-
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import vista.objeto.ObjetoVisible;
@@ -14,6 +14,9 @@ import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.danio.*;
 import modelo.errores.TamanioMatrizInvalidoError;
+import org.dom4j.*;
+
+
 
 public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicionable , ObjetoVivo {
 	protected Translacion ultimaTranslacion;
@@ -22,6 +25,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	protected int vida;
 	protected Coordenada coordenadaXY;
 	protected Mapa mapa;
+
 
 	public Personaje(Coordenada unaCoordenada,Mapa nuevoMapa) {
 		this.coordenadaXY = unaCoordenada.copiar();
@@ -121,9 +125,14 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	return this.coordenadaXY.obtenerCoordenadaY();
 	}
 
-	public Attribute guardar() {
-		
-		return ;
+	public Element guardar() {
+		Element elemPersonaje = DocumentHelper.createElement("Personaje");
+		elemPersonaje.addAttribute("Vida", String.valueOf(vida));
+		elemPersonaje.addAttribute("Velocidad", String.valueOf(velocidad));
+		elemPersonaje.add(ultimaTranslacion.guardar());
+		elemPersonaje.add(CreadorDeBombas.guardar());
+		elemPersonaje.add(coordenadaXY.guardar());
+		return elemPersonaje;
 	}
 }
 

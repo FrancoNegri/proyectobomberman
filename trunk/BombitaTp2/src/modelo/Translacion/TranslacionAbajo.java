@@ -1,6 +1,9 @@
 package modelo.Translacion;
 
 
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
 import modelo.coordenadas.Coordenada;
 
 public class TranslacionAbajo extends Translacion {
@@ -9,4 +12,12 @@ public class TranslacionAbajo extends Translacion {
 		nuevaCord.cambiarCoordenadaY(cordenada.obtenerCoordenadaY()-1);
 		return nuevaCord;
 	}
+
+	@Override
+	public Element guardar() {
+		Element elemTranslacion = DocumentHelper.createElement("TranslacionAbajo");
+		return elemTranslacion;
+	}
+	
+	
 }

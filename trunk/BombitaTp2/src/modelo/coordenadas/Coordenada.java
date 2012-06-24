@@ -1,5 +1,9 @@
 package modelo.coordenadas;
 
+import org.dom4j.Attribute;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
 import modelo.errores.coordenadaInvalida;
 
 public class Coordenada {
@@ -48,6 +52,13 @@ public class Coordenada {
 			return true;
 		}
 		return false;
+	}
+
+	public Element guardar() {
+		Element elemCoordenada = DocumentHelper.createElement("Casillero");
+		elemCoordenada.addAttribute("CoordenadaX", String.valueOf(x));
+		elemCoordenada.addAttribute("CoordenadaY", String.valueOf(y));
+		return elemCoordenada;
 	}
 }
 

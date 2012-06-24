@@ -18,7 +18,6 @@ import java.util.Collection;
 
 
 import java.util.Iterator;
-import org.dom4j.Document;
 import org.dom4j.*;
 import org.dom4j.io.SAXReader;
 
@@ -99,12 +98,20 @@ public class Mapa implements ObjetoVivo{
 	}
 
 	public Element guardar() {
-		Element elemMapa = DocumentHelper.createElement("Anotador");
+		Element elemMapa = DocumentHelper.createElement("Mapa");
 		for(int j = 0; j < this.obtenerTamanio();j++){
 			for(int k = 0; k < this.obtenerTamanio();k++){
 				Coordenada coordenada = new Coordenada(j,k);
 				Casillero CasilleroAux = this.obtenerCasillero(coordenada);
-	            elemMapa.add(CasilleroAux.guardar());
+				
+				Iterator <Personaje> it = CasilleroAux.obtenerPersonajes().iterator();
+				while(it.hasNext()){
+					Personaje personajeAguardar = it.next();
+					elemMapa.add(personajeAguardar.guardar());
+				}
+		       /* elemCasillero.add(unArmamento.guardar());
+		        elemCasillero.add(unArticulo.guardar());
+		        elemCasillero.add(unObstaculo.guardar());*/
 			}
 		}
         return elemMapa;

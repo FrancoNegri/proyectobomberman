@@ -232,18 +232,4 @@ public class Casillero {
 		return fueUtilizado;
 
 	}
-
-	public Element guardar() {
-		Element elemCasillero = DocumentHelper.createElement("Casillero");
-		Iterator <Personaje> it = personajes.iterator();
-		while(it.hasNext()){
-			Personaje personajeAguardar = it.next();
-			elemCasillero.add(personajeAguardar.guardar());
-		}
-        elemCasillero.add(unArmamento.guardar());
-        elemCasillero.add(unArticulo.guardar());
-        elemCasillero.add(unObstaculo.guardar());
-        elemCasillero.add(fuegoDeLaExplocion.guardar());
-        return elemCasillero;
-	}
 }
