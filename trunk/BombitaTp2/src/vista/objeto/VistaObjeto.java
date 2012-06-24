@@ -6,6 +6,7 @@ import java.io.IOException;
 import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import vista.fiuba.algo3.titiritero.dibujables.Circulo;
 import vista.fiuba.algo3.titiritero.dibujables.Cuadrado;
+import vista.fiuba.algo3.titiritero.dibujables.Imagen;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
@@ -174,10 +175,9 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	private class VistaLopezComun extends Cuadrado {
+	private class VistaLopezComun extends Imagen {
 		public  VistaLopezComun(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.BLUE);
+			super( VistaLopezComun.class.getResource("/vista/Imagenes/Parado.png"), modelo);
 		}
 	}
 	
@@ -195,24 +195,21 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	private class VistaBloqueAcero extends Cuadrado {
+	private class VistaBloqueAcero extends Imagen {
 		public  VistaBloqueAcero(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.MAGENTA);
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/BloqueAcero.png"), modelo);
 		}
 	}
 	
-	private class VistaBloqueCemento extends Cuadrado {
+	private class VistaBloqueCemento extends Imagen {
 		public  VistaBloqueCemento(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.BLUE);
+			super(VistaBloqueCemento.class.getResource("/vista/Imagenes/BloqueCemento.png"), modelo);
 		}
 	}
 
-	private class VistaBloqueLadrillo extends Cuadrado {
+	private class VistaBloqueLadrillo extends Imagen {
 		public  VistaBloqueLadrillo(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.BLUE);
+			super(VistaBloqueLadrillo.class.getResource("/vista/Imagenes/BloqueLadrillo.png"), modelo);
 		}
 	}
 	
