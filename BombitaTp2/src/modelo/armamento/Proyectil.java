@@ -1,5 +1,7 @@
 package modelo.armamento;
 
+import org.dom4j.Element;
+
 import vista.objeto.VistaObjeto;
 import modelo.Translacion.Translacion;
 import modelo.casillero.Casillero;
@@ -33,18 +35,28 @@ public class Proyectil extends Armamento {
 					casilleroAntiguo.eliminar(this);
 					coordenada = coordenadaPlaneada;
 					mapaAutilizar.agregarAlMapa(this);
+					distancia--;
 					return;
 				}
 				}catch(Exception e){}
 			}
 		}
-		muerto = true;
 		this.explotar(coordenada, mapaAutilizar);
+		exploto = true;
 	}
-
+	
+	public boolean estaMuerto() {
+		return exploto;
+	}
 	
 	
-	
+	public Element guardar() {
+		Element elemMolotov = super.guardar();
+		elemMolotov.addAttribute("Tipo", "Proyectil");
+		elemMolotov.addAttribute("DistanciaARecorrer", String.valueOf(distancia));
+		elemMolotov.add(transladador.guardar());
+		return elemMolotov;
+	}
 	
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConProyectil(this);

@@ -1,5 +1,7 @@
 package modelo.armamento;
 
+import org.dom4j.*;
+
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import vista.objeto.ObjetoVisible;
@@ -14,7 +16,7 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 	protected int danio;
 	protected int radio;
 	protected Mapa mapaAutilizar;
-	boolean muerto;
+	protected boolean exploto;
 	
 	public Armamento(Coordenada unaCoordenada,Mapa mapa){
 		this.coordenada = unaCoordenada.copiar();
@@ -23,7 +25,7 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 		this.radio = 0;
 		mapaAutilizar = mapa;
 		mapa.agregarAlMapa(this);
-		muerto = false;
+		exploto = false;
 	}
 	
 	public Coordenada obtenerCoordenadaXY(){
@@ -45,13 +47,14 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 	
 	
 	public void vivir(){
-		if((time>=0)&(!muerto)){
+		if(exploto){
+			return;
+		}
+		if(time>=0){
 			this.time = this.time-1;
 		}else{
-			if(!muerto){
-				this.explotar(coordenada, mapaAutilizar);
-				muerto = true;
-			}
+			this.explotar(coordenada, mapaAutilizar);
+			exploto = true;
 		}
 	}
 	
@@ -64,19 +67,16 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 		}
 		
 		public boolean estaMuerto() {
-			return muerto;
+			return (time<0);
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+		public Element guardar() {
+			Element elemPersonaje = DocumentHelper.createElement("Armamento");
+			elemPersonaje.add(coordenada.guardar());
+			elemPersonaje.addAttribute("Danio", String.valueOf(danio));
+			elemPersonaje.addAttribute("Time", String.valueOf(time));
+			elemPersonaje.addAttribute("Radio", String.valueOf(radio));
+			elemPersonaje.addAttribute("Exploto", new Boolean(exploto).toString());
+			return elemPersonaje;
+		}
 }
