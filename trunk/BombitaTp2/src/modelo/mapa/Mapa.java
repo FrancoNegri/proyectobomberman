@@ -109,9 +109,9 @@ public class Mapa implements ObjetoVivo{
 					Personaje personajeAguardar = it.next();
 					elemMapa.add(personajeAguardar.guardar());
 				}
-		       /* elemCasillero.add(unArmamento.guardar());
-		        elemCasillero.add(unArticulo.guardar());
-		        elemCasillero.add(unObstaculo.guardar());*/
+				elemMapa.add(CasilleroAux.obtenerArmamento().guardar());
+				elemMapa.add(CasilleroAux.obtenerArticulo().guardar());
+				elemMapa.add(CasilleroAux.obtenerObstaculo().guardar());
 			}
 		}
         return elemMapa;

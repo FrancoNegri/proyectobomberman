@@ -1,5 +1,7 @@
 package modelo.armamento;
 
+import org.dom4j.Element;
+
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.ToleToleFactory;
 import modelo.articulo.Articulable;
@@ -33,6 +35,12 @@ public class ToleTole extends Armamento implements Articulable {
 
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConToleTole(this);
-		
 	}
+	
+	public Element guardar() {
+		Element elemMolotov = super.guardar();
+		elemMolotov.addAttribute("Tipo", "ToleTole");
+		return elemMolotov;
+	}
+	
 }

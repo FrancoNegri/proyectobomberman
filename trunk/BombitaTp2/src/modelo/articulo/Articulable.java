@@ -1,5 +1,7 @@
 package modelo.articulo;
 
+import org.dom4j.*;
+
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.objeto.ObjetoVisible;
 import modelo.coordenadas.Coordenada;
@@ -19,4 +21,7 @@ public interface Articulable extends ObjetoPosicionable,ObjetoVisible {
 	public Coordenada obtenerCoordenadaXY();
 	
 	public int obtenerPuntaje();
+
+
+	public Element guardar();
 }

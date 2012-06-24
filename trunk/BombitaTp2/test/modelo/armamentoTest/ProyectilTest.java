@@ -33,7 +33,7 @@ public class ProyectilTest {
 		when(coord.equals(coordenadaNueva)).thenReturn(true);
 		when(mapa.obtenerCasillero((Coordenada)anyObject())).thenReturn(casillero);
 		proyectil.vivir();
-		verify(mapa,times(4)).obtenerCasillero((Coordenada)anyObject());
+		verify(mapa,times(16)).obtenerCasillero((Coordenada)anyObject());
 	}
 	
 	
