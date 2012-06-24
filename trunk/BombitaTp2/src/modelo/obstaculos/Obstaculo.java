@@ -7,7 +7,7 @@ import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.danio.*;
 
-public abstract class Obstaculo implements Daniable, Coordenable,
+public abstract class Obstaculo implements Daniable,
 		ObjetoPosicionable,ObjetoVisible {
 	Coordenada cordenadaObsaculo;
 	int vida;
