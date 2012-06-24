@@ -1,5 +1,7 @@
 package modelo.mapa;
 
+import org.dom4j.Node;
+
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
@@ -8,6 +10,18 @@ import modelo.coordenadas.Coordenada;
 import modelo.errores.CasilleroOcupadoError;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+
+
+
+import java.util.Iterator;
+import org.dom4j.Document;
+import org.dom4j.*;
+import org.dom4j.io.SAXReader;
+
 
 public class Mapa implements ObjetoVivo{
 	private Tablero TableroJuego;
@@ -82,6 +96,18 @@ public class Mapa implements ObjetoVivo{
 	
 	public int obtenerTamanio(){
 		return TableroJuego.obtenerTamanio();
+	}
+
+	public Element guardar() {
+		Element elemMapa = DocumentHelper.createElement("Anotador");
+		for(int j = 0; j < this.obtenerTamanio();j++){
+			for(int k = 0; k < this.obtenerTamanio();k++){
+				Coordenada coordenada = new Coordenada(j,k);
+				Casillero CasilleroAux = this.obtenerCasillero(coordenada);
+	            elemMapa.add(CasilleroAux.guardar());
+			}
+		}
+        return elemMapa;
 	}
 	
 	

@@ -1,5 +1,7 @@
 package modelo.personaje;
 
+import org.dom4j.Attribute;
+
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import vista.objeto.ObjetoVisible;
@@ -117,6 +119,11 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 
 	public int getY() {
 	return this.coordenadaXY.obtenerCoordenadaY();
+	}
+
+	public Attribute guardar() {
+		
+		return ;
 	}
 }
 

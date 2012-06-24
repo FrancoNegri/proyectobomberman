@@ -2,6 +2,9 @@ package modelo.casillero;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+
+import org.dom4j.Attribute;
+
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.detectorcolision.Colisionador;
@@ -9,6 +12,8 @@ import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.obstaculos.Obstaculo;
 import modelo.ondaexpansiva.OndaExpansiva;
 import modelo.personaje.*;
+import org.dom4j.*;
+
 
 public class Casillero {
 	LinkedList<Personaje> personajes;
@@ -226,5 +231,19 @@ public class Casillero {
 		}
 		return fueUtilizado;
 
+	}
+
+	public Element guardar() {
+		Element elemCasillero = DocumentHelper.createElement("Casillero");
+		Iterator <Personaje> it = personajes.iterator();
+		while(it.hasNext()){
+			Personaje personajeAguardar = it.next();
+			elemCasillero.add(personajeAguardar.guardar());
+		}
+        elemCasillero.add(unArmamento.guardar());
+        elemCasillero.add(unArticulo.guardar());
+        elemCasillero.add(unObstaculo.guardar());
+        elemCasillero.add(fuegoDeLaExplocion.guardar());
+        return elemCasillero;
 	}
 }
