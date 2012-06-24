@@ -8,7 +8,6 @@ import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
-import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.danio.*;

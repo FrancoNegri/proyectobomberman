@@ -3,7 +3,6 @@ package modelo.obstaculos;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.objeto.ObjetoVisible;
 import modelo.constantesjuego.ConstantesJuego;
-import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.danio.*;
 

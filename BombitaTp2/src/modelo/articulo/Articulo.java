@@ -1,7 +1,6 @@
 package modelo.articulo;
 
 import modelo.constantesjuego.ConstantesJuego;
-import modelo.coordenadas.Coordenable;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.*;
 
