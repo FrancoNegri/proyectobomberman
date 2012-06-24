@@ -23,37 +23,28 @@ public class Proyectil extends Armamento {
 	@Override
 	public void vivir() {
 		if (distancia > 0) {
-			Casillero casilleroAlQueMoverse;
-			Coordenada movimientoPlaneado = transladador.accion(coordenada);
-			if(coordenada.equals(movimientoPlaneado)){
-				muerto = true;
-				this.explotar(coordenada.copiar(), mapaAutilizar);
-				return;
+			Coordenada coordenadaPlaneada = transladador.accion(coordenada);
+			if(coordenada.equals(coordenadaPlaneada) == false){
+				try{
+				Casillero casilleroAlQueMoverse = mapaAutilizar.obtenerCasillero(coordenadaPlaneada);
+				if(casilleroAlQueMoverse.esAtacable() == false){
+					Casillero casilleroAntiguo = mapaAutilizar.obtenerCasillero(coordenada);
+					casilleroAntiguo.eliminar(this);
+					coordenada = coordenadaPlaneada;
+					casilleroAlQueMoverse.agregar(this);
+					return;
+				}
+				}catch(Exception e){}
 			}
-			try {
-				casilleroAlQueMoverse = mapaAutilizar
-						.obtenerCasillero(movimientoPlaneado);
-			} catch (TamanioMatrizInvalidoError e) {
-				muerto = true;
-				this.explotar(coordenada.copiar(), mapaAutilizar);
-				return;
-			}
-			if (!casilleroAlQueMoverse.esAtacable()) {
-				Casillero casilleroAntiguo = mapaAutilizar
-						.obtenerCasillero(coordenada);
-				casilleroAntiguo.eliminar(this);
-				coordenada = movimientoPlaneado;
-				mapaAutilizar.agregarAlMapa(this);
-			}else{
-				muerto = true;
-				this.explotar(coordenada.copiar(), mapaAutilizar);
-			}
-		} else {
-			muerto = true;
-			this.explotar(coordenada.copiar(), mapaAutilizar);
 		}
+		muerto = true;
+		this.explotar(coordenada, mapaAutilizar);
 	}
 
+	
+	
+	
+	
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConProyectil(this);
 	}
