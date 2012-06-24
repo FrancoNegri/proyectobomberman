@@ -1,5 +1,7 @@
 package modelo.ArmamentoFactory;
 
+import org.dom4j.Element;
+
 import modelo.armamento.Armamento;
 import modelo.armamento.ToleTole;
 import modelo.constantesjuego.ConstantesJuego;
@@ -23,4 +25,12 @@ public class ToleToleFactory extends ArmamentoFactory{
 	public int obtenerTime() {
 		return time;
 	}
+	
+	@Override
+	public Element guardar() {
+		Element ElemArmamFactory = super.guardar();
+		ElemArmamFactory.addAttribute("Tipo", "ToleToleFactory");
+		return ElemArmamFactory;
+	}
+	
 }

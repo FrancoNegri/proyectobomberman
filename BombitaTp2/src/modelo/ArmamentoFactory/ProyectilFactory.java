@@ -1,5 +1,7 @@
 package modelo.ArmamentoFactory;
 
+import org.dom4j.Element;
+
 import modelo.armamento.Armamento;
 import modelo.armamento.Proyectil;
 import modelo.constantesjuego.ConstantesJuego;
@@ -24,4 +26,12 @@ public class ProyectilFactory extends ArmamentoFactory{
 	public int obtenerTime() {
 		return time;
 	}
+	
+	@Override
+	public Element guardar() {
+		Element ElemArmamFactory = super.guardar();
+		ElemArmamFactory.addAttribute("Tipo", "ProyectilFactory");
+		return ElemArmamFactory;
+	}
+	
 }

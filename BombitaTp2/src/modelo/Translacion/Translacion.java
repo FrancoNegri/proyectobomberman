@@ -1,5 +1,7 @@
 package modelo.Translacion;
 
+import org.dom4j.*;
+
 import modelo.coordenadas.Coordenada;
 import modelo.errores.coordenadaInvalida;
 
@@ -17,4 +19,6 @@ public abstract class Translacion {
 
 	protected abstract Coordenada actuar(Coordenada cordenada,
 			Coordenada nuevaCord);
+
+	public abstract Element guardar();
 }

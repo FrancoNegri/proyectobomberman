@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import control.Persistencia.Persistencia;
 import control.Teclado.Teclado;
 import modelo.armamento.Armamento;
 import modelo.armamento.ToleTole;
@@ -96,6 +97,20 @@ public class VentanaPrincipal {
 		});
 		btnDetener.setBounds(325, 16, 92, 25);
 		frame.getContentPane().add(btnDetener);
+		
+		final Mapa mapa = new Mapa(100);
+		
+		JButton btnGuardar = new JButton("Guardar");
+		btnGuardar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Persistencia pers = new Persistencia();
+				pers.guardar("c:/JUEGOGUARDADO.xml", mapa);
+			}
+		});
+		btnGuardar.setBounds(395, 30, 92, 25);
+		frame.getContentPane().add(btnGuardar);
+		
+		
 
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(new Color(0, 0, 0));
@@ -105,7 +120,7 @@ public class VentanaPrincipal {
 		this.gameLoop = new GameLoop(200, (SuperficieDeDibujo) panel);
 		// ///////////Inicializacion grafica Completa
 		
-		Mapa mapa = new Mapa(100);
+		/*Mapa mapa = new Mapa(100);*/
 		Personaje modelo3;
 		
 		Coordenada coord = new Coordenada(99, 99);
