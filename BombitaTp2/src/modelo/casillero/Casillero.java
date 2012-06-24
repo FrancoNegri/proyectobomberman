@@ -114,10 +114,20 @@ public class Casillero {
 		this.actualizarObstaculos();
 		this.Colicionar();
 		this.ActualizarArticulo();
-		//Retocar
-		this.fuegoDeLaExplocion = null;
+		this.ActualivarFuegoExplocion();
 	}
 
+	
+	private void ActualivarFuegoExplocion(){
+		if(fuegoDeLaExplocion!=null){
+			fuegoDeLaExplocion.vivir();
+			if(fuegoDeLaExplocion.estaMuerto()){
+				this.fuegoDeLaExplocion = null;
+			}
+		}
+	}
+	
+	
 	private void ActualizarArticulo(){
 		if (this.usarArticulo()) {
 			this.puntaje = puntaje + unArticulo.obtenerPuntaje();

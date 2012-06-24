@@ -22,6 +22,6 @@ public class CirculoTest {
 		circulo.dibujar(unaSuperficie);
 		
 		Mockito.verify(graphics).setColor(circulo.getColor());
-		Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).fillOval(objeto.getX()*10, objeto.getY()*10, circulo.getRadio(), circulo.getRadio());
 	}
 }

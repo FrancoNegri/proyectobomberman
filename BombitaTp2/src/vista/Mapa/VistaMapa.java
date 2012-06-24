@@ -15,7 +15,7 @@ public class VistaMapa implements ObjetoDibujable {
 	}
 	
 	public void dibujar(SuperficieDeDibujo superficieDeDibujo) {
-		for(int j =0 ;j < mapaDibujable.obtenerTamanio(); j++){
+		for(int j =0 ;j < mapaDibujable.obtenerTamanio() ; j++){
 			for(int k =0 ;k < mapaDibujable.obtenerTamanio(); k++){
 				Coordenada coordenada = new Coordenada(j,k);
 				Casillero casillero = mapaDibujable.obtenerCasillero(coordenada);

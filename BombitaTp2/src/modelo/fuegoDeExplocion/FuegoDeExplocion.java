@@ -8,8 +8,10 @@ import modelo.coordenadas.Coordenada;
 public class FuegoDeExplocion implements ObjetoVisible,ObjetoPosicionable {
 
 	private Coordenada coordenada;
-	public FuegoDeExplocion(Coordenada Coord){
+	int vidaDelFuego;
+	public FuegoDeExplocion(Coordenada Coord, int vida){
 		coordenada = Coord.copiar();
+		vidaDelFuego = vida;
 	}	
 	
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
@@ -23,6 +25,14 @@ public class FuegoDeExplocion implements ObjetoVisible,ObjetoPosicionable {
 	
 	public int getY() {
 		return coordenada.obtenerCoordenadaY();
+	}
+
+	public boolean estaMuerto() {
+		return (vidaDelFuego <= 0);
+	}
+
+	public void vivir() {
+		vidaDelFuego = vidaDelFuego -1;
 	}
 	
 }
