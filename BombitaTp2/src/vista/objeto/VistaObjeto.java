@@ -142,7 +142,7 @@ public class VistaObjeto implements ObjetoDibujable {
 	private class VistaProyectil extends Circulo {
 		public  VistaProyectil(ObjetoPosicionable modelo){
 			super(10, modelo);
-			this.setColor(Color.RED);
+			this.setColor(Color.PINK);
 		}
 	}
 	
@@ -162,63 +162,63 @@ public class VistaObjeto implements ObjetoDibujable {
 	
 	private class VistaCesilio extends Cuadrado {
 		public  VistaCesilio(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
+			super(10,10, modelo);
 			this.setColor(Color.DARK_GRAY);
 		}
 	}
 	
 	private class VistaLopezAlado extends Cuadrado {
 		public  VistaLopezAlado(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
+			super(10,10, modelo);
 			this.setColor(Color.DARK_GRAY);
 		}
 	}
 	
 	private class VistaLopezComun extends Cuadrado {
 		public  VistaLopezComun(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
+			super(10,10, modelo);
 			this.setColor(Color.BLUE);
 		}
 	}
 	
 	private class VistaHabano extends Cuadrado {
 		public  VistaHabano(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
+			super(10,10, modelo);
 			this.setColor(Color.BLUE);
 		}
 	}
 	
 	private class VistaTimer extends Cuadrado {
 		public  VistaTimer(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
+			super(10,10, modelo);
 			this.setColor(Color.BLUE);
 		}
 	}
 	
 	private class VistaBloqueAcero extends Cuadrado {
 		public  VistaBloqueAcero(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
-			this.setColor(Color.BLUE);
+			super(10,10, modelo);
+			this.setColor(Color.MAGENTA);
 		}
 	}
 	
 	private class VistaBloqueCemento extends Cuadrado {
 		public  VistaBloqueCemento(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
+			super(10,10, modelo);
 			this.setColor(Color.BLUE);
 		}
 	}
 
 	private class VistaBloqueLadrillo extends Cuadrado {
 		public  VistaBloqueLadrillo(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
+			super(10,10, modelo);
 			this.setColor(Color.BLUE);
 		}
 	}
 	
 	private class VistaFuegoDeExplocion extends Cuadrado {
 		public  VistaFuegoDeExplocion(ObjetoPosicionable modelo) throws IOException {
-			super(10,15, modelo);
+			super(10,10, modelo);
 			this.setColor(Color.ORANGE);
 		}
 	}
