@@ -5,6 +5,7 @@ import org.dom4j.Element;
 
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.MolotovFactory;
+import modelo.Translacion.TranslacionDerecha;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
@@ -18,6 +19,10 @@ public class LopezAlado extends Enemigo {
 		this.vida = ConstantesJuego.vida_lopez_reggae_alado;
 		this.velocidad = ConstantesJuego.velocidad_lopez_reggae_alado;
 	}
+	
+	private LopezAlado(){
+	}
+	
 
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConLopezAlado(this);
@@ -29,4 +34,13 @@ public class LopezAlado extends Enemigo {
 		return elemPersonaje;
 	}
 	
+	public static Personaje recuperar(Element elemCes,Mapa mapa) {
+		LopezAlado nuevoPers = new LopezAlado();
+		nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes);
+		nuevoPers.mapa = mapa;
+		nuevoPers.CreadorDeBombas = new MolotovFactory();
+		nuevoPers.velocidad = ConstantesJuego.velocidad_cecilio;
+		nuevoPers.ultimaTranslacion = new TranslacionDerecha();
+		return nuevoPers;
+	}
 }
