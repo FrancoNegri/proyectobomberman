@@ -95,7 +95,7 @@ public class VentanaPrincipal {
 				gameLoop.detenerEjecucion();
 			}
 		});
-		btnDetener.setBounds(325, 16, 92, 25);
+		btnDetener.setBounds(425, 16, 92, 25);
 		frame.getContentPane().add(btnDetener);
 		
 		final Mapa mapa = new Mapa(100);
@@ -104,11 +104,32 @@ public class VentanaPrincipal {
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Persistencia pers = new Persistencia();
-				pers.guardar("c:/JUEGOGUARDADO.xml", mapa);
+				pers.guardar("JUEGOGUARDADO.xml", mapa);
 			}
 		});
 		btnGuardar.setBounds(200, 16, 92, 25);
 		frame.getContentPane().add(btnGuardar);
+		
+		JButton btnCargar=new JButton("Cargar");
+		btnCargar.addActionListener(new ActionListener(){
+			public void actionPerformed (ActionEvent e){
+				Persistencia pers = new Persistencia();
+				try {
+					Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml");
+					gameLoop.iniciarEjecucion();
+					gameLoop.agregar(mapacargado);
+					VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
+					gameLoop.agregar(VistaDelMapaCargado);
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+				
+			}
+			
+		});
+		
+		btnCargar.setBounds(300,16, 92, 25);
+		frame.getContentPane().add(btnCargar);
 		
 		
 
