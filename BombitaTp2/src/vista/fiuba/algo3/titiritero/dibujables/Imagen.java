@@ -24,7 +24,7 @@ public class Imagen implements ObjetoDibujable {
 	/*@Override*/
 	public void dibujar(SuperficieDeDibujo superficieDeDibujo) {
 		Graphics grafico = ((SuperficiePanel)superficieDeDibujo).getBuffer();
-		grafico.drawImage(this.imagen, this.posicionable.getX()*10, this.posicionable.getY()*10,null);
+		grafico.drawImage(this.imagen, this.posicionable.getX()*13, this.posicionable.getY()*13,null);
 	}
 	
 	public ObjetoPosicionable getPosicionable() {

@@ -23,7 +23,7 @@ public class Teclado extends JFrame implements KeyListener{
 	
 
 	public void keyPressed(KeyEvent e) {
-		if(e.VK_ESCAPE == e.getKeyCode() ){
+		if(KeyEvent.VK_ESCAPE == e.getKeyCode() ){
 			System.exit(0);	
 		}
 	}

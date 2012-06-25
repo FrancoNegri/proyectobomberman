@@ -67,7 +67,7 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 		}
 		
 		public boolean estaMuerto() {
-			return (time<0);
+			return exploto;
 		}
 
 		public Element guardar() {

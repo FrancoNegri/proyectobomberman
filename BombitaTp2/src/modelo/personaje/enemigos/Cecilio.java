@@ -49,4 +49,5 @@ public class Cecilio extends Enemigo {
 	nuevoPers.ultimaTranslacion = new TranslacionDerecha();
 	return nuevoPers;
 	}
+
 }

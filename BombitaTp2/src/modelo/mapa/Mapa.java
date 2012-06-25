@@ -164,9 +164,6 @@ public class Mapa implements ObjetoVivo {
 			Element ElemCes = (Element) ItCec.next();
 			Cecilio.recuperar(ElemCes,nuevoMapa);
 		}
-		
-		
-		
 		return nuevoMapa;
 	}
 }
