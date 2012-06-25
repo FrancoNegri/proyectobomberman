@@ -162,7 +162,8 @@ public class Mapa implements ObjetoVivo {
 		Iterator ItCec =  PersonajesCecilio.iterator();
 		while(ItCec.hasNext()){
 			Element ElemCes = (Element) ItCec.next();
-			Cecilio.recuperar(ElemCes,nuevoMapa);
+			Personaje pers = Cecilio.recuperar(ElemCes,nuevoMapa);
+			this.agregarAlMapa(pers);
 		}
 		return nuevoMapa;
 	}

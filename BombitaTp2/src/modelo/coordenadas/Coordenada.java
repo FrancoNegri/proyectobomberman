@@ -19,6 +19,10 @@ public class Coordenada {
 		
 	}
 
+	private Coordenada() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Coordenada copiar(){
 		Coordenada nuevaCoordenada = new Coordenada(x,y);
 		return nuevaCoordenada;
@@ -62,8 +66,12 @@ public class Coordenada {
 	}
 
 	public static Coordenada recuperar(Element elemCes) {
-		// TODO Auto-generated method stub
-		return null;
+		Coordenada coordenadaRecuperada = new Coordenada();
+		
+		String u = elemCes.attributeValue("CoordenadaX");
+		coordenadaRecuperada.x=Integer.parseInt(elemCes.attributeValue("CoordenadaX"));
+		coordenadaRecuperada.y=Integer.parseInt(elemCes.attributeValue("CoordenadaX"));
+		return coordenadaRecuperada;
 	}
 }
 

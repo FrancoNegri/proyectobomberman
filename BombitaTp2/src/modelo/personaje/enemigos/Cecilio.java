@@ -42,7 +42,7 @@ public class Cecilio extends Enemigo {
 
 	public static Personaje recuperar(Element elemCes,Mapa mapa) {
 	Cecilio nuevoPers = new Cecilio();
-	nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes);
+	nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes.element("Coourdenada"));
 	nuevoPers.mapa = mapa;
 	nuevoPers.CreadorDeBombas = new MolotovFactory();
 	nuevoPers.velocidad = ConstantesJuego.velocidad_cecilio;

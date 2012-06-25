@@ -25,9 +25,11 @@ public class Persistencia {
 	}
 	
 	
-	public static Mapa recuperar(String archivo, Mapa mapa) throws IOException{
+	public static Mapa recuperar(String archivo) throws IOException{
         SAXReader reader = new SAXReader();
+        Mapa mapa = new Mapa();
         try{
+        	
 	        Document document = reader.read(archivo);
 	        Element elemMapa = document.getRootElement();
 	        mapa = mapa.recuperar(elemMapa);
