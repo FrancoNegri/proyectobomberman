@@ -1,5 +1,7 @@
 package modelo.personaje;
 
+import org.dom4j.Element;
+
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.*;
 import modelo.Translacion.Translacion;
@@ -45,6 +47,12 @@ public class Bombita extends Personaje {
 
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConBombita(this);
+	}
+
+	@Override
+	public Element guardar() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	/*public void caminar(char unaLetra) {

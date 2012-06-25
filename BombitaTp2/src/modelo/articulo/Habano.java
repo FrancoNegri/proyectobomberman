@@ -1,5 +1,8 @@
 package modelo.articulo;
 
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
 import vista.objeto.VistaObjeto;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
@@ -51,6 +54,12 @@ public class Habano extends Articulo{
 
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConHabano(this);		
+	}
+
+	public Element guardar() {
+		Element elemObstaculo = super.guardar();
+		elemObstaculo.addAttribute("Tipo", "Habano");
+		return elemObstaculo;
 	}
 
 }

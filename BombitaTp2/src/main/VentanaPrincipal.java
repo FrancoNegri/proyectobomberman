@@ -107,7 +107,7 @@ public class VentanaPrincipal {
 				pers.guardar("c:/JUEGOGUARDADO.xml", mapa);
 			}
 		});
-		btnGuardar.setBounds(395, 30, 92, 25);
+		btnGuardar.setBounds(200, 16, 92, 25);
 		frame.getContentPane().add(btnGuardar);
 		
 		

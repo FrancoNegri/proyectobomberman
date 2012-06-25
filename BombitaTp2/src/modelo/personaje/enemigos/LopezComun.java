@@ -1,5 +1,8 @@
 package modelo.personaje.enemigos;
 
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.ProyectilFactory;
 import modelo.constantesjuego.ConstantesJuego;
@@ -18,5 +21,11 @@ public class LopezComun extends Enemigo {
 
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConLopezComun(this);
+	}
+	
+	public Element guardar() {
+		Element elemPersonaje = DocumentHelper.createElement("Cecilio");
+		elemPersonaje=  super.guardar(elemPersonaje);
+		return elemPersonaje;
 	}
 }

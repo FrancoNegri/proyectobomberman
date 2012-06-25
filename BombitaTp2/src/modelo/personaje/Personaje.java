@@ -1,5 +1,6 @@
 package modelo.personaje;
 
+import org.dom4j.Attribute;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
@@ -125,8 +126,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	return this.coordenadaXY.obtenerCoordenadaY();
 	}
 
-	public Element guardar() {
-		Element elemPersonaje = DocumentHelper.createElement("Personaje");
+	protected Element guardar(Element elemPersonaje) {
 		elemPersonaje.addAttribute("Vida", String.valueOf(vida));
 		elemPersonaje.addAttribute("Velocidad", String.valueOf(velocidad));
 		elemPersonaje.add(ultimaTranslacion.guardar());
@@ -134,6 +134,17 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 		elemPersonaje.add(coordenadaXY.guardar());
 		return elemPersonaje;
 	}
+
+	public abstract Element guardar();
+	
+	public static Personaje recuperar(Element elemCes) {
+		return null;
+	}
+
+		
+	
+	
+	
 }
 
 
