@@ -1,7 +1,9 @@
 package main;
 
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -9,7 +11,12 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 import control.Persistencia.Persistencia;
 import control.Teclado.Teclado;
@@ -74,32 +81,109 @@ public class VentanaPrincipal {
 	private void initialize() throws IOException {
 		// ///////////Inicializacion grafica
 		frame = new JFrame();
+		Container contenedor = frame.getContentPane();
 		frame.setForeground(new Color(0, 0, 0));
-		frame.setBounds(100, 100, 700, 700);
+		frame.setBounds(100, 100, 800, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null);
 
-		JButton btnIniciar = new JButton("Iniciar");
+		final Mapa mapa = new Mapa(100);
+
+		// MENU HERRAMIENTAS
+		JMenu menuArchivo = new JMenu("Archivo");
+		menuArchivo.setMnemonic('A');
+
+		JMenuItem elementoJugar = new JMenuItem("Jugar");
+		elementoJugar.setMnemonic('J');
+		menuArchivo.add(elementoJugar);
+		elementoJugar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evento) {
+				gameLoop.detenerEjecucion();
+			}
+		});
+
+		JMenuItem elementoPausar = new JMenuItem("Pausar");
+		elementoPausar.setMnemonic('P');
+		menuArchivo.add(elementoPausar);
+		elementoPausar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evento) {
+				gameLoop.iniciarEjecucion();
+			}
+		});
+
+		JMenuItem elementoGuardar = new JMenuItem("Guardar");
+		elementoGuardar.setMnemonic('G');
+		menuArchivo.add(elementoGuardar);
+		elementoGuardar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evento) {
+				Persistencia pers = new Persistencia();
+				pers.guardar("c:/JUEGOGUARDADO.xml", mapa);
+			}
+		});
+
+		JMenuItem elementoSalir = new JMenuItem("Salir");
+		elementoSalir.setMnemonic('S');
+		menuArchivo.add(elementoSalir);
+		elementoSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evento) {
+				System.exit(0);
+			}
+		});
+
+		JMenu menuAyuda = new JMenu("Ayuda");
+		menuArchivo.setMnemonic('Y');
+
+		JMenuItem elementoControles = new JMenuItem("Controles");
+		final String informacionControles = "Moverse: \n" + "Plantar bomba: \n"
+				+ "Ingresar a la salida: ";
+		elementoControles.setMnemonic('i');
+		menuAyuda.add(elementoControles);
+		elementoControles.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evento) {
+				JOptionPane.showMessageDialog(frame, informacionControles,
+						"Controles", JOptionPane.PLAIN_MESSAGE);
+			}
+		});
+
+		JMenuItem elementoAcerca = new JMenuItem("Acerca de...");
+		final String informacion = "TP2 - Bombita Rodriguez - Algoritmos III\n"
+				+ "\n"
+				+ "Franco Negri - Francisco Disalvo - Matias Barro - Federico Di Rocco\n";
+		elementoAcerca.setMnemonic('c');
+		menuAyuda.add(elementoAcerca);
+		elementoAcerca.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evento) {
+				JOptionPane.showMessageDialog(frame, informacion, "Acerca de",
+						JOptionPane.PLAIN_MESSAGE);
+			}
+		});
+
+		JMenuBar barra = new JMenuBar();
+		frame.setJMenuBar(barra);
+		barra.add(menuArchivo);
+		barra.add(menuAyuda);
+
+		// BOTONES
+		JButton btnIniciar = new JButton("Jugar");
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				gameLoop.iniciarEjecucion();
 			}
 		});
-		
-		btnIniciar.setBounds(42, 16, 77, 25);
-		frame.getContentPane().add(btnIniciar);
 
-		JButton btnDetener = new JButton("Detener");
+		btnIniciar.setBounds(42, 16, 77, 25);
+		contenedor.add(btnIniciar);
+
+		JButton btnDetener = new JButton("Pausar");
 		btnDetener.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				gameLoop.detenerEjecucion();
 			}
 		});
 		btnDetener.setBounds(425, 16, 92, 25);
-		frame.getContentPane().add(btnDetener);
-		
-		final Mapa mapa = new Mapa(100);
-		
+		contenedor.add(btnDetener);
+
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -108,6 +192,9 @@ public class VentanaPrincipal {
 			}
 		});
 		btnGuardar.setBounds(200, 16, 92, 25);
+<<<<<<< .mine
+		contenedor.add(btnGuardar);
+=======
 		frame.getContentPane().add(btnGuardar);
 		
 		JButton btnCargar=new JButton("Cargar");
@@ -128,37 +215,52 @@ public class VentanaPrincipal {
 			
 		});
 		
+>>>>>>> .r258
 		btnCargar.setBounds(300,16, 92, 25);
 		frame.getContentPane().add(btnCargar);
 		
 		
 
+		// AREA DE TEXTO
+		String cadena = "         Información \n" + "\n" + "Puntos: 0000 \n"
+				+ "Vida: 100 \n" + "Nivel: 1 \n" + "Usuario: Bombita \n";
+		Font fuente = new Font(Font.SERIF, Font.BOLD, 15);
+		JTextArea area = new JTextArea();
+		area.setText(cadena);
+		area.setFont(fuente);
+		area.setSize(40, 200);
+		area.setBackground(Color.white);
+		area.setBounds(600, 16, 150, 187);
+		area.setEditable(false);
+		contenedor.add(area);
+
+		// PANEL
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(new Color(0, 0, 0));
 		panel.setBounds(42, 53, 500, 500);
-		frame.getContentPane().add(panel);
+		contenedor.add(panel);
 
 		this.gameLoop = new GameLoop(200, (SuperficieDeDibujo) panel);
 		// ///////////Inicializacion grafica Completa
-		
-		/*Mapa mapa = new Mapa(100);*/
+
+		/* Mapa mapa = new Mapa(100); */
 		Personaje modelo3;
-		
+
 		Coordenada coord = new Coordenada(99, 99);
 		Articulo articulo = new Habano(coord);
 		mapa.agregarAlMapa(articulo);
 		for (int j = 4; j < 20; j++) {
-			coord = new Coordenada(j, j*3);
+			coord = new Coordenada(j, j * 3);
 			Obstaculo obst = new BloqueAcero(coord);
 			mapa.agregarAlMapa(obst);
 		}
 		for (int j = 0; j < 30; j++) {
-			coord = new Coordenada(j*3,j^2);
+			coord = new Coordenada(j * 3, j ^ 2);
 			modelo3 = new Cecilio(coord, mapa);
 			gameLoop.agregar(modelo3);
 		}
 		for (int j = 0; j < 30; j++) {
-			coord = new Coordenada(j*3,j^2);
+			coord = new Coordenada(j * 3, j ^ 2);
 			modelo3 = new LopezComun(coord, mapa);
 			gameLoop.agregar(modelo3);
 		}
