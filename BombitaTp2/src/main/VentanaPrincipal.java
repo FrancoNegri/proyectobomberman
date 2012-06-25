@@ -102,6 +102,24 @@ public class VentanaPrincipal {
 				gameLoop.detenerEjecucion();
 			}
 		});
+		
+		JMenuItem elementoCargar = new JMenuItem("Cargar");
+		elementoCargar.setMnemonic('C');
+		menuArchivo.add(elementoCargar);
+		elementoCargar.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent e){
+				Persistencia pers = new Persistencia();
+				try {
+					Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml",mapa);
+					gameLoop.iniciarEjecucion();
+					gameLoop.agregar(mapacargado);
+					VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
+					gameLoop.agregar(VistaDelMapaCargado);
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+		});
 
 		JMenuItem elementoPausar = new JMenuItem("Pausar");
 		elementoPausar.setMnemonic('P');
@@ -192,17 +210,14 @@ public class VentanaPrincipal {
 			}
 		});
 		btnGuardar.setBounds(200, 16, 92, 25);
-<<<<<<< .mine
 		contenedor.add(btnGuardar);
-=======
-		frame.getContentPane().add(btnGuardar);
 		
 		JButton btnCargar=new JButton("Cargar");
 		btnCargar.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent e){
 				Persistencia pers = new Persistencia();
 				try {
-					Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml");
+					Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml",mapa);
 					gameLoop.iniciarEjecucion();
 					gameLoop.agregar(mapacargado);
 					VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
@@ -210,15 +225,10 @@ public class VentanaPrincipal {
 				} catch (Exception e2) {
 					e2.printStackTrace();
 				}
-				
 			}
-			
 		});
-		
->>>>>>> .r258
 		btnCargar.setBounds(300,16, 92, 25);
-		frame.getContentPane().add(btnCargar);
-		
+		contenedor.add(btnCargar);
 		
 
 		// AREA DE TEXTO
