@@ -110,7 +110,7 @@ public class VentanaPrincipal {
 			public void actionPerformed (ActionEvent e){
 				Persistencia pers = new Persistencia();
 				try {
-					Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml",mapa);
+					Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml");
 					gameLoop.iniciarEjecucion();
 					gameLoop.agregar(mapacargado);
 					VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
