@@ -60,5 +60,10 @@ public class Coordenada {
 		elemCoordenada.addAttribute("CoordenadaY", String.valueOf(y));
 		return elemCoordenada;
 	}
+
+	public static Coordenada recuperar(Element elemCes) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 

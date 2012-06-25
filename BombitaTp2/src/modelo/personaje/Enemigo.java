@@ -25,6 +25,10 @@ public abstract class Enemigo extends Personaje {
 		this.puntaje = ConstantesJuego.puntaje_enemigo_muerto;
 	}
 	
+	protected Enemigo(){
+	}
+	
+	
 	protected void Atacar() {
 		if(this.decideAtacar()){
 			CreadorDeBombas.crear(this);
@@ -81,13 +85,4 @@ public abstract class Enemigo extends Personaje {
 	public Element guardar(Element elemPersonaje){
 		return super.guardar(elemPersonaje);
 	}
-	
-	public static Personaje recuperar(Element elemCes) {
-		return null;
-	}
-		
-	
-	
-	
-	
 }

@@ -34,6 +34,9 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 		mapa = nuevoMapa;
 		mapa.agregarAlMapa(this);
 	}
+	
+	protected Personaje() {
+	}
 
 	protected abstract Translacion obtenerTranslacion();
 
@@ -129,21 +132,11 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	protected Element guardar(Element elemPersonaje) {
 		elemPersonaje.addAttribute("Vida", String.valueOf(vida));
 		elemPersonaje.addAttribute("Velocidad", String.valueOf(velocidad));
-		elemPersonaje.add(ultimaTranslacion.guardar());
-		elemPersonaje.add(CreadorDeBombas.guardar());
 		elemPersonaje.add(coordenadaXY.guardar());
 		return elemPersonaje;
 	}
 
 	public abstract Element guardar();
-	
-	public static Personaje recuperar(Element elemCes) {
-		return null;
-	}
-
-		
-	
-	
 	
 }
 
