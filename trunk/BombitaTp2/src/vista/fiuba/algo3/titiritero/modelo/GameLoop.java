@@ -21,6 +21,13 @@ public class GameLoop implements Runnable{
 		this.objetosDibujables= new LinkedList<ObjetoDibujable>();
 	}
 
+	public void reiniciar(){
+		this.objetosVivos = new LinkedList<ObjetoVivo>();
+		this.objetosDibujables= new LinkedList<ObjetoDibujable>();
+		estaEjecutando = false;
+	}
+	
+	
 	public GameLoop(SuperficieDeDibujo superficieDeDibujo) {
 		this(FRECUENCIA_DEFAULT, superficieDeDibujo);
 	}
