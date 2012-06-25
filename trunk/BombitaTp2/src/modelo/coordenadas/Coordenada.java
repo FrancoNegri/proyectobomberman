@@ -55,7 +55,7 @@ public class Coordenada {
 	}
 
 	public Element guardar() {
-		Element elemCoordenada = DocumentHelper.createElement("Casillero");
+		Element elemCoordenada = DocumentHelper.createElement("Coordenada");
 		elemCoordenada.addAttribute("CoordenadaX", String.valueOf(x));
 		elemCoordenada.addAttribute("CoordenadaY", String.valueOf(y));
 		return elemCoordenada;

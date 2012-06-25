@@ -1,5 +1,8 @@
 package modelo.articulo;
 
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.*;
@@ -35,5 +38,11 @@ public abstract class Articulo implements Articulable {
 
 	public int getY() {
 		return this.coordenadaXY.obtenerCoordenadaY();
+	}
+	
+	public Element guardar() {
+		Element elemObstaculo = DocumentHelper.createElement("Articulo");
+		elemObstaculo.add(coordenadaXY.guardar());
+		return elemObstaculo;
 	}
 }

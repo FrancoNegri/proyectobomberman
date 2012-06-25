@@ -1,5 +1,7 @@
 package modelo.obstaculos;
 
+import org.dom4j.*;
+
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.objeto.ObjetoVisible;
 import modelo.constantesjuego.ConstantesJuego;
@@ -57,6 +59,13 @@ public abstract class Obstaculo implements Daniable,
 
 	public int getY() {
 		return this.cordenadaObsaculo.obtenerCoordenadaY();
+	}
+
+	public Element guardar() {
+		Element elemObstaculo = DocumentHelper.createElement("Obstaculo");
+		elemObstaculo.addAttribute("Vida", String.valueOf(vida));
+		elemObstaculo.add(cordenadaObsaculo.guardar());
+		return elemObstaculo;
 	}
 
 }

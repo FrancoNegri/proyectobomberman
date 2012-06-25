@@ -1,5 +1,7 @@
 package modelo.articulo;
 
+import org.dom4j.Element;
+
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.coordenadas.Coordenada;
@@ -44,5 +46,12 @@ public class Timer extends Articulo {
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarTimer(this);
 	}
+	
+	public Element guardar() {
+		Element elemObstaculo = super.guardar();
+		elemObstaculo.addAttribute("Tipo", "Timer");
+		return elemObstaculo;
+	}
+	
 
 }

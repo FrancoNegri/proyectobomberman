@@ -1,5 +1,8 @@
 package modelo.personaje.enemigos;
 
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.constantesjuego.ConstantesJuego;
@@ -19,4 +22,11 @@ public class LopezAlado extends Enemigo {
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConLopezAlado(this);
 	}
+	
+	public Element guardar() {
+		Element elemPersonaje = DocumentHelper.createElement("LopezAlado");
+		elemPersonaje=  super.guardar(elemPersonaje);
+		return elemPersonaje;
+	}
+	
 }
