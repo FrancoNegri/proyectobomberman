@@ -26,11 +26,21 @@ public class VistaObjeto implements ObjetoDibujable {
 	}
 	
 	public void InteractuarConMolotov(ObjetoPosicionable molotov) {
-		objetoDibujable = new VistaMolotov(molotov);
+		try {
+			objetoDibujable = new VistaMolotov(molotov);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void InteractuarConProyectil(ObjetoPosicionable proyectil){
-		objetoDibujable = new VistaProyectil(proyectil);
+		try {
+			objetoDibujable = new VistaProyectil(proyectil);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void InteractuarConBombita(ObjetoPosicionable bombita) {
@@ -132,25 +142,22 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	private class VistaMolotov extends Circulo {
-		public  VistaMolotov(ObjetoPosicionable modelo){
-			super(10, modelo);
-			this.setColor(Color.blue);
+	private class VistaMolotov extends Imagen {
+		public  VistaMolotov(ObjetoPosicionable modelo) throws IOException{
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/BombaMolotov.png"), modelo);
 		}
 	}
 	
 	
-	private class VistaProyectil extends Circulo {
-		public  VistaProyectil(ObjetoPosicionable modelo){
-			super(10, modelo);
-			this.setColor(Color.PINK);
+	private class VistaProyectil extends Imagen  {
+		public  VistaProyectil(ObjetoPosicionable modelo) throws IOException{
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/Proyectil.png"), modelo);
 		}
 	}
 	
-	private class VistaToleTole extends Circulo {
+	private class VistaToleTole extends Imagen {
 		public  VistaToleTole(ObjetoPosicionable modelo) throws IOException {
-			super(10, modelo);
-			this.setColor(Color.DARK_GRAY);
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/BombaToleTole.png"), modelo);
 		}
 	}
 	
@@ -161,17 +168,15 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	private class VistaCesilio extends Cuadrado {
+	private class VistaCesilio extends Imagen {
 		public  VistaCesilio(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.DARK_GRAY);
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/Cecilio.png"), modelo);
 		}
 	}
 	
-	private class VistaLopezAlado extends Cuadrado {
+	private class VistaLopezAlado extends Imagen {
 		public  VistaLopezAlado(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.DARK_GRAY);
+			super( VistaLopezComun.class.getResource("/vista/Imagenes/LopezAlado.png"), modelo);
 		}
 	}
 	
@@ -181,17 +186,15 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	private class VistaHabano extends Cuadrado {
+	private class VistaHabano extends Imagen {
 		public  VistaHabano(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.BLUE);
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/Habano.png"), modelo);
 		}
 	}
 	
-	private class VistaTimer extends Cuadrado {
+	private class VistaTimer extends Imagen {
 		public  VistaTimer(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.BLUE);
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/Timer.png"), modelo);
 		}
 	}
 	
@@ -213,10 +216,9 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	private class VistaFuegoDeExplocion extends Cuadrado {
+	private class VistaFuegoDeExplocion extends Imagen {
 		public  VistaFuegoDeExplocion(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.ORANGE);
+			super(VistaBloqueLadrillo.class.getResource("/vista/Imagenes/Fuego.png"), modelo);
 		}
 	}
 }
