@@ -58,8 +58,8 @@ public class Habano extends Articulo{
 	}
 
 	public Element guardar() {
-		Element elemObstaculo = super.guardar();
-		elemObstaculo.addAttribute("Tipo", "Habano");
+		Element elemObstaculo = DocumentHelper.createElement("Habano");
+		super.guardar(elemObstaculo);
 		return elemObstaculo;
 	}
 	

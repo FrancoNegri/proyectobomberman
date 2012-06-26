@@ -1,5 +1,6 @@
 package modelo.armamento;
 
+import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
 
@@ -22,8 +23,8 @@ public class Molotov extends Armamento{
 	}
 	
 	public Element guardar() {
-		Element elemMolotov = super.guardar();
-		elemMolotov.addAttribute("Tipo", "Molotov");
+		Element elemMolotov = DocumentHelper.createElement("Molotov");
+		super.guardar(elemMolotov);
 		return elemMolotov;
 	}
 	

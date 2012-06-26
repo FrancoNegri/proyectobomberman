@@ -40,8 +40,7 @@ public abstract class Articulo implements Articulable {
 		return this.coordenadaXY.obtenerCoordenadaY();
 	}
 	
-	public Element guardar() {
-		Element elemObstaculo = DocumentHelper.createElement("Articulo");
+	public Element guardar(Element elemObstaculo) {
 		elemObstaculo.add(coordenadaXY.guardar());
 		return elemObstaculo;
 	}

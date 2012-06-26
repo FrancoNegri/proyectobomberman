@@ -1,5 +1,6 @@
 package modelo.articulo;
 
+import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
 
@@ -49,8 +50,8 @@ public class Timer extends Articulo {
 	}
 	
 	public Element guardar() {
-		Element elemObstaculo = super.guardar();
-		elemObstaculo.addAttribute("Tipo", "Timer");
+		Element elemObstaculo = DocumentHelper.createElement("Timer");
+		super.guardar(elemObstaculo);
 		return elemObstaculo;
 	}
 	
