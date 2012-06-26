@@ -1,8 +1,6 @@
 package vista.CasilleroTest;
 
 import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 import java.awt.Graphics;
 import java.util.LinkedList;
 import modelo.armamento.Armamento;
@@ -18,11 +16,9 @@ import modelo.personaje.enemigos.Cecilio;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import vista.Casillero.VistaCasillero;
 import vista.fiuba.algo3.titiritero.dibujables.SuperficiePanel;
-import vista.objeto.VistaObjeto;
 
 public class VistaCasilleroTest {
 	Graphics graphics = Mockito.mock(Graphics.class);

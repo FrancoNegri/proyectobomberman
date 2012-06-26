@@ -10,6 +10,7 @@ import org.mockito.Mockito;
 
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 
+@SuppressWarnings("unused")
 public class ImagenTest {
 
 	@Test

@@ -2,9 +2,6 @@ package vista.objeto;
 
 import java.awt.Color;
 import java.io.IOException;
-
-import modelo.fuegoDeExplocion.FuegoDeExplocion;
-import vista.fiuba.algo3.titiritero.dibujables.Circulo;
 import vista.fiuba.algo3.titiritero.dibujables.Cuadrado;
 import vista.fiuba.algo3.titiritero.dibujables.Imagen;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;

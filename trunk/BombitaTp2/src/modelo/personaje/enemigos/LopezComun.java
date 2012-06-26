@@ -5,7 +5,6 @@ import org.dom4j.Element;
 import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
-import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.ArmamentoFactory.ProyectilFactory;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.constantesjuego.ConstantesJuego;

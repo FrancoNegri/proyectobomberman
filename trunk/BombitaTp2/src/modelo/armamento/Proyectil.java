@@ -1,7 +1,5 @@
 package modelo.armamento;
 
-import java.util.List;
-
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
@@ -15,7 +13,6 @@ import modelo.Translacion.TranslacionIzquierda;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.constantesjuego.ConstantesJuego;
-import modelo.errores.TamanioMatrizInvalidoError;
 import modelo.mapa.Mapa;
 
 public class Proyectil extends Armamento {

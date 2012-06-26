@@ -1,6 +1,5 @@
 package modelo.coordenadas;
 
-import org.dom4j.Attribute;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;

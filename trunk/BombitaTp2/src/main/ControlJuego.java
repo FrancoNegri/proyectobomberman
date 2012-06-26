@@ -24,8 +24,6 @@ public class ControlJuego {
 	
 	public ControlJuego(JPanel panel){
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
-		Personaje modelo3;
-		
 		//INGRESO DE OBJETOS
 		Coordenada coord = new Coordenada(10, 10);
 		Coordenada otraCoord = new Coordenada(18, 45);
@@ -35,7 +33,7 @@ public class ControlJuego {
 		//mapa.agregarAlMapa(bombita);
 		
 		//panel.addKeyListener(new Teclado(bombita));
-		
+		Personaje modelo3;
 		for (int j = 4; j < 10; j++) {
 			coord = new Coordenada(j, j * 3);
 			Obstaculo obst = new BloqueAcero(coord);

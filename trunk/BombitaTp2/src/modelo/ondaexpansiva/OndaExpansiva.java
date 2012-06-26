@@ -6,9 +6,6 @@ import modelo.coordenadas.Coordenada;
 import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.mapa.Mapa;
 import java.util.*;
-
-import vista.objeto.ObjetoVisible;
-import vista.objeto.VistaObjeto;
 import modelo.personaje.*;
 import modelo.obstaculos.*;
 

@@ -1,6 +1,5 @@
 package vista.fiuba.algo3.titiritero.modelo;
 
-import java.awt.event.KeyEvent;
 import java.util.Iterator;
 import java.util.LinkedList;
 

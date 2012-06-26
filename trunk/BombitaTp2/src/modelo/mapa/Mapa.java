@@ -1,36 +1,18 @@
 package modelo.mapa;
 
 import org.dom4j.Element;
-import org.dom4j.Node;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import modelo.armamento.Armamento;
-import modelo.armamento.Molotov;
-import modelo.armamento.Proyectil;
-import modelo.armamento.ToleTole;
 import modelo.articulo.Articulable;
-import modelo.articulo.Articulo;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.errores.CasilleroOcupadoError;
-import modelo.obstaculos.BloqueAcero;
-import modelo.obstaculos.BloqueCemento;
-import modelo.obstaculos.BloqueLadrillo;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
-import modelo.personaje.enemigos.Cecilio;
-import modelo.personaje.enemigos.LopezAlado;
-import modelo.personaje.enemigos.LopezComun;
-import modelo.articulo.Habano;
-import modelo.articulo.Timer;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Iterator;
+import java.util.LinkedList;
+
 import org.dom4j.*;
-import org.dom4j.io.SAXReader;
 
 public class Mapa implements ObjetoVivo {
 	private Tablero TableroJuego;

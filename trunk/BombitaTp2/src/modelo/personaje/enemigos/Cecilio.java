@@ -6,7 +6,6 @@ import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.MolotovFactory;
-import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
