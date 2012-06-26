@@ -276,6 +276,7 @@ public class VentanaPrincipal {
 			modelo3 = new LopezComun(coord, mapa);
 			gameLoop.agregar(modelo3);
 		}*/
+		gameLoop.agregar(bombita);
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapa = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapa);
