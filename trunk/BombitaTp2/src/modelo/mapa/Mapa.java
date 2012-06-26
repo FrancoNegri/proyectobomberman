@@ -10,6 +10,9 @@ import modelo.articulo.Articulo;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.errores.CasilleroOcupadoError;
+import modelo.obstaculos.BloqueAcero;
+import modelo.obstaculos.BloqueCemento;
+import modelo.obstaculos.BloqueLadrillo;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
@@ -219,6 +222,22 @@ private void recuperarPersonajes(Element Personajes, Mapa nuevoMapa){
 //modificar
 private void recuperarObstaculos(Element Obstaculos, Mapa nuevoMapa){
 
+	Iterator ItPers =  Obstaculos.elementIterator();
+	while(ItPers.hasNext()){
+		Element ElemCes = (Element) ItPers.next();
+		if(ElemCes.getName()=="Bloque de Cemento"){
+			Obstaculo pers = BloqueCemento.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(pers);	
+		}
+		if(ElemCes.getName()=="Bloque de Acero"){
+			Obstaculo pers = BloqueAcero.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(pers);	
+		}
+		if(ElemCes.getName()=="Bloque de Ladrillos"){
+			Obstaculo pers = BloqueLadrillo.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(pers);	
+		}
+	}
 }
 
 private void recuperarArmamentos(Element Armamentos, Mapa nuevoMapa){
