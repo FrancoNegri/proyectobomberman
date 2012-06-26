@@ -18,7 +18,7 @@ import modelo.personaje.enemigos.LopezComun;
 
 public class ControlJuego {
 
-	final Mapa mapa = new Mapa(100);
+	final Mapa mapa = new Mapa(70);
 	private GameLoop gameLoop;
 	
 	
@@ -37,17 +37,17 @@ public class ControlJuego {
 		
 		//panel.addKeyListener(new Teclado(bombita));
 		
-		for (int j = 4; j < 20; j++) {
+		for (int j = 4; j < 10; j++) {
 			coord = new Coordenada(j, j * 3);
 			Obstaculo obst = new BloqueAcero(coord);
 			mapa.agregarAlMapa(obst);
 		}
-		for (int j = 0; j < 30; j++) {
+		for (int j = 0; j < 20; j++) {
 			coord = new Coordenada(j * 3, j ^ 2);
 			modelo3 = new Cecilio(coord, mapa);
 			gameLoop.agregar(modelo3);
 		}
-		for (int j = 0; j < 30; j++) {
+		for (int j = 0; j < 20; j++) {
 			coord = new Coordenada(j * 3, j ^ 2);
 			modelo3 = new LopezComun(coord, mapa);
 			gameLoop.agregar(modelo3);
