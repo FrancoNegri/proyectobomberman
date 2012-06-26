@@ -42,7 +42,6 @@ public class Persistencia {
 
 	public Mapa recuperar(String archivo) throws IOException {
 		SAXReader reader = new SAXReader();
-		Mapa mapa = new Mapa();
 		try {
 
 			Document document = reader.read(archivo);
@@ -72,9 +71,9 @@ public class Persistencia {
 	// metodos privados para recuperar los distintos elementos del nivel.
 
 	private void recuperarPersonajes(Element Personajes, Mapa nuevoMapa) {
-		Iterator ItPers = Personajes.elementIterator();
+		Iterator<Element> ItPers = Personajes.elementIterator();
 		while (ItPers.hasNext()) {
-			Element ElemCes = (Element) ItPers.next();
+			Element ElemCes = ItPers.next();
 			if (ElemCes.getName() == "Cecilio") {
 				Personaje pers = Cecilio.recuperar(ElemCes, nuevoMapa);
 				nuevoMapa.agregarAlMapa(pers);
@@ -92,9 +91,9 @@ public class Persistencia {
 
 	// modificar
 	private void recuperarObstaculos(Element Obstaculos, Mapa nuevoMapa) {
-		Iterator ItBloques = Obstaculos.elementIterator();
+		Iterator<Element> ItBloques = Obstaculos.elementIterator();
 		while (ItBloques.hasNext()) {
-			Element ElemCes = (Element) ItBloques.next();
+			Element ElemCes = ItBloques.next();
 			if (ElemCes.getName() == "BloqueDeCemento") {
 				Obstaculo bloque = BloqueCemento.recuperar(ElemCes, nuevoMapa);
 				nuevoMapa.agregarAlMapa(bloque);
@@ -111,9 +110,9 @@ public class Persistencia {
 	}
 
 	private void recuperarArmamentos(Element Armamentos, Mapa nuevoMapa) {
-		Iterator ItBloques = Armamentos.elementIterator();
+		Iterator<Element> ItBloques = Armamentos.elementIterator();
 		while (ItBloques.hasNext()) {
-			Element ElemCes = (Element) ItBloques.next();
+			Element ElemCes = ItBloques.next();
 			if (ElemCes.getName() == "Proyectil") {
 				Armamento arma = Proyectil.recuperar(ElemCes, nuevoMapa);
 				nuevoMapa.agregarAlMapa(arma);
@@ -130,9 +129,9 @@ public class Persistencia {
 	}
 
 	private void recuperarArticulos(Element Articulos, Mapa nuevoMapa) {
-		Iterator ItArticulos = Articulos.elementIterator();
+		Iterator<Element> ItArticulos = Articulos.elementIterator();
 		while (ItArticulos.hasNext()) {
-			Element ElemCes = (Element) ItArticulos.next();
+			Element ElemCes = ItArticulos.next();
 			if (ElemCes.getName() == "Habano") {
 				Articulo Art = Habano.recuperar(ElemCes);
 				nuevoMapa.agregarAlMapa(Art);

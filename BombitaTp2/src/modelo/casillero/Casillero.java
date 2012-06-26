@@ -2,17 +2,12 @@ package modelo.casillero;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-
-import org.dom4j.Attribute;
-
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.detectorcolision.Colisionador;
 import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.obstaculos.Obstaculo;
-import modelo.ondaexpansiva.OndaExpansiva;
 import modelo.personaje.*;
-import org.dom4j.*;
 
 public class Casillero {
 	LinkedList<Personaje> personajes;
@@ -132,7 +127,7 @@ public class Casillero {
 	private void ActualizarArticulo() {
 		if (this.usarArticulo()) {
 			this.puntaje = puntaje + unArticulo.obtenerPuntaje();
-			this.unArticulo = null; // si se uso el articulo lo pongo en null.
+			this.unArticulo = null; // si se uso el articulo lo pongo en null
 		}
 	}
 
@@ -151,7 +146,7 @@ public class Casillero {
 	}
 
 	private void VivirPersonajes() {
-		LinkedList lista = (LinkedList) personajes.clone();
+		LinkedList<Personaje> lista = (LinkedList<Personaje>) personajes.clone();
 		Iterator<Personaje> IteradorPersonajes = lista.iterator();
 		while (IteradorPersonajes.hasNext()) {
 			Personaje personaje = IteradorPersonajes.next();

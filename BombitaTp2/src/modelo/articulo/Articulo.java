@@ -1,6 +1,6 @@
 package modelo.articulo;
 
-import org.dom4j.DocumentHelper;
+
 import org.dom4j.Element;
 
 import modelo.constantesjuego.ConstantesJuego;

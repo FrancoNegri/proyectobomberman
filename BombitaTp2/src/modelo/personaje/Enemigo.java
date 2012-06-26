@@ -14,8 +14,6 @@ import modelo.errores.TamanioMatrizInvalidoError;
 import modelo.mapa.Mapa;
 
 import java.util.Random;
-
-import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
 public abstract class Enemigo extends Personaje {

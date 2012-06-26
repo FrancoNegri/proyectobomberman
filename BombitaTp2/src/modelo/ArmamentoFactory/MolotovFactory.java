@@ -1,7 +1,5 @@
-		package modelo.ArmamentoFactory;
+package modelo.ArmamentoFactory;
 
-import org.dom4j.Attribute;
-import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
 import modelo.armamento.*;

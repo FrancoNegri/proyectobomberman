@@ -1,17 +1,10 @@
 package control.Teclado;
 
 
-
-import java.awt.Frame;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-import modelo.coordenadas.Coordenada;
 import modelo.personaje.Bombita;
 
 public class Teclado extends JPanel implements KeyListener{

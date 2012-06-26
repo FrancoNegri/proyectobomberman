@@ -7,8 +7,6 @@ import vista.objeto.ObjetoVisible;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.danio.*;
-import modelo.mapa.Mapa;
-import modelo.personaje.Personaje;
 
 public abstract class Obstaculo implements Daniable,
 		ObjetoPosicionable,ObjetoVisible {

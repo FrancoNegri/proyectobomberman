@@ -1,7 +1,6 @@
 package modelo.personaje;
 
-import org.dom4j.Attribute;
-import org.dom4j.DocumentHelper;
+
 import org.dom4j.Element;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
@@ -10,12 +9,9 @@ import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.articulo.Articulable;
-import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.danio.*;
-import modelo.errores.TamanioMatrizInvalidoError;
-import org.dom4j.*;
 
 
 
