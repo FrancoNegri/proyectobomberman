@@ -25,12 +25,10 @@ public class Teclado extends JPanel implements KeyListener{
 
 	public Teclado(Bombita personaje){
 		this.rodriguez = personaje;
-		/*addKeyListener(this);
+		//addKeyListener(this);
 		add(keycode);
 		setSize(300, 300);
 		setVisible(true);
-		setTitle("Key Listener Practice");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
 	}
 	
 
