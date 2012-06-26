@@ -54,6 +54,25 @@ public class Mapa implements ObjetoVivo {
 	public Casillero obtenerCasillero(Coordenada coord) {
 		return this.TableroJuego.obtenerCasillero(coord);
 	}
+	
+	public Armamento ObtenerArmamento(Coordenada coord){
+		return	this.TableroJuego.obtenerCasillero(coord).obtenerArmamento();
+	}
+	
+	public LinkedList<Personaje> ObtenerPersonaje(Coordenada coord){
+		return	this.TableroJuego.obtenerCasillero(coord).obtenerPersonajes();
+	}
+	
+	public Obstaculo ObtenerObstaculo(Coordenada coord){
+		return	this.TableroJuego.obtenerCasillero(coord).obtenerObstaculo();
+	}
+	
+	public Articulable ObtenerArticulo(Coordenada coord){
+		return	this.TableroJuego.obtenerCasillero(coord).obtenerArticulo();
+	}
+	
+	
+	
 
 	public synchronized void agregarAlMapa(Personaje unPersonaje) {
 
