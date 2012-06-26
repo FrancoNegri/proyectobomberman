@@ -44,7 +44,7 @@ import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 public class VentanaPrincipal {
 
 	private JFrame frame;
-	private GameLoop gameLoop;
+	
 
 	/**
 	 * Launch the application.
@@ -84,12 +84,17 @@ public class VentanaPrincipal {
 		frame = new JFrame();
 		Container contenedor = frame.getContentPane();
 		frame.setForeground(new Color(0, 0, 0));
-		frame.setBounds(100, 100, 1500, 900);
+		frame.setBounds(100, 100, 1000, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 
-		final Mapa mapa = new Mapa(100);
+		// PANEL
+		JPanel panel = new SuperficiePanel();
+		panel.setBackground(new Color(0, 0, 0));
+		panel.setBounds(42, 53, 700, 500);
+		contenedor.add(panel);
+		final ControlJuego controlDelJuego = new ControlJuego(panel);
 
 		// MENU HERRAMIENTAS
 		JMenu menuArchivo = new JMenu("Archivo");
@@ -100,7 +105,7 @@ public class VentanaPrincipal {
 		menuArchivo.add(elementoJugar);
 		elementoJugar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evento) {
-				gameLoop.detenerEjecucion();
+				controlDelJuego.IniciarJuego();
 			}
 		});
 		
@@ -109,16 +114,7 @@ public class VentanaPrincipal {
 		menuArchivo.add(elementoCargar);
 		elementoCargar.addActionListener(new ActionListener() {
 			public void actionPerformed (ActionEvent e){
-				Persistencia pers = new Persistencia();
-				try {
-					Mapa mapacargado= pers.recuperar("c:/JUEGOGUARDADO.xml");
-					gameLoop.iniciarEjecucion();
-					gameLoop.agregar(mapacargado);
-					VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
-					gameLoop.agregar(VistaDelMapaCargado);
-				} catch (Exception e2) {
-					e2.printStackTrace();
-				}
+				controlDelJuego.CargarJuego();
 			}
 		});
 
@@ -127,7 +123,7 @@ public class VentanaPrincipal {
 		menuArchivo.add(elementoPausar);
 		elementoPausar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evento) {
-				gameLoop.iniciarEjecucion();
+				controlDelJuego.DetenerJuego();
 			}
 		});
 		JMenuItem elementoSalir = new JMenuItem("Salir");
@@ -176,105 +172,54 @@ public class VentanaPrincipal {
 		JButton btnIniciar = new JButton("Jugar");
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				gameLoop.iniciarEjecucion();
+				controlDelJuego.IniciarJuego();
 			}
 		});
 
-		btnIniciar.setBounds(1220, 220, 130, 25);
+		btnIniciar.setBounds(42, 16, 77, 25);
 		contenedor.add(btnIniciar);
 
 		JButton btnDetener = new JButton("Pausar");
 		btnDetener.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gameLoop.detenerEjecucion();
+				controlDelJuego.DetenerJuego();
 			}
 		});
-		btnDetener.setBounds(1220, 260, 130, 25);
+		btnDetener.setBounds(425, 16, 92, 25);
 		contenedor.add(btnDetener);
 
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Persistencia pers = new Persistencia();
-				pers.guardar("JUEGOGUARDADO.xml", mapa);
+				controlDelJuego.GuardarJuego();
 			}
 		});
-		btnGuardar.setBounds(1220, 300, 130, 25);
+		btnGuardar.setBounds(200, 16, 92, 25);
 		contenedor.add(btnGuardar);
 		
 		JButton btnCargar=new JButton("Cargar");
 		btnCargar.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent e){
-				Persistencia pers = new Persistencia();
-				try {
-					gameLoop.reiniciar();
-					Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml");
-					gameLoop.agregar(mapacargado);
-					VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
-					gameLoop.agregar(VistaDelMapaCargado);
-				} catch (Exception e2) {
-					e2.printStackTrace();
-				}
+				controlDelJuego.CargarJuego();
 			}
 		});
-		btnCargar.setBounds(1220, 340, 130, 25);
+		btnCargar.setBounds(300,16, 92, 25);
 		contenedor.add(btnCargar);
 		
 
 		// AREA DE TEXTO
-		String cadena = "       Información \n" + "\n" + "Puntos: 0000 \n"
+		String cadena = "         Información \n" + "\n" + "Puntos: 0000 \n"
 				+ "Vida: 100 \n" + "Nivel: 1 \n" + "Usuario: Bombita \n";
 		Font fuente = new Font(Font.SERIF, Font.BOLD, 15);
 		JTextArea area = new JTextArea();
 		area.setText(cadena);
 		area.setFont(fuente);
 		area.setSize(40, 200);
-		area.setDisabledTextColor(Color.GREEN);
-		area.setBackground(Color.black);
-		area.setBounds(1220, 16, 130, 187);
+		area.setBackground(Color.white);
+		area.setBounds(800, 16, 150, 187);
 		area.setEditable(false);
 		contenedor.add(area);
 
-		// PANEL
-		JPanel panel = new SuperficiePanel();
-		panel.setBackground(new Color(0, 0, 0));
-		panel.setBounds(5, 5, 1200, 700);
-		contenedor.add(panel);
-
-		this.gameLoop = new GameLoop(200, (SuperficieDeDibujo) panel);
-		// ///////////Inicializacion grafica Completa
-
-		Personaje modelo3;
 		
-		//INGRESO DE OBJETOS
-		Coordenada coord = new Coordenada(60, 45);
-		Coordenada otraCoord = new Coordenada(18, 45);
-		Articulo articulo = new Habano(otraCoord);
-		mapa.agregarAlMapa(articulo);
-		Bombita bombita = new Bombita(coord,mapa);
-		mapa.agregarAlMapa(bombita);
-		
-		panel.addKeyListener(new Teclado(bombita)); //Agregar teclado al panel del juego
-		
-		for (int j = 4; j < 20; j++) {
-			coord = new Coordenada(j, j * 3);
-			Obstaculo obst = new BloqueAcero(coord);
-			mapa.agregarAlMapa(obst);
-		}
-		for (int j = 0; j < 30; j++) {
-			coord = new Coordenada(j * 3, j ^ 2);
-			modelo3 = new Cecilio(coord, mapa);
-			gameLoop.agregar(modelo3);
-		}
-		for (int j = 0; j < 30; j++) {
-			coord = new Coordenada(j * 3, j ^ 2);
-			modelo3 = new LopezComun(coord, mapa);
-			gameLoop.agregar(modelo3);
-		}
-		
-		gameLoop.agregar(bombita);
-		gameLoop.agregar(mapa);
-		VistaMapa VistaDelMapa = new VistaMapa(mapa);
-		gameLoop.agregar(VistaDelMapa);
 	};
 }
