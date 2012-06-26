@@ -1,6 +1,7 @@
 package modelo.obstaculos;
 
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.coordenadas.Coordenada;
@@ -28,9 +29,9 @@ public class BloqueAcero extends Obstaculo {
 	
     public BloqueAcero recuperar(Element elemAcero, Mapa mapa ){
 		
-		Coordenada posicionBloque = Coordenada.recuperar(elemAcero.element("Coordenada"));
+		Coordenada posicionBloque = Coordenada.recuperar(elemAcero.element(new QName("Coordenada")));
 		BloqueAcero bloqueNuevo = new BloqueAcero(posicionBloque);
-		bloqueNuevo.vida = Integer.parseInt(elemAcero.attributeValue("Vida"));
+		bloqueNuevo.vida = Integer.parseInt(elemAcero.attributeValue(new QName("Vida")));
 		return bloqueNuevo;
 	}
 	

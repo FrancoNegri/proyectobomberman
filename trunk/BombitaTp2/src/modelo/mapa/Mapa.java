@@ -179,22 +179,55 @@ public class Mapa implements ObjetoVivo {
 	public Mapa recuperar(Element elemMapa) {
 		Mapa nuevoMapa = new Mapa(Integer.parseInt(elemMapa.attributeValue("Tamanio")));
 		Element Personajes = elemMapa.element("Personajes");
-		Iterator ItPers =  Personajes.elementIterator();
-		while(ItPers.hasNext()){
-			Element ElemCes = (Element) ItPers.next();
-			if(ElemCes.getName()=="Cecilio"){
-				Personaje pers = Cecilio.recuperar(ElemCes,nuevoMapa);
-				nuevoMapa.agregarAlMapa(pers);	
-			}
-			if(ElemCes.getName()=="LopezAlado"){
-				Personaje pers = LopezAlado.recuperar(ElemCes,nuevoMapa);
-				nuevoMapa.agregarAlMapa(pers);	
-			}
-			if(ElemCes.getName()=="LopezComun"){
-				Personaje pers = LopezComun.recuperar(ElemCes,nuevoMapa);
-				nuevoMapa.agregarAlMapa(pers);	
-			}
-		}
+		Element Obstaculos = elemMapa.element("Bloques");
+		Element Articulos = elemMapa.element("Articulos");
+		Element Armamentos = elemMapa.element("Armamentos");
+		
+		this.recuperarPersonajes(Personajes, nuevoMapa);
+		this.recuperarObstaculos(Obstaculos, nuevoMapa);
+		this.recuperarArticulos(Articulos, nuevoMapa);
+		this.recuperarArmamentos(Armamentos, nuevoMapa);
+		
 		return nuevoMapa;
 	}
+ 
+
+
+
+//metodos privados para recuperar los distintos elementos del nivel.
+
+private void recuperarPersonajes(Element Personajes, Mapa nuevoMapa){
+	Iterator ItPers =  Personajes.elementIterator();
+	while(ItPers.hasNext()){
+		Element ElemCes = (Element) ItPers.next();
+		if(ElemCes.getName()=="Cecilio"){
+			Personaje pers = Cecilio.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(pers);	
+		}
+		if(ElemCes.getName()=="LopezAlado"){
+			Personaje pers = LopezAlado.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(pers);	
+		}
+		if(ElemCes.getName()=="LopezComun"){
+			Personaje pers = LopezComun.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(pers);	
+		}
+	}
+}
+
+
+//modificar
+private void recuperarObstaculos(Element Obstaculos, Mapa nuevoMapa){
+
+}
+
+private void recuperarArmamentos(Element Armamentos, Mapa nuevoMapa){
+	
+}
+
+private void recuperarArticulos(Element Articulos,Mapa nuevoMapa){
+	
+}
+
+
 }

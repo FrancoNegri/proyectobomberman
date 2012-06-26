@@ -2,6 +2,7 @@ package modelo.articulo;
 
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.constantesjuego.ConstantesJuego;
@@ -60,6 +61,14 @@ public class Habano extends Articulo{
 		Element elemObstaculo = super.guardar();
 		elemObstaculo.addAttribute("Tipo", "Habano");
 		return elemObstaculo;
+	}
+	
+	public Habano recuperar(Element elemArticulo ){
+		Coordenada coordenada = Coordenada.recuperar(elemArticulo.element(new QName ("Coordenada")));
+		Habano unHabano = new Habano(coordenada);
+		return unHabano;
+		
+		
 	}
 
 }
