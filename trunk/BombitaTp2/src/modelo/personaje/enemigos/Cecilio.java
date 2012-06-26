@@ -2,6 +2,7 @@ package modelo.personaje.enemigos;
 
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.MolotovFactory;
@@ -33,7 +34,7 @@ public class Cecilio extends Enemigo {
 	
 	public Element guardar() {
 		Element elemPersonaje = DocumentHelper.createElement("Cecilio");
-		elemPersonaje=  super.guardar(elemPersonaje);
+		super.guardar(elemPersonaje);
 		return elemPersonaje;
 	}
 	
@@ -42,7 +43,8 @@ public class Cecilio extends Enemigo {
 
 	public static Personaje recuperar(Element elemCes,Mapa mapa) {
 	Cecilio nuevoPers = new Cecilio();
-	nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes.element("Coourdenada"));
+	nuevoPers.vida = Integer.parseInt(elemCes.attributeValue((new QName("Vida"))));
+	nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes.element(new QName("Coordenada")));
 	nuevoPers.mapa = mapa;
 	nuevoPers.CreadorDeBombas = new MolotovFactory();
 	nuevoPers.velocidad = ConstantesJuego.velocidad_cecilio;

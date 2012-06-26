@@ -82,7 +82,7 @@ public abstract class Enemigo extends Personaje {
 		
 	}
 	
-	public Element guardar(Element elemPersonaje){
-		return super.guardar(elemPersonaje);
+	public void guardar(Element elemPersonaje){
+		super.guardar(elemPersonaje);
 	}
 }

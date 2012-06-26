@@ -3,6 +3,7 @@ package modelo.coordenadas;
 import org.dom4j.Attribute;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import modelo.errores.coordenadaInvalida;
 
@@ -67,10 +68,8 @@ public class Coordenada {
 
 	public static Coordenada recuperar(Element elemCes) {
 		Coordenada coordenadaRecuperada = new Coordenada();
-		
-		String u = elemCes.attributeValue("CoordenadaX");
-		coordenadaRecuperada.x=Integer.parseInt(elemCes.attributeValue("CoordenadaX"));
-		coordenadaRecuperada.y=Integer.parseInt(elemCes.attributeValue("CoordenadaY"));
+		coordenadaRecuperada.x=Integer.parseInt(elemCes.attributeValue((new QName("CoordenadaX"))));
+		coordenadaRecuperada.y=Integer.parseInt(elemCes.attributeValue((new QName("CoordenadaY"))));
 		return coordenadaRecuperada;
 	}
 }

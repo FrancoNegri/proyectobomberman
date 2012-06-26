@@ -30,7 +30,7 @@ public class LopezAlado extends Enemigo {
 	
 	public Element guardar() {
 		Element elemPersonaje = DocumentHelper.createElement("LopezAlado");
-		elemPersonaje=  super.guardar(elemPersonaje);
+		super.guardar(elemPersonaje);
 		return elemPersonaje;
 	}
 	

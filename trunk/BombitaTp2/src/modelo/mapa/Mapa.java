@@ -158,12 +158,13 @@ public class Mapa implements ObjetoVivo {
 	public Mapa recuperar(Element elemMapa) {
 		Mapa nuevoMapa = new Mapa(Integer.parseInt(elemMapa.attributeValue("Tamanio")));
 		Element Personajes = elemMapa.element("Personajes");
-		List PersonajesCecilio = Personajes.elements("Cecilio");
-		Iterator ItCec =  PersonajesCecilio.iterator();
-		while(ItCec.hasNext()){
-			Element ElemCes = (Element) ItCec.next();
-			Personaje pers = Cecilio.recuperar(ElemCes,nuevoMapa);
-			this.agregarAlMapa(pers);
+		Iterator ItPers =  Personajes.elementIterator();
+		while(ItPers.hasNext()){
+			Element ElemCes = (Element) ItPers.next();
+			if(ElemCes.getName()=="Cecilio"){
+				Personaje pers = Cecilio.recuperar(ElemCes,nuevoMapa);
+				nuevoMapa.agregarAlMapa(pers);	
+			}
 		}
 		return nuevoMapa;
 	}
