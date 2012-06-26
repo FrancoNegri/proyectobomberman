@@ -39,7 +39,7 @@ public class LopezComun extends Enemigo {
 	public static Personaje recuperar(Element elemCes,Mapa mapa) {
 		LopezComun nuevoPers = new LopezComun();
 		nuevoPers.vida = Integer.parseInt(elemCes.attributeValue((new QName("Vida"))));
-		nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes);
+		nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes.element(new QName("Coordenada")));
 		nuevoPers.mapa = mapa;
 		nuevoPers.CreadorDeBombas = new ProyectilFactory();
 		nuevoPers.velocidad = ConstantesJuego.velocidad_lopez_reggae_comun;
