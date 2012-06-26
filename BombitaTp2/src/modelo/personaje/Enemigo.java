@@ -7,8 +7,10 @@ import modelo.Translacion.TranslacionArriba;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.Translacion.TranslacionIzquierda;
 import modelo.articulo.Articulable;
+import modelo.casillero.Casillero;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
+import modelo.errores.TamanioMatrizInvalidoError;
 import modelo.mapa.Mapa;
 
 import java.util.Random;
@@ -50,6 +52,21 @@ public abstract class Enemigo extends Personaje {
 	
 	public void chocar() {
 		this.vida = vida - 1; 
+	}
+	
+	protected void caminar() {
+		Casillero casilleroAlQueMoverse;
+		ultimaTranslacion = this.obtenerTranslacion();
+		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
+		try{
+		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
+		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa
+		if (casilleroAlQueMoverse.esCaminable()){
+			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
+			casilleroAntiguo.eliminar(this);
+			coordenadaXY = movimientoPlaneado;
+			mapa.agregarAlMapa(this);
+		}
 	}
 	
 	/*public void perseguirABombita(Bombita rodriguez) {
