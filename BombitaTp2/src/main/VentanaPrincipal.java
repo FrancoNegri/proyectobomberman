@@ -130,17 +130,6 @@ public class VentanaPrincipal {
 				gameLoop.iniciarEjecucion();
 			}
 		});
-
-		JMenuItem elementoGuardar = new JMenuItem("Guardar");
-		elementoGuardar.setMnemonic('G');
-		menuArchivo.add(elementoGuardar);
-		elementoGuardar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent evento) {
-				Persistencia pers = new Persistencia();
-				pers.guardar("c:/JUEGOGUARDADO.xml", mapa);
-			}
-		});
-
 		JMenuItem elementoSalir = new JMenuItem("Salir");
 		elementoSalir.setMnemonic('S');
 		menuArchivo.add(elementoSalir);
@@ -261,12 +250,12 @@ public class VentanaPrincipal {
 		Coordenada otraCoord = new Coordenada(18, 45);
 		Articulo articulo = new Habano(otraCoord);
 		mapa.agregarAlMapa(articulo);
-		Bombita bombita = new Bombita(coord,mapa);
-		mapa.agregarAlMapa(bombita);
+		//Bombita bombita = new Bombita(coord,mapa);
+		//mapa.agregarAlMapa(bombita);
 		
-		panel.addKeyListener(new Teclado(bombita));
+		//panel.addKeyListener(new Teclado(bombita));
 		
-		/*for (int j = 4; j < 20; j++) {
+		for (int j = 4; j < 20; j++) {
 			coord = new Coordenada(j, j * 3);
 			Obstaculo obst = new BloqueAcero(coord);
 			mapa.agregarAlMapa(obst);
@@ -280,8 +269,8 @@ public class VentanaPrincipal {
 			coord = new Coordenada(j * 3, j ^ 2);
 			modelo3 = new LopezComun(coord, mapa);
 			gameLoop.agregar(modelo3);
-		}*/
-		gameLoop.agregar(bombita);
+		}
+		//gameLoop.agregar(bombita);
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapa = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapa);

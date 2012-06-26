@@ -1,5 +1,6 @@
 package modelo.obstaculos;
 
+import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
 
@@ -22,12 +23,12 @@ public class BloqueAcero extends Obstaculo {
 
 	
 	public Element guardar() {
-		Element elemBloque = super.guardar();
-		elemBloque.addAttribute("Tipo", "BloqueAcero");
+		Element elemBloque = DocumentHelper.createElement("BloqueDeAcero");
+		super.guardar(elemBloque);
 		return elemBloque;
 	}
 	
-    public BloqueAcero recuperar(Element elemAcero, Mapa mapa ){
+    public static BloqueAcero recuperar(Element elemAcero, Mapa mapa ){
 		
 		Coordenada posicionBloque = Coordenada.recuperar(elemAcero.element(new QName("Coordenada")));
 		BloqueAcero bloqueNuevo = new BloqueAcero(posicionBloque);

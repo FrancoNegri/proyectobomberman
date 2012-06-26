@@ -63,12 +63,12 @@ public abstract class Obstaculo implements Daniable,
 		return this.cordenadaObsaculo.obtenerCoordenadaY();
 	}
 
-	public Element guardar() {
-		Element elemObstaculo = DocumentHelper.createElement("Obstaculo");
+	protected void guardar(Element elemObstaculo) {
 		elemObstaculo.addAttribute("Vida", String.valueOf(vida));
 		elemObstaculo.add(cordenadaObsaculo.guardar());
-		return elemObstaculo;
 	}
+
+	public abstract Element guardar();
 	
 
 }
