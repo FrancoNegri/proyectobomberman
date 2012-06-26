@@ -35,8 +35,8 @@ public class Bombita extends Personaje {
 		this.morir();
 	}
 
-	@Override
-	public void Atacar() {
+	@Override 
+	public void Atacar() { //Ver este metodo!!
 		CreadorDeBombas.crear(this);
 	}
 
@@ -59,7 +59,7 @@ public class Bombita extends Personaje {
 	public void caminar() {
 	}
 	
-	//Movimientos
+	//Movimientos (hay que refactorizar pero despues de que ande)
 	public void moverseArriba() {
 		Casillero casilleroAlQueMoverse;
 		this.ultimaTranslacion = new TranslacionArriba();

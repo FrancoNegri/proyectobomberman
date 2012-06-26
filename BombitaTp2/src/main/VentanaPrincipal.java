@@ -84,7 +84,7 @@ public class VentanaPrincipal {
 		frame = new JFrame();
 		Container contenedor = frame.getContentPane();
 		frame.setForeground(new Color(0, 0, 0));
-		frame.setBounds(100, 100, 1000, 700);
+		frame.setBounds(100, 100, 1500, 900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
@@ -180,7 +180,7 @@ public class VentanaPrincipal {
 			}
 		});
 
-		btnIniciar.setBounds(42, 16, 77, 25);
+		btnIniciar.setBounds(1220, 220, 130, 25);
 		contenedor.add(btnIniciar);
 
 		JButton btnDetener = new JButton("Pausar");
@@ -189,7 +189,7 @@ public class VentanaPrincipal {
 				gameLoop.detenerEjecucion();
 			}
 		});
-		btnDetener.setBounds(425, 16, 92, 25);
+		btnDetener.setBounds(1220, 260, 130, 25);
 		contenedor.add(btnDetener);
 
 		JButton btnGuardar = new JButton("Guardar");
@@ -199,7 +199,7 @@ public class VentanaPrincipal {
 				pers.guardar("JUEGOGUARDADO.xml", mapa);
 			}
 		});
-		btnGuardar.setBounds(200, 16, 92, 25);
+		btnGuardar.setBounds(1220, 300, 130, 25);
 		contenedor.add(btnGuardar);
 		
 		JButton btnCargar=new JButton("Cargar");
@@ -217,27 +217,28 @@ public class VentanaPrincipal {
 				}
 			}
 		});
-		btnCargar.setBounds(300,16, 92, 25);
+		btnCargar.setBounds(1220, 340, 130, 25);
 		contenedor.add(btnCargar);
 		
 
 		// AREA DE TEXTO
-		String cadena = "         Información \n" + "\n" + "Puntos: 0000 \n"
+		String cadena = "       Información \n" + "\n" + "Puntos: 0000 \n"
 				+ "Vida: 100 \n" + "Nivel: 1 \n" + "Usuario: Bombita \n";
 		Font fuente = new Font(Font.SERIF, Font.BOLD, 15);
 		JTextArea area = new JTextArea();
 		area.setText(cadena);
 		area.setFont(fuente);
 		area.setSize(40, 200);
-		area.setBackground(Color.white);
-		area.setBounds(800, 16, 150, 187);
+		area.setDisabledTextColor(Color.GREEN);
+		area.setBackground(Color.black);
+		area.setBounds(1220, 16, 130, 187);
 		area.setEditable(false);
 		contenedor.add(area);
 
 		// PANEL
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(new Color(0, 0, 0));
-		panel.setBounds(42, 53, 700, 500);
+		panel.setBounds(5, 5, 1200, 700);
 		contenedor.add(panel);
 
 		this.gameLoop = new GameLoop(200, (SuperficieDeDibujo) panel);
@@ -246,14 +247,14 @@ public class VentanaPrincipal {
 		Personaje modelo3;
 		
 		//INGRESO DE OBJETOS
-		Coordenada coord = new Coordenada(10, 10);
+		Coordenada coord = new Coordenada(60, 45);
 		Coordenada otraCoord = new Coordenada(18, 45);
 		Articulo articulo = new Habano(otraCoord);
 		mapa.agregarAlMapa(articulo);
-		//Bombita bombita = new Bombita(coord,mapa);
-		//mapa.agregarAlMapa(bombita);
+		Bombita bombita = new Bombita(coord,mapa);
+		mapa.agregarAlMapa(bombita);
 		
-		//panel.addKeyListener(new Teclado(bombita));
+		panel.addKeyListener(new Teclado(bombita)); //Agregar teclado al panel del juego
 		
 		for (int j = 4; j < 20; j++) {
 			coord = new Coordenada(j, j * 3);
@@ -270,8 +271,8 @@ public class VentanaPrincipal {
 			modelo3 = new LopezComun(coord, mapa);
 			gameLoop.agregar(modelo3);
 		}
-		//gameLoop.agregar(bombita);
-
+		
+		gameLoop.agregar(bombita);
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapa = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapa);
