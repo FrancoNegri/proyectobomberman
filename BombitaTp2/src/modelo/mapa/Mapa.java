@@ -76,9 +76,6 @@ public class Mapa implements ObjetoVivo {
 	public Articulable ObtenerArticulo(Coordenada coord){
 		return	this.TableroJuego.obtenerCasillero(coord).obtenerArticulo();
 	}
-	
-	
-	
 
 	public synchronized void agregarAlMapa(Personaje unPersonaje) {
 
