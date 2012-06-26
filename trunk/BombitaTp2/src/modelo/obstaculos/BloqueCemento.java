@@ -1,9 +1,6 @@
 package modelo.obstaculos;
 
-import org.dom4j.DocumentHelper;
-import org.dom4j.Element;
-import org.dom4j.QName;
-
+import org.dom4j.*;
 import vista.objeto.VistaObjeto;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
