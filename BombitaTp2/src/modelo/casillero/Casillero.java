@@ -14,7 +14,6 @@ import modelo.ondaexpansiva.OndaExpansiva;
 import modelo.personaje.*;
 import org.dom4j.*;
 
-
 public class Casillero {
 	LinkedList<Personaje> personajes;
 	Armamento unArmamento;
@@ -22,7 +21,6 @@ public class Casillero {
 	Obstaculo unObstaculo;
 	FuegoDeExplocion fuegoDeLaExplocion;
 	int puntaje;
-	
 
 	public Casillero() {
 		this.personajes = new LinkedList<Personaje>();
@@ -62,7 +60,7 @@ public class Casillero {
 			this.fuegoDeLaExplocion = fuego;
 		}
 	}
-	
+
 	public void agregar(Articulable unArticulo) {
 		this.unArticulo = unArticulo;
 	}
@@ -93,7 +91,7 @@ public class Casillero {
 	public FuegoDeExplocion obtenerFuegoDeExplocion() {
 		return fuegoDeLaExplocion;
 	}
-	
+
 	public boolean esCaminable() {
 		if (this.unObstaculo == null) {
 			return true;
@@ -122,24 +120,22 @@ public class Casillero {
 		this.ActualivarFuegoExplocion();
 	}
 
-	
-	private void ActualivarFuegoExplocion(){
-		if(fuegoDeLaExplocion!=null){
+	private void ActualivarFuegoExplocion() {
+		if (fuegoDeLaExplocion != null) {
 			fuegoDeLaExplocion.vivir();
-			if(fuegoDeLaExplocion.estaMuerto()){
+			if (fuegoDeLaExplocion.estaMuerto()) {
 				this.fuegoDeLaExplocion = null;
 			}
 		}
 	}
-	
-	
-	private void ActualizarArticulo(){
+
+	private void ActualizarArticulo() {
 		if (this.usarArticulo()) {
 			this.puntaje = puntaje + unArticulo.obtenerPuntaje();
 			this.unArticulo = null; // si se uso el articulo lo pongo en null.
 		}
 	}
-	
+
 	private void actualizarArmamento() {
 		this.VivirArmamento();
 		if (unArmamento != null) {
@@ -150,19 +146,18 @@ public class Casillero {
 	}
 
 	private void actualizarPersonajes() {
-		/* this.VivirPersonajes(); */
+		this.VivirPersonajes();
 		this.eliminarPersonajesMuertos();
 	}
 
-	/*
-	 * No es implementable por cuestiones de axceso a las variables
-	 * 
-	 * 
-	 * 
-	 * private void VivirPersonajes() { Iterator<Personaje> IteradorPersonajes =
-	 * personajes.iterator(); while (IteradorPersonajes.hasNext()) { Personaje
-	 * personaje = IteradorPersonajes.next(); personaje.vivir(); } }
-	 */
+	private void VivirPersonajes() {
+		LinkedList lista = (LinkedList) personajes.clone();
+		Iterator<Personaje> IteradorPersonajes = lista.iterator();
+		while (IteradorPersonajes.hasNext()) {
+			Personaje personaje = IteradorPersonajes.next();
+			personaje.vivir();
+		}
+	}
 
 	public void actualizarObstaculos() {
 		if (unObstaculo != null) {

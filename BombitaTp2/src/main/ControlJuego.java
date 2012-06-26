@@ -24,7 +24,6 @@ public class ControlJuego {
 	
 	public ControlJuego(JPanel panel){
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
-
 		Personaje modelo3;
 		
 		//INGRESO DE OBJETOS
@@ -45,12 +44,10 @@ public class ControlJuego {
 		for (int j = 0; j < 20; j++) {
 			coord = new Coordenada(j * 3, j ^ 2);
 			modelo3 = new Cecilio(coord, mapa);
-			gameLoop.agregar(modelo3);
 		}
 		for (int j = 0; j < 20; j++) {
 			coord = new Coordenada(j * 3, j ^ 2);
 			modelo3 = new LopezComun(coord, mapa);
-			gameLoop.agregar(modelo3);
 		}
 		//gameLoop.agregar(bombita);
 		gameLoop.agregar(mapa);
