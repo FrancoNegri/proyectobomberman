@@ -38,7 +38,7 @@ public class LopezAlado extends Enemigo {
 	public static Personaje recuperar(Element elemCes,Mapa mapa) {
 		LopezAlado nuevoPers = new LopezAlado();
 		nuevoPers.vida = Integer.parseInt(elemCes.attributeValue((new QName("Vida"))));
-		nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes);
+		nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes.element(new QName("Coordenada")));
 		nuevoPers.mapa = mapa;
 		nuevoPers.CreadorDeBombas = new MolotovFactory();
 		nuevoPers.velocidad = ConstantesJuego.velocidad_lopez_reggae_alado;
