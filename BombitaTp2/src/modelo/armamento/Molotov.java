@@ -25,4 +25,18 @@ public class Molotov extends Armamento{
 		elemMolotov.addAttribute("Tipo", "Molotov");
 		return elemMolotov;
 	}
+	
+	public Molotov recuperar(Element elemArmamento,Mapa mapa){
+		
+		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element("Coordenada"));
+		int time = Integer.parseInt(elemArmamento.attributeValue("Time"));
+		Molotov bombaRecuperada = new Molotov(posicionBomba,mapa,time);
+		bombaRecuperada.danio = Integer.parseInt(elemArmamento.attributeValue("Danio"));
+		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue("Radio"));
+		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue("Exploto"));
+		return bombaRecuperada;
+		
+		
+	}
+	
 }

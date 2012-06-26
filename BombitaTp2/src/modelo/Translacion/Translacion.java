@@ -21,4 +21,8 @@ public abstract class Translacion {
 			Coordenada nuevaCord);
 
 	public abstract Element guardar();
+	
+	public static Translacion recuperar (Element elemTrans){
+		return null;
+	}
 }

@@ -70,7 +70,7 @@ public class Coordenada {
 		
 		String u = elemCes.attributeValue("CoordenadaX");
 		coordenadaRecuperada.x=Integer.parseInt(elemCes.attributeValue("CoordenadaX"));
-		coordenadaRecuperada.y=Integer.parseInt(elemCes.attributeValue("CoordenadaX"));
+		coordenadaRecuperada.y=Integer.parseInt(elemCes.attributeValue("CoordenadaY"));
 		return coordenadaRecuperada;
 	}
 }
