@@ -30,9 +30,9 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 
 	public Personaje(Coordenada unaCoordenada,Mapa nuevoMapa) {
 		this.coordenadaXY = unaCoordenada.copiar();
-		ultimaTranslacion = new TranslacionDerecha();
-		mapa = nuevoMapa;
-		mapa.agregarAlMapa(this);
+		this.ultimaTranslacion = new TranslacionDerecha();
+		this.mapa = nuevoMapa;
+		this.mapa.agregarAlMapa(this);
 	}
 	
 	protected Personaje() {
@@ -97,20 +97,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 
 	}
 
-	protected void caminar() {
-		Casillero casilleroAlQueMoverse;
-		ultimaTranslacion = this.obtenerTranslacion();
-		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
-		try{
-		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
-		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa
-		if (casilleroAlQueMoverse.esCaminable()){
-			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
-			casilleroAntiguo.eliminar(this);
-			coordenadaXY = movimientoPlaneado;
-			mapa.agregarAlMapa(this);
-		}
-	}
+	protected abstract void caminar();
 
 	
 	public void vivir() {

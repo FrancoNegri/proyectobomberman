@@ -4,7 +4,7 @@ import org.dom4j.Element;
 
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.*;
-import modelo.Translacion.Translacion;
+import modelo.Translacion.*;
 import modelo.articulo.Articulable;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
@@ -34,9 +34,8 @@ public class Bombita extends Personaje {
 	}
 
 	@Override
-	protected void Atacar() {
-		//Aca iria la accion de plantar la bomba por parte del teclado
-		//En este momento bombita no ataca
+	public void Atacar() {
+		CreadorDeBombas.crear(this);
 	}
 
 	@Override
@@ -55,13 +54,28 @@ public class Bombita extends Personaje {
 		return null;
 	}
 
-	/*public void caminar(char unaLetra) {
-	 * Para obtener un movimiento desde el teclado
-	 * if (unaLetraEsValida) {
-		if (unaLetra = w) -> translacion arriba
-		if (unaLetra = s) -> translacion abajo
-		if (unaLetra = a) -> translacion izquierda
-		if (unaLetra = d) -> translacion derecha
-		}
-	}*/
+	public void caminar() {
+	}
+	
+	//Movimientos
+	public void moverseArriba() {
+		this.ultimaTranslacion = new TranslacionArriba();
+		this.coordenadaXY = ultimaTranslacion.accion(this.obtenerCoordenadaXY());
+	}
+	
+	public void moverseAbajo() {
+		this.ultimaTranslacion = new TranslacionAbajo();
+		this.coordenadaXY = ultimaTranslacion.accion(this.obtenerCoordenadaXY());
+	}
+	
+	public void moverseDerecha() {
+		this.ultimaTranslacion = new TranslacionDerecha();
+		this.coordenadaXY = ultimaTranslacion.accion(this.obtenerCoordenadaXY());
+	}
+	
+	public void moverseIzquierda() {
+		this.ultimaTranslacion = new TranslacionIzquierda();
+		this.coordenadaXY = ultimaTranslacion.accion(this.obtenerCoordenadaXY());
+	}
+	
 }
