@@ -28,6 +28,7 @@ import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
 import modelo.obstaculos.Obstaculo;
+import modelo.personaje.Bombita;
 import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
 import modelo.personaje.enemigos.LopezComun;
@@ -256,10 +257,11 @@ public class VentanaPrincipal {
 		/* Mapa mapa = new Mapa(100); */
 		Personaje modelo3;
 
-		Coordenada coord = new Coordenada(99, 99);
+		Coordenada coord = new Coordenada(10, 10);
 		Articulo articulo = new Habano(coord);
 		mapa.agregarAlMapa(articulo);
-		for (int j = 4; j < 20; j++) {
+		Bombita bombita = new Bombita(coord,mapa);
+		/*for (int j = 4; j < 20; j++) {
 			coord = new Coordenada(j, j * 3);
 			Obstaculo obst = new BloqueAcero(coord);
 			mapa.agregarAlMapa(obst);
@@ -273,7 +275,7 @@ public class VentanaPrincipal {
 			coord = new Coordenada(j * 3, j ^ 2);
 			modelo3 = new LopezComun(coord, mapa);
 			gameLoop.agregar(modelo3);
-		}
+		}*/
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapa = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapa);
