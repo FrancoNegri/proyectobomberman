@@ -221,21 +221,20 @@ private void recuperarPersonajes(Element Personajes, Mapa nuevoMapa){
 
 //modificar
 private void recuperarObstaculos(Element Obstaculos, Mapa nuevoMapa){
-
-	Iterator ItPers =  Obstaculos.elementIterator();
-	while(ItPers.hasNext()){
-		Element ElemCes = (Element) ItPers.next();
-		if(ElemCes.getName()=="Bloque de Cemento"){
-			Obstaculo pers = BloqueCemento.recuperar(ElemCes,nuevoMapa);
-			nuevoMapa.agregarAlMapa(pers);	
+	Iterator ItBloques =  Obstaculos.elementIterator();
+	while(ItBloques.hasNext()){
+		Element ElemCes = (Element) ItBloques.next();
+		if(ElemCes.getName()=="BloqueDeCemento"){
+			Obstaculo bloque = BloqueCemento.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(bloque);	
 		}
-		if(ElemCes.getName()=="Bloque de Acero"){
-			Obstaculo pers = BloqueAcero.recuperar(ElemCes,nuevoMapa);
-			nuevoMapa.agregarAlMapa(pers);	
+		if(ElemCes.getName()=="BloqueDeAcero"){
+			Obstaculo bloque = BloqueAcero.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(bloque);	
 		}
-		if(ElemCes.getName()=="Bloque de Ladrillos"){
-			Obstaculo pers = BloqueLadrillo.recuperar(ElemCes,nuevoMapa);
-			nuevoMapa.agregarAlMapa(pers);	
+		if(ElemCes.getName()=="BloqueDeLadrillos"){
+			Obstaculo bloque = BloqueLadrillo.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(bloque);	
 		}
 	}
 }
