@@ -13,6 +13,8 @@ import modelo.errores.CasilleroOcupadoError;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
+import modelo.personaje.enemigos.LopezAlado;
+import modelo.personaje.enemigos.LopezComun;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -163,6 +165,14 @@ public class Mapa implements ObjetoVivo {
 			Element ElemCes = (Element) ItPers.next();
 			if(ElemCes.getName()=="Cecilio"){
 				Personaje pers = Cecilio.recuperar(ElemCes,nuevoMapa);
+				nuevoMapa.agregarAlMapa(pers);	
+			}
+			if(ElemCes.getName()=="LopezAlado"){
+				Personaje pers = LopezAlado.recuperar(ElemCes,nuevoMapa);
+				nuevoMapa.agregarAlMapa(pers);	
+			}
+			if(ElemCes.getName()=="LopezComun"){
+				Personaje pers = LopezComun.recuperar(ElemCes,nuevoMapa);
 				nuevoMapa.agregarAlMapa(pers);	
 			}
 		}
