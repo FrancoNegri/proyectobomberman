@@ -63,7 +63,7 @@ public class Habano extends Articulo{
 		return elemObstaculo;
 	}
 	
-	public Habano recuperar(Element elemArticulo ){
+	public static Habano recuperar(Element elemArticulo ){
 		Coordenada coordenada = Coordenada.recuperar(elemArticulo.element(new QName ("Coordenada")));
 		Habano unHabano = new Habano(coordenada);
 		return unHabano;

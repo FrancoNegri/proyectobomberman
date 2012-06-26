@@ -21,6 +21,8 @@ import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
 import modelo.personaje.enemigos.LopezAlado;
 import modelo.personaje.enemigos.LopezComun;
+import modelo.articulo.Habano;
+import modelo.articulo.Timer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -259,7 +261,20 @@ private void recuperarArmamentos(Element Armamentos, Mapa nuevoMapa){
 }
 
 private void recuperarArticulos(Element Articulos,Mapa nuevoMapa){
+	Iterator ItArticulos =  Articulos.elementIterator();
+	while(ItArticulos.hasNext()){
+		Element ElemCes = (Element) ItArticulos.next();
+		if(ElemCes.getName()=="Habano"){
+			Articulo Art = Habano.recuperar(ElemCes);
+			nuevoMapa.agregarAlMapa(Art);	
+		}
+		if(ElemCes.getName()=="Timer"){
+			Articulo Art = Timer.recuperar(ElemCes);
+			nuevoMapa.agregarAlMapa(Art);	
+		}
 	
+		
+	}
 }
 
 
