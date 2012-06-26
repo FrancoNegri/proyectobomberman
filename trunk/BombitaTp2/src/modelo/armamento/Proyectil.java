@@ -1,11 +1,17 @@
 package modelo.armamento;
 
+import java.util.List;
+
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.Translacion.Translacion;
+import modelo.Translacion.TranslacionAbajo;
+import modelo.Translacion.TranslacionArriba;
+import modelo.Translacion.TranslacionDerecha;
+import modelo.Translacion.TranslacionIzquierda;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.constantesjuego.ConstantesJuego;
@@ -69,9 +75,19 @@ public class Proyectil extends Armamento {
 		bombaRecuperada.danio = Integer.parseInt(elemArmamento.attributeValue(new QName("Danio")));
 		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue(new QName("Radio")));
 		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue(new QName("Exploto")));
+		if(elemArmamento.element("TranslacionIzquierda") != null){
+			bombaRecuperada.transladador = new TranslacionIzquierda();
+		}
+		if(elemArmamento.element("TranslacionDerecha") != null){
+			bombaRecuperada.transladador = new TranslacionDerecha();
+		}
+		if(elemArmamento.element("TranslacionArriba") != null){
+			bombaRecuperada.transladador = new TranslacionArriba();
+		}
+		if(elemArmamento.element("TranslacionAbajo") != null){
+			bombaRecuperada.transladador = new TranslacionAbajo();
+		}
 		return bombaRecuperada;
-		
-		
 	}
 	
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {

@@ -24,7 +24,6 @@ public class ControlJuego {
 	
 	public ControlJuego(JPanel panel){
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
-		// ///////////Inicializacion grafica Completa
 
 		Personaje modelo3;
 		
