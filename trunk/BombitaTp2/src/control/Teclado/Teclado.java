@@ -3,16 +3,18 @@ package control.Teclado;
 
 
 import java.awt.Frame;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import modelo.coordenadas.Coordenada;
 import modelo.personaje.Bombita;
 
-public class Teclado extends JFrame implements KeyListener{
+public class Teclado extends JPanel implements KeyListener{
 
 	/**
 	 * 
@@ -20,24 +22,25 @@ public class Teclado extends JFrame implements KeyListener{
 	private static final long serialVersionUID = 1L;
 	JTextField keycode = new JTextField("");
 	private Bombita rodriguez;
-	private Coordenada xy = new Coordenada(4,5);
 
-	public Teclado(){
-		this.rodriguez = new Bombita(xy,rodriguez.getMapa());
-		addKeyListener(this);
+	public Teclado(Bombita personaje){
+		this.rodriguez = personaje;
+		/*addKeyListener(this);
 		add(keycode);
 		setSize(300, 300);
 		setVisible(true);
 		setTitle("Key Listener Practice");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
 	}
 	
 
 	public void keyPressed(KeyEvent e) {
 		{
-			switch(e.getKeyCode()){
+			int pressedKey = e.getKeyCode();
+			switch (pressedKey) {
 			case KeyEvent.VK_DOWN:
 			{	rodriguez.moverseAbajo();
+				System.out.println("Abajo");
 				break;
 			}
 			case KeyEvent.VK_LEFT:

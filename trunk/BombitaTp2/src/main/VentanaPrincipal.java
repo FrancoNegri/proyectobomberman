@@ -84,7 +84,7 @@ public class VentanaPrincipal {
 		frame = new JFrame();
 		Container contenedor = frame.getContentPane();
 		frame.setForeground(new Color(0, 0, 0));
-		frame.setBounds(100, 100, 800, 700);
+		frame.setBounds(100, 100, 1000, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
@@ -241,26 +241,31 @@ public class VentanaPrincipal {
 		area.setFont(fuente);
 		area.setSize(40, 200);
 		area.setBackground(Color.white);
-		area.setBounds(600, 16, 150, 187);
+		area.setBounds(800, 16, 150, 187);
 		area.setEditable(false);
 		contenedor.add(area);
 
 		// PANEL
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(new Color(0, 0, 0));
-		panel.setBounds(42, 53, 500, 500);
+		panel.setBounds(42, 53, 700, 500);
 		contenedor.add(panel);
 
 		this.gameLoop = new GameLoop(200, (SuperficieDeDibujo) panel);
 		// ///////////Inicializacion grafica Completa
 
-		/* Mapa mapa = new Mapa(100); */
 		Personaje modelo3;
-
+		
+		//INGRESO DE OBJETOS
 		Coordenada coord = new Coordenada(10, 10);
-		Articulo articulo = new Habano(coord);
+		Coordenada otraCoord = new Coordenada(18, 45);
+		Articulo articulo = new Habano(otraCoord);
 		mapa.agregarAlMapa(articulo);
 		Bombita bombita = new Bombita(coord,mapa);
+		mapa.agregarAlMapa(bombita);
+		
+		panel.addKeyListener(new Teclado(bombita));
+		
 		/*for (int j = 4; j < 20; j++) {
 			coord = new Coordenada(j, j * 3);
 			Obstaculo obst = new BloqueAcero(coord);
