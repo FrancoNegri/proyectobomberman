@@ -24,7 +24,7 @@ public class PuntajeTest {
 	public void setUp() {
 		Coordenada coordenada = new Coordenada(1,1);
 		Mapa mapa = mock(Mapa.class);
-		cecilio = new Cecilio(coordenada,mapa);
+		cecilio = mock(Cecilio.class);
 		ladrillo = new BloqueLadrillo(coordenada);
 		habano = new Habano(coordenada);
 		casillero = new Casillero();
@@ -32,7 +32,7 @@ public class PuntajeTest {
 		casillero.agregar(cecilio);
 		casillero.agregar(habano);
 		casillero.agregar(ladrillo);
-		casillero.agregar(rodriguez);
+		//casillero.agregar(rodriguez);
 	}
 	
 	@Test
