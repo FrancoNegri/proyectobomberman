@@ -12,7 +12,7 @@ import modelo.ondaexpansiva.OndaExpansiva;
 public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 	
 	protected Coordenada coordenada;
-	protected float time;
+	protected int time;
 	protected int danio;
 	protected int radio;
 	protected Mapa mapaAutilizar;
@@ -36,7 +36,7 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 		return time;
 	}
 
-	public void cambiarTime(float tiempo) {
+	public void cambiarTime(int tiempo) {
 		this.time = tiempo;
 	}
 	

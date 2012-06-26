@@ -4,5 +4,5 @@ public interface Armamentable {
 
 	public float obtenerTime();
 	
-	public void cambiarTime(float Tiempo);
+	public void cambiarTime(int Tiempo);
 }
