@@ -129,11 +129,10 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	return this.coordenadaXY.obtenerCoordenadaY();
 	}
 
-	protected Element guardar(Element elemPersonaje) {
+	protected void guardar(Element elemPersonaje) {
 		elemPersonaje.addAttribute("Vida", String.valueOf(vida));
 		elemPersonaje.addAttribute("Velocidad", String.valueOf(velocidad));
 		elemPersonaje.add(coordenadaXY.guardar());
-		return elemPersonaje;
 	}
 
 	public abstract Element guardar();

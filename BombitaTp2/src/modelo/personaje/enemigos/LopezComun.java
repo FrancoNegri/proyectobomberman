@@ -28,7 +28,7 @@ public class LopezComun extends Enemigo {
 	
 	public Element guardar() {
 		Element elemPersonaje = DocumentHelper.createElement("Cecilio");
-		elemPersonaje=  super.guardar(elemPersonaje);
+		super.guardar(elemPersonaje);
 		return elemPersonaje;
 	}
 	
