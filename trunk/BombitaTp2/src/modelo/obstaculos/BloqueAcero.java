@@ -5,6 +5,7 @@ import org.dom4j.Element;
 import vista.objeto.VistaObjeto;
 import modelo.coordenadas.Coordenada;
 import modelo.constantesjuego.ConstantesJuego;
+import modelo.mapa.Mapa;
 
 public class BloqueAcero extends Obstaculo {
 
@@ -24,4 +25,13 @@ public class BloqueAcero extends Obstaculo {
 		elemBloque.addAttribute("Tipo", "BloqueAcero");
 		return elemBloque;
 	}
+	
+    public BloqueAcero recuperar(Element elemAcero, Mapa mapa ){
+		
+		Coordenada posicionBloque = Coordenada.recuperar(elemAcero.element("Coordenada"));
+		BloqueAcero bloqueNuevo = new BloqueAcero(posicionBloque);
+		bloqueNuevo.vida = Integer.parseInt(elemAcero.attributeValue("Vida"));
+		return bloqueNuevo;
+	}
+	
 }

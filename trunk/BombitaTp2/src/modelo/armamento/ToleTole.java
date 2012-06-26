@@ -43,4 +43,18 @@ public class ToleTole extends Armamento implements Articulable {
 		return elemMolotov;
 	}
 	
+	public ToleTole recuperar(Element elemArmamento,Mapa mapa){
+		
+		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element("Coordenada"));
+		int time = Integer.parseInt(elemArmamento.attributeValue("Time"));
+		ToleTole bombaRecuperada = new ToleTole(posicionBomba,mapa,time);
+		bombaRecuperada.danio = Integer.parseInt(elemArmamento.attributeValue("Danio"));
+		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue("Radio"));
+		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue("Exploto"));
+		return bombaRecuperada;
+		
+		
+	}
+	
+	
 }

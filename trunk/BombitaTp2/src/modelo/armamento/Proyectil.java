@@ -58,6 +58,20 @@ public class Proyectil extends Armamento {
 		return elemMolotov;
 	}
 	
+	public Proyectil recuperar(Element elemArmamento,Mapa mapa){
+		
+		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element("Coordenada"));
+		Translacion transProyectil = Translacion.recuperar(elemArmamento.element("Translacion"));
+		Proyectil bombaRecuperada = new Proyectil(posicionBomba,mapa,transProyectil);
+		bombaRecuperada.distancia = Integer.parseInt(elemArmamento.attributeValue("DistanciaARecorrer"));
+		bombaRecuperada.danio = Integer.parseInt(elemArmamento.attributeValue("Danio"));
+		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue("Radio"));
+		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue("Exploto"));
+		return bombaRecuperada;
+		
+		
+	}
+	
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
 		vistaObjeto.InteractuarConProyectil(this);
 	}
