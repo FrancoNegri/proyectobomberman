@@ -1,6 +1,7 @@
 package modelo.obstaculos;
 
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.constantesjuego.ConstantesJuego;
@@ -25,9 +26,9 @@ public class BloqueCemento extends Obstaculo {
 	
 	public BloqueCemento recuperar(Element elemCemento, Mapa mapa ){
 		
-		Coordenada posicionBloque = Coordenada.recuperar(elemCemento.element("Coordenada"));
+		Coordenada posicionBloque = Coordenada.recuperar(elemCemento.element(new QName("Coordenada")));
 		BloqueCemento bloqueNuevo = new BloqueCemento(posicionBloque);
-		bloqueNuevo.vida = Integer.parseInt(elemCemento.attributeValue("Vida"));
+		bloqueNuevo.vida = Integer.parseInt(elemCemento.attributeValue(new QName("Vida")));
 		return bloqueNuevo;
 	}
 	

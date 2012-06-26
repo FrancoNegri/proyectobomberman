@@ -1,6 +1,7 @@
 package modelo.armamento;
 
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.Translacion.Translacion;
@@ -60,13 +61,13 @@ public class Proyectil extends Armamento {
 	
 	public Proyectil recuperar(Element elemArmamento,Mapa mapa){
 		
-		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element("Coordenada"));
-		Translacion transProyectil = Translacion.recuperar(elemArmamento.element("Translacion"));
+		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element(new QName("Coordenada")));
+		Translacion transProyectil = Translacion.recuperar(elemArmamento.element(new QName("Translacion")));
 		Proyectil bombaRecuperada = new Proyectil(posicionBomba,mapa,transProyectil);
-		bombaRecuperada.distancia = Integer.parseInt(elemArmamento.attributeValue("DistanciaARecorrer"));
-		bombaRecuperada.danio = Integer.parseInt(elemArmamento.attributeValue("Danio"));
-		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue("Radio"));
-		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue("Exploto"));
+		bombaRecuperada.distancia = Integer.parseInt(elemArmamento.attributeValue(new QName("DistanciaARecorrer")));
+		bombaRecuperada.danio = Integer.parseInt(elemArmamento.attributeValue(new QName("Danio")));
+		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue(new QName("Radio")));
+		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue(new QName("Exploto")));
 		return bombaRecuperada;
 		
 		

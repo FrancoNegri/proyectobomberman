@@ -1,6 +1,7 @@
 package modelo.articulo;
 
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.ArmamentoFactory;
@@ -53,5 +54,9 @@ public class Timer extends Articulo {
 		return elemObstaculo;
 	}
 	
-
+	public Timer recuperar(Element elemArticulo ){
+		Coordenada coordenada = Coordenada.recuperar(elemArticulo.element(new QName ("Coordenada")));
+		Timer unTimer = new Timer(coordenada);
+		return unTimer;
+	}
 }

@@ -1,6 +1,7 @@
 package modelo.armamento;
 
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.ToleToleFactory;
@@ -45,12 +46,12 @@ public class ToleTole extends Armamento implements Articulable {
 	
 	public ToleTole recuperar(Element elemArmamento,Mapa mapa){
 		
-		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element("Coordenada"));
-		int time = Integer.parseInt(elemArmamento.attributeValue("Time"));
+		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element(new QName("Coordenada")));
+		int time = Integer.parseInt(elemArmamento.attributeValue(new QName("Time")));
 		ToleTole bombaRecuperada = new ToleTole(posicionBomba,mapa,time);
-		bombaRecuperada.danio = Integer.parseInt(elemArmamento.attributeValue("Danio"));
-		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue("Radio"));
-		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue("Exploto"));
+		bombaRecuperada.danio = Integer.parseInt(elemArmamento.attributeValue(new QName("Danio")));
+		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue(new QName("Radio")));
+		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue(new QName("Exploto")));
 		return bombaRecuperada;
 		
 		
