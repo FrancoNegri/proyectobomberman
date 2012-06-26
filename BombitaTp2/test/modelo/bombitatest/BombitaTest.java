@@ -94,17 +94,6 @@ public class BombitaTest {
 		assertEquals(0, rodriguez.tirarArmamento().obtenerTime(), 500);
 	}
 
-	/*@Test
-	public void testCaminarHaciaLaDerecha() {
-		rodriguez.caminar(derecha);
-		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 2);
-	}
-
-	public void testCaminarHaciaAbajo() {
-		rodriguez.caminar(abajo);
-		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 0);
-	}*/
-
 	@Test
 	public void testDaniar() {
 		this.rodriguez.Daniar(2);
@@ -116,4 +105,29 @@ public class BombitaTest {
 		rodriguez.chocar();
 		assertTrue(rodriguez.obtenerVida() == 0);
 	}
+	
+	@Test
+	public void testMoverseHaciaArriba() {
+		rodriguez.moverseArriba();
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 2);
+	}
+	
+	@Test
+	public void testMoverseHaciaAbajo() {
+		rodriguez.moverseAbajo();
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 0);
+	}
+	
+	@Test
+	public void testMoverseHaciaDerecha() {
+		rodriguez.moverseDerecha();
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 2);
+	}
+	
+	@Test
+	public void testMoverseHaciaIzquierda() {
+		rodriguez.moverseIzquierda();
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 0);
+	}
+	
 }
