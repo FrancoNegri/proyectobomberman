@@ -1,5 +1,6 @@
 package modelo.armamento;
 
+import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
 
@@ -39,8 +40,9 @@ public class ToleTole extends Armamento implements Articulable {
 	}
 	
 	public Element guardar() {
-		Element elemMolotov = super.guardar();
-		elemMolotov.addAttribute("Tipo", "ToleTole");
+		
+		Element elemMolotov = DocumentHelper.createElement("ToleTole");
+		super.guardar(elemMolotov);
 		return elemMolotov;
 	}
 	

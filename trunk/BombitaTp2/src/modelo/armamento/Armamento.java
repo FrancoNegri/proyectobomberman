@@ -70,13 +70,13 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 			return exploto;
 		}
 
-		public Element guardar() {
-			Element elemPersonaje = DocumentHelper.createElement("Armamento");
-			elemPersonaje.add(coordenada.guardar());
-			elemPersonaje.addAttribute("Danio", String.valueOf(danio));
-			elemPersonaje.addAttribute("Time", String.valueOf(time));
-			elemPersonaje.addAttribute("Radio", String.valueOf(radio));
-			elemPersonaje.addAttribute("Exploto", new Boolean(exploto).toString());
-			return elemPersonaje;
+		protected void guardar(Element elemArma) {
+			elemArma.add(coordenada.guardar());
+			elemArma.addAttribute("Danio", String.valueOf(danio));
+			elemArma.addAttribute("Time", String.valueOf(time));
+			elemArma.addAttribute("Radio", String.valueOf(radio));
+			elemArma.addAttribute("Exploto", new Boolean(exploto).toString());
 		}
+
+		public abstract Element guardar();
 }

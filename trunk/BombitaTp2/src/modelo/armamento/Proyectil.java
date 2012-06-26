@@ -1,5 +1,6 @@
 package modelo.armamento;
 
+import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
 
@@ -52,8 +53,8 @@ public class Proyectil extends Armamento {
 	
 	
 	public Element guardar() {
-		Element elemMolotov = super.guardar();
-		elemMolotov.addAttribute("Tipo", "Proyectil");
+		Element elemMolotov = DocumentHelper.createElement("Proyectil");
+		super.guardar(elemMolotov);
 		elemMolotov.addAttribute("DistanciaARecorrer", String.valueOf(distancia));
 		elemMolotov.add(transladador.guardar());
 		return elemMolotov;
