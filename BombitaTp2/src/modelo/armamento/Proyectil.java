@@ -60,7 +60,7 @@ public class Proyectil extends Armamento {
 		return elemMolotov;
 	}
 	
-	public Proyectil recuperar(Element elemArmamento,Mapa mapa){
+	public static Proyectil recuperar(Element elemArmamento,Mapa mapa){
 		
 		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element(new QName("Coordenada")));
 		Translacion transProyectil = Translacion.recuperar(elemArmamento.element(new QName("Translacion")));

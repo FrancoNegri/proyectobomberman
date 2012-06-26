@@ -46,7 +46,7 @@ public class ToleTole extends Armamento implements Articulable {
 		return elemMolotov;
 	}
 	
-	public ToleTole recuperar(Element elemArmamento,Mapa mapa){
+	public static ToleTole recuperar(Element elemArmamento,Mapa mapa){
 		
 		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element(new QName("Coordenada")));
 		int time = Integer.parseInt(elemArmamento.attributeValue(new QName("Time")));

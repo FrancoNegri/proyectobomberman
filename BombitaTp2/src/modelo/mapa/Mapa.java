@@ -5,6 +5,9 @@ import org.dom4j.Node;
 
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import modelo.armamento.Armamento;
+import modelo.armamento.Molotov;
+import modelo.armamento.Proyectil;
+import modelo.armamento.ToleTole;
 import modelo.articulo.Articulable;
 import modelo.articulo.Articulo;
 import modelo.casillero.Casillero;
@@ -240,7 +243,22 @@ private void recuperarObstaculos(Element Obstaculos, Mapa nuevoMapa){
 }
 
 private void recuperarArmamentos(Element Armamentos, Mapa nuevoMapa){
-	
+	Iterator ItBloques =  Armamentos.elementIterator();
+	while(ItBloques.hasNext()){
+		Element ElemCes = (Element) ItBloques.next();
+		if(ElemCes.getName()=="Proyectil"){
+			Armamento arma = Proyectil.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(arma);	
+		}
+		if(ElemCes.getName()=="ToleTole"){
+			Armamento arma = ToleTole.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(arma);	
+		}
+		if(ElemCes.getName()=="Molotov"){
+			Armamento arma = Molotov.recuperar(ElemCes,nuevoMapa);
+			nuevoMapa.agregarAlMapa(arma);	
+		}
+	}
 }
 
 private void recuperarArticulos(Element Articulos,Mapa nuevoMapa){

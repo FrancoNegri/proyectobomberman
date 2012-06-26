@@ -28,7 +28,7 @@ public class Molotov extends Armamento{
 		return elemMolotov;
 	}
 	
-	public Molotov recuperar(Element elemArmamento,Mapa mapa){
+	public static Molotov recuperar(Element elemArmamento,Mapa mapa){
 		
 		Coordenada posicionBomba = Coordenada.recuperar(elemArmamento.element(new QName("Coordenada")));
 		int time = Integer.parseInt(elemArmamento.attributeValue(new QName("Time")));
