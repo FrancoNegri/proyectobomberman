@@ -8,45 +8,75 @@ import vista.fiuba.algo3.titiritero.modelo.GameLoop;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 import modelo.articulo.Articulo;
 import modelo.articulo.Habano;
+import modelo.articulo.Timer;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
+import modelo.obstaculos.BloqueLadrillo;
 import modelo.obstaculos.Obstaculo;
+import modelo.personaje.Bombita;
 import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
+import modelo.personaje.enemigos.LopezAlado;
 import modelo.personaje.enemigos.LopezComun;
 
 public class ControlJuego {
 
-	final Mapa mapa = new Mapa(70);
+	final Mapa mapa = new Mapa(40);
 	private GameLoop gameLoop;
 	
 	
 	public ControlJuego(JPanel panel){
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
-		//INGRESO DE OBJETOS
-		Coordenada coord = new Coordenada(10, 10);
-		Coordenada otraCoord = new Coordenada(18, 45);
+		//INGRESO DE OBJETOS----------------------------------------------------------------
+		
+		//ARTICULOS
+		Coordenada otraCoord = new Coordenada(18, 25);
+		Coordenada coord = new Coordenada(30, 10);
 		Articulo articulo = new Habano(otraCoord);
 		mapa.agregarAlMapa(articulo);
-		//Bombita bombita = new Bombita(coord,mapa);
-		//mapa.agregarAlMapa(bombita);
+		Articulo otroArticulo = new Timer(coord);
+		mapa.agregarAlMapa(otroArticulo);
+		
+		//BOMBITA
+		Coordenada coord1 = new Coordenada(35, 39);
+		Bombita bombita = new Bombita(coord1,mapa);
+		mapa.agregarAlMapa(bombita);
 		
 		//panel.addKeyListener(new Teclado(bombita));
 		Personaje modelo3;
-		for (int j = 4; j < 10; j++) {
+		//BLOQUE ACERO
+		for (int j = 2; j < 9; j++) {
 			coord = new Coordenada(j, j * 3);
 			Obstaculo obst = new BloqueAcero(coord);
 			mapa.agregarAlMapa(obst);
 		}
-		for (int j = 0; j < 20; j++) {
-			coord = new Coordenada(j * 3, j ^ 2);
+		
+		//BLOQUE LADRILLO
+		for (int j = 5; j < 9; j++) {
+			coord = new Coordenada(j * 3, j);
+			Obstaculo obst = new BloqueLadrillo(coord);
+			mapa.agregarAlMapa(obst);
+		}
+		
+		//CECILIO
+		for (int j = 0; j < 12; j++) {
+			coord = new Coordenada(j * 3, j ^ 6);
 			modelo3 = new Cecilio(coord, mapa);
 		}
-		for (int j = 0; j < 20; j++) {
-			coord = new Coordenada(j * 3, j ^ 2);
+		
+		//LOPEZ COMUN
+		for (int j = 0; j < 7; j++) {
+			coord = new Coordenada(j * 6, j ^ 2);
 			modelo3 = new LopezComun(coord, mapa);
 		}
+		
+		//LOPEZ ALADO
+		for (int j = 7; j < 12; j++) {
+			coord = new Coordenada(j * 2, j ^ 2);
+			modelo3 = new LopezAlado(coord, mapa);
+		}
+		
 		//gameLoop.agregar(bombita);
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapa = new VistaMapa(mapa);

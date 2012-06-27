@@ -179,7 +179,7 @@ public class VistaObjeto implements ObjetoDibujable {
 	
 	private class VistaLopezComun extends Imagen {
 		public  VistaLopezComun(ObjetoPosicionable modelo) throws IOException {
-			super( VistaLopezComun.class.getResource("/vista/Imagenes/Parado.png"), modelo);
+			super( VistaLopezComun.class.getResource("/vista/Imagenes/LopezComun.png"), modelo);
 		}
 	}
 	
