@@ -37,7 +37,7 @@ public class Bombita extends Personaje {
 
 	@Override 
 	public void Atacar() { //Ver este metodo!!
-		CreadorDeBombas.crear(this);
+		//CreadorDeBombas.crear(this);
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class Bombita extends Personaje {
 	}
 	
 	//Movimientos (hay que refactorizar pero despues de que ande)
-	public void moverseArriba() {
+	public void moverseAbajo() {
 		Casillero casilleroAlQueMoverse;
 		this.ultimaTranslacion = new TranslacionArriba();
 		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
@@ -75,7 +75,7 @@ public class Bombita extends Personaje {
 		}
 	}
 	
-	public void moverseAbajo() {
+	public void moverseArriba() {
 		Casillero casilleroAlQueMoverse;
 		this.ultimaTranslacion = new TranslacionAbajo();
 		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
@@ -90,7 +90,7 @@ public class Bombita extends Personaje {
 		}
 	}
 	
-	public void moverseDerecha() {
+	public void moverseIzquierda() {
 		Casillero casilleroAlQueMoverse;
 		this.ultimaTranslacion = new TranslacionDerecha();
 		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
@@ -105,7 +105,7 @@ public class Bombita extends Personaje {
 		}
 	}
 	
-	public void moverseIzquierda() {
+	public void moverseDerecha() {
 		Casillero casilleroAlQueMoverse;
 		this.ultimaTranslacion = new TranslacionIzquierda();
 		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);

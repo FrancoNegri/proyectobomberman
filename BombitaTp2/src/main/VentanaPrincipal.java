@@ -206,7 +206,50 @@ public class VentanaPrincipal {
 		btnCargar.setBounds(600, 340, 130, 25);
 		contenedor.add(btnCargar);
 		
-
+		//INICIO BOTONES DE MOVIMIENTO
+		
+		JButton btnArriba = new JButton("U");
+		btnArriba.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				
+				controlDelJuego.moverBombitaArriba();
+			}
+		});
+		btnArriba.setBounds(650, 420, 50, 25);
+		contenedor.add(btnArriba);
+		
+		JButton btnAbajo = new JButton("D");
+		btnAbajo.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				
+				controlDelJuego.moverBombitaAbajo();
+			}
+		});
+		btnAbajo.setBounds(650, 500, 50, 25);
+		contenedor.add(btnAbajo);
+		
+		JButton btnDerecha = new JButton("R");
+		btnDerecha.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				
+				controlDelJuego.moverBombitaDerecha();
+			}
+		});
+		btnDerecha.setBounds(600, 460, 50, 25);
+		contenedor.add(btnDerecha);
+		
+		JButton btnIzquierda = new JButton("L");
+		btnIzquierda.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				
+				controlDelJuego.moverBombitaIzquierda();
+			}
+		});
+		btnIzquierda.setBounds(700, 460, 50, 25);
+		contenedor.add(btnIzquierda);
+		
+		//FIN BOTONES DE MOVIMIENTO.
+		
 		// AREA DE TEXTO
 		String cadena = "      Información \n" + "\n" 
 						+ "Puntos: " +  controlDelJuego.mapa.obtenerPuntajeTotal() + "\n"
