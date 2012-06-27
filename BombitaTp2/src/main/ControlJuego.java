@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 
 import control.Persistencia.Persistencia;
 import control.Teclado.Teclado;
+import fiuba.algo3.titiritero.dibujables.SuperficiePanel;
 import vista.Mapa.VistaMapa;
 import vista.fiuba.algo3.titiritero.modelo.GameLoop;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
@@ -25,10 +26,13 @@ public class ControlJuego {
 
 	final Mapa mapa = new Mapa(40);
 	private GameLoop gameLoop;
+	private JPanel panel;
 	private Bombita bombita;
+
+	public ControlJuego(JPanel unPanel){
+		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) unPanel);
+		this.panel = unPanel;
 	
-	public ControlJuego(JPanel panel){
-		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
 		Personaje modelo3;
 		
 		//INGRESO DE OBJETOS----------------------------------------------------------------
@@ -45,7 +49,7 @@ public class ControlJuego {
 		//BOMBITA
 		Coordenada coord1 = new Coordenada(20, 36);
 		this.bombita = new Bombita(coord1,mapa);
-		panel.addKeyListener(new Teclado(bombita));
+		panel.addKeyListener(new Teclado(bombita)); //Agrego teclado para Bombita
 		mapa.agregarAlMapa(bombita);
 		
 		

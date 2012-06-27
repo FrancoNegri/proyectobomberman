@@ -1,13 +1,14 @@
 package control.Teclado;
 
 
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import modelo.personaje.Bombita;
 
-public class Teclado extends JPanel implements KeyListener{
+public class Teclado extends KeyAdapter implements KeyListener{
 
 	/**
 	 * 
@@ -17,11 +18,8 @@ public class Teclado extends JPanel implements KeyListener{
 	private Bombita rodriguez;
 
 	public Teclado(Bombita personaje){
+		super();
 		this.rodriguez = personaje;
-		//addKeyListener(this);
-		add(keycode);
-		setSize(300, 300);
-		setVisible(true);
 	}
 	
 

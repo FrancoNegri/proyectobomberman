@@ -56,7 +56,7 @@ public class Mapa implements ObjetoVivo {
 	}
 	
 	public int obtenerVidaBombita() {
-		
+		//IMPLEMENTAR
 		return 10;
 	}
 
