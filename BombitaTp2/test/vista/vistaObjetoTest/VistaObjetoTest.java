@@ -1,7 +1,7 @@
 package vista.vistaObjetoTest;
 
 import static org.mockito.Mockito.mock;
-
+/*
 import java.awt.Graphics;
 import modelo.casillero.Casillero;
 import org.junit.Before;
@@ -160,3 +160,4 @@ public class VistaObjetoTest {
 	
 	
 }
+*/
