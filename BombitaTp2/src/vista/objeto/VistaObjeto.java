@@ -196,19 +196,19 @@ public class VistaObjeto implements ObjetoDibujable {
 	
 	private class VistaBloqueAcero extends Imagen {
 		public  VistaBloqueAcero(ObjetoPosicionable modelo) throws IOException {
-			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/BloqueAcero.png"), modelo);
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/BloqueAcero1.png"), modelo);
 		}
 	}
 	
 	private class VistaBloqueCemento extends Imagen {
 		public  VistaBloqueCemento(ObjetoPosicionable modelo) throws IOException {
-			super(VistaBloqueCemento.class.getResource("/vista/Imagenes/BloqueCemento.png"), modelo);
+			super(VistaBloqueCemento.class.getResource("/vista/Imagenes/BloqueCemento1.png"), modelo);
 		}
 	}
 
 	private class VistaBloqueLadrillo extends Imagen {
 		public  VistaBloqueLadrillo(ObjetoPosicionable modelo) throws IOException {
-			super(VistaBloqueLadrillo.class.getResource("/vista/Imagenes/BloqueLadrillo.png"), modelo);
+			super(VistaBloqueLadrillo.class.getResource("/vista/Imagenes/BloqueLadrillo1.png"), modelo);
 		}
 	}
 	
