@@ -2,7 +2,12 @@ package vista.fiuba.algo3.titiritero.dibujables;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
@@ -11,7 +16,14 @@ public class SuperficiePanel extends JPanel implements SuperficieDeDibujo {
 
 	private static final long serialVersionUID = 1L;
 	private Image imagen;
+	private Image fondo;
 
+	public SuperficiePanel() {
+		this.setFocusable(true);
+		this.fondo = new ImageIcon(getClass().getResource("/vista/Imagenes/Background.png")).getImage();
+	}
+
+	
 	// es llamado internamente por el metodo repaint() de la clase Frame
 	public void update(Graphics g) {
 		paint(g);
@@ -35,7 +47,8 @@ public class SuperficiePanel extends JPanel implements SuperficieDeDibujo {
 		if(this.imagen == null)
 			this.imagen = this.createImage(getSize().width, getSize().height);
 		Graphics superficieParaDibujar =  this.imagen.getGraphics();
-		superficieParaDibujar.setColor(this.getBackground());// 
+		//superficieParaDibujar.drawImage(this.fondo, 0, 0, 20, 20, null);// Dibujar la imagen de fondo
+		superficieParaDibujar.setColor(this.getBackground());
 		superficieParaDibujar.fillRect(0, 0, this.getSize().width, this.getSize().height);
 	}
 
