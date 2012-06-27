@@ -84,15 +84,15 @@ public class VentanaPrincipal {
 		frame = new JFrame();
 		Container contenedor = frame.getContentPane();
 		frame.setForeground(new Color(0, 0, 0));
-		frame.setBounds(100, 100, 1500, 900);
+		frame.setBounds(100, 100, 800, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 
 		// PANEL
 		JPanel panel = new SuperficiePanel();
-		panel.setBackground(new Color(0, 0, 0));
-		panel.setBounds(1, 1, 1200, 700);
+		panel.setBackground(Color.white);
+		panel.setBounds(20, 20, 550, 550);
 		contenedor.add(panel);
 		final ControlJuego controlDelJuego = new ControlJuego(panel);
 
@@ -176,7 +176,7 @@ public class VentanaPrincipal {
 			}
 		});
 
-		btnIniciar.setBounds(1220, 220, 130, 25);
+		btnIniciar.setBounds(600, 220, 130, 25);
 		contenedor.add(btnIniciar);
 
 		JButton btnDetener = new JButton("Pausar");
@@ -185,7 +185,7 @@ public class VentanaPrincipal {
 				controlDelJuego.DetenerJuego();
 			}
 		});
-		btnDetener.setBounds(1220, 260, 130, 25);
+		btnDetener.setBounds(600, 260, 130, 25);
 		contenedor.add(btnDetener);
 
 		JButton btnGuardar = new JButton("Guardar");
@@ -194,7 +194,7 @@ public class VentanaPrincipal {
 				controlDelJuego.GuardarJuego();
 			}
 		});
-		btnGuardar.setBounds(1220, 300, 130, 25);
+		btnGuardar.setBounds(600, 300, 130, 25);
 		contenedor.add(btnGuardar);
 		
 		JButton btnCargar=new JButton("Cargar");
@@ -203,12 +203,12 @@ public class VentanaPrincipal {
 				controlDelJuego.CargarJuego();
 			}
 		});
-		btnCargar.setBounds(1220, 340, 130, 25);
+		btnCargar.setBounds(600, 340, 130, 25);
 		contenedor.add(btnCargar);
 		
 
 		// AREA DE TEXTO
-		String cadena = "       Información \n" + "\n" + "Puntos: 0000 \n"
+		String cadena = "      Información \n" + "\n" + "Puntos: 0000 \n"
 				+ "Vida: 100 \n" + "Velocidad: 5 \n" + "Nivel: 1 \n" + "Usuario: Bombita \n";
 		Font fuente = new Font(Font.SERIF, Font.BOLD, 15);
 		JTextArea area = new JTextArea();
@@ -216,7 +216,7 @@ public class VentanaPrincipal {
 		area.setFont(fuente);
 		area.setSize(40, 200);
 		area.setBackground(Color.white);
-		area.setBounds(1220, 16, 130, 187);
+		area.setBounds(600, 16, 130, 187);
 		area.setEditable(false);
 		contenedor.add(area);
 
