@@ -139,6 +139,15 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
+	public void InteractuarConSalida(ObjetoPosicionable objeto){
+		try {
+			objetoDibujable = new VistaSalida(objeto);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	private class VistaMolotov extends Imagen {
 		public  VistaMolotov(ObjetoPosicionable modelo) throws IOException{
 			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/BombaMolotov.png"), modelo);
@@ -215,6 +224,11 @@ public class VistaObjeto implements ObjetoDibujable {
 	private class VistaFuegoDeExplocion extends Imagen {
 		public  VistaFuegoDeExplocion(ObjetoPosicionable modelo) throws IOException {
 			super(VistaBloqueLadrillo.class.getResource("/vista/Imagenes/Fuego.png"), modelo);
+		}
+	}
+	private class VistaSalida extends Imagen {
+		public  VistaSalida(ObjetoPosicionable modelo) throws IOException{
+			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/Salida.png"), modelo);
 		}
 	}
 	

@@ -27,6 +27,8 @@ public class VistaCasillero implements ObjetoDibujable {
 		this.dibujarBloque(superficieDeDibujo);
 		this.dibujarPersonajes(superficieDeDibujo);
 		this.dibujarFuegoDeExplocion(superficieDeDibujo);
+		this.dibujarSalida(superficieDeDibujo);
+		
 	}
 
 	private void dibujarFuegoDeExplocion(SuperficieDeDibujo superficieDeDibujo) {
@@ -69,6 +71,14 @@ public class VistaCasillero implements ObjetoDibujable {
 				VistaObjeto vistaDelPersonaje = new VistaObjeto(
 						iteradorDePersonajes.next());
 				vistaDelPersonaje.dibujar(superficieDeDibujo);
+		}
+	}
+	
+	private void dibujarSalida(SuperficieDeDibujo superficieDeDibujo){
+		
+		if(this.CasilleroADibujar.salidaON()){
+			VistaObjeto vistaSalida = new VistaObjeto(this.CasilleroADibujar);
+			vistaSalida.dibujar(superficieDeDibujo);
 		}
 	}
 }

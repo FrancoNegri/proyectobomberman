@@ -73,7 +73,9 @@ public class ControlJuego {
 		try {
 			gameLoop.reiniciar();
 			Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml");
-			bombita = pers.recuperarBombita();
+			/*bombita = pers.recuperarBombita();
+			Coordenada coord = new Coordenada(38,38);
+			mapacargado.agregarSalida(coord)*/
 			gameLoop.agregar(mapacargado);
 			VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
 			gameLoop.agregar(VistaDelMapaCargado);

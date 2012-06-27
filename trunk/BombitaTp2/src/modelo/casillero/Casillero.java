@@ -1,7 +1,12 @@
 package modelo.casillero;
 
 import java.util.Iterator;
+
+import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
+import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
+import vista.objeto.ObjetoVisible;
 import java.util.LinkedList;
+import vista.objeto.VistaObjeto;
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulable;
 import modelo.detectorcolision.Colisionador;
@@ -9,7 +14,7 @@ import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.*;
 
-public class Casillero {
+public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 	LinkedList<Personaje> personajes;
 	Armamento unArmamento;
 	Articulable unArticulo;
@@ -147,8 +152,7 @@ public class Casillero {
 	}
 
 	private void VivirPersonajes() {
-		LinkedList<Personaje> lista =  (LinkedList<Personaje>) personajes
-				.clone();
+		LinkedList<Personaje> lista =  (LinkedList<Personaje>) personajes.clone();
 		Iterator<Personaje> IteradorPersonajes = lista.iterator();
 		while (IteradorPersonajes.hasNext()) {
 			Personaje personaje = IteradorPersonajes.next();
@@ -279,5 +283,24 @@ public class Casillero {
 			return false;
 		}
 		return true;
+	}
+	
+	public void DeterminarObjeto(VistaObjeto vistaObjeto){
+		vistaObjeto.InteractuarConSalida(this);
+	}
+	
+	public int getX() {
+		
+		return 38;
+		
+		}
+
+	public int getY() {
+			
+		return 38;
+		}
+	
+	public void vivir(){
+		
 	}
 }
