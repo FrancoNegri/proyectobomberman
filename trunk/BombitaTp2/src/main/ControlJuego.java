@@ -105,7 +105,7 @@ public class ControlJuego {
 	}
 	
 	public JTextArea obtenerAreaDeTexto () {
-		String cadena = "      Información \n" + "\n" 
+		String cadena = "      Informacion \n" + "\n" 
 				+ "Puntos: " +  this.mapa.obtenerPuntajeTotal() + "\n"
 				+ "Vida: " + this.mapa.obtenerVidaBombita() + "\n" 
 				+ "Velocidad: 5 \n" 
