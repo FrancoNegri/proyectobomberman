@@ -109,25 +109,25 @@ public class BombitaTest {
 	@Test
 	public void testMoverseHaciaArriba() {
 		rodriguez.moverseArriba();
-		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 2);
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 1);
 	}
 	
 	@Test
 	public void testMoverseHaciaAbajo() {
 		rodriguez.moverseAbajo();
-		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 0);
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaY() == 1);
 	}
 	
 	@Test
 	public void testMoverseHaciaDerecha() {
 		rodriguez.moverseDerecha();
-		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 2);
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 1);
 	}
 	
 	@Test
 	public void testMoverseHaciaIzquierda() {
 		rodriguez.moverseIzquierda();
-		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 0);
+		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 1);
 	}
 	
 }

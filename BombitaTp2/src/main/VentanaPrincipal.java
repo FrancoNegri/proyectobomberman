@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -45,7 +46,6 @@ import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 public class VentanaPrincipal {
 
 	private JFrame frame;
-	
 
 	/**
 	 * Launch the application.
@@ -89,7 +89,7 @@ public class VentanaPrincipal {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
-
+		
 		// PANEL
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(Color.white);
@@ -251,23 +251,11 @@ public class VentanaPrincipal {
 		
 		//FIN BOTONES DE MOVIMIENTO.
 		
-		// AREA DE TEXTO
-		String cadena = "      Informacion \n" + "\n" 
-						+ "Puntos: " +  controlDelJuego.mapa.obtenerPuntajeTotal() + "\n"
-						+ "Vida: " + controlDelJuego.mapa.obtenerVidaBombita() + "\n" 
-						+ "Velocidad: 5 \n" 
-						+ "Nivel: 1 \n" 
-						+ "Usuario: Bombita \n";
-		Font fuente = new Font(Font.SERIF, Font.BOLD, 15);
-		JTextArea area = new JTextArea();
-		area.setText(cadena);
-		area.setFont(fuente);
-		area.setSize(40, 200);
-		area.setBackground(Color.white);
-		area.setBounds(600, 16, 130, 187);
-		area.setEditable(false);
-		contenedor.add(area);
 
+		//AREA DE TEXTO
+		JTextArea area = new JTextArea();
+		area = controlDelJuego.obtenerAreaDeTexto();
+		contenedor.add(area);
 		
 	};
 }
