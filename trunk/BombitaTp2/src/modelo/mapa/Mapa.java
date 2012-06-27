@@ -96,6 +96,7 @@ public class Mapa implements ObjetoVivo {
 
 	public synchronized void vivir() {
 		int j, k;
+		Tablero NuevoTableroJuego = new Tablero(TableroJuego.obtenerTamanio());		
 		for (j = 0; j < TableroJuego.obtenerTamanio(); j++) {
 			for (k = 0; k < TableroJuego.obtenerTamanio(); k++) {
 				Coordenada unaCoordenada = new Coordenada(j, k);
@@ -105,7 +106,7 @@ public class Mapa implements ObjetoVivo {
 					casillero.actualizar();
 					this.puntajeTotal = puntajeTotal
 							+ casillero.obtenerPuntaje();
-
+					TableroJuego.cambiarCasillero(unaCoordenada, casillero);
 				}
 			}
 		}
