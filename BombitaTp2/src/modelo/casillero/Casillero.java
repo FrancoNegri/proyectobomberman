@@ -147,7 +147,8 @@ public class Casillero {
 	}
 
 	private void VivirPersonajes() {
-		LinkedList<Personaje> lista = (LinkedList<Personaje>) personajes.clone();
+		LinkedList<Personaje> lista = (LinkedList<Personaje>) personajes
+				.clone();
 		Iterator<Personaje> IteradorPersonajes = lista.iterator();
 		while (IteradorPersonajes.hasNext()) {
 			Personaje personaje = IteradorPersonajes.next();
@@ -223,38 +224,56 @@ public class Casillero {
 		return fueUtilizado;
 
 	}
-	
-	//metodos para chequear la salida del nivel.
-	
-	public boolean salidaON(){
-		
-		//verifica si el casillero es un casillero de salida y si no tiene ningun obstaculo que la cubra.
-		
-		return((this.esSalida)&&(this.unObstaculo == null));
+
+	// metodos para chequear la salida del nivel.
+
+	public boolean salidaON() {
+
+		// verifica si el casillero es un casillero de salida y si no tiene
+		// ningun obstaculo que la cubra.
+
+		return ((this.esSalida) && (this.unObstaculo == null));
 	}
-	
-	public boolean casilleroSinPersonajes(){
-		
+
+	public boolean casilleroSinPersonajes() {
+
 		return this.personajes.isEmpty();
 	}
-	
-	public boolean estaBombita(){
-		
+
+	public boolean estaBombita() {
+
 		boolean bandera = false;
-		Iterator<Personaje>itPers = this.personajes.iterator();
-		while((itPers.hasNext())&&(!bandera)){
-			
+		Iterator<Personaje> itPers = this.personajes.iterator();
+		while ((itPers.hasNext()) && (!bandera)) {
+
 			Personaje PersonajeAux = itPers.next();
-			bandera = (PersonajeAux instanceof Bombita); 
+			bandera = (PersonajeAux instanceof Bombita);
 		}
 		return bandera;
-		
+
 	}
-	
-	public boolean soloEstaBombita(){
-		
-		return ((this.estaBombita())&&(this.personajes.size() == 1));
-		
+
+	public boolean soloEstaBombita() {
+		return ((this.estaBombita()) && (this.personajes.size() == 1));
 	}
-	
+
+	public boolean casilleroEstaVacio() {
+		if (!personajes.isEmpty()) {
+			return false;
+		}
+		if (unArmamento != null) {
+			return false;
+		}
+		if (unObstaculo != null) {
+			return false;
+		}
+		if (unArticulo != null) {
+			return false;
+		}
+		if (fuegoDeLaExplocion != null) {
+			return false;
+		}
+		return true;
+	}
+
 }

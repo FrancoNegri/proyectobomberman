@@ -38,25 +38,25 @@ public class Mapa implements ObjetoVivo {
 	public Casillero obtenerCasillero(Coordenada coord) {
 		return this.TableroJuego.obtenerCasillero(coord);
 	}
-	
-	public Armamento ObtenerArmamento(Coordenada coord){
-		return	this.TableroJuego.obtenerCasillero(coord).obtenerArmamento();
+
+	public Armamento ObtenerArmamento(Coordenada coord) {
+		return this.TableroJuego.obtenerCasillero(coord).obtenerArmamento();
 	}
-	
-	public LinkedList<Personaje> ObtenerPersonaje(Coordenada coord){
-		return	this.TableroJuego.obtenerCasillero(coord).obtenerPersonajes();
+
+	public LinkedList<Personaje> ObtenerPersonaje(Coordenada coord) {
+		return this.TableroJuego.obtenerCasillero(coord).obtenerPersonajes();
 	}
-	
-	public Obstaculo ObtenerObstaculo(Coordenada coord){
-		return	this.TableroJuego.obtenerCasillero(coord).obtenerObstaculo();
+
+	public Obstaculo ObtenerObstaculo(Coordenada coord) {
+		return this.TableroJuego.obtenerCasillero(coord).obtenerObstaculo();
 	}
-	
-	public Articulable ObtenerArticulo(Coordenada coord){
-		return	this.TableroJuego.obtenerCasillero(coord).obtenerArticulo();
+
+	public Articulable ObtenerArticulo(Coordenada coord) {
+		return this.TableroJuego.obtenerCasillero(coord).obtenerArticulo();
 	}
-	
+
 	public int obtenerVidaBombita() {
-		//IMPLEMENTAR
+		// IMPLEMENTAR
 		return 10;
 	}
 
@@ -101,8 +101,12 @@ public class Mapa implements ObjetoVivo {
 				Coordenada unaCoordenada = new Coordenada(j, k);
 				Casillero casillero = TableroJuego
 						.obtenerCasillero(unaCoordenada);
-				casillero.actualizar();
-				this.puntajeTotal = puntajeTotal + casillero.obtenerPuntaje();
+				if (!casillero.casilleroEstaVacio()) {
+					casillero.actualizar();
+					this.puntajeTotal = puntajeTotal
+							+ casillero.obtenerPuntaje();
+
+				}
 			}
 		}
 	}
@@ -115,8 +119,7 @@ public class Mapa implements ObjetoVivo {
 		return TableroJuego.obtenerTamanio();
 	}
 
-	
-	//Refactorizar!!!!
+	// Refactorizar!!!!
 	public Element guardar() {
 		Element elemMapa = DocumentHelper.createElement("Mapa");
 		elemMapa.addAttribute("Tamanio",
