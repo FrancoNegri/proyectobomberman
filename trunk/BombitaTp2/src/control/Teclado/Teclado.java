@@ -62,4 +62,9 @@ public class Teclado extends KeyAdapter implements KeyListener{
 		
 	}
 	
+	public boolean isFocusable(){
+		
+		return true;
+	}
+	
 }
