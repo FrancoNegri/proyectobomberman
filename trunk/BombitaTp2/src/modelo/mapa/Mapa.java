@@ -93,6 +93,12 @@ public class Mapa implements ObjetoVivo {
 		CasilleroAux.agregar(unArticulo);
 		this.agregarCasillero(coord, CasilleroAux);
 	}
+	
+	public void agregarSalida(Coordenada coord){
+		
+		this.obtenerCasillero(coord).activarSalida();
+		
+	}
 
 	public synchronized void vivir() {
 		int j, k;
@@ -160,5 +166,30 @@ public class Mapa implements ObjetoVivo {
 		elemMapa.add(elemArmamentos);
 		elemMapa.add(elemArticulos);
 		return elemMapa;
+	}
+	
+	public boolean terminoNivel(){
+		
+		boolean bandera = true;
+		int j = 0;
+		int k = 0;
+		while((j < this.obtenerTamanio())&&(bandera)){
+			
+			while((k < this.obtenerTamanio())&&(bandera)){
+				Coordenada coord = new Coordenada(j,k);
+				Casillero cas = this.obtenerCasillero(coord);
+				if(cas.salidaON()){
+					bandera = (cas.soloEstaBombita());
+				}
+				else{
+					bandera = (cas.casilleroSinPersonajes());
+				}
+				k++;
+			}
+			k=0;
+			j++;
+		
+		}
+		return bandera;
 	}
 }
