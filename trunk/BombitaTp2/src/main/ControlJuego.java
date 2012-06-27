@@ -23,7 +23,7 @@ import control.Teclado.Teclado;
 
 public class ControlJuego {
 
-	final Mapa mapa = new Mapa(40);
+	Mapa mapa;
 	private GameLoop gameLoop;
 	private JPanel panel;
 	private Bombita bombita;
@@ -39,10 +39,10 @@ public class ControlJuego {
 		
 		try {
 			gameLoop.reiniciar();
-			Mapa mapacargado= pers.recuperar("lvls/lvl1.xml");
+			mapa = pers.recuperar("lvls/lvl1.xml");
 			bombita = pers.recuperarBombita();
-			gameLoop.agregar(mapacargado);
-			VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
+			gameLoop.agregar(mapa);
+			VistaMapa VistaDelMapaCargado = new VistaMapa(mapa);
 			gameLoop.agregar(VistaDelMapaCargado);
 			gameLoop.iniciarEjecucion();
 			

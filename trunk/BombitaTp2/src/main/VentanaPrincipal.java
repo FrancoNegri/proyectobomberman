@@ -252,7 +252,7 @@ public class VentanaPrincipal {
 		//FIN BOTONES DE MOVIMIENTO.
 		
 		// AREA DE TEXTO
-		String cadena = "      Información \n" + "\n" 
+		String cadena = "      Informacion \n" + "\n" 
 						+ "Puntos: " +  controlDelJuego.mapa.obtenerPuntajeTotal() + "\n"
 						+ "Vida: " + controlDelJuego.mapa.obtenerVidaBombita() + "\n" 
 						+ "Velocidad: 5 \n" 
