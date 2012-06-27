@@ -119,7 +119,8 @@ public class Mapa implements ObjetoVivo {
 	}
 
 	public int obtenerPuntajeTotal() {
-		return puntajeTotal;
+		//IMPLEMENTAR
+		return 0;
 	}
 
 	public int obtenerTamanio() {
