@@ -1,6 +1,8 @@
 package modelo.personaje;
 
+import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
+import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
 import modelo.ArmamentoFactory.*;
@@ -11,6 +13,7 @@ import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.errores.TamanioMatrizInvalidoError;
 import modelo.mapa.Mapa;
+import modelo.personaje.enemigos.Cecilio;
 
 public class Bombita extends Personaje {
 
@@ -24,6 +27,9 @@ public class Bombita extends Personaje {
 		this.CreadorDeBombas = new MolotovFactory();
 	}
 	
+	private Bombita() {
+	}
+
 	public void tomarArticulo(Articulable unArticulo) {
 		unArticulo.usar(this);
 	}
@@ -55,8 +61,9 @@ public class Bombita extends Personaje {
 
 	@Override
 	public Element guardar() {
-		// TODO Auto-generated method stub
-		return null;
+		Element elemPersonaje = DocumentHelper.createElement("Bombita");
+		super.guardar(elemPersonaje);
+		return elemPersonaje;
 	}
 	
 	public void moverseAbajo() {
@@ -74,5 +81,17 @@ public class Bombita extends Personaje {
 	public void moverseDerecha() {
 		TranslacionADar = new TranslacionIzquierda();
 	}
+	
+	public static Personaje recuperar(Element elemCes,Mapa mapa) {
+		Bombita nuevoPers = new Bombita();
+		nuevoPers.vida = Integer.parseInt(elemCes.attributeValue((new QName("Vida"))));
+		nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes.element(new QName("Coordenada")));
+		nuevoPers.mapa = mapa;
+		nuevoPers.CreadorDeBombas = new MolotovFactory();
+		nuevoPers.velocidad = ConstantesJuego.velocidad_cecilio;
+		nuevoPers.ultimaTranslacion = new TranslacionDerecha();
+		return nuevoPers;
+		}
+	
 	
 }
