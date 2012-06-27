@@ -217,4 +217,5 @@ public class VistaObjeto implements ObjetoDibujable {
 			super(VistaBloqueLadrillo.class.getResource("/vista/Imagenes/Fuego.png"), modelo);
 		}
 	}
+	
 }

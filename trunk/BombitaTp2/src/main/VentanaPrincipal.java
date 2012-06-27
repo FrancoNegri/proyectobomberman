@@ -208,8 +208,12 @@ public class VentanaPrincipal {
 		
 
 		// AREA DE TEXTO
-		String cadena = "      Información \n" + "\n" + "Puntos: 0000 \n"
-				+ "Vida: 100 \n" + "Velocidad: 5 \n" + "Nivel: 1 \n" + "Usuario: Bombita \n";
+		String cadena = "      Información \n" + "\n" 
+						+ "Puntos: " +  controlDelJuego.mapa.obtenerPuntajeTotal() + "\n"
+						+ "Vida: " + controlDelJuego.mapa.obtenerVidaBombita() + "\n" 
+						+ "Velocidad: 5 \n" 
+						+ "Nivel: 1 \n" 
+						+ "Usuario: Bombita \n";
 		Font fuente = new Font(Font.SERIF, Font.BOLD, 15);
 		JTextArea area = new JTextArea();
 		area.setText(cadena);

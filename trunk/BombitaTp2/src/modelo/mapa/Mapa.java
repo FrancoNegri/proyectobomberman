@@ -54,6 +54,11 @@ public class Mapa implements ObjetoVivo {
 	public Articulable ObtenerArticulo(Coordenada coord){
 		return	this.TableroJuego.obtenerCasillero(coord).obtenerArticulo();
 	}
+	
+	public int obtenerVidaBombita() {
+		
+		return 10;
+	}
 
 	public synchronized void agregarAlMapa(Personaje unPersonaje) {
 
