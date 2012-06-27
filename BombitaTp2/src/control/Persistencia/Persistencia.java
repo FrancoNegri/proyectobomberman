@@ -3,7 +3,6 @@ package control.Persistencia;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
-
 import modelo.armamento.Armamento;
 import modelo.armamento.Molotov;
 import modelo.armamento.Proyectil;
@@ -21,7 +20,6 @@ import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
 import modelo.personaje.enemigos.LopezAlado;
 import modelo.personaje.enemigos.LopezComun;
-
 import org.dom4j.*;
 import org.dom4j.io.SAXReader;
 
