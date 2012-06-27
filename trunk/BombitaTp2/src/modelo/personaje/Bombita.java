@@ -1,5 +1,7 @@
 package modelo.personaje;
 
+import java.util.Random; 
+
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
@@ -19,15 +21,18 @@ public class Bombita extends Personaje {
 
 	
 	Translacion TranslacionADar;
+	boolean actitudAtaque;
+
 	
 	public Bombita(Coordenada unaCoordenada,Mapa nuevoMapa) {
 		super(unaCoordenada,nuevoMapa);
 		this.velocidad = ConstantesJuego.velocidad_bombita;
 		this.vida = ConstantesJuego.velocidad_bombita;
 		this.CreadorDeBombas = new MolotovFactory();
+        this.actitudAtaque = false;
 	}
 	
-	private Bombita() {
+	private Bombita(){
 	}
 
 	public void tomarArticulo(Articulable unArticulo) {
@@ -42,11 +47,22 @@ public class Bombita extends Personaje {
 	public void chocar() {
 		this.morir();
 	}
-
-	@Override 
-	public void Atacar() { //Ver este metodo!!
-		//CreadorDeBombas.crear(this);
+	
+	public void cambiarActitud(){
+		if(this.actitudAtaque)
+			this.actitudAtaque = false;
+		else 
+		   (this.actitudAtaque) = true;
 	}
+
+	
+	public void Atacar(){
+		if (this.actitudAtaque){
+			CreadorDeBombas.crear(this);
+		    this.cambiarActitud();
+		}
+	}
+	
 
 	@Override
 	protected Translacion obtenerTranslacion() {

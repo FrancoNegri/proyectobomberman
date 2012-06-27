@@ -92,7 +92,7 @@ public class VentanaPrincipal {
 		
 		// PANEL
 		JPanel panel = new SuperficiePanel();
-		panel.setBackground(Color.white);
+		panel.setBackground(Color.green);
 		panel.setBounds(20, 20, 550, 550);
 		contenedor.add(panel);
 		final ControlJuego controlDelJuego = new ControlJuego(panel);
@@ -170,14 +170,14 @@ public class VentanaPrincipal {
 		barra.add(menuAyuda);
 
 		// BOTONES
-		JButton btnIniciar = new JButton("Jugar");
+		JButton btnIniciar = new JButton("Jugarsela");
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controlDelJuego.IniciarJuego();
 			}
 		});
 
-		btnIniciar.setBounds(600, 220, 130, 25);
+		btnIniciar.setBounds(600, 260, 130, 25);
 		contenedor.add(btnIniciar);
 
 		JButton btnDetener = new JButton("Pausar");
@@ -186,7 +186,7 @@ public class VentanaPrincipal {
 				controlDelJuego.DetenerJuego();
 			}
 		});
-		btnDetener.setBounds(600, 260, 130, 25);
+		btnDetener.setBounds(600, 220, 130, 25);
 		contenedor.add(btnDetener);
 
 		JButton btnGuardar = new JButton("Guardar");
@@ -206,6 +206,7 @@ public class VentanaPrincipal {
 		});
 		btnCargar.setBounds(600, 340, 130, 25);
 		contenedor.add(btnCargar);
+		
 		
 		//INICIO BOTONES DE MOVIMIENTO
 		
@@ -248,6 +249,15 @@ public class VentanaPrincipal {
 		});
 		btnIzquierda.setBounds(700, 460, 50, 25);
 		contenedor.add(btnIzquierda);
+		
+		JButton btnAtacar = new JButton("A");
+		btnAtacar.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				controlDelJuego.ataqueDeBombita();
+			}
+		});
+		btnAtacar.setBounds(650, 460, 50, 25);
+		contenedor.add(btnAtacar);
 		
 		//FIN BOTONES DE MOVIMIENTO.
 		

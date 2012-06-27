@@ -40,7 +40,8 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 
 	public abstract void chocar();
 
-	protected abstract void Atacar();
+	public abstract void Atacar();
+		
 	
 	protected void caminar() {
 		Casillero casilleroAlQueMoverse;
