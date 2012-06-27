@@ -27,9 +27,8 @@ public abstract class Enemigo extends Personaje {
 	
 	protected Enemigo(){
 	}
-	
-	
-	protected void Atacar() {
+
+	public void Atacar(){
 		if(this.decideAtacar()){
 			CreadorDeBombas.crear(this);
 		}
@@ -38,7 +37,7 @@ public abstract class Enemigo extends Personaje {
 	public boolean decideAtacar(){
 		Random generator = new Random();
 		// un 50% de chances de plantar una bomba
-		return(generator.nextInt(1000) < 50);
+		return(generator.nextInt(1000) < 10);
 	}
 
 	protected Translacion obtenerTranslacion(){
@@ -49,7 +48,7 @@ public abstract class Enemigo extends Personaje {
 	
 	
 	public void chocar() {
-		this.vida = vida - 1; 
+		this.vida = vida; 
 	}
 	
 	protected void caminar() {

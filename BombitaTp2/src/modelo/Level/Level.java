@@ -53,7 +53,7 @@ public class Level implements Runnable {
 	}
 
 	public void run() {
-		System.out.println("Prueva Integracion");
+		System.out.println("Prueba Integracion");
 		while (personajes.size() > 2) {
 			Iterator<Personaje> it = personajes.iterator();
 			while (it.hasNext()) {

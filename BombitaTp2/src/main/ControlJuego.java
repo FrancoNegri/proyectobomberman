@@ -104,6 +104,10 @@ public class ControlJuego {
 		bombita.moverseIzquierda();
 	}
 	
+	public void ataqueDeBombita(){
+		bombita.cambiarActitud();
+	}
+	
 	public JTextArea obtenerAreaDeTexto () {
 		String cadena = "      Informacion \n" + "\n" 
 				+ "Puntos: " +  this.mapa.obtenerPuntajeTotal() + "\n"
