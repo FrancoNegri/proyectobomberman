@@ -224,6 +224,11 @@ public class Casillero {
 		return fueUtilizado;
 
 	}
+	
+	public void activarSalida(){
+		
+		this.esSalida = true;
+	}
 
 	// metodos para chequear la salida del nivel.
 

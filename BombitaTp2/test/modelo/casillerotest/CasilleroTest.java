@@ -4,9 +4,12 @@ import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
 import modelo.obstaculos.BloqueAcero;
 import modelo.personaje.Personaje;
+import modelo.personaje.Bombita;
 import static org.junit.Assert.*;
 import org.junit.*;
 import static org.mockito.Mockito.*;
+import modelo.coordenadas.*;
+
 
 public class CasilleroTest {
 
@@ -105,4 +108,85 @@ public class CasilleroTest {
 		casi.agregar(pers);
 		assertTrue(casi.esAtacable()==true);
 	}
+	
+	@Test
+	public void testSalidaOn(){
+		Casillero cas = new Casillero();
+		cas.activarSalida();
+		assertTrue(cas.salidaON());
+	}
+	
+	@Test
+	
+	public void testSalidaOff(){
+		
+		Casillero cas = new Casillero();
+		assertFalse(cas.salidaON());
+		
+	}
+	
+	@Test
+	
+	public void testSalidaOffporObstaculo(){
+		
+		Casillero cas = new Casillero ();
+		BloqueAcero unObstaculo = mock(BloqueAcero.class);
+		cas.agregar(unObstaculo);
+		assertFalse(cas.salidaON());
+	}
+	
+	@Test
+	
+	public void testcasilleroSinPersonajes(){
+		
+		Casillero cas = new Casillero();
+		assertTrue(cas.casilleroSinPersonajes());
+		}
+	
+	@Test
+	
+	public void testCasilleroSinPersonjesConPersonaje(){
+		
+		Casillero cas = new Casillero();
+		Personaje personaje = mock(Personaje.class);
+		cas.agregar(personaje);
+		assertFalse(cas.casilleroSinPersonajes());
+	}
+	
+	@Test
+	
+	public void testestaBombita(){
+		Casillero cas = new Casillero();
+		Bombita personaje = mock(Bombita.class);
+		cas.agregar(personaje);
+		assertTrue(cas.estaBombita());
+	}
+	
+	@Test
+	public void testestaBombitaSinPersonajes(){
+		
+		Casillero cas = new Casillero();
+		assertFalse(cas.estaBombita());
+	
+	}
+	
+	@Test
+	
+	public void testestaBombitaConPesonajeCualquiera(){
+		Casillero cas = new Casillero();
+		Personaje personaje = mock(Personaje.class);
+		cas.agregar(personaje);
+		assertFalse(cas.estaBombita());
+	}
+	
+	@Test
+	public void testestaBombitaConVariosPersonajes(){
+		Casillero cas = new Casillero();
+		Bombita personaje = mock(Bombita.class);
+		Personaje personajeaux = mock(Personaje.class);
+		cas.agregar(personaje);
+		cas.agregar(personajeaux);
+		assertTrue(cas.estaBombita());
+	}
+
 }
