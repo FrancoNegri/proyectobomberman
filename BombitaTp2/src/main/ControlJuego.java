@@ -27,67 +27,28 @@ public class ControlJuego {
 	private GameLoop gameLoop;
 	private JPanel panel;
 	private Bombita bombita;
-
+	Persistencia pers = new Persistencia();
+	
 	public ControlJuego(JPanel unPanel){
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) unPanel);
 		this.panel = unPanel;
 	
 		Personaje modelo3;
 		
-		//INGRESO DE OBJETOS----------------------------------------------------------------
+		//Cargo Mapa DE OBJETOS----------------------------------------------------------------
 		
-		//ARTICULOS
-		Coordenada otraCoord = new Coordenada(18, 25);
-		Coordenada coord = new Coordenada(30, 10);
-		Articulo articulo = new Habano(otraCoord);
-		mapa.agregarAlMapa(articulo);
-		Articulo otroArticulo = new Timer(coord);
-		mapa.agregarAlMapa(otroArticulo);
-		
-		
-		//BOMBITA
-		Coordenada coord1 = new Coordenada(20, 36);
-		this.bombita = new Bombita(coord1,mapa);
-		panel.addKeyListener(new Teclado(bombita)); //Agrego teclado para Bombita
-		mapa.agregarAlMapa(bombita);
-		
-		
-		//BLOQUE ACERO
-		for (int j = 2; j < 9; j++) {
-			coord = new Coordenada(j, j * 3);
-			Obstaculo obst = new BloqueAcero(coord);
-			mapa.agregarAlMapa(obst);
+		try {
+			gameLoop.reiniciar();
+			Mapa mapacargado= pers.recuperar("lvls/lvl1.xml");
+			bombita = pers.recuperarBombita();
+			gameLoop.agregar(mapacargado);
+			VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
+			gameLoop.agregar(VistaDelMapaCargado);
+			gameLoop.iniciarEjecucion();
+			
+		} catch (Exception e2) {
+			e2.printStackTrace();
 		}
-		
-		//BLOQUE LADRILLO
-		for (int j = 5; j < 9; j++) {
-			coord = new Coordenada(j * 3, j);
-			Obstaculo obst = new BloqueLadrillo(coord);
-			mapa.agregarAlMapa(obst);
-		}
-		
-		//CECILIO
-		for (int j = 0; j < 12; j++) {
-			coord = new Coordenada(j * 3, j ^ 6);
-			modelo3 = new Cecilio(coord, mapa);
-		}
-		
-		//LOPEZ COMUN
-		for (int j = 0; j < 7; j++) {
-			coord = new Coordenada(j * 6, j ^ 2);
-			modelo3 = new LopezComun(coord, mapa);
-		}
-		
-		//LOPEZ ALADO
-		for (int j = 7; j < 12; j++) {
-			coord = new Coordenada(j * 2, j ^ 2);
-			modelo3 = new LopezAlado(coord, mapa);
-		}
-		
-		gameLoop.agregar(bombita);
-		gameLoop.agregar(mapa);
-		VistaMapa VistaDelMapa = new VistaMapa(mapa);
-		gameLoop.agregar(VistaDelMapa);
 	}
 	
 	
@@ -101,15 +62,14 @@ public class ControlJuego {
 	
 	
 	public void CargarJuego(){
-		Persistencia pers = new Persistencia();
 		try {
 			gameLoop.reiniciar();
 			Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml");
 			bombita = pers.recuperarBombita();
-			gameLoop.iniciarEjecucion();
 			gameLoop.agregar(mapacargado);
 			VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
 			gameLoop.agregar(VistaDelMapaCargado);
+			gameLoop.iniciarEjecucion();
 			
 		} catch (Exception e2) {
 			e2.printStackTrace();
@@ -117,7 +77,6 @@ public class ControlJuego {
 	}	
 	
 	public void GuardarJuego(){
-		Persistencia pers = new Persistencia();
 		pers.guardar("JUEGOGUARDADO.xml", mapa);
 	}
 	
