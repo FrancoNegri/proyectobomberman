@@ -12,6 +12,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -46,7 +47,7 @@ import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 public class VentanaPrincipal {
 
 	private JFrame frame;
-
+	private JLabel labelPts, labelVida, labelVel, labelNiv;
 	/**
 	 * Launch the application.
 	 */
@@ -95,7 +96,27 @@ public class VentanaPrincipal {
 		panel.setBackground(Color.green);
 		panel.setBounds(20, 20, 550, 550);
 		contenedor.add(panel);
+		
+		// CONTROL DEL JUEGO
 		final ControlJuego controlDelJuego = new ControlJuego(panel);
+				
+		// LABELS 
+		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
+		int vidaBombita = controlDelJuego.obtenerVidaArea();
+		float velocidadBombita = controlDelJuego.obtenerVelocidadArea();
+		labelPts = new JLabel("Puntos: "+ puntajeMapa);
+		labelPts.setBounds(600, 21, 100, 50);
+		labelVida = new JLabel("Vida: "+ vidaBombita);
+		labelVida.setBounds(600, 37, 100, 50);
+		labelVel = new JLabel("Velocidad: "+ velocidadBombita);
+		labelVel.setBounds(600, 52, 100, 50);
+		labelNiv = new JLabel("Nivel: 1");
+		labelNiv.setBounds(600, 67, 100, 50);
+		contenedor.add(labelPts);
+		contenedor.add(labelVida);
+		contenedor.add(labelVel);
+		contenedor.add(labelNiv);
+		
 
 		// MENU HERRAMIENTAS
 		JMenu menuArchivo = new JMenu("Archivo");

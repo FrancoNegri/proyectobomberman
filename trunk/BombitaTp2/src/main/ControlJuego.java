@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import javax.imageio.ImageIO;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -111,12 +112,7 @@ public class ControlJuego {
 	}
 	
 	public JTextArea obtenerAreaDeTexto () {
-		String cadena = "      Informacion \n" + "\n" 
-				+ "Puntos: " +  this.mapa.obtenerPuntajeTotal() + "\n"
-				+ "Vida: " + this.mapa.obtenerVidaBombita() + "\n" 
-				+ "Velocidad: 5 \n" 
-				+ "Nivel: 1 \n" 
-				+ "Usuario: Bombita \n";
+		String cadena = "      Informacion \n" + "\n";
 		Font fuente = new Font(Font.SERIF, Font.BOLD, 15);
 		JTextArea area = new JTextArea();
 		area.setText(cadena);
@@ -128,6 +124,19 @@ public class ControlJuego {
 		return area;
 	}
 	
+	public int obtenerPuntajeArea() {
+		return mapa.obtenerPuntajeTotal();
+	}
+	
+	public int obtenerVidaArea() {
+		return bombita.obtenerVida();
+	}
+	
+	public float obtenerVelocidadArea() {
+		return bombita.getVelocidad();
+	}
+	
+	/*MANEJO DEL FONDO DEL MAPA
 	private void cargarFondoMapa() {
 		try{
 			fondo = ImageIO.read(getClass().getClassLoader().getResource("/vista/Imagenes/BloquePiso.png"));
@@ -135,6 +144,7 @@ public class ControlJuego {
 	}
 	
 	private void drawPane(Graphics g){
+		//Hacer un for sobre el panel para ir agregando los bloques
 		if(fondo!=null){
 			for(int i=0;i<40;i++){
 			for(int j=0;j<40;j++){
@@ -147,7 +157,7 @@ public class ControlJuego {
 	public void dibujarMapa(Graphics g){
 		this.cargarFondoMapa();
 		this.drawPane(g);
-	}
+	}*/
 }
 
 
