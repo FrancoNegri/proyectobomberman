@@ -3,6 +3,7 @@ package main;
 import javax.swing.JPanel;
 
 import control.Persistencia.Persistencia;
+import control.Teclado.Teclado;
 import vista.Mapa.VistaMapa;
 import vista.fiuba.algo3.titiritero.modelo.GameLoop;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
@@ -28,6 +29,8 @@ public class ControlJuego {
 	
 	public ControlJuego(JPanel panel){
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
+		Personaje modelo3;
+		
 		//INGRESO DE OBJETOS----------------------------------------------------------------
 		
 		//ARTICULOS
@@ -38,13 +41,14 @@ public class ControlJuego {
 		Articulo otroArticulo = new Timer(coord);
 		mapa.agregarAlMapa(otroArticulo);
 		
+		
 		//BOMBITA
-		Coordenada coord1 = new Coordenada(35, 39);
+		Coordenada coord1 = new Coordenada(20, 36);
 		Bombita bombita = new Bombita(coord1,mapa);
+		panel.addKeyListener(new Teclado(bombita));
 		mapa.agregarAlMapa(bombita);
 		
-		//panel.addKeyListener(new Teclado(bombita));
-		Personaje modelo3;
+		
 		//BLOQUE ACERO
 		for (int j = 2; j < 9; j++) {
 			coord = new Coordenada(j, j * 3);
@@ -77,7 +81,7 @@ public class ControlJuego {
 			modelo3 = new LopezAlado(coord, mapa);
 		}
 		
-		//gameLoop.agregar(bombita);
+		gameLoop.agregar(bombita);
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapa = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapa);

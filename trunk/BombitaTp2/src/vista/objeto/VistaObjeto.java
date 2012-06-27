@@ -158,10 +158,9 @@ public class VistaObjeto implements ObjetoDibujable {
 		}
 	}
 	
-	private class VistaBombita extends Cuadrado {
+	private class VistaBombita extends Imagen {
 		public  VistaBombita(ObjetoPosicionable modelo) throws IOException {
-			super(10,10, modelo);
-			this.setColor(Color.DARK_GRAY);
+			super(VistaBombita.class.getResource("/vista/Imagenes/Parado.png"), modelo);
 		}
 	}
 	
