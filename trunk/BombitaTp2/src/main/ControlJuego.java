@@ -25,7 +25,7 @@ public class ControlJuego {
 
 	final Mapa mapa = new Mapa(40);
 	private GameLoop gameLoop;
-	
+	private Bombita bombita;
 	
 	public ControlJuego(JPanel panel){
 		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) panel);
@@ -44,7 +44,7 @@ public class ControlJuego {
 		
 		//BOMBITA
 		Coordenada coord1 = new Coordenada(20, 36);
-		Bombita bombita = new Bombita(coord1,mapa);
+		this.bombita = new Bombita(coord1,mapa);
 		panel.addKeyListener(new Teclado(bombita));
 		mapa.agregarAlMapa(bombita);
 		
@@ -116,4 +116,39 @@ public class ControlJuego {
 		pers.guardar("JUEGOGUARDADO.xml", mapa);
 	}
 	
+	public void moverBombitaArriba(){
+		
+		gameLoop.remover(bombita);
+		bombita.moverseArriba();
+		gameLoop.agregar(bombita);
+		
+	}
+	
+	public void moverBombitaAbajo(){
+		
+		gameLoop.remover(bombita);
+		bombita.moverseAbajo();
+		gameLoop.agregar(bombita);
+		
+	}
+	
+	public void moverBombitaDerecha(){
+		
+		gameLoop.remover(bombita);
+		bombita.moverseDerecha();
+		gameLoop.agregar(bombita);
+		
+	}
+	
+	public void moverBombitaIzquierda(){
+		
+		gameLoop.remover(bombita);
+		bombita.moverseIzquierda();
+		gameLoop.agregar(bombita);
+		
+	}
+	
 }
+
+
+
