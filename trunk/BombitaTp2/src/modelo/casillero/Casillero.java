@@ -16,6 +16,7 @@ public class Casillero {
 	Obstaculo unObstaculo;
 	FuegoDeExplocion fuegoDeLaExplocion;
 	int puntaje;
+	boolean esSalida;
 
 	public Casillero() {
 		this.personajes = new LinkedList<Personaje>();
@@ -222,4 +223,38 @@ public class Casillero {
 		return fueUtilizado;
 
 	}
+	
+	//metodos para chequear la salida del nivel.
+	
+	public boolean salidaON(){
+		
+		//verifica si el casillero es un casillero de salida y si no tiene ningun obstaculo que la cubra.
+		
+		return((this.esSalida)&&(this.unObstaculo == null));
+	}
+	
+	public boolean casilleroSinPersonajes(){
+		
+		return this.personajes.isEmpty();
+	}
+	
+	public boolean estaBombita(){
+		
+		boolean bandera = false;
+		Iterator<Personaje>itPers = this.personajes.iterator();
+		while((itPers.hasNext())&&(!bandera)){
+			
+			Personaje PersonajeAux = itPers.next();
+			bandera = (PersonajeAux instanceof Bombita); 
+		}
+		return bandera;
+		
+	}
+	
+	public boolean soloEstaBombita(){
+		
+		return ((this.estaBombita())&&(this.personajes.size() == 1));
+		
+	}
+	
 }
