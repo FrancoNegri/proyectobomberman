@@ -15,6 +15,8 @@ import modelo.mapa.Mapa;
 public class Bombita extends Personaje {
 
 	
+	Translacion TranslacionADar;
+	
 	public Bombita(Coordenada unaCoordenada,Mapa nuevoMapa) {
 		super(unaCoordenada,nuevoMapa);
 		this.velocidad = ConstantesJuego.velocidad_bombita;
@@ -42,8 +44,9 @@ public class Bombita extends Personaje {
 
 	@Override
 	protected Translacion obtenerTranslacion() {
-		// TODO Auto-generated method stub
-		return null;
+		Translacion TranslacionAux = TranslacionADar;
+		TranslacionADar = null;
+		return TranslacionAux;
 	}
 
 	public void DeterminarObjeto(VistaObjeto vistaObjeto) {
@@ -55,69 +58,21 @@ public class Bombita extends Personaje {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	public void caminar() {
-	}
 	
-	//Movimientos (hay que refactorizar pero despues de que ande)
 	public void moverseAbajo() {
-		Casillero casilleroAlQueMoverse;
-		this.ultimaTranslacion = new TranslacionArriba();
-		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
-		try{
-		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
-		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa
-		if (casilleroAlQueMoverse.esCaminable()){
-			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
-			casilleroAntiguo.eliminar(this);
-			coordenadaXY = movimientoPlaneado;
-			mapa.agregarAlMapa(this);
-		}
+		TranslacionADar = new TranslacionArriba();
 	}
 	
 	public void moverseArriba() {
-		Casillero casilleroAlQueMoverse;
-		this.ultimaTranslacion = new TranslacionAbajo();
-		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
-		try{
-		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
-		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa
-		if (casilleroAlQueMoverse.esCaminable()){
-			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
-			casilleroAntiguo.eliminar(this);
-			coordenadaXY = movimientoPlaneado;
-			mapa.agregarAlMapa(this);
-		}
+		TranslacionADar = new TranslacionAbajo();
 	}
 	
 	public void moverseIzquierda() {
-		Casillero casilleroAlQueMoverse;
-		this.ultimaTranslacion = new TranslacionDerecha();
-		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
-		try{
-		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
-		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa
-		if (casilleroAlQueMoverse.esCaminable()){
-			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
-			casilleroAntiguo.eliminar(this);
-			coordenadaXY = movimientoPlaneado;
-			mapa.agregarAlMapa(this);
-		}
+		TranslacionADar = new TranslacionDerecha();
 	}
 	
 	public void moverseDerecha() {
-		Casillero casilleroAlQueMoverse;
-		this.ultimaTranslacion = new TranslacionIzquierda();
-		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
-		try{
-		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
-		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa
-		if (casilleroAlQueMoverse.esCaminable()){
-			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
-			casilleroAntiguo.eliminar(this);
-			coordenadaXY = movimientoPlaneado;
-			mapa.agregarAlMapa(this);
-		}
+		TranslacionADar = new TranslacionIzquierda();
 	}
 	
 }

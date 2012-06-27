@@ -2,12 +2,6 @@ package main;
 
 import javax.swing.JPanel;
 
-import control.Persistencia.Persistencia;
-import control.Teclado.Teclado;
-import fiuba.algo3.titiritero.dibujables.SuperficiePanel;
-import vista.Mapa.VistaMapa;
-import vista.fiuba.algo3.titiritero.modelo.GameLoop;
-import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 import modelo.articulo.Articulo;
 import modelo.articulo.Habano;
 import modelo.articulo.Timer;
@@ -21,6 +15,11 @@ import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
 import modelo.personaje.enemigos.LopezAlado;
 import modelo.personaje.enemigos.LopezComun;
+import vista.Mapa.VistaMapa;
+import vista.fiuba.algo3.titiritero.modelo.GameLoop;
+import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
+import control.Persistencia.Persistencia;
+import control.Teclado.Teclado;
 
 public class ControlJuego {
 
@@ -121,35 +120,19 @@ public class ControlJuego {
 	}
 	
 	public void moverBombitaArriba(){
-		
-		gameLoop.remover(bombita);
 		bombita.moverseArriba();
-		gameLoop.agregar(bombita);
-		
 	}
 	
 	public void moverBombitaAbajo(){
-		
-		gameLoop.remover(bombita);
 		bombita.moverseAbajo();
-		gameLoop.agregar(bombita);
-		
 	}
 	
 	public void moverBombitaDerecha(){
-		
-		gameLoop.remover(bombita);
 		bombita.moverseDerecha();
-		gameLoop.agregar(bombita);
-		
 	}
 	
 	public void moverBombitaIzquierda(){
-		
-		gameLoop.remover(bombita);
 		bombita.moverseIzquierda();
-		gameLoop.agregar(bombita);
-		
 	}
 	
 }
