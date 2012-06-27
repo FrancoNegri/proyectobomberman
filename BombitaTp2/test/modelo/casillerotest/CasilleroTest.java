@@ -188,5 +188,41 @@ public class CasilleroTest {
 		cas.agregar(personajeaux);
 		assertTrue(cas.estaBombita());
 	}
+	
+	@Test
+	
+	public void testEstaSoloBombita(){
+	
+		Casillero cas = new Casillero();
+		Bombita personaje = mock(Bombita.class);
+		cas.agregar(personaje);
+		assertTrue(cas.soloEstaBombita());
+		
+	}
+
+	@Test
+	
+	public void testEstaSoloBombitaConPersonajeCualquiera(){
+	
+		Casillero cas = new Casillero();
+		Personaje personaje = mock(Personaje.class);
+		cas.agregar(personaje);
+		assertFalse(cas.soloEstaBombita());
+		
+	}
+	
+	@Test
+	
+	public void testEstaSoloBombitaConVariosPersonajes(){
+	
+		Casillero cas = new Casillero();
+		Bombita personaje = mock(Bombita.class);
+		Personaje personajeaux = mock(Personaje.class);
+		cas.agregar(personaje);
+		cas.agregar(personajeaux);
+		assertFalse(cas.soloEstaBombita());
+		
+	}
+	
 
 }

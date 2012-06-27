@@ -6,6 +6,7 @@ import modelo.obstaculos.BloqueCemento;
 import modelo.obstaculos.BloqueLadrillo;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
+import modelo.personaje.Bombita;
 import modelo.errores.*;
 import modelo.armamento.Armamento;
 import modelo.articulo.Articulo;
@@ -130,5 +131,55 @@ public class MapaTest {
 		when(articulo.obtenerCoordenadaXY()).thenReturn(coord);
 		unMapa.agregarAlMapa(articulo);
 		assertTrue(unMapa.obtenerCasillero(coord).obtenerArticulo() == articulo);
+	}
+	
+	@Test
+	public void testTerminoNivel(){
+		Coordenada cord = new Coordenada(3,4);
+		Bombita pers = mock(Bombita.class);
+		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
+		this.unMapa.agregarAlMapa(pers);
+		this.unMapa.agregarSalida(cord);
+		assertTrue(this.unMapa.terminoNivel());
+	}
+	
+	@Test
+	public void testTerminoNivelsinBombitaenSalida(){
+		Coordenada cord = new Coordenada(3,4);
+		Coordenada cordsalida = new Coordenada(2,2);
+		Personaje pers = mock(Personaje.class);
+		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
+		this.unMapa.agregarAlMapa(pers);
+		this.unMapa.agregarSalida(cordsalida);
+		assertFalse(this.unMapa.terminoNivel());
+	}
+	
+	@Test
+	public void testTerminoNivelConBombitaenSalidayPersonajes(){
+		Coordenada cord = new Coordenada(3,4);
+		Coordenada cordotropers = new Coordenada(1,1);
+		Coordenada cordsalida = new Coordenada(2,2);
+		Personaje pers = mock(Personaje.class);
+		Personaje otropers = mock (Personaje.class);
+		Bombita rodriguez = mock(Bombita.class);
+		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
+		when(otropers.obtenerCoordenadaXY()).thenReturn(cordotropers);
+		when(rodriguez.obtenerCoordenadaXY()).thenReturn(cordsalida);
+		this.unMapa.agregarAlMapa(pers);
+		this.unMapa.agregarAlMapa(otropers);
+		this.unMapa.agregarAlMapa(rodriguez);
+		this.unMapa.agregarSalida(cordsalida);
+		assertFalse(this.unMapa.terminoNivel());
+		
+	}
+	
+	@Test
+	public void testTerminoNivelconPersonajeEnSalida(){
+		Coordenada cordsalida = new Coordenada(2,2);
+		Personaje pers = mock(Personaje.class);
+		when(pers.obtenerCoordenadaXY()).thenReturn(cordsalida);
+		this.unMapa.agregarAlMapa(pers);
+		this.unMapa.agregarSalida(cordsalida);
+		assertFalse(this.unMapa.terminoNivel());
 	}
 }
