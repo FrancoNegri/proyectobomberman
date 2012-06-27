@@ -18,11 +18,6 @@ public class SuperficiePanel extends JPanel implements SuperficieDeDibujo {
 	private Image imagen;
 	private Image fondo;
 
-	public SuperficiePanel() {
-		this.setFocusable(true);
-		this.fondo = new ImageIcon(getClass().getResource("/vista/Imagenes/Background.png")).getImage();
-	}
-
 	
 	// es llamado internamente por el metodo repaint() de la clase Frame
 	public void update(Graphics g) {
