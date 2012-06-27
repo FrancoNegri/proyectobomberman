@@ -1,4 +1,4 @@
-package modelo.bombitaTest;
+package modelo.bombitatest;
 
 import static org.junit.Assert.*;
 import org.junit.*;
