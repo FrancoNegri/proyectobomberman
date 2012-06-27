@@ -147,7 +147,7 @@ public class Casillero {
 	}
 
 	private void VivirPersonajes() {
-		LinkedList<Personaje> lista = (LinkedList<Personaje>) personajes
+		LinkedList<Personaje> lista =  (LinkedList<Personaje>) personajes
 				.clone();
 		Iterator<Personaje> IteradorPersonajes = lista.iterator();
 		while (IteradorPersonajes.hasNext()) {
@@ -275,5 +275,4 @@ public class Casillero {
 		}
 		return true;
 	}
-
 }

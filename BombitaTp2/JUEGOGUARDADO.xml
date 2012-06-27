@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Mapa Tamanio="40"><Personajes></Personajes><Bloques></Bloques><Armamentos><Proyectil Danio="100" Time="0" Radio="4" Exploto="false" DistanciaARecorrer="397"><Coordenada CoordenadaX="27" CoordenadaY="15"/><TranslacionArriba/></Proyectil></Armamentos><Articulos></Articulos></Mapa>
+<Mapa Tamanio="40"><Personajes></Personajes><Bloques></Bloques><Armamentos><Proyectil Danio="100" Time="0" Radio="4" Exploto="false" DistanciaARecorrer="397"><Coordenada CoordenadaX="10" CoordenadaY="10"/><TranslacionArriba/></Proyectil></Armamentos><Articulos></Articulos></Mapa>
