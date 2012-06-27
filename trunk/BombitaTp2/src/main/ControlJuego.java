@@ -105,10 +105,12 @@ public class ControlJuego {
 		try {
 			gameLoop.reiniciar();
 			Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml");
+			bombita = pers.recuperarBombita();
 			gameLoop.iniciarEjecucion();
 			gameLoop.agregar(mapacargado);
 			VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
 			gameLoop.agregar(VistaDelMapaCargado);
+			
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}

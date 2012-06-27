@@ -16,6 +16,7 @@ import modelo.obstaculos.BloqueAcero;
 import modelo.obstaculos.BloqueCemento;
 import modelo.obstaculos.BloqueLadrillo;
 import modelo.obstaculos.Obstaculo;
+import modelo.personaje.Bombita;
 import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
 import modelo.personaje.enemigos.LopezAlado;
@@ -26,6 +27,8 @@ import org.dom4j.io.SAXReader;
 
 public class Persistencia {
 
+	Personaje bombita;
+	
 	public void guardar(String archivo, Mapa mapa) {
 		Document doc = DocumentHelper.createDocument();
 		doc.add(mapa.guardar());
@@ -86,6 +89,10 @@ public class Persistencia {
 				Personaje pers = LopezComun.recuperar(ElemCes, nuevoMapa);
 				nuevoMapa.agregarAlMapa(pers);
 			}
+			if (ElemCes.getName() == "Bombita") {
+				bombita = Bombita.recuperar(ElemCes, nuevoMapa);
+				nuevoMapa.agregarAlMapa(bombita);
+			}
 		}
 	}
 
@@ -142,5 +149,9 @@ public class Persistencia {
 			}
 
 		}
+	}
+
+	public Bombita recuperarBombita() {
+		return (Bombita) bombita;
 	}
 }

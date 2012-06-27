@@ -92,6 +92,4 @@ public class Bombita extends Personaje {
 		nuevoPers.ultimaTranslacion = new TranslacionDerecha();
 		return nuevoPers;
 		}
-	
-	
 }
