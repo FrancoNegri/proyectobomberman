@@ -9,9 +9,11 @@ import modelo.ArmamentoFactory.ArmamentoFactory;
 import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.articulo.Articulable;
+import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.danio.*;
+import modelo.errores.TamanioMatrizInvalidoError;
 
 
 
@@ -39,6 +41,23 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	public abstract void chocar();
 
 	protected abstract void Atacar();
+	
+	protected void caminar() {
+		Casillero casilleroAlQueMoverse;
+		ultimaTranslacion = this.obtenerTranslacion();
+		if(ultimaTranslacion == null){return;}
+		Coordenada movimientoPlaneado = ultimaTranslacion.accion(coordenadaXY);
+		try{
+		casilleroAlQueMoverse = mapa.obtenerCasillero(movimientoPlaneado);
+		}catch(TamanioMatrizInvalidoError e){return;}//Caso que el Personaje intenta salirse del mapa
+		if (casilleroAlQueMoverse.esCaminable()){
+			Casillero casilleroAntiguo = mapa.obtenerCasillero(coordenadaXY);
+			casilleroAntiguo.eliminar(this);
+			coordenadaXY = movimientoPlaneado;
+			mapa.agregarAlMapa(this);
+		}
+	}
+	
 	
 	public abstract void tomarArticulo(Articulable unArticulo);
 
@@ -92,9 +111,6 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 		}
 
 	}
-
-	protected abstract void caminar();
-
 	
 	public void vivir() {
 		if(!this.estaMuerto()){

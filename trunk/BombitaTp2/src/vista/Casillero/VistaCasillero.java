@@ -61,7 +61,7 @@ public class VistaCasillero implements ObjetoDibujable {
 		}
 	}
 
-	private void dibujarPersonajes(SuperficieDeDibujo superficieDeDibujo) {
+	private synchronized void  dibujarPersonajes(SuperficieDeDibujo superficieDeDibujo) {
 		LinkedList<Personaje> personajes = CasilleroADibujar
 				.obtenerPersonajes();
 		Iterator<Personaje> iteradorDePersonajes = personajes.iterator();
