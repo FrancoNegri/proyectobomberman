@@ -45,7 +45,7 @@ public class Teclado extends KeyAdapter implements KeyListener{
 				break;
 			}
 			case KeyEvent.VK_A:
-			{	rodriguez.Atacar();
+			{	rodriguez.cambiarActitud();
 				break;
 			}
 			}

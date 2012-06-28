@@ -21,7 +21,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	protected Translacion ultimaTranslacion;
 	protected ArmamentoFactory CreadorDeBombas;
 	protected float velocidad;
-	protected int vida;
+	public int vida;
 	protected Coordenada coordenadaXY;
 	protected Mapa mapa;
 
@@ -31,6 +31,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 		this.ultimaTranslacion = new TranslacionDerecha();
 		this.mapa = nuevoMapa;
 		this.mapa.agregarAlMapa(this);
+		this.vida = 9;
 	}
 	
 	protected Personaje() {

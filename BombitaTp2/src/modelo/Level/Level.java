@@ -13,6 +13,7 @@ import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.LopezAlado;
 import modelo.personaje.enemigos.LopezComun;
+import modelo.salida.Salida;
 
 //Crea un nivel y lo deja listo para arrancar a jugar.
 public class Level implements Runnable {
@@ -45,9 +46,12 @@ public class Level implements Runnable {
 			Personaje pers = new LopezComun(coord, mapa);
 			personajes.add(pers);
 		}
+		
 		Coordenada coord = new Coordenada(4, 6);
 		Articulo articulo = new Habano(coord);
 		mapa.agregarAlMapa(articulo);
+		
+		
 
 		// Falta agregar la salida del juego hacia el proximo nivel
 	}

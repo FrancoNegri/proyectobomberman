@@ -9,6 +9,8 @@ import modelo.coordenadas.Coordenada;
 import modelo.errores.CasilleroOcupadoError;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
+import modelo.salida.Salida;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -77,6 +79,7 @@ public class Mapa implements ObjetoVivo {
 		CasilleroAux.agregar(obstaculo);
 		this.agregarCasillero(coordenada, CasilleroAux);
 	}
+	
 
 	public synchronized void agregarAlMapa(Armamento unArmamento) {
 

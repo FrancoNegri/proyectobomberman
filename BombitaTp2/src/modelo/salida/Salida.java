@@ -1,6 +1,6 @@
 package modelo.salida;
 
-public class Salida {
-	
 
+public class Salida{
+	 
 }

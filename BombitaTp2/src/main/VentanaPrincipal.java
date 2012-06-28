@@ -191,14 +191,14 @@ public class VentanaPrincipal {
 		barra.add(menuAyuda);
 
 		// BOTONES
-		JButton btnIniciar = new JButton("Jugarsela");
+		JButton btnIniciar = new JButton("Jugar");
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controlDelJuego.IniciarJuego();
 			}
 		});
 
-		btnIniciar.setBounds(600, 260, 130, 25);
+		btnIniciar.setBounds(600, 220, 130, 25);
 		contenedor.add(btnIniciar);
 
 		JButton btnDetener = new JButton("Pausar");
@@ -207,7 +207,7 @@ public class VentanaPrincipal {
 				controlDelJuego.DetenerJuego();
 			}
 		});
-		btnDetener.setBounds(600, 220, 130, 25);
+		btnDetener.setBounds(600, 260, 130, 25);
 		contenedor.add(btnDetener);
 
 		JButton btnGuardar = new JButton("Guardar");
