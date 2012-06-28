@@ -4,7 +4,7 @@ public class ConstantesJuego {
 
 	/* Constantes del juego */
 	public static final int velocidad_bombita = 4;
-	public static final int velocidad_lopez_reggae_alado = 5;
+	public static final int velocidad_lopez_reggae_alado = 2;
 	public static final int velocidad_lopez_reggae_comun = 7;
 	public static final int velocidad_cecilio = 3;
 	public static final int vida_bombita = 5;
