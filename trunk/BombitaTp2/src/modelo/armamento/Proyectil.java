@@ -19,7 +19,7 @@ public class Proyectil extends Armamento {
 
 	private Translacion transladador;
 	private int distancia = ConstantesJuego.distancia_proyectil;
-	private int tiempoQueLeTomaPasarUnCasillero = 1;
+	private int tiempoQueLeTomaPasarUnCasillero = 4;
 	private int tiempoParaCambiarDeCasillero = 0;
 
 	public Proyectil(Coordenada coordenada, Mapa mapa, Translacion trans) {
