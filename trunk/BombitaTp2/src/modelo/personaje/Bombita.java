@@ -22,12 +22,13 @@ public class Bombita extends Personaje {
 	
 	Translacion TranslacionADar;
 	boolean actitudAtaque;
+	
 
 	
 	public Bombita(Coordenada unaCoordenada,Mapa nuevoMapa) {
 		super(unaCoordenada,nuevoMapa);
 		this.velocidad = ConstantesJuego.velocidad_bombita;
-		this.vida = ConstantesJuego.velocidad_bombita;
+		this.vida = 5;
 		this.CreadorDeBombas = new MolotovFactory();
         this.actitudAtaque = false;
 	}
@@ -40,7 +41,7 @@ public class Bombita extends Personaje {
 	}
 
 	
-	public void morir() {
+	public void morir(){
 		this.vida = 0;
 	}
 	
