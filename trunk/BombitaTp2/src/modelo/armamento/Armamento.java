@@ -41,6 +41,7 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 	}
 	
 	public void explotar(Coordenada coord,Mapa mapa){
+		exploto = true;
 		OndaExpansiva Onda = new OndaExpansiva(radio,danio);
 		Onda.Expandirse(coord.copiar(),mapa);
 	}
@@ -54,7 +55,6 @@ public abstract class Armamento implements Armamentable,ObjetoVivo,ObjetoPosicio
 			this.time = this.time-1;
 		}else{
 			this.explotar(coordenada, mapaAutilizar);
-			exploto = true;
 		}
 	}
 	
