@@ -28,6 +28,7 @@ import modelo.armamento.Armamento;
 import modelo.armamento.ToleTole;
 import modelo.articulo.Articulo;
 import modelo.articulo.Habano;
+import modelo.bombitatest.BombitaTest;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
@@ -103,7 +104,6 @@ public class VentanaPrincipal {
 				
 		// LABELS 
 		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
-
 		float velocidadBombita = controlDelJuego.obtenerVelocidadArea();
 		labelPts = new JLabel("Puntos: "+ puntajeMapa);
 		labelPts.setBounds(600, 21, 100, 50);
