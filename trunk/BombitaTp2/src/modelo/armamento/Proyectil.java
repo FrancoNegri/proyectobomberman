@@ -19,7 +19,9 @@ public class Proyectil extends Armamento {
 
 	private Translacion transladador;
 	private int distancia = ConstantesJuego.distancia_proyectil;
-
+	private int tiempoQueLeTomaPasarUnCasillero =1;
+	private int tiempoParaCambiarDeCasillero = 0;
+	
 	public Proyectil(Coordenada coordenada, Mapa mapa, Translacion trans) {
 		super(coordenada, mapa);
 		this.danio = ConstantesJuego.danio_proyectil;
@@ -30,6 +32,14 @@ public class Proyectil extends Armamento {
 	
 	@Override
 	public void vivir() {
+		if(tiempoParaCambiarDeCasillero>0){
+			Casillero casilleroAntiguo = mapaAutilizar.obtenerCasillero(coordenada);
+			if(casilleroAntiguo.esAtacable()){
+				this.explotar(coordenada, mapaAutilizar);
+				exploto = true;
+			}
+			tiempoParaCambiarDeCasillero--;
+		}else{
 		if (distancia > 0) {
 			Coordenada coordenadaPlaneada = transladador.accion(coordenada);
 			if(coordenada.equals(coordenadaPlaneada) == false){
@@ -41,6 +51,7 @@ public class Proyectil extends Armamento {
 					coordenada = coordenadaPlaneada;
 					mapaAutilizar.agregarAlMapa(this);
 					distancia--;
+					tiempoParaCambiarDeCasillero = tiempoQueLeTomaPasarUnCasillero;
 					return;
 				}
 				}catch(Exception e){}
@@ -48,6 +59,7 @@ public class Proyectil extends Armamento {
 		}
 		this.explotar(coordenada, mapaAutilizar);
 		exploto = true;
+		}
 	}
 	
 	public boolean estaMuerto() {
