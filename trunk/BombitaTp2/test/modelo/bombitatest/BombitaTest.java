@@ -43,7 +43,7 @@ public class BombitaTest {
 
 	@Test
 	public void testInicializarVida() {
-		assertTrue(rodriguez.obtenerVida() == 10);
+		assertTrue(rodriguez.obtenerVida() == 5);
 	}
 
 	@Test
@@ -59,7 +59,7 @@ public class BombitaTest {
 	@Test
 	public void testRestarVida() {
 		rodriguez.restarVida(1);
-		assertTrue(rodriguez.obtenerVida() == 9);
+		assertTrue(rodriguez.obtenerVida() == 4);
 	}
 
 	@Test
@@ -97,7 +97,7 @@ public class BombitaTest {
 	@Test
 	public void testDaniar() {
 		this.rodriguez.Daniar(2);
-		assertTrue(rodriguez.obtenerVida() == 8);
+		assertTrue(rodriguez.obtenerVida() == 3);
 	}
 
 	@Test

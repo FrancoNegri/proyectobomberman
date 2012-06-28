@@ -28,7 +28,7 @@ public class Bombita extends Personaje {
 	public Bombita(Coordenada unaCoordenada,Mapa nuevoMapa) {
 		super(unaCoordenada,nuevoMapa);
 		this.velocidad = ConstantesJuego.velocidad_bombita;
-		this.vida = 5;
+		this.vida = ConstantesJuego.vida_bombita;
 		this.CreadorDeBombas = new MolotovFactory();
         this.actitudAtaque = false;
 	}

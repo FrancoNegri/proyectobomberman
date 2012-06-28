@@ -99,6 +99,6 @@ public class ComunTest {
 	@Test
 	public void testchocar(){
 		lopez.chocar();
-		assertTrue(lopez.obtenerVida() == 9);
+		assertTrue(lopez.obtenerVida() == 10);
 	}
 }

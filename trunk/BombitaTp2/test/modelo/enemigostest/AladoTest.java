@@ -104,6 +104,6 @@ public class AladoTest {
 	@Test
 	public void testchocar(){
 		lopez.chocar();
-		assertTrue(lopez.obtenerVida() == 4);
+		assertTrue(lopez.obtenerVida() == 5);
 	}
 }
