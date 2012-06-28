@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -102,11 +103,11 @@ public class VentanaPrincipal {
 				
 		// LABELS 
 		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
-		int vidaBombita = controlDelJuego.obtenerVidaArea();
+
 		float velocidadBombita = controlDelJuego.obtenerVelocidadArea();
 		labelPts = new JLabel("Puntos: "+ puntajeMapa);
 		labelPts.setBounds(600, 21, 100, 50);
-		labelVida = new JLabel("Vida: "+ vidaBombita);
+		labelVida = new JLabel("Vida: "+ (controlDelJuego.obtenerVidaArea()));
 		labelVida.setBounds(600, 37, 100, 50);
 		labelVel = new JLabel("Velocidad: "+ velocidadBombita);
 		labelVel.setBounds(600, 52, 100, 50);
@@ -287,6 +288,10 @@ public class VentanaPrincipal {
 		JTextArea area = new JTextArea();
 		area = controlDelJuego.obtenerAreaDeTexto();
 		contenedor.add(area);
+		
+		//CONTROLES
+		
+		
 		
 	};
 }

@@ -100,6 +100,6 @@ public class CecilioTest {
 	@Test
 	public void testchocar(){
 		cecilio.chocar();
-		assertTrue(cecilio.obtenerVida() == 4);
+		assertTrue(cecilio.obtenerVida() == 5);
 	}
 }

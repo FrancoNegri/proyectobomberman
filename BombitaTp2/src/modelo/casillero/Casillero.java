@@ -44,7 +44,7 @@ public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 
 	// Metodo Sobrecargado
 	public void agregar(Personaje unPersonaje) {
-		//if (!personajes.contains(unPersonaje)) {
+		if (!personajes.contains(unPersonaje)) 
 			this.personajes.add(unPersonaje);
 		}
 

@@ -22,7 +22,7 @@ public class ColicionadorTest {
 		miCasi.agregar(enemigo);
 		miCasi.agregar(bomb);
 		coli.Colicionar(miCasi.obtenerPersonajes());
-		assertTrue(enemigo.obtenerVida() == 9);
+		assertTrue(enemigo.obtenerVida() == 10);
 		assertTrue(bomb.obtenerVida() == 0);
 	}
 }
