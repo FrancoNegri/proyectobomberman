@@ -39,7 +39,7 @@ public class ControlJuego {
 	Persistencia pers = new Persistencia();
 	
 	public ControlJuego(JPanel unPanel){
-		this.gameLoop = new GameLoop(100, (SuperficieDeDibujo) unPanel);
+		this.gameLoop = new GameLoop(30, (SuperficieDeDibujo) unPanel);
 		this.panel = unPanel;
 	
 		Personaje modelo3;

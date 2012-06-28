@@ -36,7 +36,7 @@ public class Habano extends Articulo{
 	
 	public void aumentarVelocidad(Personaje unPersonaje){
 		
-		float velocidad = unPersonaje.getVelocidad();
+		int velocidad = unPersonaje.getVelocidad();
 		/*como convencion aumenta la velocidad del personaje en 10 unidades.
 		 * si se supera la velocidad maxima se arroja una excepcion.
 		 */
