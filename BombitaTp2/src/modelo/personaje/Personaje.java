@@ -20,7 +20,8 @@ import modelo.errores.TamanioMatrizInvalidoError;
 public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicionable , ObjetoVivo {
 	protected Translacion ultimaTranslacion;
 	protected ArmamentoFactory CreadorDeBombas;
-	protected float velocidad;
+	protected int velocidad;
+	private int tiempoHastaMoverse = 0;
 	protected int vida;
 	protected Coordenada coordenadaXY;
 	protected Mapa mapa;
@@ -87,11 +88,11 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 		this.vida = vida - danio;
 	}
 
-	public float getVelocidad() {
+	public int getVelocidad() {
 		return velocidad;
 	}
 
-	public void cambiarVelocidad(float velocidad) {
+	public void cambiarVelocidad(int velocidad) {
 		this.velocidad = velocidad;
 	}
 
@@ -116,7 +117,17 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	
 	public void vivir() {
 		if(!this.estaMuerto()){
-			this.caminar();
+			/*Aclaracion SobreVelocidad, Yo pense que la velocidad de un personaje
+			 * es el tiempo en que tarda en moverse.Ejemplo: si tiene velocidad 3
+			 * va a Tardar 3 "vivir()" en poder moverse un casillero 
+			 */
+			if(tiempoHastaMoverse <= 0){
+				this.caminar();
+				tiempoHastaMoverse = velocidad;
+			}else{
+				tiempoHastaMoverse--;
+			}
+			
 			this.Atacar();
 		}
 	}

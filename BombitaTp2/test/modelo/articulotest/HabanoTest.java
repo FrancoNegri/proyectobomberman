@@ -60,9 +60,7 @@ public class HabanoTest {
 	}
 	@Test
 	public void testaumentarVelocidadsuperandoVelocidadMaxima(){
-		
-		float velocidadnueva=30;
-		this.rodriguez.cambiarVelocidad(velocidadnueva);
+		this.rodriguez.cambiarVelocidad(30);
 		try{
 			this.unHabano.usar(this.rodriguez);
 		}
