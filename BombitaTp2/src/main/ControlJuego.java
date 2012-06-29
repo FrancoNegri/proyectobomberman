@@ -123,7 +123,7 @@ public class ControlJuego {
 		return bombita.obtenerVida();
 	}
 	
-	public float obtenerVelocidadArea() {
+	public int obtenerVelocidadArea() {
 		return bombita.getVelocidad();
 	}
 	

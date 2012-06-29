@@ -46,6 +46,7 @@ public class Teclado extends KeyAdapter implements KeyListener{
 			}
 			case KeyEvent.VK_A:
 			{	rodriguez.cambiarActitud();
+			System.out.println("Atacar");
 				break;
 			}
 			}

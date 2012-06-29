@@ -100,7 +100,7 @@ public class VentanaPrincipal {
 		
 		// LABELS 
 		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
-		float velocidadBombita = controlDelJuego.obtenerVelocidadArea();
+		int velocidadBombita = controlDelJuego.obtenerVelocidadArea();
 		Font fuente = new Font(Font.SERIF,Font.BOLD,15);
 		labelInfo = new JLabel("Informacion");
 		labelInfo.setFont(fuente);
@@ -112,9 +112,9 @@ public class VentanaPrincipal {
 		labelVida = new JLabel("Vida: "+ (controlDelJuego.obtenerVidaArea()));
 		labelVida.setForeground(Color.white);
 		labelVida.setBounds(610, 90, 100, 50);
-		labelVel = new JLabel("Velocidad: "+ velocidadBombita);
+		labelVel = new JLabel("Velocidad: "+ velocidadBombita + " km/h");
 		labelVel.setForeground(Color.white);
-		labelVel.setBounds(610, 130, 100, 50);
+		labelVel.setBounds(610, 130, 120, 50);
 		labelNiv = new JLabel("Nivel: 1");
 		labelNiv.setForeground(Color.white);
 		labelNiv.setBounds(610, 165, 100, 50);
@@ -136,7 +136,6 @@ public class VentanaPrincipal {
 
 		// MENU HERRAMIENTAS
 		JMenu menuArchivo = new JMenu("Archivo");
-		menuArchivo.setMnemonic('A');
 
 		JMenuItem elementoJugar = new JMenuItem("Jugar");
 		elementoJugar.setMnemonic('J');
