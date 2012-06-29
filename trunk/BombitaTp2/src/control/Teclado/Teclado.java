@@ -66,5 +66,10 @@ public class Teclado extends KeyAdapter implements KeyListener{
 		
 		return true;
 	}
+
+
+	public void set(Bombita bombita) {
+		this.rodriguez = bombita;
+	}
 	
 }
