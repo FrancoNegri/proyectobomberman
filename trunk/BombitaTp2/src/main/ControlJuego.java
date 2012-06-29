@@ -115,19 +115,6 @@ public class ControlJuego {
 		bombita.cambiarActitud();
 	}
 	
-	public JTextArea obtenerAreaDeTexto () {
-		String cadena = "      Informacion \n" + "\n";
-		Font fuente = new Font(Font.SERIF, Font.BOLD, 15);
-		JTextArea area = new JTextArea();
-		area.setText(cadena);
-		area.setFont(fuente);
-		area.setSize(40, 200);
-		area.setBackground(Color.white);
-		area.setBounds(600, 16, 130, 187);
-		area.setEditable(false);
-		return area;
-	}
-	
 	public int obtenerPuntajeArea() {
 		return mapa.obtenerPuntajeTotal();
 	}
