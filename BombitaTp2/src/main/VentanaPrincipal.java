@@ -23,6 +23,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JPopupMenu;
+import javax.swing.border.Border;
 
 import control.Persistencia.Persistencia;
 import control.Teclado.Teclado;
@@ -51,7 +52,7 @@ import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 public class VentanaPrincipal {
 
 	private JFrame frame;
-	private JLabel labelPts, labelVida, labelVel, labelNiv, labelImg;
+	private JLabel labelInfo, labelPts, labelVida, labelVel, labelNiv, labelImg, labelPnl;
 	
 	public JFrame obtenerFrame() {
 		return frame;
@@ -77,14 +78,14 @@ public class VentanaPrincipal {
 	 */
 	private void initialize() throws IOException {
 		// ///////////Inicializacion grafica
-		frame = new JFrame("Bombita Rodriguez - Algortimos y ProgramacionIII - FIUBA ©");
+		frame = new JFrame("Bombita Rodriguez, The Game - Algortimos y ProgramacionIII - FIUBA ©");
 		Container contenedor = frame.getContentPane();
 		frame.setForeground(new Color(0, 0, 0));
-		frame.setBounds(100, 100, 800, 700);
+		frame.setBounds(100, 100, 770, 650);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
-	
+
 		
 		// PANEL
 		JPanel panel = new SuperficiePanel();
@@ -100,23 +101,37 @@ public class VentanaPrincipal {
 		// LABELS 
 		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
 		float velocidadBombita = controlDelJuego.obtenerVelocidadArea();
+		Font fuente = new Font(Font.SERIF,Font.BOLD,15);
+		labelInfo = new JLabel("Informacion");
+		labelInfo.setFont(fuente);
+		labelInfo.setForeground(Color.white);
+		labelInfo.setBounds(625, 15, 100, 50);
 		labelPts = new JLabel("Puntos: "+ puntajeMapa);
-		labelPts.setBounds(600, 21, 100, 50);
+		labelPts.setForeground(Color.white);
+		labelPts.setBounds(610, 50, 100, 50);
 		labelVida = new JLabel("Vida: "+ (controlDelJuego.obtenerVidaArea()));
-		labelVida.setBounds(600, 37, 100, 50);
+		labelVida.setForeground(Color.white);
+		labelVida.setBounds(610, 90, 100, 50);
 		labelVel = new JLabel("Velocidad: "+ velocidadBombita);
-		labelVel.setBounds(600, 52, 100, 50);
+		labelVel.setForeground(Color.white);
+		labelVel.setBounds(610, 130, 100, 50);
 		labelNiv = new JLabel("Nivel: 1");
-		labelNiv.setBounds(600, 67, 100, 50);
+		labelNiv.setForeground(Color.white);
+		labelNiv.setBounds(610, 165, 100, 50);
 		labelImg = new JLabel();
 		labelImg.setIcon(new ImageIcon(getClass().getResource("/vista/Imagenes/BombitaRodriguez1.png")));
 		labelImg.setBounds(600,380,200,200);
+		labelPnl = new JLabel();
+		labelPnl.setIcon(new ImageIcon(getClass().getResource("/vista/Imagenes/Panel1.png")));
+		labelPnl.setBounds(600,16,130,200);
 		
+		contenedor.add(labelInfo);
 		contenedor.add(labelPts);
 		contenedor.add(labelVida);
 		contenedor.add(labelVel);
 		contenedor.add(labelNiv);
 		contenedor.add(labelImg);
+		contenedor.add(labelPnl);
 		
 
 		// MENU HERRAMIENTAS
@@ -194,6 +209,8 @@ public class VentanaPrincipal {
 
 		// BOTONES
 		JButton btnIniciar = new JButton("Jugar");
+		btnIniciar.setBackground(Color.red);
+		btnIniciar.setForeground(Color.white);
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				controlDelJuego.IniciarJuego();
@@ -204,6 +221,8 @@ public class VentanaPrincipal {
 		contenedor.add(btnIniciar);
 
 		JButton btnDetener = new JButton("Pausar");
+		btnDetener.setBackground(Color.red);
+		btnDetener.setForeground(Color.white);
 		btnDetener.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				controlDelJuego.DetenerJuego();
@@ -213,6 +232,8 @@ public class VentanaPrincipal {
 		contenedor.add(btnDetener);
 
 		JButton btnGuardar = new JButton("Guardar");
+		btnGuardar.setBackground(Color.red);
+		btnGuardar.setForeground(Color.white);
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				controlDelJuego.GuardarJuego();
@@ -222,6 +243,8 @@ public class VentanaPrincipal {
 		contenedor.add(btnGuardar);
 		
 		JButton btnCargar=new JButton("Cargar");
+		btnCargar.setBackground(Color.red);
+		btnCargar.setForeground(Color.white);
 		btnCargar.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent e){
 				controlDelJuego.CargarJuego();
@@ -230,12 +253,6 @@ public class VentanaPrincipal {
 		btnCargar.setBounds(600, 340, 130, 25);
 		contenedor.add(btnCargar);
 		
-		
-
-		//AREA DE TEXTO
-		JTextArea area = new JTextArea();
-		area = controlDelJuego.obtenerAreaDeTexto();
-		contenedor.add(area);
 		
 		//CONTROLES (TECLADO)
 		panel.addKeyListener(new Teclado(controlDelJuego.getBombita()));
