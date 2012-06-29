@@ -50,21 +50,6 @@ public class VentanaPrincipal {
 
 	private JFrame frame;
 	private JLabel labelPts, labelVida, labelVel, labelNiv;
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaPrincipal window = new VentanaPrincipal();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the application.
@@ -78,6 +63,10 @@ public class VentanaPrincipal {
 		}
 	}
 
+	public JFrame obtenerFrame() {
+		return frame;
+	}
+	
 	/**
 	 * Initialize the contents of the frame.
 	 * 
@@ -94,29 +83,20 @@ public class VentanaPrincipal {
 		frame.setLocationRelativeTo(null);
 		
 		
-		
 		// PANEL
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(Color.green);
 		panel.setBounds(20, 20, 550, 550);
-		
-		
-		
-		
 		contenedor.add(panel);
+		
 		
 		// CONTROL DEL JUEGO
 		final ControlJuego controlDelJuego = new ControlJuego(panel);
 		
-		
-		
-		
 
+		// TECLADO
 		frame.addKeyListener(new Teclado(controlDelJuego.getBombita()));
 		panel.addKeyListener(new Teclado(controlDelJuego.getBombita()));
-		
-		
-		
 		
 		
 		// LABELS 
@@ -248,7 +228,6 @@ public class VentanaPrincipal {
 		
 		
 		//INICIO BOTONES DE MOVIMIENTO
-		
 		JButton btnArriba = new JButton("U");
 		btnArriba.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
@@ -306,9 +285,8 @@ public class VentanaPrincipal {
 		area = controlDelJuego.obtenerAreaDeTexto();
 		contenedor.add(area);
 		
+		
 		//CONTROLES
-		
-		
 		
 	};
 }
