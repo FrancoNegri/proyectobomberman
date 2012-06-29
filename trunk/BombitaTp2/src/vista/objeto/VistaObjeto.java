@@ -26,8 +26,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaMolotov(molotov);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 
@@ -35,8 +33,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaProyectil(proyectil);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 
@@ -44,8 +40,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaBombita(bombita);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -53,8 +47,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaToleTole(toleTole);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -62,8 +54,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaCesilio(cecilio);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -71,8 +61,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaLopezAlado(lopezAlado);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -80,8 +68,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaLopezComun(lopezComun);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -89,8 +75,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaHabano(habano);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -98,8 +82,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaTimer(timer);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -107,8 +89,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaBloqueAcero(bloqueAcero);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -116,8 +96,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaBloqueCemento(bloqueCemento);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -125,8 +103,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaBloqueLadrillo(bloqueLadrillo);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -134,8 +110,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaFuegoDeExplocion(objeto);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	
@@ -143,8 +117,6 @@ public class VistaObjeto implements ObjetoDibujable {
 		try {
 			objetoDibujable = new VistaSalida(objeto);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 	

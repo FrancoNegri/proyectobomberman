@@ -3,6 +3,9 @@ package vista.vistaObjetoTest;
 import static org.mockito.Mockito.mock;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
+
 import modelo.casillero.Casillero;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,9 +36,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.interactuarConCecilio(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -43,9 +44,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConBombita(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -53,9 +52,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConLopezComun(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -63,9 +60,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConLopezAlado(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -73,9 +68,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConToleTole(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -83,9 +76,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConProyectil(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -93,9 +84,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConMolotov(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -103,9 +92,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConHabano(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -113,9 +100,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarTimer(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -123,9 +108,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConBloqueCemento(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -133,9 +116,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConBloqueAcero(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -143,9 +124,7 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConBloqueLadrillo(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
 	@Test
@@ -153,10 +132,15 @@ public class VistaObjetoTest {
 		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
 		vistaO.InteractuarConFuegoDeExplocion(objeto);
 		vistaO.dibujar(unaSuperficie);
-		//A Determinar
-		//Mockito.verify(graphics).setColor(circulo.getColor());
-		//Mockito.verify(graphics).fillOval(objeto.getX()*5, objeto.getY()*5, circulo.getRadio(), circulo.getRadio());
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
 	}
 	
+	@Test
+	public void testQuePruevaLaVistaDeLaSalida(){
+		VistaObjeto vistaO = new VistaObjeto(mock(ObjetoVisible.class));
+		vistaO.InteractuarConSalida(objeto);
+		vistaO.dibujar(unaSuperficie);
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5*13), Mockito.eq(5*13), Mockito.isNull(ImageObserver.class));
+	}
 	
 }

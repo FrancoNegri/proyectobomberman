@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import modelo.coordenadas.Coordenada;
 import modelo.errores.coordenadaInvalida;
 
+import org.dom4j.Element;
 import org.junit.Test;
 
 
@@ -51,4 +52,25 @@ public class CoordenadasTest {
 		}
 		assertTrue(false);
 	}
+	
+	@Test
+	public void testQuePruebaElGuardado(){
+		Coordenada coord = new Coordenada(2,2);
+		Element elemCoord = coord.guardar();
+		assertTrue(elemCoord.getName() == "Coordenada");
+	}
+	
+	@Test
+	public void testQuePruebaCoordenadasIguales(){
+		Coordenada coord = new Coordenada(2,2);
+		Coordenada coord2 = new Coordenada(2,2);
+		assertTrue(coord.equals(coord2));
+	}
+	
+	public void testQuePruebaCoordenadasNoIguales(){
+		Coordenada coord = new Coordenada(2,2);
+		Coordenada coord2 = new Coordenada(1,2);
+		assertTrue(coord.equals(coord2)==false);
+	}
+	
 }

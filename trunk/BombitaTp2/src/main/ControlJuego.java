@@ -74,7 +74,7 @@ public class ControlJuego {
 	public void CargarJuego(){
 		try {
 			gameLoop.reiniciar();
-			Mapa mapacargado= pers.recuperar("JUEGOGUARDADO.xml");
+			Mapa mapacargado= pers.recuperar("lvls/JUEGOGUARDADO.xml");
 			/*bombita = pers.recuperarBombita();
 			Coordenada coord = new Coordenada(38,38);
 			mapacargado.agregarSalida(coord)*/
@@ -89,7 +89,7 @@ public class ControlJuego {
 	}	
 	
 	public void GuardarJuego(){
-		pers.guardar("JUEGOGUARDADO.xml", mapa);
+		pers.guardar("lvls/JUEGOGUARDADO.xml", mapa);
 	}
 	
 	public void moverBombitaArriba(){
