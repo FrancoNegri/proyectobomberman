@@ -23,12 +23,13 @@ public class VistaCasillero implements ObjetoDibujable {
 	}
 
 	public void dibujar(SuperficieDeDibujo superficieDeDibujo) {
-		/*this.dibujarArmamento(superficieDeDibujo);
+		this.dibujarSalida(superficieDeDibujo);
+		this.dibujarArmamento(superficieDeDibujo);
 		this.dibujarArticulo(superficieDeDibujo);
 		this.dibujarBloque(superficieDeDibujo);
 		this.dibujarPersonajes(superficieDeDibujo);
-		this.dibujarFuegoDeExplocion(superficieDeDibujo);*/
-		this.dibujarSalida(superficieDeDibujo);
+		this.dibujarFuegoDeExplocion(superficieDeDibujo);
+		
 		
 	}
 

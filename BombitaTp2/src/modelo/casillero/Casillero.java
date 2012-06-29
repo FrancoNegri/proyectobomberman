@@ -291,7 +291,11 @@ public class Casillero {
 		if (fuegoDeLaExplocion != null) {
 			return false;
 		}
+		if(salidaJuego !=null){
+			return false;
+		}
 		return true;
+		
 	}
 	
 	

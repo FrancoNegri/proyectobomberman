@@ -28,7 +28,7 @@ import vista.fiuba.algo3.titiritero.modelo.GameLoop;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 import control.Persistencia.Persistencia;
 import control.Teclado.Teclado;
-
+import modelo.salida.*;
 public class ControlJuego {
 
 	Mapa mapa;
@@ -50,6 +50,8 @@ public class ControlJuego {
 		try {
 			gameLoop.reiniciar();
 			mapa = pers.recuperar("lvls/lvl1.xml");
+			Coordenada coord = new Coordenada (0,20);	
+			mapa.agregarSalida(coord);
 			bombita = pers.recuperarBombita();
 			teclado = new Teclado(bombita);
 			unPanel.setVisible(true);
@@ -67,6 +69,7 @@ public class ControlJuego {
 	
 	public void IniciarJuego(){
 		gameLoop.iniciarEjecucion();
+	
 	}
 	
 	public void DetenerJuego(){
