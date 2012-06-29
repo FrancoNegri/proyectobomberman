@@ -50,20 +50,9 @@ public class VentanaPrincipal {
 
 	private JFrame frame;
 	private JLabel labelPts, labelVida, labelVel, labelNiv;
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaPrincipal window = new VentanaPrincipal();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	
+	public JFrame obtenerFrame() {
+		return frame;
 	}
 
 	/**
