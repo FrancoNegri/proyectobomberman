@@ -1,4 +1,4 @@
-/*package vista.CasilleroTest;
+package vista.CasilleroTest;
 
 import static org.mockito.Mockito.*;
 import java.awt.Graphics;
@@ -64,4 +64,3 @@ public class VistaCasilleroTest {
 	}
 	
 }
-*/

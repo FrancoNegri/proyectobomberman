@@ -31,7 +31,7 @@ public class CecilioTest {
 	
 	@Test
 	public void testInicializarVelocidad() {
-		assertTrue(cecilio.getVelocidad() == 10);
+		assertTrue(cecilio.getVelocidad() == 3);
 	}
 	
 	@Test

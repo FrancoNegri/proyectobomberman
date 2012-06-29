@@ -2,11 +2,8 @@ package modelo.movimientotest;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
-
 import java.util.LinkedList;
-
 import org.junit.*;
-
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.Bombita;

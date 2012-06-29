@@ -32,7 +32,7 @@ public class AladoTest {
 	
 	@Test
 	public void testInicializarVelocidad() {
-		assertTrue(lopez.getVelocidad() == 10);
+		assertTrue(lopez.getVelocidad() == 2);
 	}
 	
 	@Test

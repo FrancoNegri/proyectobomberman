@@ -15,7 +15,7 @@ public class ImagenTest {
 
 	@Test
 	public void testDibujar() throws IOException {
-		/*Graphics graphics = Mockito.mock(Graphics.class);
+		Graphics graphics = Mockito.mock(Graphics.class);
 		SuperficiePanel unaSuperficie = Mockito.mock(SuperficiePanel.class);
 		Mockito.when(unaSuperficie.getBuffer()).thenReturn(graphics);
 		ObjetoPosicionable objeto = Mockito.mock(ObjetoPosicionable.class);
@@ -24,8 +24,7 @@ public class ImagenTest {
 		URL imagenUrl = this.getClass().getResource("/imagen.png");
 		Imagen imagen = new Imagen(imagenUrl, objeto);
 		imagen.dibujar(unaSuperficie);
-		
-		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5), Mockito.eq(5), Mockito.isNull(ImageObserver.class));*/
+		Mockito.verify(graphics).drawImage(Mockito.any(BufferedImage.class), Mockito.eq(5), Mockito.eq(5), Mockito.isNull(ImageObserver.class));
 	}
 
 }

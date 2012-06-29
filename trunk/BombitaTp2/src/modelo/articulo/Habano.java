@@ -13,11 +13,11 @@ import modelo.personaje.*;
 
 public class Habano extends Articulo{
 	
-	private float velocidadmaxima;
+	private int velocidadmaxima;
 	
 	public Habano(Coordenada unaCoordenada){
 		super(unaCoordenada);
-		this.velocidadmaxima=35;
+		this.velocidadmaxima=0;
 	}
 	
 	public void usar(Personaje unPersonaje){
@@ -40,14 +40,11 @@ public class Habano extends Articulo{
 		/*como convencion aumenta la velocidad del personaje en 10 unidades.
 		 * si se supera la velocidad maxima se arroja una excepcion.
 		 */
-		velocidad = velocidad + ConstantesJuego.velocidad_aumento_habano;
+		velocidad = velocidad - 1;
 		if(velocidad >= this.velocidadmaxima){
-			
-			throw new VelocidadMaximaError();
+			return;
 		}
-		
 		else {
-			
 			unPersonaje.cambiarVelocidad(velocidad);
 		}
 		
