@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import static org.mockito.Mockito.*;
 import modelo.coordenadas.*;
+import modelo.salida.*;
 
 
 public class CasilleroTest {
@@ -111,8 +112,11 @@ public class CasilleroTest {
 	
 	@Test
 	public void testSalidaOn(){
+		
 		Casillero cas = new Casillero();
-		cas.activarSalida();
+		Coordenada coord = mock(Coordenada.class);
+		Salida unasalida = new Salida(coord);
+		cas.agregar(unasalida);
 		assertTrue(cas.salidaON());
 	}
 	
@@ -130,8 +134,11 @@ public class CasilleroTest {
 	public void testSalidaOffporObstaculo(){
 		
 		Casillero cas = new Casillero ();
+		Coordenada coord = mock(Coordenada.class);
+		Salida unasalida = new Salida(coord);
 		BloqueAcero unObstaculo = mock(BloqueAcero.class);
 		cas.agregar(unObstaculo);
+		cas.agregar(unasalida);
 		assertFalse(cas.salidaON());
 	}
 	

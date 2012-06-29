@@ -200,7 +200,7 @@ public class VistaObjeto implements ObjetoDibujable {
 	}
 	private class VistaSalida extends Imagen {
 		public  VistaSalida(ObjetoPosicionable modelo) throws IOException{
-			super(VistaBloqueAcero.class.getResource("/vista/Imagenes/Salida.png"), modelo);
+			super(VistaSalida.class.getResource("/vista/Imagenes/Salida.png"), modelo);
 		}
 	}
 	

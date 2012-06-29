@@ -9,6 +9,7 @@ import modelo.casillero.Casillero;
 import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
+import modelo.salida.*;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoDibujable;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 import vista.objeto.VistaObjeto;
@@ -22,11 +23,11 @@ public class VistaCasillero implements ObjetoDibujable {
 	}
 
 	public void dibujar(SuperficieDeDibujo superficieDeDibujo) {
-		this.dibujarArmamento(superficieDeDibujo);
+		/*this.dibujarArmamento(superficieDeDibujo);
 		this.dibujarArticulo(superficieDeDibujo);
 		this.dibujarBloque(superficieDeDibujo);
 		this.dibujarPersonajes(superficieDeDibujo);
-		this.dibujarFuegoDeExplocion(superficieDeDibujo);
+		this.dibujarFuegoDeExplocion(superficieDeDibujo);*/
 		this.dibujarSalida(superficieDeDibujo);
 		
 	}
@@ -76,8 +77,9 @@ public class VistaCasillero implements ObjetoDibujable {
 	
 	private void dibujarSalida(SuperficieDeDibujo superficieDeDibujo){
 		
-		if(this.CasilleroADibujar.salidaON()){
-			VistaObjeto vistaSalida = new VistaObjeto(this.CasilleroADibujar);
+		Salida salidaJuego = CasilleroADibujar.obtenerSalida();
+		if(salidaJuego != null){
+			VistaObjeto vistaSalida = new VistaObjeto(salidaJuego);
 			vistaSalida.dibujar(superficieDeDibujo);
 		}
 	}

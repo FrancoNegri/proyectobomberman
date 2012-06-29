@@ -13,15 +13,16 @@ import modelo.detectorcolision.Colisionador;
 import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.*;
+import modelo.salida.*;
 
-public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
+public class Casillero {
 	LinkedList<Personaje> personajes;
 	Armamento unArmamento;
 	Articulable unArticulo;
 	Obstaculo unObstaculo;
 	FuegoDeExplocion fuegoDeLaExplocion;
 	int puntaje;
-	boolean esSalida;
+	Salida salidaJuego;
 
 	public Casillero() {
 		this.personajes = new LinkedList<Personaje>();
@@ -68,6 +69,11 @@ public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 
 		this.unObstaculo = unObstaculo;
 	}
+	
+	public void agregar(Salida salidaJuego){
+		
+		this.salidaJuego = salidaJuego;
+	}
 
 	// fin Metodo Sobrecargado
 
@@ -90,6 +96,11 @@ public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 	public FuegoDeExplocion obtenerFuegoDeExplocion() {
 		return fuegoDeLaExplocion;
 	}
+	
+	public Salida obtenerSalida(){
+		
+		return this.salidaJuego;
+	}
 
 	public boolean esCaminable() {
 		if (this.unObstaculo == null) {
@@ -97,6 +108,7 @@ public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 		}
 		return false;
 	}
+	
 
 	public boolean esAtacable() {
 		if ((this.unObstaculo == null) && (personajes.isEmpty())) {
@@ -227,10 +239,6 @@ public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 
 	}
 	
-	public void activarSalida(){
-		
-		this.esSalida = true;
-	}
 
 	// metodos para chequear la salida del nivel.
 
@@ -238,8 +246,11 @@ public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 
 		// verifica si el casillero es un casillero de salida y si no tiene
 		// ningun obstaculo que la cubra.
-
-		return ((this.esSalida) && (this.unObstaculo == null));
+		if(this.salidaJuego !=null){
+		return ((this.salidaJuego.activada()) && (this.unObstaculo == null));
+		}
+		else
+		return false;
 	}
 
 	public boolean casilleroSinPersonajes() {
@@ -283,22 +294,5 @@ public class Casillero implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 		return true;
 	}
 	
-	public void DeterminarObjeto(VistaObjeto vistaObjeto){
-		vistaObjeto.InteractuarConSalida(this);
-	}
 	
-	public int getX() {
-		
-		return 38;
-		
-		}
-
-	public int getY() {
-			
-		return 38;
-		}
-	
-	public void vivir(){
-		
-	}
 }
