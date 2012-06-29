@@ -16,8 +16,6 @@ public class SuperficiePanel extends JPanel implements SuperficieDeDibujo {
 
 	private static final long serialVersionUID = 1L;
 	private Image imagen;
-	private Image fondo;
-
 	
 	// es llamado internamente por el metodo repaint() de la clase Frame
 	public void update(Graphics g) {
