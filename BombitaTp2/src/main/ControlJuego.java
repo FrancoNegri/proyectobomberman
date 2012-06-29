@@ -37,6 +37,7 @@ public class ControlJuego {
 	private Bombita bombita;
 	private BufferedImage fondo;
 	Persistencia pers = new Persistencia();
+	Teclado teclado;
 	
 	public ControlJuego(JPanel unPanel){
 		this.gameLoop = new GameLoop(10, (SuperficieDeDibujo) unPanel);
@@ -50,8 +51,9 @@ public class ControlJuego {
 			gameLoop.reiniciar();
 			mapa = pers.recuperar("lvls/lvl1.xml");
 			bombita = pers.recuperarBombita();
+			teclado = new Teclado(bombita);
 			unPanel.setVisible(true);
-			unPanel.addKeyListener(new Teclado(bombita));
+			unPanel.addKeyListener(teclado);
 			gameLoop.agregar(mapa);
 			VistaMapa VistaDelMapaCargado = new VistaMapa(mapa);
 			gameLoop.agregar(VistaDelMapaCargado);
@@ -79,10 +81,10 @@ public class ControlJuego {
 			/*bombita = pers.recuperarBombita();
 			Coordenada coord = new Coordenada(38,38);
 			mapacargado.agregarSalida(coord)*/
+			teclado.set(pers.recuperarBombita());
 			gameLoop.agregar(mapacargado);
 			VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
 			gameLoop.agregar(VistaDelMapaCargado);
-			gameLoop.iniciarEjecucion();
 			
 		} catch (Exception e2) {
 			e2.printStackTrace();
