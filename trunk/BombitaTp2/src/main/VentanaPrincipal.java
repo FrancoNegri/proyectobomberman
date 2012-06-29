@@ -112,8 +112,8 @@ public class VentanaPrincipal {
 		
 		
 
+		frame.addKeyListener(new Teclado(controlDelJuego.getBombita()));
 		panel.addKeyListener(new Teclado(controlDelJuego.getBombita()));
-		
 		
 		
 		
