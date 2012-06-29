@@ -28,7 +28,7 @@ import modelo.armamento.Armamento;
 import modelo.armamento.ToleTole;
 import modelo.articulo.Articulo;
 import modelo.articulo.Habano;
-import modelo.bombitatest.BombitaTest;
+//import modelo.bombitatest.BombitaTest;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
@@ -93,15 +93,32 @@ public class VentanaPrincipal {
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 		
+		
+		
 		// PANEL
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(Color.green);
 		panel.setBounds(20, 20, 550, 550);
+		
+		
+		
+		
 		contenedor.add(panel);
 		
 		// CONTROL DEL JUEGO
 		final ControlJuego controlDelJuego = new ControlJuego(panel);
-				
+		
+		
+		
+		
+
+		panel.addKeyListener(new Teclado(controlDelJuego.getBombita()));
+		
+		
+		
+		
+		
+		
 		// LABELS 
 		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
 		float velocidadBombita = controlDelJuego.obtenerVelocidadArea();

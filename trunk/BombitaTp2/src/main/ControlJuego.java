@@ -50,6 +50,7 @@ public class ControlJuego {
 			gameLoop.reiniciar();
 			mapa = pers.recuperar("lvls/lvl1.xml");
 			bombita = pers.recuperarBombita();
+			this.panel.addKeyListener(new Teclado(bombita));
 			gameLoop.agregar(mapa);
 			VistaMapa VistaDelMapaCargado = new VistaMapa(mapa);
 			gameLoop.agregar(VistaDelMapaCargado);
@@ -158,6 +159,10 @@ public class ControlJuego {
 		this.cargarFondoMapa();
 		this.drawPane(g);
 	}*/
+	
+	public Bombita getBombita() {
+		return this.bombita;
+	}
 }
 
 
