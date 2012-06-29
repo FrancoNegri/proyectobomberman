@@ -11,6 +11,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -49,7 +51,7 @@ import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 public class VentanaPrincipal {
 
 	private JFrame frame;
-	private JLabel labelPts, labelVida, labelVel, labelNiv;
+	private JLabel labelPts, labelVida, labelVel, labelNiv, labelImg;
 	
 	public JFrame obtenerFrame() {
 		return frame;
@@ -66,6 +68,7 @@ public class VentanaPrincipal {
 			e.printStackTrace();
 		}
 	}
+	
 
 	/**
 	 * Initialize the contents of the frame.
@@ -74,25 +77,21 @@ public class VentanaPrincipal {
 	 */
 	private void initialize() throws IOException {
 		// ///////////Inicializacion grafica
-		frame = new JFrame();
+		frame = new JFrame("Bombita Rodriguez - Algortimos y ProgramacionIII - FIUBA ©");
 		Container contenedor = frame.getContentPane();
 		frame.setForeground(new Color(0, 0, 0));
 		frame.setBounds(100, 100, 800, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
-		
-		
+	
 		
 		// PANEL
 		JPanel panel = new SuperficiePanel();
 		panel.setBackground(Color.green);
 		panel.setBounds(20, 20, 550, 550);
-		
-		
-		
-		
 		contenedor.add(panel);
+		
 		
 		// CONTROL DEL JUEGO
 		final ControlJuego controlDelJuego = new ControlJuego(panel);
@@ -109,10 +108,15 @@ public class VentanaPrincipal {
 		labelVel.setBounds(600, 52, 100, 50);
 		labelNiv = new JLabel("Nivel: 1");
 		labelNiv.setBounds(600, 67, 100, 50);
+		labelImg = new JLabel();
+		labelImg.setIcon(new ImageIcon(getClass().getResource("/vista/Imagenes/BombitaRodriguez1.png")));
+		labelImg.setBounds(600,380,200,200);
+		
 		contenedor.add(labelPts);
 		contenedor.add(labelVida);
 		contenedor.add(labelVel);
 		contenedor.add(labelNiv);
+		contenedor.add(labelImg);
 		
 
 		// MENU HERRAMIENTAS
@@ -155,11 +159,12 @@ public class VentanaPrincipal {
 		});
 
 		JMenu menuAyuda = new JMenu("Ayuda");
-		menuArchivo.setMnemonic('Y');
+		menuArchivo.setMnemonic('A');
 
 		JMenuItem elementoControles = new JMenuItem("Controles");
-		final String informacionControles = "Moverse: \n" + "Plantar bomba: \n"
-				+ "Ingresar a la salida: ";
+		final String informacionControles = "Moverse: Flechas del Teclado \n" 
+											+ "Plantar bomba: A\n"
+											+ "Ingresar a la salida: ";
 		elementoControles.setMnemonic('i');
 		menuAyuda.add(elementoControles);
 		elementoControles.addActionListener(new ActionListener() {
@@ -173,7 +178,7 @@ public class VentanaPrincipal {
 		final String informacion = "TP2 - Bombita Rodriguez - Algoritmos III\n"
 				+ "\n"
 				+ "Franco Negri - Francisco Disalvo - Matias Barro - Federico Di Rocco\n";
-		elementoAcerca.setMnemonic('c');
+		elementoAcerca.setMnemonic('A');
 		menuAyuda.add(elementoAcerca);
 		elementoAcerca.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evento) {
@@ -226,66 +231,15 @@ public class VentanaPrincipal {
 		contenedor.add(btnCargar);
 		
 		
-		//INICIO BOTONES DE MOVIMIENTO
-		
-		JButton btnArriba = new JButton("U");
-		btnArriba.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				
-				controlDelJuego.moverBombitaArriba();
-			}
-		});
-		btnArriba.setBounds(650, 420, 50, 25);
-		contenedor.add(btnArriba);
-		
-		JButton btnAbajo = new JButton("D");
-		btnAbajo.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				
-				controlDelJuego.moverBombitaAbajo();
-			}
-		});
-		btnAbajo.setBounds(650, 500, 50, 25);
-		contenedor.add(btnAbajo);
-		
-		JButton btnDerecha = new JButton("R");
-		btnDerecha.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				
-				controlDelJuego.moverBombitaDerecha();
-			}
-		});
-		btnDerecha.setBounds(600, 460, 50, 25);
-		contenedor.add(btnDerecha);
-		
-		JButton btnIzquierda = new JButton("L");
-		btnIzquierda.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				
-				controlDelJuego.moverBombitaIzquierda();
-			}
-		});
-		btnIzquierda.setBounds(700, 460, 50, 25);
-		contenedor.add(btnIzquierda);
-		
-		JButton btnAtacar = new JButton("A");
-		btnAtacar.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				controlDelJuego.ataqueDeBombita();
-			}
-		});
-		btnAtacar.setBounds(650, 460, 50, 25);
-		contenedor.add(btnAtacar);
-		
-		//FIN BOTONES DE MOVIMIENTO.
-		
 
 		//AREA DE TEXTO
 		JTextArea area = new JTextArea();
 		area = controlDelJuego.obtenerAreaDeTexto();
 		contenedor.add(area);
 		
-		//CONTROLES
+		//CONTROLES (TECLADO)
+		panel.addKeyListener(new Teclado(controlDelJuego.getBombita()));
+		panel.setVisible(true);
 		
 	};
 }
