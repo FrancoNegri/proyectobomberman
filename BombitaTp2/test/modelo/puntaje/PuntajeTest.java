@@ -48,6 +48,17 @@ public class PuntajeTest {
 	}
 	
 	@Test
+	public void testPuntajeInicialArticulo() {
+		assertTrue(habano.obtenerPuntaje() == 100);
+	}
+	
+	@Test
+	public void testPuntajeInicialObstaculo() {
+		ladrillo.Daniar(5);
+		assertTrue(ladrillo.obtenerPuntaje() == 200);
+	}
+	
+	@Test
 	public void testAumentarPuntajeLuegoDeMatarEnemigo() { //Pensar en que momento se peude sumar el puntaje al morir un enemigo
 		/*cecilio.Daniar(5);
 		casillero.actualizar();
