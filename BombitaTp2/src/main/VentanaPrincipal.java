@@ -136,7 +136,7 @@ public class VentanaPrincipal {
 
 		// MENU HERRAMIENTAS
 		JMenu menuArchivo = new JMenu("Archivo");
-
+		menuArchivo.setForeground(Color.red);
 		JMenuItem elementoJugar = new JMenuItem("Jugar");
 		elementoJugar.setMnemonic('J');
 		menuArchivo.add(elementoJugar);
@@ -173,6 +173,7 @@ public class VentanaPrincipal {
 		});
 
 		JMenu menuAyuda = new JMenu("Ayuda");
+		menuAyuda.setForeground(Color.red);
 		menuArchivo.setMnemonic('A');
 
 		JMenuItem elementoControles = new JMenuItem("Controles");
@@ -202,6 +203,7 @@ public class VentanaPrincipal {
 		});
 
 		JMenuBar barra = new JMenuBar();
+		barra.setBackground(Color.black);
 		frame.setJMenuBar(barra);
 		barra.add(menuArchivo);
 		barra.add(menuAyuda);
