@@ -36,6 +36,7 @@ public class SuperficiePanel extends JPanel implements SuperficieDeDibujo {
 	
 	public void actualizar() {
 		this.repaint();
+		this.requestFocus();
 	}
 
 	private void limpiar() {
@@ -50,4 +51,5 @@ public class SuperficiePanel extends JPanel implements SuperficieDeDibujo {
 	public Graphics getBuffer(){
 		return this.imagen.getGraphics();
 	}
+	
 }
