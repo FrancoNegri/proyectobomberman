@@ -287,8 +287,5 @@ public class VentanaPrincipal {
 		
 		//CONTROLES
 		
-		area.addKeyListener(new Teclado(controlDelJuego.getBombita()));
-		area.setVisible(true);
-		
 	};
 }

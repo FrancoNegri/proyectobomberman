@@ -92,11 +92,11 @@ public class Bombita extends Personaje {
 	}
 	
 	public void moverseIzquierda() {
-		TranslacionADar = new TranslacionDerecha();
+		TranslacionADar = new TranslacionIzquierda();
 	}
 	
 	public void moverseDerecha() {
-		TranslacionADar = new TranslacionIzquierda();
+		TranslacionADar = new TranslacionDerecha();
 	}
 	
 	public static Personaje recuperar(Element elemCes,Mapa mapa) {
