@@ -32,7 +32,7 @@ public class BombitaTest {
 
 	@Test
 	public void testInicializarVelocidad() {
-		assertTrue(rodriguez.getVelocidad() == 10);
+		assertTrue(rodriguez.getVelocidad() == 4);
 	}
 
 	@Test
@@ -71,7 +71,7 @@ public class BombitaTest {
 	@Test
 	public void testObtenerHabanoYAumentarVelocidad() {
 		rodriguez.tomarArticulo(habano);
-		assertTrue(rodriguez.getVelocidad() == 20);
+		assertTrue(rodriguez.getVelocidad() == 4);
 	}
 
 	@Test

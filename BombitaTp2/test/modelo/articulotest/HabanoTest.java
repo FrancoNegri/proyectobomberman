@@ -12,7 +12,7 @@ public class HabanoTest {
 
 	private Bombita rodriguez;
 	private Habano unHabano;
-	private float VelocidadPrueba;
+	private int VelocidadPrueba;
 	Coordenada coordenada;
 	@Before
 	public void setUp(){
@@ -21,7 +21,7 @@ public class HabanoTest {
 		Mapa mapa = new Mapa(5);
 		this.rodriguez = new Bombita(coordenada,mapa);
 		this.unHabano = new Habano(coordenada);
-		this.VelocidadPrueba = 20;
+		this.VelocidadPrueba = 4;
 		
 	}
 	@Test

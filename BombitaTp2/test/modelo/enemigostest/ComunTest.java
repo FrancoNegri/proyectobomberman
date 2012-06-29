@@ -29,7 +29,7 @@ public class ComunTest {
 	
 	@Test
 	public void testInicializarVelocidad() {
-		assertTrue(lopez.getVelocidad() == 20);
+		assertTrue(lopez.getVelocidad() == 7);
 	}
 	
 	@Test
