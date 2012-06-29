@@ -57,10 +57,6 @@ public class Mapa implements ObjetoVivo {
 		return this.TableroJuego.obtenerCasillero(coord).obtenerArticulo();
 	}
 
-	public int obtenerVidaBombita() {
-		// IMPLEMENTAR
-		return 10;
-	}
 
 	public synchronized void agregarAlMapa(Personaje unPersonaje) {
 
@@ -122,8 +118,7 @@ public class Mapa implements ObjetoVivo {
 	}
 
 	public int obtenerPuntajeTotal() {
-		//IMPLEMENTAR
-		return 0;
+		return puntajeTotal;
 	}
 
 	public int obtenerTamanio() {
