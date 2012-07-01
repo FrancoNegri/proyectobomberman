@@ -36,7 +36,7 @@ public abstract class Enemigo extends Personaje {
 	
 	public boolean decideAtacar(){
 		Random generator = new Random();
-		// un 50% de chances de plantar una bomba
+		// un 10% de chances de plantar una bomba
 		return(generator.nextInt(1000) < 10);
 	}
 
