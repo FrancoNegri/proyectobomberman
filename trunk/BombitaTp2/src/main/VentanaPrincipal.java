@@ -95,7 +95,7 @@ public class VentanaPrincipal {
 		
 		
 		// CONTROL DEL JUEGO
-		final ControlJuego controlDelJuego = new ControlJuego(panel);
+		final ControlJuego controlDelJuego = new ControlJuego(panel, null);
 		
 		
 		// LABELS 

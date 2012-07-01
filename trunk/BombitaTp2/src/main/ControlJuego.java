@@ -6,7 +6,9 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import javax.imageio.ImageIO;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -36,12 +38,14 @@ public class ControlJuego {
 	private JPanel panel;
 	private Bombita bombita;
 	private BufferedImage fondo;
+	private JFrame frame;
 	Persistencia pers = new Persistencia();
 	Teclado teclado;
 	
-	public ControlJuego(JPanel unPanel){
+	public ControlJuego(JPanel unPanel, JFrame unFrame){
 		this.gameLoop = new GameLoop(10, (SuperficieDeDibujo) unPanel);
 		this.panel = unPanel;
+		this.frame = unFrame;
 	
 		Personaje modelo3;
 		
@@ -159,6 +163,42 @@ public class ControlJuego {
 	public Bombita getBombita() {
 		return this.bombita;
 	}
+	
+	//GAME OVER
+	public void gameOver() {
+	       int n = JOptionPane.showConfirmDialog(frame,
+	               "Perdiste, queres volver a jugar?",
+	               "Game Over",
+	               JOptionPane.YES_NO_OPTION);
+	       if (n == JOptionPane.YES_OPTION) {
+	           this.IniciarJuego(); //Aca deberia reiniciar el nivel correcto
+	       } else
+	           System.exit(0);
+	}
+	
+	//PASAJE A OTRO NIVEL
+	public void pasajeDeNivel() {
+	       int n = JOptionPane.showConfirmDialog(frame,
+	               "Ganaste, queres pasar al otro nivel?",
+	               "Ganaste",
+	               JOptionPane.YES_NO_OPTION);
+	       if (n == JOptionPane.YES_OPTION) {
+	           this.IniciarJuego(); //Aca deberia pasar al nivel correcto
+	       } else
+	           System.exit(0);
+	}
+	
+	//JUEGO GANADO
+	public void juegoGanado() {
+		      int n = JOptionPane.showConfirmDialog(frame,
+		              "GANASTE EL JUEGO, queres volver a comenzar el juego?",
+		              "Ganador",
+		              JOptionPane.YES_NO_OPTION);
+		      if (n == JOptionPane.YES_OPTION) {
+		          this.IniciarJuego();
+		      } else
+		          System.exit(0);
+		}
 }
 
 
