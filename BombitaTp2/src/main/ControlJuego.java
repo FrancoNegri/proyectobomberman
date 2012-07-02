@@ -127,10 +127,7 @@ public class ControlJuego {
 	}
 	
 	public int obtenerVidaArea() {
-		//Hecho asi para probar
-		if (!bombita.estaMuerto())
 		return bombita.obtenerVida();
-		return 0;
 	}
 	
 	public int obtenerVelocidadArea() {

@@ -107,9 +107,11 @@ public class VentanaPrincipal {
 		labelInfo.setForeground(Color.white);
 		labelInfo.setBounds(625, 15, 100, 50);
 		labelPts = new JLabel("Puntos: "+ puntajeMapa);
+		labelPts.setVisible(true);
 		labelPts.setForeground(Color.white);
 		labelPts.setBounds(610, 50, 100, 50);
 		labelVida = new JLabel("Vida: "+ (controlDelJuego.obtenerVidaArea()));
+		labelPts.setVisible(true);
 		labelVida.setForeground(Color.white);
 		labelVida.setBounds(610, 90, 100, 50);
 		labelVel = new JLabel("Velocidad: "+ velocidadBombita + " km/h");
