@@ -78,7 +78,7 @@ public class VentanaPrincipal {
 	 */
 	private void initialize() throws IOException {
 		// ///////////Inicializacion grafica
-		frame = new JFrame("Bombita Rodriguez, The Game - Algortimos y Programacion III - FIUBA ©");
+		frame = new JFrame("Bombita Rodriguez, The Game - Algortimos y Programacion III - FIUBA");
 		Container contenedor = frame.getContentPane();
 		frame.setForeground(new Color(0, 0, 0));
 		frame.setBounds(100, 100, 770, 650);
