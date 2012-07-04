@@ -29,7 +29,6 @@ public class Teclado extends KeyAdapter implements KeyListener{
 			switch (pressedKey) {
 			case KeyEvent.VK_DOWN:
 			{	rodriguez.moverseAbajo();
-				System.out.println("Abajo");
 				break;
 			}
 			case KeyEvent.VK_LEFT:
