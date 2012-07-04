@@ -1,27 +1,23 @@
 package modelo.personaje;
 
-import java.util.Random; 
-
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.QName;
 
 import vista.objeto.VistaObjeto;
+
 import modelo.ArmamentoFactory.*;
 import modelo.Translacion.*;
 import modelo.articulo.Articulable;
-import modelo.casillero.Casillero;
 import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
-import modelo.errores.TamanioMatrizInvalidoError;
 import modelo.mapa.Mapa;
-import modelo.personaje.enemigos.Cecilio;
 
 public class Bombita extends Personaje {
 
 	
 	Translacion TranslacionADar;
-	boolean actitudAtaque;
+	private boolean actitudAtaque;
 	
 
 	

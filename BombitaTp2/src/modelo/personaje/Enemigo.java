@@ -1,7 +1,7 @@
 package modelo.personaje;
 
 
-import modelo.Translacion.Translacion;
+import modelo.Translacion.Translacion; 
 import modelo.Translacion.TranslacionAbajo;
 import modelo.Translacion.TranslacionArriba;
 import modelo.Translacion.TranslacionDerecha;
@@ -37,7 +37,7 @@ public abstract class Enemigo extends Personaje {
 	public boolean decideAtacar(){
 		Random generator = new Random();
 		// un 10% de chances de plantar una bomba
-		return(generator.nextInt(1000) < 10);
+		return(generator.nextInt(1000) < 5);
 	}
 
 	protected Translacion obtenerTranslacion(){
