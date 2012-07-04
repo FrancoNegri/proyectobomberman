@@ -19,7 +19,7 @@ public class ConstantesJuego {
 	public static final int danio_molotov = 5;
 	public static final int danio_proyectil = 100;
 	public static final int danio_toletole = 1000;
-	public static final int timer_molotov = 20;
+	public static final int timer_molotov = 30;
 	public static final int timer_toletole = 20;
 	public static final int timer_proyectil = 0;
 	public static final int velocidad_aumento_habano = 10;
