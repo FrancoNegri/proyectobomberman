@@ -231,8 +231,10 @@ public class Casillero {
 			Iterator<Personaje> itPersonajes = Personajes.iterator();
 			while (itPersonajes.hasNext()) {
 				Personaje unPersonaje = itPersonajes.next();
+				if(this.personajeEsBombita(unPersonaje)){
 				unPersonaje.tomarArticulo(articulo);
 				fueUtilizado = true;
+				}
 			}
 		}
 		return fueUtilizado;
@@ -265,7 +267,7 @@ public class Casillero {
 		while ((itPers.hasNext()) && (!bandera)) {
 
 			Personaje PersonajeAux = itPers.next();
-			bandera = (PersonajeAux instanceof Bombita);
+			bandera = (this.personajeEsBombita(PersonajeAux));
 		}
 		return bandera;
 
@@ -295,6 +297,12 @@ public class Casillero {
 			return false;
 		}
 		return true;
+		
+	}
+	
+	private boolean personajeEsBombita(Personaje unPersonaje){
+		
+		return (unPersonaje instanceof Bombita);
 		
 	}
 	
