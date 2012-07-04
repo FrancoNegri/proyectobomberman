@@ -1,5 +1,6 @@
 package modelo.puntajetest;
 
+import modelo.armamento.ToleTole;
 import modelo.articulo.Habano;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
@@ -15,6 +16,7 @@ public class PuntajeTest {
 	private Cecilio cecilio;
 	private BloqueLadrillo ladrillo;
 	private Habano habano;
+	private ToleTole tole;
 	private Casillero casillero;
 	private Casillero otroCasillero;
 	private Bombita rodriguez;
@@ -28,6 +30,7 @@ public class PuntajeTest {
 		ladrillo = new BloqueLadrillo(coordenada);
 		habano = new Habano(coordenada);
 		casillero = new Casillero();
+		tole = new ToleTole(coordenada,mapa,6);
 		otroCasillero = new Casillero();
 		rodriguez = new Bombita(coordenada,mapa);
 		casillero.agregar(cecilio);
@@ -85,4 +88,10 @@ public class PuntajeTest {
 		mapa.actualizarMapa();
 		assertTrue(mapa.obtenerPuntajeTotal() == 600);
 	}*/
+	
+	@Test
+	public void testObtenerPuntajeToleTole() {
+		int puntaje = tole.obtenerPuntaje();
+		assertTrue(puntaje == 100);
+	}
 }

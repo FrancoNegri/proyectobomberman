@@ -23,4 +23,12 @@ public class FuegoDeExplocionTest {
 		assertTrue(fuego.estaMuerto());
 		
 	}
+	
+	@Test
+	public void obtenerCoordenadaDelFuego() {
+		Coordenada coord = new Coordenada(2,2);
+		FuegoDeExplocion fuego = new FuegoDeExplocion(coord, 10);
+		assertTrue(fuego.getX() == 2);
+		assertTrue(fuego.getY() == 2);
+	}
 }

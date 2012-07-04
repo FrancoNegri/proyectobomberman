@@ -48,4 +48,10 @@ public class ArmamentoTest {
 		verify(casilleroADaniar,times(4)).obtenerObstaculo();
 	}
 	
+	@Test
+	public void testExploto() {
+		arma.explotar(coordenada,mapa);
+		arma.vivir();
+		assertTrue(arma.getClass() == arma.getClass());
+	}
 }
