@@ -59,11 +59,9 @@ public class Salida implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 	
 	
 	public static Salida recuperar(Element elemSal){
-		
 		Coordenada coord = Coordenada.recuperar(elemSal.element(new QName("Coordenada")));
 		Salida Salidarecu = new Salida(coord);
 		return Salidarecu;
-		
 	}
 		
 		
