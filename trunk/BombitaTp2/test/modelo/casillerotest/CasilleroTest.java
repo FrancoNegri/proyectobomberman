@@ -1,14 +1,20 @@
 package modelo.casillerotest;
 import modelo.armamento.Armamento;
+import modelo.armamento.Molotov;
+import modelo.armamento.ToleTole;
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
+import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
+import modelo.obstaculos.BloqueLadrillo;
+import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Personaje;
 import modelo.personaje.Bombita;
 import static org.junit.Assert.*;
 import org.junit.*;
 import static org.mockito.Mockito.*;
 import modelo.coordenadas.*;
+import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.salida.*;
 
 
@@ -231,5 +237,81 @@ public class CasilleroTest {
 		
 	}
 	
+	@Test
+	public void testObtenerFuego(){
+		Casillero cas = new Casillero();
+		Coordenada coordenada = new Coordenada(2,2);
+		FuegoDeExplocion fuego = new FuegoDeExplocion(coordenada, 10);
+		FuegoDeExplocion fueguito = cas.obtenerFuegoDeExplocion();
+	}
 
+	@Test
+	public void testEliminarArticuloIgual() {
+		Casillero cas = new Casillero();
+		Coordenada coordenada = new Coordenada(2,2);
+		Mapa mapa = new Mapa(10);
+		Articulable tole = new ToleTole(coordenada,mapa,6);
+		cas.eliminar(tole);
+		Articulable art = cas.obtenerArticulo();
+		assertTrue(art == null);
+	}
+	
+	@Test
+	public void testEliminarArmamentoIgual() {
+		Casillero cas = new Casillero();
+		Coordenada coordenada = new Coordenada(2,2);
+		Mapa mapa = new Mapa(10);
+		Armamento molotov = new Molotov(coordenada,mapa,6);
+		cas.eliminar(molotov);
+		Armamento art = cas.obtenerArmamento();
+		assertTrue(art == null);
+	}
+	
+	@Test
+	public void testEliminarObstaculoIgual() {
+		Casillero cas = new Casillero();
+		Coordenada coordenada = new Coordenada(2,2);
+		Obstaculo obs = new BloqueLadrillo(coordenada);
+		cas.eliminar(obs);
+		Obstaculo art = cas.obtenerObstaculo();
+		assertTrue(art == null);
+	}
+	
+	@Test
+	public void testObtenerSalida() {
+		Coordenada coordenada = new Coordenada(2,2);
+		Salida salida = new Salida(coordenada);
+		Casillero cas = new Casillero();
+		cas.obtenerSalida();
+	}
+	
+	@Test
+	public void testVerificarCasilleroNoVacioAlAgregarleUnaSalida() {
+		Coordenada coordenada = new Coordenada(2,2);
+		Salida salida = new Salida(coordenada);
+		Casillero cas = new Casillero();
+		cas.agregar(salida);
+		assertTrue(cas.casilleroEstaVacio() == false);
+	}
+	
+	@Test
+	public void testVerificarSalidaOn() {
+		Coordenada coordenada = new Coordenada(2,2);
+		Salida salida = new Salida(coordenada);
+		Casillero cas = new Casillero();
+		cas.agregar(salida);
+		assertTrue(cas.salidaON() == true);
+	}
+	
+	@Test
+	public void testVerificarSalidaOnNoPosible() {
+		Coordenada coordenada = new Coordenada(2,2);
+		Salida salida = new Salida(coordenada);
+		Obstaculo obs = new BloqueLadrillo(coordenada);
+		Casillero cas = new Casillero();
+		cas.agregar(obs);
+		cas.agregar(salida);
+		assertTrue(cas.salidaON() == false);
+	}
+	
 }

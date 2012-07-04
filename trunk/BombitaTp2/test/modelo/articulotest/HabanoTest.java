@@ -70,7 +70,15 @@ public class HabanoTest {
 		}	
 	}
 
-		
+	@Test
+	public void testAumentarVelocidadSuperandoVelocidadMaxima() {
+		rodriguez.cambiarVelocidad(49);
+		unHabano.aumentarVelocidad(rodriguez);
+	}
 	
+	public void testCambiarVelocidadBombitaDespuesDeFumarseUnHabano() {
+		unHabano.aumentarVelocidad(rodriguez);
+		assertTrue(rodriguez.getVelocidad() == 14);
+	}
 	
 }
