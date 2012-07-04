@@ -69,15 +69,13 @@ public class PuntajeTest {
 	public void testAumentarPuntajeLuegoDeDestruirObstaculo() {
 		ladrillo.Daniar(5);
 		casillero.actualizar();
-		assertTrue(casillero.obtenerPuntaje() == 300); //Devuelve 300 y no se porque!!!
-														//hay un articulo que le esta sumando +100
-														//(en el casillero hay un habano). Franco
+		assertTrue(casillero.obtenerPuntaje() == 200); 
 	}
 	
 	@Test
 	public void testAumentarPuntajeLuegoDeObtenerArticulo() {
 		rodriguez.tomarArticulo(habano);
 		casillero.actualizar();
-		assertTrue(casillero.obtenerPuntaje() == 100);
+		assertTrue(casillero.obtenerPuntaje() == 0);
 	}
 }
