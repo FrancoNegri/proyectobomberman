@@ -55,20 +55,9 @@ public class ControlJuego implements Runnable {
 		
 		try {
 			gameLoop.reiniciar();
-			mapa = pers.recuperar("lvls/lvl1.xml");
+			cargarMapaEnXml("lvls/lvl1.xml");
 			Thread juego = new Thread(this);
 			juego.start();
-			Coordenada coord = new Coordenada (0,20);	
-			mapa.agregarSalida(coord);
-			bombita = pers.recuperarBombita();
-			teclado = new Teclado(bombita);
-			unPanel.setVisible(true);
-			unPanel.addKeyListener(teclado);
-			gameLoop.agregar(mapa);
-			VistaMapa VistaDelMapaCargado = new VistaMapa(mapa);
-			gameLoop.agregar(VistaDelMapaCargado);
-			gameLoop.iniciarEjecucion();
-			
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
@@ -87,16 +76,7 @@ public class ControlJuego implements Runnable {
 	
 	public void CargarJuego(){
 		try {
-			gameLoop.reiniciar();
-			Mapa mapacargado= pers.recuperar("lvls/JUEGOGUARDADO.xml");
-			/*bombita = pers.recuperarBombita();
-			Coordenada coord = new Coordenada(38,38);
-			mapacargado.agregarSalida(coord)*/
-			teclado.set(pers.recuperarBombita());
-			gameLoop.agregar(mapacargado);
-			VistaMapa VistaDelMapaCargado = new VistaMapa(mapacargado);
-			gameLoop.agregar(VistaDelMapaCargado);
-			
+			cargarMapaEnXml("lvls/JUEGOGUARDADO.xml");
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
@@ -208,10 +188,10 @@ public class ControlJuego implements Runnable {
 		while(!finDelJuego){
 			if(mapa.terminoNivel()){
 				try {
-					System.out.print("LISTO PARA SALIR!");
-					mapa = pers.recuperar("lvls/lvl"+ k + ".xml");
+					cargarMapaEnXml("lvl"+k+".xml");
+					finDelJuego = false;
 				} catch (IOException e) {
-					e.printStackTrace();
+					juegoGanado();
 				}
 				k = k+1;
 			}
@@ -223,7 +203,16 @@ public class ControlJuego implements Runnable {
 	public void terminar() {
 		finDelJuego = true;
 	}
+
+
+	public void cargarMapaEnXml(String ruta) throws IOException{
+		gameLoop.reiniciar();
+		mapa= pers.recuperar(ruta);
+		teclado.set(pers.recuperarBombita());
+		gameLoop.agregar(mapa);
+		VistaMapa VistaDelMapaCargado = new VistaMapa(mapa);
+		gameLoop.agregar(VistaDelMapaCargado);
+		pasajeDeNivel();
+	}
+
 }
-
-
-

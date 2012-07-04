@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mapa Tamanio="40">
+	<Personajes>
+		<Bombita Vida="10" Velocidad="10.0">
+			<Coordenada CoordenadaX="0" CoordenadaY="0" />
+		</Bombita>
+	</Personajes>
+	<Bloques>
+		<BloqueDeAcero Vida="995">
+			<Coordenada CoordenadaX="3" CoordenadaY="3"/>
+		</BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="8" CoordenadaY="3" />
+		</BloqueDeAcero>
+		<BloqueDeAcero Vida="900">
+			<Coordenada CoordenadaX="13" CoordenadaY="3" />
+		</BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="18" CoordenadaY="3" />
+		</BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="23" CoordenadaY="3" />
+		</BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="28" CoordenadaY="3" />
+		</BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="33" CoordenadaY="3" /></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="38" CoordenadaY="3"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="3" CoordenadaY="8"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="8" CoordenadaY="8"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="13" CoordenadaY="8"></Coordenada></BloqueDeAcero>
+	</Bloques>
+	<Armamentos></Armamentos>
+	<Articulos>
+		<Habano>
+			<Coordenada CoordenadaX="18" CoordenadaY="25" />
+		</Habano>
+		<Timer>
+			<Coordenada CoordenadaX="30" CoordenadaY="10" />
+		</Timer>
+		<Timer>
+			<Coordenada CoordenadaX="0" 
+CoordenadaY="12"></Coordenada></Timer>
+	</Articulos>
+</Mapa>
