@@ -74,4 +74,5 @@
 			<Coordenada CoordenadaX="0" 
 CoordenadaY="12"></Coordenada></Timer>
 	</Articulos>
-</Mapa>
+	<Salida>
+		<Coordenada CoordenadaX="0" CoordenadaY="20"></Coordenada></Salida></Mapa>
