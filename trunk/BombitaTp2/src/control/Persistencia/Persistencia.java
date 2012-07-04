@@ -20,6 +20,7 @@ import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.Cecilio;
 import modelo.personaje.enemigos.LopezAlado;
 import modelo.personaje.enemigos.LopezComun;
+import modelo.salida.*;
 import org.dom4j.*;
 import org.dom4j.io.SAXReader;
 
@@ -60,11 +61,13 @@ public class Persistencia {
 		Element Obstaculos = elemMapa.element("Bloques");
 		Element Articulos = elemMapa.element("Articulos");
 		Element Armamentos = elemMapa.element("Armamentos");
-
+		Element Salida = elemMapa.element("Salida");
+		
 		this.recuperarPersonajes(Personajes, nuevoMapa);
 		this.recuperarObstaculos(Obstaculos, nuevoMapa);
 		this.recuperarArticulos(Articulos, nuevoMapa);
 		this.recuperarArmamentos(Armamentos, nuevoMapa);
+		this.recuperarSalida(Salida, nuevoMapa);
 
 		return nuevoMapa;
 	}
@@ -147,6 +150,13 @@ public class Persistencia {
 			}
 
 		}
+	}
+	
+	private void recuperarSalida(Element ElemSas, Mapa nuevoMapa){
+		
+		Salida unaSalida = Salida.recuperar(ElemSas);
+		nuevoMapa.agregarAlMapa(unaSalida);
+		
 	}
 
 	public Bombita recuperarBombita() {

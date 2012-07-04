@@ -30,6 +30,7 @@ public class Casillero {
 		this.unArticulo = null;
 		this.unObstaculo = null;
 		this.puntaje = 0;
+		this.salidaJuego = null;
 
 	}
 

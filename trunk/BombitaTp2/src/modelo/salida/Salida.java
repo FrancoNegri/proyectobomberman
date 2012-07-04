@@ -1,5 +1,9 @@
 package modelo.salida;
 
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.QName;
+
 import vista.fiuba.algo3.titiritero.modelo.ObjetoPosicionable;
 import vista.fiuba.algo3.titiritero.modelo.ObjetoVivo;
 import vista.fiuba.algo3.titiritero.dibujables.*;
@@ -32,23 +36,36 @@ public class Salida implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 			vistaObjeto.InteractuarConSalida(this);
 		}
 		
-		public int getX() {
+	public int getX() {
 			
-			return this.coordenada.obtenerCoordenadaX();
-			
-			}
-
-		public int getY() {
-				
-			return this.coordenada.obtenerCoordenadaY();
-			}
-		
-		public void vivir(){
+		return this.coordenada.obtenerCoordenadaX();
 			
 		}
-	 
-	 
+
+	public int getY() {
+				
+		return this.coordenada.obtenerCoordenadaY();
+		}
+		
+		
+	public void vivir(){
+			
+		}
+	
+	public Coordenada obtenerCoordenadaXY(){
+		
+		return this.coordenada.copiar();
+	}
 	
 	
+	public static Salida recuperar(Element elemSal){
+		
+		Coordenada coord = Coordenada.recuperar(elemSal.element(new QName("Coordenada")));
+		Salida Salidarecu = new Salida(coord);
+		return Salidarecu;
+		
+	}
+		
+		
 	
 }
