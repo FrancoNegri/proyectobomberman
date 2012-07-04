@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -31,7 +32,7 @@ import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 import control.Persistencia.Persistencia;
 import control.Teclado.Teclado;
 import modelo.salida.*;
-public class ControlJuego {
+public class ControlJuego implements Runnable {
 
 	Mapa mapa;
 	private GameLoop gameLoop;
@@ -41,8 +42,9 @@ public class ControlJuego {
 	private JFrame frame;
 	Persistencia pers = new Persistencia();
 	Teclado teclado;
+	private boolean finDelJuego = false;
 	
-	public ControlJuego(JPanel unPanel, JFrame unFrame){
+	public ControlJuego(JPanel unPanel, JFrame unFrame)  {
 		this.gameLoop = new GameLoop(10, (SuperficieDeDibujo) unPanel);
 		this.panel = unPanel;
 		this.frame = unFrame;
@@ -54,6 +56,8 @@ public class ControlJuego {
 		try {
 			gameLoop.reiniciar();
 			mapa = pers.recuperar("lvls/lvl1.xml");
+			Thread juego = new Thread(this);
+			juego.start();
 			Coordenada coord = new Coordenada (0,20);	
 			mapa.agregarSalida(coord);
 			bombita = pers.recuperarBombita();
@@ -197,6 +201,28 @@ public class ControlJuego {
 		      } else
 		          System.exit(0);
 		}
+
+
+	public void run() {
+		int k = 1;
+		while(!finDelJuego){
+			if(mapa.terminoNivel()){
+				try {
+					System.out.print("LISTO PARA SALIR!");
+					mapa = pers.recuperar("lvls/lvl"+ k + ".xml");
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				k = k+1;
+			}
+			
+		}
+	}
+
+
+	public void terminar() {
+		finDelJuego = true;
+	}
 }
 
 

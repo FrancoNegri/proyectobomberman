@@ -174,6 +174,7 @@ public class VentanaPrincipal {
 		menuArchivo.add(elementoSalir);
 		elementoSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evento) {
+				controlDelJuego.terminar();
 				System.exit(0);
 			}
 		});
