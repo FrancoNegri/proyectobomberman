@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.EventQueue;
@@ -53,6 +54,7 @@ public class VentanaPrincipal {
 
 	private JFrame frame;
 	private JLabel labelInfo, labelPts, labelVida, labelVel, labelNiv, labelImg, labelPnl;
+	private BarraEstado barra;
 	
 	public JFrame obtenerFrame() {
 		return frame;
@@ -85,7 +87,9 @@ public class VentanaPrincipal {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
-
+		frame.setResizable(false);
+		BarraEstado barraEstado = new BarraEstado();
+		contenedor.add(barraEstado,BorderLayout.CENTER);
 		
 		// PANEL
 		JPanel panel = new SuperficiePanel();
@@ -96,7 +100,7 @@ public class VentanaPrincipal {
 		
 		// CONTROL DEL JUEGO
 		final ControlJuego controlDelJuego = new ControlJuego(panel, null);
-		
+
 		
 		// LABELS 
 		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
