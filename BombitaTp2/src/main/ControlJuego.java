@@ -55,9 +55,19 @@ public class ControlJuego implements Runnable {
 		
 		try {
 			gameLoop.reiniciar();
-			cargarMapaEnXml("lvls/lvl1.xml");
+			mapa = pers.recuperar("lvls/lvl1.xml");
 			Thread juego = new Thread(this);
+			juego.start();	
+			bombita = pers.recuperarBombita();
+			teclado = new Teclado(bombita);
+			unPanel.setVisible(true);
+			unPanel.addKeyListener(teclado);
+			gameLoop.agregar(mapa);
+			VistaMapa VistaDelMapaCargado = new VistaMapa(mapa);
+			gameLoop.agregar(VistaDelMapaCargado);
+			gameLoop.iniciarEjecucion();
 			juego.start();
+			unFrame.addKeyListener(teclado);
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
@@ -214,5 +224,4 @@ public class ControlJuego implements Runnable {
 		gameLoop.agregar(VistaDelMapaCargado);
 		pasajeDeNivel();
 	}
-
 }
