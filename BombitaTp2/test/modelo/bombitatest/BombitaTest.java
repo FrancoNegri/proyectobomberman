@@ -129,5 +129,16 @@ public class BombitaTest {
 		rodriguez.moverseIzquierda();
 		assertTrue(rodriguez.obtenerCoordenadaXY().obtenerCoordenadaX() == 1);
 	}
+
+	@Test
+	public void testCambiarActitud() {
+		rodriguez.cambiarActitud();
+		assertTrue(rodriguez.obtenerActitudAtaque() == true);
+	}
 	
+
+	@Test
+	public void testAtacar() {
+		rodriguez.Atacar();
+	}
 }
