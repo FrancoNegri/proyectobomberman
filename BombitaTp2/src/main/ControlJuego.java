@@ -161,6 +161,7 @@ public class ControlJuego {
 		return this.bombita;
 	}
 	
+	
 	//GAME OVER
 	public void gameOver() {
 	       int n = JOptionPane.showConfirmDialog(frame,

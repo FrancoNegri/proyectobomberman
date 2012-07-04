@@ -56,8 +56,6 @@ public class BarraEstado extends JPanel implements Runnable {
 		add(labelNiv);
 		add(labelImg);
 		add(labelPnl);
-		
-		setVisible(true);
 	}
 	
 	public void actualizarBarraEstado(Bombita rodriguez, Mapa mapa) {
@@ -70,6 +68,10 @@ public class BarraEstado extends JPanel implements Runnable {
 	public void run() {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public BarraEstado obtenerBarra() {
+		return this;
 	}
 
 }
