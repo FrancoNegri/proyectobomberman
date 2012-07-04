@@ -61,13 +61,13 @@ public class Persistencia {
 		Element Obstaculos = elemMapa.element("Bloques");
 		Element Articulos = elemMapa.element("Articulos");
 		Element Armamentos = elemMapa.element("Armamentos");
-		Element Salida = elemMapa.element("Salida");
+		//Element Salida = elemMapa.element("Salida");
 		
 		this.recuperarPersonajes(Personajes, nuevoMapa);
 		this.recuperarObstaculos(Obstaculos, nuevoMapa);
 		this.recuperarArticulos(Articulos, nuevoMapa);
 		this.recuperarArmamentos(Armamentos, nuevoMapa);
-		this.recuperarSalida(Salida, nuevoMapa);
+		//this.recuperarSalida(Salida, nuevoMapa);
 
 		return nuevoMapa;
 	}

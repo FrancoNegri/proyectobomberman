@@ -149,4 +149,5 @@
 			<Coordenada CoordenadaX="30" CoordenadaY="10" />
 		</Timer>
 	</Articulos>
-</Mapa>
+	<Salida>
+		<Coordenada CoordenadaX="0" CoordenadaY="20"></Coordenada></Salida></Mapa>
