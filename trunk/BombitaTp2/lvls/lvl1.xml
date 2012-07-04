@@ -1,30 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Mapa Tamanio="40">
 	<Personajes>
-		<Cecilio Vida="5" Velocidad="10.0">
-			<Coordenada CoordenadaX="10" CoordenadaY="10" />
-		</Cecilio>
 		<Bombita Vida="10" Velocidad="10.0">
 			<Coordenada CoordenadaX="0" CoordenadaY="0" />
 		</Bombita>
-		<Cecilio Vida="5" Velocidad="10.0">
-			<Coordenada CoordenadaX="20" CoordenadaY="10" />
-		</Cecilio>
-		<LopezAlado Vida="5" Velocidad="10.0">
-			<Coordenada CoordenadaX="30" CoordenadaY="30"></Coordenada>
-		</LopezAlado>
-		<LopezComun Vida="5" Velocidad="20.0">
-			<Coordenada CoordenadaX="28" CoordenadaY="0" />
-		</LopezComun>
-		<LopezAlado Vida="5" Velocidad="10.0">
-			<Coordenada CoordenadaX="22" CoordenadaY="10" />
-		</LopezAlado>
-		<Cecilio Vida="5" Velocidad="10.0">
-			<Coordenada CoordenadaX="25" CoordenadaY="23" />
-		</Cecilio>
-		<LopezComun Vida="10" Velocidad="20.0">
-			<Coordenada CoordenadaX="0" CoordenadaY="23" />
-		</LopezComun>
 	</Personajes>
 	<Bloques>
 		<BloqueDeAcero Vida="1000">

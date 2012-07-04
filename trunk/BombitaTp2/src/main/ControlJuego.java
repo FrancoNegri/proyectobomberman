@@ -45,7 +45,7 @@ public class ControlJuego implements Runnable {
 	private boolean finDelJuego = false;
 	
 	public ControlJuego(JPanel unPanel, JFrame unFrame)  {
-		this.gameLoop = new GameLoop(10, (SuperficieDeDibujo) unPanel);
+		this.gameLoop = new GameLoop(1, (SuperficieDeDibujo) unPanel);
 		this.panel = unPanel;
 		this.frame = unFrame;
 	
@@ -67,7 +67,6 @@ public class ControlJuego implements Runnable {
 			gameLoop.agregar(VistaDelMapaCargado);
 			gameLoop.iniciarEjecucion();
 			juego.start();
-			unFrame.addKeyListener(teclado);
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
@@ -199,13 +198,13 @@ public class ControlJuego implements Runnable {
 			if(mapa.terminoNivel()){
 				try {
 					cargarMapaEnXml("lvl"+k+".xml");
+					pasajeDeNivel();
 					finDelJuego = false;
 				} catch (IOException e) {
 					juegoGanado();
 				}
 				k = k+1;
 			}
-			
 		}
 	}
 
@@ -222,6 +221,5 @@ public class ControlJuego implements Runnable {
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapaCargado = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapaCargado);
-		pasajeDeNivel();
 	}
 }
