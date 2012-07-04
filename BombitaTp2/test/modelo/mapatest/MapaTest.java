@@ -13,6 +13,7 @@ import modelo.articulo.Articulo;
 import modelo.casillero.*;
 import modelo.coordenadas.Coordenada;
 import static org.junit.Assert.*;
+import modelo.salida.*;
 import org.junit.*;
 import static org.mockito.Mockito.*;
 public class MapaTest {
@@ -139,7 +140,8 @@ public class MapaTest {
 		Bombita pers = mock(Bombita.class);
 		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
 		this.unMapa.agregarAlMapa(pers);
-		this.unMapa.agregarSalida(cord);
+		Salida unaSalida = new Salida(cord);
+		this.unMapa.agregarAlMapa(unaSalida);
 		assertTrue(this.unMapa.terminoNivel());
 	}
 	
@@ -150,7 +152,8 @@ public class MapaTest {
 		Personaje pers = mock(Personaje.class);
 		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
 		this.unMapa.agregarAlMapa(pers);
-		this.unMapa.agregarSalida(cordsalida);
+		Salida unaSalida = new Salida(cordsalida);
+		this.unMapa.agregarAlMapa(unaSalida);
 		assertFalse(this.unMapa.terminoNivel());
 	}
 	
@@ -168,7 +171,8 @@ public class MapaTest {
 		this.unMapa.agregarAlMapa(pers);
 		this.unMapa.agregarAlMapa(otropers);
 		this.unMapa.agregarAlMapa(rodriguez);
-		this.unMapa.agregarSalida(cordsalida);
+		Salida unaSalida = new Salida(cordsalida);
+		this.unMapa.agregarAlMapa(unaSalida);
 		assertFalse(this.unMapa.terminoNivel());
 		
 	}
@@ -179,7 +183,8 @@ public class MapaTest {
 		Personaje pers = mock(Personaje.class);
 		when(pers.obtenerCoordenadaXY()).thenReturn(cordsalida);
 		this.unMapa.agregarAlMapa(pers);
-		this.unMapa.agregarSalida(cordsalida);
+		Salida unaSalida = new Salida(cordsalida);
+		this.unMapa.agregarAlMapa(unaSalida);
 		assertFalse(this.unMapa.terminoNivel());
 	}
 }

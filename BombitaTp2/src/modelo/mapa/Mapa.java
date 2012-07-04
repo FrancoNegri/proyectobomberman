@@ -93,10 +93,9 @@ public class Mapa implements ObjetoVivo {
 		this.agregarCasillero(coord, CasilleroAux);
 	}
 	
-	public void agregarSalida(Coordenada coord){
+	public void agregarAlMapa(Salida unaSalida){
 		
-		
-		Salida unaSalida = new Salida(coord);
+		Coordenada coord = unaSalida.obtenerCoordenadaXY();
 		Casillero casAux = this.obtenerCasillero(coord);
 		casAux.agregar(unaSalida);
 		this.agregarCasillero(coord, casAux);
