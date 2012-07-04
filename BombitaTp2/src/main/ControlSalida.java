@@ -7,19 +7,14 @@ import vista.fiuba.algo3.titiritero.modelo.GameLoop;
 import modelo.mapa.*;
 
 public class ControlSalida implements Runnable{
-	
-	private GameLoop gameloop;
 	private Mapa mapa;
-	private int frecuencia;
 	private Thread hilo;
 	private boolean estaEjecutando;
 	
 	
 	
 	public ControlSalida(int frecuencia, GameLoop gameLoop, Mapa mapa) {
-		this.frecuencia = frecuencia;
 		this.mapa = mapa;
-		this.gameloop = gameloop;
 	}
 
 	public void reiniciar(){
@@ -31,16 +26,7 @@ public class ControlSalida implements Runnable{
 	public void run() {
 		while(this.estaEjecutando) {
 			int k = 0;
-			while(!mapa.terminoNivel()){
-				k = k+1;
-			}
-			this.gameloop.detenerEjecucion();
-			try {
-				Thread.sleep(this.frecuencia);
-			} catch (InterruptedException e) {
-				// TODO log de exception
-				e.printStackTrace();
-			}
+			
 		}
 	}
 
