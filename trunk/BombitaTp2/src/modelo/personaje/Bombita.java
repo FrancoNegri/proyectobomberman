@@ -41,6 +41,10 @@ public class Bombita extends Personaje {
 		this.vida = 0;
 	}
 	
+	public boolean obtenerActitudAtaque() {
+		return actitudAtaque;
+	}
+	
 	public void chocar() {
 		this.morir();
 	}

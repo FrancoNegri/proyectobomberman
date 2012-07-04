@@ -46,5 +46,12 @@ public class BloqueAceroTest {
 		assertTrue(Bloque.vidaRestante()==975);
 	}
 	
+	@Test
+	public void testObtenerPuntaje() {
+		Obstaculo Bloque = new BloqueAcero(coord);
+		Bloque.Daniar(1000);
+		int puntaje = Bloque.obtenerPuntaje();
+		assertTrue(puntaje == 200);
+	}
 	
 }

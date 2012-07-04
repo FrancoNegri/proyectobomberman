@@ -102,8 +102,21 @@ public class AladoTest {
 	}
 	
 	@Test
-	public void testchocar(){
+	public void testChocar(){
 		lopez.chocar();
 		assertTrue(lopez.obtenerVida() == 5);
+	}
+	
+	@Test
+	public void testObtenerPuntaje(){
+		lopez.Daniar(5);
+		int puntaje = lopez.obtenerPuntaje();
+		assertTrue( puntaje == 300);
+	}
+	
+	@Test
+	public void testDaniarAlado(){
+		lopez.Daniar(3);
+		assertTrue(lopez.obtenerVida() == 2);
 	}
 }
