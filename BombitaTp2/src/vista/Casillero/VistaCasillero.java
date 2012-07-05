@@ -29,15 +29,13 @@ public class VistaCasillero implements ObjetoDibujable {
 		this.dibujarBloque(superficieDeDibujo);
 		this.dibujarPersonajes(superficieDeDibujo);
 		this.dibujarFuegoDeExplocion(superficieDeDibujo);
-		
-		
 	}
 
 	private void dibujarFuegoDeExplocion(SuperficieDeDibujo superficieDeDibujo) {
 		FuegoDeExplocion fuegoDeLaExplocion = CasilleroADibujar.obtenerFuegoDeExplocion();
 		if (fuegoDeLaExplocion != null) {
 			VistaObjeto vistaFuego = new VistaObjeto(fuegoDeLaExplocion);
-			vistaFuego.dibujar(superficieDeDibujo);
+			dibujar(vistaFuego,superficieDeDibujo );
 		}
 	}
 
@@ -45,7 +43,7 @@ public class VistaCasillero implements ObjetoDibujable {
 		Obstaculo ObstaculoAmostrar = CasilleroADibujar.obtenerObstaculo();
 		if (ObstaculoAmostrar != null) {
 			VistaObjeto vistaBloque = new VistaObjeto(ObstaculoAmostrar);
-			vistaBloque.dibujar(superficieDeDibujo);
+			dibujar(vistaBloque,superficieDeDibujo );
 		}
 	}
 
@@ -53,7 +51,7 @@ public class VistaCasillero implements ObjetoDibujable {
 		Articulable articuloADibujar = CasilleroADibujar.obtenerArticulo();
 		if (articuloADibujar != null) {
 			VistaObjeto vistaArma = new VistaObjeto(articuloADibujar);
-			vistaArma.dibujar(superficieDeDibujo);
+			dibujar(vistaArma,superficieDeDibujo );
 		}
 	}
 
@@ -61,7 +59,7 @@ public class VistaCasillero implements ObjetoDibujable {
 		Armamento arma = CasilleroADibujar.obtenerArmamento();
 		if (arma != null) {
 			VistaObjeto vistaArma = new VistaObjeto(arma);
-			vistaArma.dibujar(superficieDeDibujo);
+			dibujar(vistaArma,superficieDeDibujo );
 		}
 	}
 
@@ -72,16 +70,34 @@ public class VistaCasillero implements ObjetoDibujable {
 		while (iteradorDePersonajes.hasNext()) {
 				VistaObjeto vistaDelPersonaje = new VistaObjeto(
 						iteradorDePersonajes.next());
-				vistaDelPersonaje.dibujar(superficieDeDibujo);
+				dibujar(vistaDelPersonaje,superficieDeDibujo );
 		}
 	}
 	
 	private void dibujarSalida(SuperficieDeDibujo superficieDeDibujo){
-		
 		Salida salidaJuego = CasilleroADibujar.obtenerSalida();
 		if(salidaJuego != null){
 			VistaObjeto vistaSalida = new VistaObjeto(salidaJuego);
-			vistaSalida.dibujar(superficieDeDibujo);
+			dibujar(vistaSalida,superficieDeDibujo );
+		}
+	}
+	
+	private void dibujar(VistaObjeto objeto,SuperficieDeDibujo superficieDeDibujo){
+		Dibujador dibujador = new Dibujador(objeto,superficieDeDibujo);
+		Thread hilo = new Thread(dibujador);
+		hilo.run();
+		
+	}
+	
+	private class Dibujador implements Runnable{
+		VistaObjeto objetoADibujar;
+		SuperficieDeDibujo superficieDeDibujo;
+		public Dibujador(VistaObjeto objeto,SuperficieDeDibujo superficieDeDibujo){
+			objetoADibujar = objeto;
+			this.superficieDeDibujo = superficieDeDibujo;
+		}
+		public void run(){
+			objetoADibujar.dibujar(superficieDeDibujo);
 		}
 	}
 }

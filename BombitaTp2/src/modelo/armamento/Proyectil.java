@@ -40,30 +40,27 @@ public class Proyectil extends Armamento {
 				Coordenada coordenadaPlaneada = transladador.accion(coordenada);
 				if (coordenada.equals(coordenadaPlaneada) == false) {
 					try {
-						this.MoverseDeCasillero(coordenadaPlaneada);
-						distancia--;
+						Casillero casilleroAlQueMoverse = mapaAutilizar
+								.obtenerCasillero(coordenadaPlaneada);
+						if (casilleroAlQueMoverse.esAtacable() == false) {
+							Casillero casilleroAntiguo = mapaAutilizar
+									.obtenerCasillero(coordenada);
+							casilleroAntiguo.eliminar(this);
+							coordenada = coordenadaPlaneada;
+							mapaAutilizar.agregarAlMapa(this);
+							distancia--;
+							return;
+						}
 						tiempoParaCambiarDeCasillero = tiempoQueLeTomaPasarUnCasillero;
-						return;
-					} catch (Exception e) {}
+						
+					} catch (Exception e) {
+					}
 				}
 			}
 			this.explotar(coordenada, mapaAutilizar);
 		}
 	}
 
-	private void MoverseDeCasillero(Coordenada coordenadaPlaneada)
-			throws Exception {
-		Casillero casilleroAlQueMoverse = mapaAutilizar
-				.obtenerCasillero(coordenadaPlaneada);
-		if (casilleroAlQueMoverse.esAtacable() == false) {
-			Casillero casilleroAntiguo = mapaAutilizar
-					.obtenerCasillero(coordenada);
-			casilleroAntiguo.eliminar(this);
-			coordenada = coordenadaPlaneada;
-			mapaAutilizar.agregarAlMapa(this);
-		}
-	}
-	
 	private void comprobarCasilleroEnQueSeEncuentra() {
 		Casillero casilleroAntiguo = mapaAutilizar.obtenerCasillero(coordenada);
 		if (casilleroAntiguo.esAtacable()) {
