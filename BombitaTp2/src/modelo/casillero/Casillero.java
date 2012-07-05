@@ -195,7 +195,7 @@ public class Casillero {
 			hacerVivir(unArmamento);
 		}
 	}
-
+    //Elimina los personajes, y devuelve el numero que elimino para luego sacar el puntaje.
 	private int eliminarPersonajesMuertos() {
 		int cont = 0; 
 		Iterator<Personaje> IteradorPersonajes = personajes.iterator();
@@ -203,7 +203,6 @@ public class Casillero {
 			Personaje personaje = IteradorPersonajes.next();
 			if (personaje.estaMuerto()) {
 				cont = cont + 1;
-				this.actualizarPuntaje(personaje.obtenerPuntaje());
 				IteradorPersonajes.remove();
 			}
 		}
