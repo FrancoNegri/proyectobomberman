@@ -22,6 +22,7 @@ public class Mapa implements ObjetoVivo {
 
 	public Mapa(int tamanio) {
 		this.TableroJuego = new Tablero(tamanio);
+		this.puntajeTotal = 0;
 	}
 
 	public Mapa() {

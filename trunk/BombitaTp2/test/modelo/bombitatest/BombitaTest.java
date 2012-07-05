@@ -71,7 +71,7 @@ public class BombitaTest {
 	@Test
 	public void testObtenerHabanoYAumentarVelocidad() {
 		rodriguez.tomarArticulo(habano);
-		assertTrue(rodriguez.getVelocidad() == 4);
+		assertTrue(rodriguez.getVelocidad() == 14);
 	}
 
 	@Test

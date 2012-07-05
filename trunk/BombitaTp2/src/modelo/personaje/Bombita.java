@@ -27,7 +27,7 @@ public class Bombita extends Personaje {
 		this.vida = ConstantesJuego.vida_bombita;
 		this.CreadorDeBombas = new MolotovFactory();
         this.actitudAtaque = false;
-		this.puntaje = 0;
+        this.puntaje = 0;
 	}
 	
 	private Bombita(){
@@ -106,7 +106,7 @@ public class Bombita extends Personaje {
 		nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes.element(new QName("Coordenada")));
 		nuevoPers.mapa = mapa;
 		nuevoPers.CreadorDeBombas = new MolotovFactory();
-		nuevoPers.velocidad = ConstantesJuego.velocidad_cecilio;
+		nuevoPers.velocidad = ConstantesJuego.velocidad_bombita;
 		nuevoPers.ultimaTranslacion = new TranslacionDerecha();
 		return nuevoPers;
 		}
