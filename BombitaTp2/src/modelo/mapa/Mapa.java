@@ -17,7 +17,7 @@ import java.util.LinkedList;
 import org.dom4j.*;
 
 public class Mapa implements ObjetoVivo {
-	private Tablero TableroJuego;
+	public Tablero TableroJuego;
 	int puntajeTotal;
 
 	public Mapa(int tamanio) {
@@ -27,7 +27,7 @@ public class Mapa implements ObjetoVivo {
 	public Mapa() {
 	}
 
-	private void agregarCasillero(Coordenada coord, Casillero unCasillero) {
+	public void agregarCasillero(Coordenada coord, Casillero unCasillero) {
 		this.TableroJuego.cambiarCasillero(coord, unCasillero);
 	}
 
@@ -118,9 +118,8 @@ public class Mapa implements ObjetoVivo {
 		for (j = 0; j < TableroJuego.obtenerTamanio(); j++) {
 			for (k = 0; k < TableroJuego.obtenerTamanio(); k++) {
 				Coordenada unaCoordenada = new Coordenada(j, k);
-				Casillero casillero = TableroJuego
-						.obtenerCasillero(unaCoordenada);
-				puntajeTotal = casillero.obtenerPuntaje();
+				Casillero casillero = TableroJuego.obtenerCasillero(unaCoordenada);
+				puntajeTotal = puntajeTotal + (casillero.obtenerPuntaje());
 			}
 		}
 		

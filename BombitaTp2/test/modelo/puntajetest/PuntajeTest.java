@@ -13,12 +13,11 @@ import org.junit.*;
 
 public class PuntajeTest {
 
-	private Cecilio cecilio;
-	private BloqueLadrillo ladrillo;
+	private Cecilio cecilio,otroCecilio;
+	private BloqueLadrillo ladrillo,otroLadrillo;
 	private Habano habano;
 	private ToleTole tole;
-	private Casillero casillero;
-	private Casillero otroCasillero;
+	private Casillero casillero,otroCasillero;
 	private Bombita rodriguez;
 	private Mapa mapa;
 	
@@ -26,19 +25,23 @@ public class PuntajeTest {
 	public void setUp() {
 		mapa = new Mapa(10);
 		Coordenada coordenada = new Coordenada(1,1);
+		Coordenada otraCoordenada = new Coordenada(2,2);
 		cecilio = new Cecilio(coordenada,mapa);
 		ladrillo = new BloqueLadrillo(coordenada);
+		otroLadrillo = new BloqueLadrillo(otraCoordenada);
 		habano = new Habano(coordenada);
 		casillero = new Casillero();
 		tole = new ToleTole(coordenada,mapa,6);
 		otroCasillero = new Casillero();
 		rodriguez = new Bombita(coordenada,mapa);
+		otroCecilio = new Cecilio(otraCoordenada,mapa);
 		casillero.agregar(cecilio);
 		casillero.agregar(ladrillo);
 		casillero.agregar(rodriguez);
-		otroCasillero.agregar(ladrillo);
-		otroCasillero.agregar(habano);
-		otroCasillero.agregar(rodriguez);
+		otroCasillero.agregar(otroCecilio);
+		mapa.agregarCasillero(coordenada, casillero);
+		mapa.agregarCasillero(otraCoordenada,otroCasillero);
+		
 	}
 	
 	@Test
@@ -75,19 +78,15 @@ public class PuntajeTest {
 		assertTrue(casillero.obtenerPuntaje() == 100);
 	}
 	
-	/*@Test
+	@Test
 	public void testAumentarPuntajeEnDosCasillerosDiferentes() {
-		habano = null;
-		rodriguez = null;
-		ladrillo = null;
-		cecilio = null;
-		casillero.actualizarPuntaje(300);
-		assertTrue(casillero.obtenerPuntaje() == 300);
-		otroCasillero.actualizarPuntaje(300);
-		assertTrue(otroCasillero.obtenerPuntaje() == 300);
-		mapa.actualizarMapa();
+		cecilio.Daniar(5);
+		casillero.actualizar();
+		otroCecilio.Daniar(5);
+		otroCasillero.actualizar();
+		mapa.vivir();
 		assertTrue(mapa.obtenerPuntajeTotal() == 600);
-	}*/
+	}
 	
 	@Test
 	public void testObtenerPuntajeToleTole() {
