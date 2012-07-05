@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Mapa Tamanio="40">
 	<Personajes>
-		<Bombita Vida="10" Velocidad="10.0">
+		<Bombita Vida="10" Velocidad="4">
 			<Coordenada CoordenadaX="0" CoordenadaY="0" />
 		</Bombita>
 		<Cecilio Vida="5" Velocidad="10.0">
