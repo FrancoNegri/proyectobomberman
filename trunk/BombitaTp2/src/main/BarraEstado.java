@@ -13,11 +13,13 @@ public class BarraEstado extends JPanel implements Runnable {
 	private int velocidad;
 	private int puntaje;
 	private int vida;
-	private boolean estaEjecutando;
 	private JLabel labelInfo, labelPts, labelVida, labelVel, labelNiv, labelImg, labelPnl;
-	private Thread hilo;
+	Bombita rodriguez;
+	Mapa mapa;
 	
-	public BarraEstado() {
+	public BarraEstado(Bombita unRodriguez, Mapa unMapa) {
+		rodriguez =unRodriguez;
+		mapa = unMapa;
 		this.velocidad = 0;
 		this.puntaje = 0;
 		this.vida = 0;
@@ -58,7 +60,7 @@ public class BarraEstado extends JPanel implements Runnable {
 		add(labelPnl);
 	}
 	
-	public void actualizarBarraEstado(Bombita rodriguez, Mapa mapa) {
+	public void actualizarBarraEstado() {
 		labelPts.setText("Puntos: " + mapa.obtenerPuntajeTotal());
 		labelVida.setText("Vida: "+ rodriguez.obtenerVida());
 		labelVel.setText("Velocidad: "+ rodriguez.getVelocidad() + " km/h");
@@ -66,8 +68,9 @@ public class BarraEstado extends JPanel implements Runnable {
 	}
 
 	public void run() {
-		// TODO Auto-generated method stub
-		
+		while(true){
+			actualizarBarraEstado();
+		}
 	}
 	
 	public BarraEstado obtenerBarra() {
