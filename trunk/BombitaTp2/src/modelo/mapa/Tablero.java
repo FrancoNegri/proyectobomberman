@@ -36,20 +36,20 @@ public class Tablero {
 		
 	}
 	
-	private void tamanioValido(int tamanio){
+	public void tamanioValido(int tamanio){
 			if(tamanio<0){
 				throw new TamanioMatrizInvalidoError();
 			}
 	}
 	
-	private void verificarTamanio(int tamanio){
+	public void verificarTamanio(int tamanio){
 		this.tamanioValido(tamanio);
 		if(tamanio>=this.tamanio){
 			throw new TamanioMatrizInvalidoError();
 		}
 	}
 	
-	private void cargarMatriz(Casillero matriz[][], int tamanio){
+	public void cargarMatriz(Casillero matriz[][], int tamanio){
 			for(int i=0 ; i<tamanio ; i++){
 					for(int j=0; j<tamanio ; j++){
 					Casillero unCasillero = new Casillero();
