@@ -154,9 +154,4 @@ public class BombitaTest {
 		assertTrue(rodriguez.obtenerActitudAtaque() == false);
 	}
 	
-	@Test
-	public void testCaminar() {
-		rodriguez.vivir();
-		assertTrue(true);
-	}
 }

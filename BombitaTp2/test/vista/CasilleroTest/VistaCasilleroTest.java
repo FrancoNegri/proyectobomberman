@@ -306,7 +306,6 @@ public class VistaCasilleroTest {
 		LinkedList<Personaje> personajes = new LinkedList<Personaje>();
 		personajes.add(comun);
 		when(casillero.obtenerSalida()).thenReturn(salida);
-		salida.vivir();
 		when(casillero.obtenerPersonajes()).thenReturn(personajes);
 		when(casillero.obtenerArmamento()).thenReturn(molotov);
 		when(casillero.obtenerObstaculo()).thenReturn(bloqueL);

@@ -15,11 +15,11 @@ public class VentanaPrincipalTest {
 		
 	}
 	@Test
-	public void testDeVentanaPrincipal(){
+	public void pruevaDeVentanaPrincipal(){
 		try{
 			ventana = new VentanaPrincipal();
 		}catch(Exception e){
-			assertTrue(true);
+			assertTrue(false);
 		}
 		
 		

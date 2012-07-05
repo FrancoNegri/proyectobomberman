@@ -14,7 +14,7 @@ import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 public class ControlDeJuegoTest {
 
 	@Test
-	public void testQuePruevaElFuncionamientoDelControlador(){
+	public void TestQuePruevaElFuncionamientoDelControlador(){
 		JPanel panel = new SuperficiePanel();
 		JFrame frame = mock(JFrame.class);
 		ControlJuego control = new ControlJuego(panel,frame);
@@ -23,7 +23,7 @@ public class ControlDeJuegoTest {
 	}
 	
 	@Test
-	public void testQuePruevaElFuncionamientoDelGuardado(){
+	public void TestQuePruevaElFuncionamientoDelGuardado(){
 		JPanel panel = new SuperficiePanel();
 		JFrame frame = mock(JFrame.class);
 		ControlJuego control = new ControlJuego(panel,frame);
