@@ -158,10 +158,10 @@ public class ControlJuego implements Runnable {
 
 
 	public void run() {
-		
 		while(!finDelJuego){
 			if(mapa.terminoNivel()){
 				try {
+					nivel = nivel+1;
 					pasajeDeNivel();
 					finDelJuego = false;
 				} catch (IOException e) {
@@ -169,7 +169,6 @@ public class ControlJuego implements Runnable {
 						juegoGanado();
 					} catch (IOException e1) {}
 				}
-				nivel = nivel+1;
 			}
 			if(bombita.estaMuerto()){
 				try {

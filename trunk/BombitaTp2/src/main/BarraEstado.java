@@ -55,9 +55,9 @@ public class BarraEstado implements Runnable {
 	}
 	
 	public void actualizarBarraEstado() {
-		labelPts.setText("Puntos: " + control.getMapa().obtenerPuntajeTotal());
+		labelPts.setText("Puntos: " + (control.getMapa()).obtenerPuntajeTotal());
 		labelVida.setText("Vida: "+ control.getBombita().obtenerVida());
-		labelVel.setText("Velocidad: "+ control.getBombita().getVelocidad() + " km/h");
+		labelVel.setText("Velocidad: "+ (control.getBombita().getVelocidad()) + " km/h");
 		labelNiv.setText("Nivel: "+control.getNivel());
 	}
 
