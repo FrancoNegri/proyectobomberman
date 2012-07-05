@@ -112,7 +112,7 @@ public class VentanaPrincipal {
 		JMenuItem elementoControles = new JMenuItem("Controles");
 		final String informacionControles = "Moverse: Flechas del Teclado \n" 
 											+ "Plantar bomba: A\n"
-											+ "Ingresar a la salida: ";
+											+ "Ingresar a la salida: Luego de haber matado a todos los enemigos, posicionarse sobre ella";
 		elementoControles.setMnemonic('i');
 		menuAyuda.add(elementoControles);
 		elementoControles.addActionListener(new ActionListener() {
@@ -123,9 +123,13 @@ public class VentanaPrincipal {
 		});
 
 		JMenuItem elementoAcerca = new JMenuItem("Acerca de...");
-		final String informacion = "TP2 - Bombita Rodriguez - Algoritmos III\n"
+		final String informacion = "              TP2 - Bombita Rodriguez - Algoritmos III\n"
 				+ "\n"
-				+ "Franco Negri - Francisco Disalvo - Matias Barro - Federico Di Rocco\n";
+				+ "Franco Negri - 93817 - franconegri2004@hotmail.com \n" 
+				+ "Francisco Disalvo - 91545 - fran_disa@hotmail.com \n"
+				+ "Matias Barro - 92970 - matias.barro@gmail.com \n"
+				+ "Federico Di Rocco - 92853 - fede.dirocco@hotmail.com \n"
+				+ "\n";
 		elementoAcerca.setMnemonic('A');
 		menuAyuda.add(elementoAcerca);
 		elementoAcerca.addActionListener(new ActionListener() {
