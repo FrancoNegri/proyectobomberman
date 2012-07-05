@@ -3,6 +3,7 @@ import modelo.armamento.Armamento;
 import modelo.armamento.Molotov;
 import modelo.armamento.ToleTole;
 import modelo.articulo.Articulable;
+import modelo.articulo.Habano;
 import modelo.casillero.Casillero;
 import modelo.mapa.Mapa;
 import modelo.obstaculos.BloqueAcero;
@@ -314,4 +315,25 @@ public class CasilleroTest {
 		assertTrue(cas.salidaON() == false);
 	}
 	
+	@Test
+	public void testActualizarFuegoEstaMuertoEntoncesNull() {
+		Casillero cas = new Casillero();
+		FuegoDeExplocion fuego = new FuegoDeExplocion(new Coordenada(2,2),1);
+		cas.agregar(fuego);
+		fuego.vivir();
+		cas.actualizar();
+		assertTrue(cas.obtenerFuegoDeExplocion() == null);
+	}
+	
+	@Test
+	public void testUsarArticuloNoNull(){
+		Casillero cas = new Casillero();
+		Mapa mapa = new Mapa(5);
+		Bombita rodriguez = new Bombita(new Coordenada(2,2), mapa);
+		Habano habano = new Habano(new Coordenada(2,2));
+		cas.agregar(rodriguez);
+		cas.agregar(habano);
+		cas.actualizar();
+		assertTrue(cas.obtenerArticulo() == null);
+	}
 }

@@ -87,8 +87,6 @@ public class BombitaTest {
 	}
 
 	@Test
-	// Aca esta andando mal el resultado obtenido, habria que ver con el test
-	// unitario de obtenerTime
 	public void testObtenerTimerYCambiarTiempoRetraso() {
 		rodriguez.tomarArticulo(timer);
 		assertEquals(0, rodriguez.tirarArmamento().obtenerTime(), 500);
@@ -98,6 +96,13 @@ public class BombitaTest {
 	public void testDaniar() {
 		this.rodriguez.Daniar(2);
 		assertTrue(rodriguez.obtenerVida() == 3);
+	}
+	
+	@Test
+	public void testDaniarEstandoMuerto() {
+		this.rodriguez.Daniar(5);
+		this.rodriguez.Daniar(1);
+		assertTrue(rodriguez.obtenerVida() == 0);
 	}
 
 	@Test
@@ -131,14 +136,22 @@ public class BombitaTest {
 	}
 
 	@Test
-	public void testCambiarActitud() {
+	public void testInicializarActitudAtaque() {
+		assertTrue(rodriguez.obtenerActitudAtaque() == false);
+	}
+	
+	@Test
+	public void testCambiarActitudAtaque() {
 		rodriguez.cambiarActitud();
 		assertTrue(rodriguez.obtenerActitudAtaque() == true);
 	}
 	
 
 	@Test
-	public void testAtacar() {
+	public void testCambiarActitudAlAtacarYVolverAFalso() {
+		rodriguez.cambiarActitud();
 		rodriguez.Atacar();
+		assertTrue(rodriguez.obtenerActitudAtaque() == false);
 	}
+	
 }

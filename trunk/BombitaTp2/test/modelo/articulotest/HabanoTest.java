@@ -73,9 +73,16 @@ public class HabanoTest {
 		unHabano.aumentarVelocidad(rodriguez);
 	}
 	
+	@Test
 	public void testCambiarVelocidadBombitaDespuesDeFumarseUnHabano() {
 		unHabano.aumentarVelocidad(rodriguez);
 		assertTrue(rodriguez.getVelocidad() == 14);
+	}
+	
+	@Test
+	public void testVelocidadEnCeroBombitaYTomaArticulo() {
+		rodriguez.cambiarVelocidad(0);
+		unHabano.aumentarVelocidad(rodriguez);
 	}
 	
 }
