@@ -88,8 +88,7 @@ public class VentanaPrincipal {
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
-		BarraEstado barraEstado = new BarraEstado();
-		contenedor.add(barraEstado,BorderLayout.CENTER);
+		
 		
 		// PANEL
 		JPanel panel = new SuperficiePanel();
@@ -101,6 +100,10 @@ public class VentanaPrincipal {
 		// CONTROL DEL JUEGO
 		final ControlJuego controlDelJuego = new ControlJuego(panel, null);
 
+		BarraEstado barraEstado = new BarraEstado(controlDelJuego.getBombita(),controlDelJuego.mapa);
+		Thread hilo = new Thread(barraEstado);
+		hilo.start();
+		contenedor.add(barraEstado,BorderLayout.CENTER);
 		
 		// LABELS 
 		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
