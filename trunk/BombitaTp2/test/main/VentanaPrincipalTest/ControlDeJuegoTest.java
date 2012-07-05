@@ -32,4 +32,21 @@ public class ControlDeJuegoTest {
 	}
 	
 	
+	@Test
+	public void TestDondeBombitaTiraBombasYseMueve(){
+		JPanel panel = new SuperficiePanel();
+		JFrame frame = mock(JFrame.class);
+		ControlJuego control = new ControlJuego(panel,frame);
+		control.moverBombitaAbajo();
+		control.ataqueDeBombita();
+		control.moverBombitaArriba();
+		control.moverBombitaIzquierda();
+		control.moverBombitaDerecha();
+		control.ataqueDeBombita();
+		control.IniciarJuego();
+		control.DetenerJuego();
+	}
+	
+	
+	
 }

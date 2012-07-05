@@ -146,7 +146,7 @@ public class AladoTest {
 		Element elemCes = mock(Element.class);
 		when(elemCes.element(new QName("Coordenada"))).thenReturn(elemCord);
 		when(elemCes.attributeValue((new QName("Vida")))).thenReturn("2");
-		Personaje peros =  lopez.recuperar(elemCes, mapa);
+		Personaje peros =  LopezAlado.recuperar(elemCes, mapa);
 		assertTrue(peros.obtenerVida() == 2);
 		assertTrue(peros.obtenerCoordenadaXY().equals(coord));
 	}

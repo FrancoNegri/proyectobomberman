@@ -10,6 +10,7 @@ import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.Personaje;
 
+import org.dom4j.Element;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -39,6 +40,12 @@ public class ProyectilFactoryTest {
 	public void testQueCambiaElTiempo(){
 		ProyFac.cambiarTime(3);
 		assertTrue(ProyFac.obtenerTime()==3);
+	}
+	
+	@Test
+	public void testQueGuardaUnFactory(){
+		Element elem = ProyFac.guardar();
+		assertTrue(elem.getName() == "ArmamentoFactory");
 	}
 	
 	
