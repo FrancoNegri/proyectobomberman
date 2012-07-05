@@ -14,6 +14,7 @@ import modelo.fuegoDeExplocion.FuegoDeExplocion;
 import modelo.obstaculos.Obstaculo;
 import modelo.personaje.*;
 import modelo.salida.*;
+import modelo.constantesjuego.*;
 
 public class Casillero {
 	LinkedList<Personaje> personajes;
@@ -162,7 +163,8 @@ public class Casillero {
 
 	private void actualizarPersonajes() {
 		this.VivirPersonajes();
-		this.eliminarPersonajesMuertos();
+		this.actualizarPuntaje((ConstantesJuego.puntaje_enemigo_muerto) * (this.eliminarPersonajesMuertos()));
+		
 	}
 
 	private void VivirPersonajes() {
@@ -194,15 +196,18 @@ public class Casillero {
 		}
 	}
 
-	private void eliminarPersonajesMuertos() {
+	private int eliminarPersonajesMuertos() {
+		int cont = 0; 
 		Iterator<Personaje> IteradorPersonajes = personajes.iterator();
 		while (IteradorPersonajes.hasNext()) {
 			Personaje personaje = IteradorPersonajes.next();
 			if (personaje.estaMuerto()) {
+				cont = cont + 1;
 				this.actualizarPuntaje(personaje.obtenerPuntaje());
 				IteradorPersonajes.remove();
 			}
 		}
+		return cont;
 	}
 
 	public void eliminar(Articulable Articulo) {
