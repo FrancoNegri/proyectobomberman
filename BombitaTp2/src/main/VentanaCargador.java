@@ -38,7 +38,7 @@ public class VentanaCargador extends JDialog {
         panel = new JPanel();
         panel.setLayout(new BorderLayout());
         progressBar = new JProgressBar();
-        progressBar.setBackground(Color.WHITE);
+        progressBar.setBackground(Color.RED);
         progressBar.setForeground(Color.BLACK);
         progressBar.setStringPainted(true);
         img = new ImageIcon(getClass().getResource("/vista/Imagenes/BombitaRodriguez1.png"));
