@@ -34,7 +34,6 @@ public class ControlJuego implements Runnable {
 			gameLoop.reiniciar();
 			mapa = pers.recuperar("lvls/lvl1.xml");
 			Thread juego = new Thread(this);
-			juego.start();	
 			bombita = pers.recuperarBombita();
 			teclado = new Teclado(bombita);
 			unPanel.setVisible(true);
@@ -117,37 +116,42 @@ public class ControlJuego implements Runnable {
 	}
 	
 	//GAME OVER
-	public void gameOver() {
+	public void gameOver() throws IOException {
 	       int n = JOptionPane.showConfirmDialog(frame,
 	               "Perdiste, queres volver a jugar?",
 	               "Game Over",
 	               JOptionPane.YES_NO_OPTION);
 	       if (n == JOptionPane.YES_OPTION) {
-	           this.IniciarJuego(); //Aca deberia reiniciar el nivel correcto
+	    	   nivel = 1;
+	    	   this.cargarMapaEnXml("lvls/lvl"+nivel+".xml");
+	    	   gameLoop.iniciarEjecucion();
 	       } else
 	           System.exit(0);
 	}
 	
 	//PASAJE A OTRO NIVEL
-	public void pasajeDeNivel() {
+	public void pasajeDeNivel() throws IOException {
 	       int n = JOptionPane.showConfirmDialog(frame,
 	               "Ganaste, queres pasar al otro nivel?",
 	               "Ganaste",
 	               JOptionPane.YES_NO_OPTION);
 	       if (n == JOptionPane.YES_OPTION) {
-	           this.IniciarJuego(); //Aca deberia pasar al nivel correcto
+	    	   cargarMapaEnXml("lvls/lvl"+nivel+".xml");
+	    	   gameLoop.iniciarEjecucion();
 	       } else
 	           System.exit(0);
 	}
 	
 	//JUEGO GANADO
-	public void juegoGanado() {
+	public void juegoGanado() throws IOException {
 		      int n = JOptionPane.showConfirmDialog(frame,
 		              "GANASTE EL JUEGO, queres volver a comenzar el juego?",
 		              "Ganador",
 		              JOptionPane.YES_NO_OPTION);
 		      if (n == JOptionPane.YES_OPTION) {
-		          this.IniciarJuego();
+		    	  nivel = 1;
+		    	  cargarMapaEnXml("lvls/lvl"+nivel+".xml");
+		    	  gameLoop.iniciarEjecucion();
 		      } else
 		          System.exit(0);
 		}
@@ -158,13 +162,22 @@ public class ControlJuego implements Runnable {
 		while(!finDelJuego){
 			if(mapa.terminoNivel()){
 				try {
-					cargarMapaEnXml("lvl"+nivel+".xml");
 					pasajeDeNivel();
 					finDelJuego = false;
 				} catch (IOException e) {
-					juegoGanado();
+					try {
+						juegoGanado();
+					} catch (IOException e1) {}
 				}
 				nivel = nivel+1;
+			}
+			if(bombita.estaMuerto()){
+				try {
+					gameOver();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 	}
@@ -176,6 +189,7 @@ public class ControlJuego implements Runnable {
 
 
 	public void cargarMapaEnXml(String ruta) throws IOException{
+		
 		gameLoop.reiniciar();
 		mapa= pers.recuperar(ruta);
 		bombita = pers.recuperarBombita();
