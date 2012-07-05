@@ -26,7 +26,7 @@ public class HabanoTest {
 	public void testUsar(){
 		
 		unHabano.usar(rodriguez);
-		assertTrue(rodriguez.getVelocidad() == 14);
+		assertTrue(rodriguez.getVelocidad() == 20);
 		
 	}
 	@Test
@@ -52,7 +52,7 @@ public class HabanoTest {
 		
 		unHabano.aumentarVelocidad(rodriguez);
 		int velocidad = rodriguez.getVelocidad();
-		assertTrue(velocidad == 14);
+		assertTrue(velocidad == 20);
 		
 	}
 	@Test
