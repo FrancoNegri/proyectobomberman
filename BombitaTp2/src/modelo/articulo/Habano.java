@@ -17,7 +17,7 @@ public class Habano extends Articulo{
 	
 	public Habano(Coordenada unaCoordenada){
 		super(unaCoordenada);
-		this.velocidadmaxima=0;
+		this.velocidadmaxima = 20;
 	}
 	
 	public void usar(Personaje unPersonaje){
@@ -37,12 +37,10 @@ public class Habano extends Articulo{
 	public void aumentarVelocidad(Personaje unPersonaje){
 		
 		int velocidad = unPersonaje.getVelocidad();
-		/*como convencion aumenta la velocidad del personaje en 10 unidades.
-		 * si se supera la velocidad maxima se arroja una excepcion.
-		 */
-		velocidad = velocidad - 1;
-		if(velocidad >= this.velocidadmaxima){
-			return;
+
+		velocidad = velocidad + 10;
+		if(velocidad > this.velocidadmaxima){
+			unPersonaje.cambiarVelocidad(20);
 		}
 		else {
 			unPersonaje.cambiarVelocidad(velocidad);

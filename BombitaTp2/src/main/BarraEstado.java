@@ -26,10 +26,10 @@ public class BarraEstado implements Runnable {
 		labelInfo.setFont(fuente);
 		labelInfo.setForeground(Color.white);
 		labelInfo.setBounds(625, 15, 100, 50);
-		labelPts = new JLabel("Puntos: "+ control.mapa.obtenerPuntajeTotal() );
+		labelPts = new JLabel("Puntos: "+ (control.getMapa()).obtenerPuntajeTotal());
 		labelPts.setForeground(Color.white);
 		labelPts.setBounds(610, 50, 100, 50);
-		labelVida = new JLabel("Vida: "+ control.getBombita().obtenerVida() );
+		labelVida = new JLabel("Vida: "+ control.getBombita().obtenerVida());
 		labelVida.setForeground(Color.white);
 		labelVida.setBounds(610, 90, 100, 50);
 		labelVel = new JLabel("Velocidad: "+ control.getBombita().getVelocidad() + " km/h");
@@ -56,9 +56,9 @@ public class BarraEstado implements Runnable {
 	
 	public void actualizarBarraEstado() {
 		labelPts.setText("Puntos: " + (control.getMapa()).obtenerPuntajeTotal());
-		labelVida.setText("Vida: "+ control.getBombita().obtenerVida());
-		labelVel.setText("Velocidad: "+ (control.getBombita().getVelocidad()) + " km/h");
-		labelNiv.setText("Nivel: "+control.getNivel());
+		labelVida.setText("Vida: " + (control.getBombita()).obtenerVida());
+		labelVel.setText("Velocidad: " + (control.getBombita()).getVelocidad() + " km/h");
+		labelNiv.setText("Nivel: " + control.getNivel());
 	}
 
 	public void run() {

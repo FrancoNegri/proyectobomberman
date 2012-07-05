@@ -12,24 +12,21 @@ public class HabanoTest {
 
 	private Bombita rodriguez;
 	private Habano unHabano;
-	private int VelocidadPrueba;
 	Coordenada coordenada;
 	@Before
 	public void setUp(){
 		
 		coordenada = new Coordenada(1,2);
 		Mapa mapa = new Mapa(5);
-		this.rodriguez = new Bombita(coordenada,mapa);
-		this.unHabano = new Habano(coordenada);
-		this.VelocidadPrueba = 4;
+		rodriguez = new Bombita(coordenada,mapa);
+		unHabano = new Habano(coordenada);
 		
 	}
 	@Test
 	public void testUsar(){
 		
-		this.unHabano.usar(rodriguez);
-		float velocidad= this.rodriguez.getVelocidad();
-		assertTrue(velocidad==this.VelocidadPrueba);
+		unHabano.usar(rodriguez);
+		assertTrue(rodriguez.getVelocidad() == 14);
 		
 	}
 	@Test
@@ -53,9 +50,9 @@ public class HabanoTest {
 	@Test
 	public void testaumentarVelocidad(){
 		
-		this.unHabano.aumentarVelocidad(this.rodriguez);
-		float velocidad=this.rodriguez.getVelocidad();
-		assertTrue(velocidad==this.VelocidadPrueba);
+		unHabano.aumentarVelocidad(rodriguez);
+		int velocidad = rodriguez.getVelocidad();
+		assertTrue(velocidad == 14);
 		
 	}
 	@Test

@@ -22,7 +22,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	protected Translacion ultimaTranslacion;
 	protected ArmamentoFactory CreadorDeBombas;
 	protected int velocidad;
-	private int tiempoHastaMoverse = 0;
+	private int tiempoHastaMoverse;
 	protected int vida;
 	protected Coordenada coordenadaXY;
 	protected Mapa mapa;
@@ -36,6 +36,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 		this.mapa.agregarAlMapa(this);
 		this.vida = 10;
 		this.puntaje = ConstantesJuego.puntaje_enemigo_muerto;
+		this.tiempoHastaMoverse = 0;
 	}
 	
 	protected Personaje() {
