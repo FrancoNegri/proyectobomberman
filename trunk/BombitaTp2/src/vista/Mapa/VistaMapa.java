@@ -21,12 +21,33 @@ public class VistaMapa implements ObjetoDibujable {
 				Coordenada coordenada = new Coordenada(j, k);
 				Casillero casillero = mapaDibujable
 						.obtenerCasillero(coordenada);
+				actualizadorDeVistaCasillero Actualizador = new actualizadorDeVistaCasillero(casillero,superficieDeDibujo);
+				Thread hilo = new Thread(Actualizador);
+				hilo.run();
+			}
+		}
+	}
+
+	private class actualizadorDeVistaCasillero implements Runnable {
+		private Casillero casillero;
+		SuperficieDeDibujo unaSuperficieDeDibujo;
+
+		public actualizadorDeVistaCasillero(Casillero cas,
+				SuperficieDeDibujo superficieDeDibujo) {
+			casillero = cas;
+			unaSuperficieDeDibujo = superficieDeDibujo;
+		}
+
+		public void run() {
+			if (!casillero.casilleroEstaVacio()) {
 				if (!casillero.casilleroEstaVacio()) {
 					VistaCasillero vistaDelCasillero = new VistaCasillero(
 							casillero);
-					vistaDelCasillero.dibujar(superficieDeDibujo);
+					vistaDelCasillero.dibujar(unaSuperficieDeDibujo);
+
 				}
 			}
 		}
 	}
+
 }

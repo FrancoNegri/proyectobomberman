@@ -45,7 +45,7 @@ public class ControlJuego implements Runnable {
 	private boolean finDelJuego = false;
 	
 	public ControlJuego(JPanel unPanel, JFrame unFrame)  {
-		this.gameLoop = new GameLoop(1, (SuperficieDeDibujo) unPanel);
+		this.gameLoop = new GameLoop(0, (SuperficieDeDibujo) unPanel);
 		this.panel = unPanel;
 		this.frame = unFrame;
 	

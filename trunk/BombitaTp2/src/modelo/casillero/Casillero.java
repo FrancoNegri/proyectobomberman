@@ -123,7 +123,7 @@ public class Casillero {
 	 * bombita esta en el casillero y si hay un articulo, lo utiliza.
 	 */
 
-	public synchronized void actualizar() {
+	public /*synchronized*/ void actualizar() {
 		this.actualizarArmamento();
 		this.actualizarPersonajes();
 		this.actualizarObstaculos();
@@ -306,6 +306,11 @@ public class Casillero {
 		return (unPersonaje instanceof Bombita);
 		
 	}
+	
+	
+	
+	
+	
 	
 	
 }

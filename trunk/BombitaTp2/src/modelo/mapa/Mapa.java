@@ -57,7 +57,6 @@ public class Mapa implements ObjetoVivo {
 		return this.TableroJuego.obtenerCasillero(coord).obtenerArticulo();
 	}
 
-
 	public synchronized void agregarAlMapa(Personaje unPersonaje) {
 
 		Coordenada coordenada = unPersonaje.obtenerCoordenadaXY();
@@ -75,7 +74,6 @@ public class Mapa implements ObjetoVivo {
 		CasilleroAux.agregar(obstaculo);
 		this.agregarCasillero(coordenada, CasilleroAux);
 	}
-	
 
 	public synchronized void agregarAlMapa(Armamento unArmamento) {
 
@@ -92,32 +90,40 @@ public class Mapa implements ObjetoVivo {
 		CasilleroAux.agregar(unArticulo);
 		this.agregarCasillero(coord, CasilleroAux);
 	}
-	
-	public void agregarAlMapa(Salida unaSalida){
-		
+
+	public void agregarAlMapa(Salida unaSalida) {
+
 		Coordenada coord = unaSalida.obtenerCoordenadaXY();
 		Casillero casAux = this.obtenerCasillero(coord);
 		casAux.agregar(unaSalida);
 		this.agregarCasillero(coord, casAux);
-		
+
 	}
 
-	public synchronized void vivir() {
+	public void vivir() {
 		int j, k;
-		Tablero NuevoTableroJuego = new Tablero(TableroJuego.obtenerTamanio());		
 		for (j = 0; j < TableroJuego.obtenerTamanio(); j++) {
 			for (k = 0; k < TableroJuego.obtenerTamanio(); k++) {
 				Coordenada unaCoordenada = new Coordenada(j, k);
 				Casillero casillero = TableroJuego
 						.obtenerCasillero(unaCoordenada);
 				if (!casillero.casilleroEstaVacio()) {
-					casillero.actualizar();
-					this.puntajeTotal = puntajeTotal
-							+ casillero.obtenerPuntaje();
-					TableroJuego.cambiarCasillero(unaCoordenada, casillero);
+					actualizadorDeCasillero actualizador = new actualizadorDeCasillero(
+							casillero);
+					Thread nuevoThread = new Thread(actualizador);
+					nuevoThread.run();
 				}
 			}
 		}
+		for (j = 0; j < TableroJuego.obtenerTamanio(); j++) {
+			for (k = 0; k < TableroJuego.obtenerTamanio(); k++) {
+				Coordenada unaCoordenada = new Coordenada(j, k);
+				Casillero casillero = TableroJuego
+						.obtenerCasillero(unaCoordenada);
+				puntajeTotal = casillero.obtenerPuntaje();
+			}
+		}
+		
 	}
 
 	public int obtenerPuntajeTotal() {
@@ -169,29 +175,40 @@ public class Mapa implements ObjetoVivo {
 		elemMapa.add(elemArticulos);
 		return elemMapa;
 	}
-	
-	public boolean terminoNivel(){
-		
+
+	public boolean terminoNivel() {
+
 		boolean bandera = true;
 		int j = 0;
 		int k = 0;
-		while((j < this.obtenerTamanio())&&(bandera)){
-			
-			while((k < this.obtenerTamanio())&&(bandera)){
-				Coordenada coord = new Coordenada(j,k);
+		while ((j < this.obtenerTamanio()) && (bandera)) {
+			while ((k < this.obtenerTamanio()) && (bandera)) {
+				Coordenada coord = new Coordenada(j, k);
 				Casillero cas = this.obtenerCasillero(coord);
-				if(cas.salidaON()){
+				if (cas.salidaON()) {
 					bandera = (cas.soloEstaBombita());
-				}
-				else{
+				} else {
 					bandera = (cas.casilleroSinPersonajes());
 				}
 				k++;
 			}
-			k=0;
+			k = 0;
 			j++;
-		
 		}
 		return bandera;
+	}
+	
+	private class actualizadorDeCasillero implements Runnable {
+		private Casillero casillero;
+
+		public actualizadorDeCasillero(Casillero cas) {
+			casillero = cas;
+		}
+
+		public void run() {
+			if (!casillero.casilleroEstaVacio()) {
+				casillero.actualizar();
+			}
+		}
 	}
 }
