@@ -39,7 +39,10 @@ public class Casillero {
 	}
 
 	public int obtenerPuntaje() {
-		return this.puntaje;
+		int puntajeRonda;
+		puntajeRonda = this.puntaje;
+		this.puntaje = 0;
+		return puntajeRonda;
 	}
 
 	// Metodo Sobrecargado
