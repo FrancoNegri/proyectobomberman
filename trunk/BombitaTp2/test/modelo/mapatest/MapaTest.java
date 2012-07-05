@@ -14,6 +14,9 @@ import modelo.casillero.*;
 import modelo.coordenadas.Coordenada;
 import static org.junit.Assert.*;
 import modelo.salida.*;
+
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 import org.junit.*;
 import static org.mockito.Mockito.*;
 public class MapaTest {
@@ -186,5 +189,16 @@ public class MapaTest {
 		Salida unaSalida = new Salida(cordsalida);
 		this.unMapa.agregarAlMapa(unaSalida);
 		assertFalse(this.unMapa.terminoNivel());
+	}
+	@Test
+	public void testGuardaElNivel(){
+		Coordenada cordsalida = new Coordenada(2,2);
+		Personaje pers = mock(Personaje.class);
+		Element elemPersonaje = DocumentHelper.createElement("PersonajeDePrueva");
+		when(pers.obtenerCoordenadaXY()).thenReturn(cordsalida);
+		when(pers.guardar()).thenReturn(elemPersonaje);
+		this.unMapa.agregarAlMapa(pers);
+		unMapa.guardar();
+		verify(pers).guardar();
 	}
 }
