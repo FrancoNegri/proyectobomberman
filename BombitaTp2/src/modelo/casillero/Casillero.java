@@ -170,7 +170,7 @@ public class Casillero {
 		Iterator<Personaje> IteradorPersonajes = lista.iterator();
 		while (IteradorPersonajes.hasNext()) {
 			Personaje personaje = IteradorPersonajes.next();
-			personaje.vivir();
+			hacerVivir(personaje);
 		}
 	}
 
@@ -190,7 +190,7 @@ public class Casillero {
 
 	private void VivirArmamento() {
 		if (unArmamento != null) {
-			unArmamento.vivir();
+			hacerVivir(unArmamento);
 		}
 	}
 
@@ -308,13 +308,24 @@ public class Casillero {
 	private boolean personajeEsBombita(Personaje unPersonaje){
 		
 		return (unPersonaje instanceof Bombita);
-		
 	}
 	
 	
+	private void hacerVivir(ObjetoVivo Objeto){
+		Vividor vividor = new Vividor(Objeto);
+		Thread hilo = new Thread(vividor);
+		hilo.run();
+	}
 	
-	
-	
-	
+	private class Vividor implements Runnable{
+		ObjetoVivo objetoVivo;
+		public Vividor(ObjetoVivo Objeto){
+			objetoVivo = Objeto;
+		}
+		
+		public void run() {
+			objetoVivo.vivir();
+		}
+	}
 	
 }
