@@ -34,7 +34,6 @@ public class PuntajeTest {
 		otroCasillero = new Casillero();
 		rodriguez = new Bombita(coordenada,mapa);
 		casillero.agregar(cecilio);
-		casillero.agregar(habano);
 		casillero.agregar(ladrillo);
 		casillero.agregar(rodriguez);
 		otroCasillero.agregar(ladrillo);
@@ -56,20 +55,21 @@ public class PuntajeTest {
 	
 	@Test
 	public void testAumentarPuntajeLuegoDeMatarEnemigo() { //Pensar en que momento se peude sumar el puntaje al morir un enemigo
-		/*cecilio.Daniar(5);
+		cecilio.Daniar(5);
 		casillero.actualizar();
-		assertTrue(casillero.obtenerPuntaje() == 300);*/
+		assertTrue(casillero.obtenerPuntaje() == 300);
 	}
 	
 	@Test
 	public void testAumentarPuntajeLuegoDeDestruirObstaculo() {
 		ladrillo.Daniar(5);
 		casillero.actualizar();
-		assertTrue(casillero.obtenerPuntaje() == 300);
+		assertTrue(casillero.obtenerPuntaje() == 200);
 	}
 	
 	@Test
 	public void testAumentarPuntajeLuegoDeObtenerArticulo() {
+		casillero.agregar(habano);
 		rodriguez.tomarArticulo(habano);
 		casillero.actualizar();
 		assertTrue(casillero.obtenerPuntaje() == 100);

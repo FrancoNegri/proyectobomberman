@@ -27,6 +27,7 @@ public class Bombita extends Personaje {
 		this.vida = ConstantesJuego.vida_bombita;
 		this.CreadorDeBombas = new MolotovFactory();
         this.actitudAtaque = false;
+		this.puntaje = 0;
 	}
 	
 	private Bombita(){

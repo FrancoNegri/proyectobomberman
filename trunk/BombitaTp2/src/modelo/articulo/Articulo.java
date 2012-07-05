@@ -29,7 +29,7 @@ public abstract class Articulo implements Articulable {
 
 
 	public int obtenerPuntaje() {
-		return puntaje;
+		return this.puntaje;
 	}
 	
 	public int getX() {

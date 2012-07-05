@@ -8,7 +8,6 @@ import modelo.Translacion.TranslacionDerecha;
 import modelo.Translacion.TranslacionIzquierda;
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
-import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.errores.TamanioMatrizInvalidoError;
 import modelo.mapa.Mapa;
@@ -18,11 +17,10 @@ import org.dom4j.Element;
 
 public abstract class Enemigo extends Personaje {
 
-	protected int puntaje;
+	
 	
 	public Enemigo(Coordenada unaCoordenada,Mapa nuevoMapa){
 		super(unaCoordenada,nuevoMapa);
-		this.puntaje = ConstantesJuego.puntaje_enemigo_muerto;
 	}
 	
 	protected Enemigo(){
@@ -82,13 +80,6 @@ public abstract class Enemigo extends Personaje {
 
 	}*/
 	
-	public int obtenerPuntaje() {
-		int puntajeAux = 0;
-		if ( this.estaMuerto() ){
-		 puntajeAux = this.puntaje;	
-		}
-		return puntajeAux;
-	}
 
 	@Override
 	public void tomarArticulo(Articulable unArticulo) {

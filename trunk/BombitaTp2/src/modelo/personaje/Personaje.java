@@ -10,6 +10,7 @@ import modelo.Translacion.Translacion;
 import modelo.Translacion.TranslacionDerecha;
 import modelo.articulo.Articulable;
 import modelo.casillero.Casillero;
+import modelo.constantesjuego.ConstantesJuego;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.danio.*;
@@ -25,6 +26,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 	protected int vida;
 	protected Coordenada coordenadaXY;
 	protected Mapa mapa;
+	protected int puntaje;
 
 
 	public Personaje(Coordenada unaCoordenada,Mapa nuevoMapa) {
@@ -33,6 +35,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 		this.mapa = nuevoMapa;
 		this.mapa.agregarAlMapa(this);
 		this.vida = 10;
+		this.puntaje = ConstantesJuego.puntaje_enemigo_muerto;
 	}
 	
 	protected Personaje() {
@@ -139,6 +142,10 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 
 	public int getY() {
 	return this.coordenadaXY.obtenerCoordenadaY();
+	}
+	
+	public int obtenerPuntaje() {
+		return this.puntaje;
 	}
 
 	protected void guardar(Element elemPersonaje) {
