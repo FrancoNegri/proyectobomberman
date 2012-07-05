@@ -106,7 +106,7 @@ public class Bombita extends Personaje {
 		nuevoPers.coordenadaXY  = Coordenada.recuperar(elemCes.element(new QName("Coordenada")));
 		nuevoPers.mapa = mapa;
 		nuevoPers.CreadorDeBombas = new MolotovFactory();
-		nuevoPers.velocidad = ConstantesJuego.velocidad_bombita;
+		nuevoPers.velocidad = Integer.parseInt(elemCes.attributeValue((new QName("Velocidad"))));
 		nuevoPers.ultimaTranslacion = new TranslacionDerecha();
 		return nuevoPers;
 		}
