@@ -14,7 +14,7 @@ import org.junit.*;
 public class PuntajeTest {
 
 	private Cecilio cecilio,otroCecilio;
-	private BloqueLadrillo ladrillo,otroLadrillo;
+	private BloqueLadrillo ladrillo;
 	private Habano habano;
 	private ToleTole tole;
 	private Casillero casillero,otroCasillero;
@@ -28,7 +28,6 @@ public class PuntajeTest {
 		Coordenada otraCoordenada = new Coordenada(2,2);
 		cecilio = new Cecilio(coordenada,mapa);
 		ladrillo = new BloqueLadrillo(coordenada);
-		otroLadrillo = new BloqueLadrillo(otraCoordenada);
 		habano = new Habano(coordenada);
 		casillero = new Casillero();
 		tole = new ToleTole(coordenada,mapa,6);
