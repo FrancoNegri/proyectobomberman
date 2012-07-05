@@ -231,7 +231,7 @@ public class Casillero {
 	private boolean usarArticulo() {
 		boolean fueUtilizado = false;
 		Articulable articulo = this.obtenerArticulo();
-		if (articulo != null) {
+		//if (articulo != null) {
 			LinkedList<Personaje> Personajes = this.obtenerPersonajes();
 			Iterator<Personaje> itPersonajes = Personajes.iterator();
 			while (itPersonajes.hasNext()) {
@@ -241,7 +241,7 @@ public class Casillero {
 				fueUtilizado = true;
 				}
 			}
-		}
+		//}
 		return fueUtilizado;
 
 	}

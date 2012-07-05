@@ -296,7 +296,7 @@ public class CasilleroTest {
 	}
 	
 	@Test
-	public void testVerificarSalidaOn() {
+	public void testVerificarSalidaOnActivada() {
 		Coordenada coordenada = new Coordenada(2,2);
 		Salida salida = new Salida(coordenada);
 		Casillero cas = new Casillero();
@@ -305,7 +305,24 @@ public class CasilleroTest {
 	}
 	
 	@Test
-	public void testVerificarSalidaOnNoPosible() {
+	public void testVerificarSalidaOnNoActivadaPorqueNoEstaAgregada() {
+		Casillero cas = new Casillero();
+		assertTrue(cas.salidaON() == false);
+	}
+	
+	@Test
+	public void testVerificarSalidaOnNoActivadaEnOtraCoordenada() {
+		Coordenada coordenada = new Coordenada(2,2);
+		Salida salida = new Salida(coordenada);
+		Casillero cas = new Casillero();
+		Obstaculo obs = new BloqueLadrillo(new Coordenada(3,1));
+		cas.agregar(salida);
+		cas.agregar(obs);
+		assertTrue(cas.salidaON() == false);
+	}
+	
+	@Test
+	public void testVerificarSalidaOnNoHabilitada() {
 		Coordenada coordenada = new Coordenada(2,2);
 		Salida salida = new Salida(coordenada);
 		Obstaculo obs = new BloqueLadrillo(coordenada);
@@ -333,6 +350,16 @@ public class CasilleroTest {
 		Habano habano = new Habano(new Coordenada(2,2));
 		cas.agregar(rodriguez);
 		cas.agregar(habano);
+		cas.actualizar();
+		assertTrue(cas.obtenerArticulo() == null);
+	}
+	
+	@Test
+	public void testUsarArticuloNuloYNoPasaNada() {
+		Casillero cas = new Casillero();
+		Mapa mapa = new Mapa(5);
+		Bombita rodriguez = new Bombita(new Coordenada(2,2), mapa);
+		cas.agregar(rodriguez);
 		cas.actualizar();
 		assertTrue(cas.obtenerArticulo() == null);
 	}
