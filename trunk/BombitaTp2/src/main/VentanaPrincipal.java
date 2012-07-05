@@ -62,7 +62,9 @@ public class VentanaPrincipal {
 		
 		// CONTROL DEL JUEGO
 		final ControlJuego controlDelJuego = new ControlJuego(panel, null);
-
+		
+		
+		// BARRA ESTADO DEL JUEGO
 		BarraEstado barraEstado = new BarraEstado(contenedor,controlDelJuego);
 
 
@@ -145,6 +147,7 @@ public class VentanaPrincipal {
 		barra.add(menuArchivo);
 		barra.add(menuAyuda);
 
+		
 		// BOTONES
 		JButton btnIniciar = new JButton("Jugar");
 		btnIniciar.setBackground(Color.red);
