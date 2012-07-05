@@ -76,7 +76,7 @@ public class HabanoTest {
 	@Test
 	public void testCambiarVelocidadBombitaDespuesDeFumarseUnHabano() {
 		unHabano.aumentarVelocidad(rodriguez);
-		assertTrue(rodriguez.getVelocidad() == 14);
+		assertTrue(rodriguez.getVelocidad() == 20);
 	}
 	
 	@Test
