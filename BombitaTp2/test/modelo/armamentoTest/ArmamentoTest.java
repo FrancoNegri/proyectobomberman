@@ -54,4 +54,10 @@ public class ArmamentoTest {
 		arma.vivir();
 		assertTrue(arma.getClass() == arma.getClass());
 	}
+	
+	@Test
+	public void testExplotar() {
+		arma.explotar(coordenada,mapa);
+		assertTrue(arma.estaMuerto() == true);
+	}
 }

@@ -9,6 +9,7 @@ import org.junit.*;
 
 public class BloqueCementoTest {
 	Coordenada coord = mock(Coordenada.class);
+
 	@Test
 	public void testQueChequeaQueElObjetoSeCreeCorrectamente() {
 		Obstaculo Bloque = new BloqueCemento(coord);
@@ -28,16 +29,29 @@ public class BloqueCementoTest {
 		Bloque.Daniar(10);
 		assertTrue(Bloque.Destruido());
 	}
-	
-	
+
 	@Test
-	
-	public void testDaniar(){
-		
+	public void testDaniar() {
+
 		Obstaculo Bloque = new BloqueCemento(coord);
 		Bloque.Daniar(25);
-		assertTrue(Bloque.vidaRestante()<0);
-		
+		assertTrue(Bloque.vidaRestante() < 0);
+
+	}
+
+	@Test
+	public void testDaniarConVidaNula() {
+
+		Obstaculo Bloque = new BloqueAcero(coord);
+		Bloque.Daniar(1000);
+		Bloque.Daniar(10);
 	}
 	
+	@Test
+	public void testNoObtenerPuntajeAlNoMatarlo() {
+		
+		Obstaculo Bloque = new BloqueAcero(coord);
+		Bloque.Daniar(10);
+		assertTrue(Bloque.obtenerPuntaje() == 0);
+	}
 }

@@ -5,6 +5,7 @@ import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.*;
 import modelo.ArmamentoFactory.MolotovFactory;
 import modelo.armamento.Armamento;
+import modelo.articulo.Habano;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
@@ -18,6 +19,7 @@ public class AladoTest {
 	private LopezAlado lopez;
 	private Coordenada coordenadaC;
 	MolotovFactory molotov;
+	private Habano habano;
 	Mapa mapa = mock(Mapa.class);
 	Casillero casi = mock(Casillero.class);
 	
@@ -28,6 +30,7 @@ public class AladoTest {
 		coordenadaC = new Coordenada(8,2);
 		lopez = new LopezAlado(coordenadaC,mapa);
 		molotov = new MolotovFactory();
+		habano = new Habano(coordenadaC);
 	}
 	
 	@Test
@@ -118,5 +121,11 @@ public class AladoTest {
 	public void testDaniarAlado(){
 		lopez.Daniar(3);
 		assertTrue(lopez.obtenerVida() == 2);
+	}
+	
+	@Test
+	public void testTomarArticuloYNoPasaNada() {
+		lopez.tomarArticulo(habano);
+		assert(true);
 	}
 }

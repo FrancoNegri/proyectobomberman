@@ -19,127 +19,129 @@ import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.junit.*;
 import static org.mockito.Mockito.*;
+
 public class MapaTest {
 
 	private Mapa unMapa;
-	
+
 	@SuppressWarnings("unused")
 	private Casillero unCasillero;
-	
+
 	private int Tamanio;
-	
+
 	@Before
-	public void setUp(){
-		
+	public void setUp() {
+
 		this.Tamanio = 5;
 		this.unMapa = new Mapa(this.Tamanio);
 		this.unCasillero = new Casillero();
-		
+
 	}
-	
+
 	@Test
-	
-	public void testConstructor(){
-		Coordenada cord = new Coordenada(2,3);
+	public void testConstructor() {
+		Coordenada cord = new Coordenada(2, 3);
 		this.unCasillero = this.unMapa.obtenerCasillero(cord);
 	}
-	
+
 	@Test
-	public void testTamanio(){
+	public void testConcstructorPorDefecto() {
+		Mapa mapa = new Mapa();
+	}
+
+	@Test
+	public void testTamanio() {
 		assertTrue(5 == unMapa.obtenerTamanio());
 	}
-	
-	
+
 	@Test
-	
-	public void testConstructorTamanioInvalido(){
-		
-		try{
-		
+	public void testConstructorTamanioInvalido() {
+
+		try {
+
 			this.unMapa = new Mapa(-3);
+		} catch (TamanioMatrizInvalidoError e) {
+
 		}
-		catch(TamanioMatrizInvalidoError e){
-			
-		}
-		
+
 	}
-	
-@Test
-	
-	public void testErrorCasilleroInvalido(){
-		
-		
-			Coordenada coord = new Coordenada(1,1);
-			Obstaculo obs = mock(BloqueCemento.class);
-			when(obs.obtenerCoordenadaXY()).thenReturn(coord);
-			Personaje pers = mock(Personaje.class);
-			when(pers.obtenerCoordenadaXY()).thenReturn(coord);
-			this.unMapa = new Mapa(3);
-			unMapa.agregarAlMapa(obs);
-		try{
-			unMapa.agregarAlMapa(pers);
-		}
-		catch(CasilleroOcupadoError e){
-			
-		}
-		
-	}
-	
+
 	@Test
-	
-	public void testObtenerCasillero(){
-		Coordenada cord = new Coordenada(3,4);
+	public void testErrorCasilleroInvalido() {
+
+		Coordenada coord = new Coordenada(1, 1);
+		Obstaculo obs = mock(BloqueCemento.class);
+		when(obs.obtenerCoordenadaXY()).thenReturn(coord);
+		Personaje pers = mock(Personaje.class);
+		when(pers.obtenerCoordenadaXY()).thenReturn(coord);
+		this.unMapa = new Mapa(3);
+		unMapa.agregarAlMapa(obs);
+		try {
+			unMapa.agregarAlMapa(pers);
+		} catch (CasilleroOcupadoError e) {
+
+		}
+
+	}
+
+	@Test
+	public void testObtenerCasillero() {
+		Coordenada cord = new Coordenada(3, 4);
 		Casillero casilleroPrueba = this.unMapa.obtenerCasillero(cord);
 		assertTrue(casilleroPrueba.getClass() == Casillero.class);
-		
+
 	}
+
 	@Test
-	
-	public void testObtenerCasilleroTamanioFueraDeRango(){
-		Coordenada cord = new Coordenada(7,2);
-		try{
+	public void testObtenerCasilleroTamanioFueraDeRango() {
+		Coordenada cord = new Coordenada(7, 2);
+		try {
 			this.unMapa.obtenerCasillero(cord);
-		}
-		catch(TamanioMatrizInvalidoError e){
+		} catch (TamanioMatrizInvalidoError e) {
 		}
 	}
+
 	@Test
-	public void testObtenerPersonajeDelMapa(){
-		Coordenada cord = new Coordenada(3,4);
+	public void testObtenerPersonajeDelMapa() {
+		Coordenada cord = new Coordenada(3, 4);
 		Personaje pers = mock(Personaje.class);
 		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
 		unMapa.agregarAlMapa(pers);
-		LinkedList<Personaje> lista = unMapa.obtenerCasillero(cord).obtenerPersonajes();
+		LinkedList<Personaje> lista = unMapa.obtenerCasillero(cord)
+				.obtenerPersonajes();
 		assertTrue(lista.contains(pers));
 	}
+
 	@Test
-	public void testObtenerObstaculoDelMapa(){
-		Coordenada coord = new Coordenada(3,4);
+	public void testObtenerObstaculoDelMapa() {
+		Coordenada coord = new Coordenada(3, 4);
 		BloqueLadrillo bloque = mock(BloqueLadrillo.class);
 		when(bloque.obtenerCoordenadaXY()).thenReturn(coord);
 		unMapa.agregarAlMapa(bloque);
 		assertTrue(unMapa.obtenerCasillero(coord).obtenerObstaculo() == bloque);
 	}
+
 	@Test
-	public void testObtenerArmamentoDelMapa(){
-		Coordenada coord = new Coordenada(3,4);
+	public void testObtenerArmamentoDelMapa() {
+		Coordenada coord = new Coordenada(3, 4);
 		Armamento arma = mock(Armamento.class);
 		when(arma.obtenerCoordenadaXY()).thenReturn(coord);
 		unMapa.agregarAlMapa(arma);
 		assertTrue(unMapa.obtenerCasillero(coord).obtenerArmamento() == arma);
 	}
+
 	@Test
-	public void testObtenerArticuloDelMapa(){
-		Coordenada coord = new Coordenada(3,4);
+	public void testObtenerArticuloDelMapa() {
+		Coordenada coord = new Coordenada(3, 4);
 		Articulo articulo = mock(Articulo.class);
 		when(articulo.obtenerCoordenadaXY()).thenReturn(coord);
 		unMapa.agregarAlMapa(articulo);
 		assertTrue(unMapa.obtenerCasillero(coord).obtenerArticulo() == articulo);
 	}
-	
+
 	@Test
-	public void testTerminoNivel(){
-		Coordenada cord = new Coordenada(3,4);
+	public void testTerminoNivel() {
+		Coordenada cord = new Coordenada(3, 4);
 		Bombita pers = mock(Bombita.class);
 		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
 		this.unMapa.agregarAlMapa(pers);
@@ -147,11 +149,11 @@ public class MapaTest {
 		this.unMapa.agregarAlMapa(unaSalida);
 		assertTrue(this.unMapa.terminoNivel());
 	}
-	
+
 	@Test
-	public void testTerminoNivelsinBombitaenSalida(){
-		Coordenada cord = new Coordenada(3,4);
-		Coordenada cordsalida = new Coordenada(2,2);
+	public void testTerminoNivelsinBombitaenSalida() {
+		Coordenada cord = new Coordenada(3, 4);
+		Coordenada cordsalida = new Coordenada(2, 2);
 		Personaje pers = mock(Personaje.class);
 		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
 		this.unMapa.agregarAlMapa(pers);
@@ -159,14 +161,14 @@ public class MapaTest {
 		this.unMapa.agregarAlMapa(unaSalida);
 		assertFalse(this.unMapa.terminoNivel());
 	}
-	
+
 	@Test
-	public void testTerminoNivelConBombitaenSalidayPersonajes(){
-		Coordenada cord = new Coordenada(3,4);
-		Coordenada cordotropers = new Coordenada(1,1);
-		Coordenada cordsalida = new Coordenada(2,2);
+	public void testTerminoNivelConBombitaenSalidayPersonajes() {
+		Coordenada cord = new Coordenada(3, 4);
+		Coordenada cordotropers = new Coordenada(1, 1);
+		Coordenada cordsalida = new Coordenada(2, 2);
 		Personaje pers = mock(Personaje.class);
-		Personaje otropers = mock (Personaje.class);
+		Personaje otropers = mock(Personaje.class);
 		Bombita rodriguez = mock(Bombita.class);
 		when(pers.obtenerCoordenadaXY()).thenReturn(cord);
 		when(otropers.obtenerCoordenadaXY()).thenReturn(cordotropers);
@@ -177,12 +179,12 @@ public class MapaTest {
 		Salida unaSalida = new Salida(cordsalida);
 		this.unMapa.agregarAlMapa(unaSalida);
 		assertFalse(this.unMapa.terminoNivel());
-		
+
 	}
-	
+
 	@Test
-	public void testTerminoNivelconPersonajeEnSalida(){
-		Coordenada cordsalida = new Coordenada(2,2);
+	public void testTerminoNivelconPersonajeEnSalida() {
+		Coordenada cordsalida = new Coordenada(2, 2);
 		Personaje pers = mock(Personaje.class);
 		when(pers.obtenerCoordenadaXY()).thenReturn(cordsalida);
 		this.unMapa.agregarAlMapa(pers);

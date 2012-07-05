@@ -38,12 +38,11 @@ public class BloqueAceroTest {
 	}
 	
 	@Test
-	
-	public void testDaniar(){
-		
+	public void testDaniar() {
+
 		Obstaculo Bloque = new BloqueAcero(coord);
 		Bloque.Daniar(25);
-		assertTrue(Bloque.vidaRestante()==975);
+		assertTrue(Bloque.vidaRestante() == 975);
 	}
 	
 	@Test
