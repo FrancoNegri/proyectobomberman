@@ -1,60 +1,23 @@
 package main;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.EventQueue;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JPopupMenu;
-import javax.swing.border.Border;
-
-import control.Persistencia.Persistencia;
 import control.Teclado.Teclado;
-import modelo.armamento.Armamento;
-import modelo.armamento.ToleTole;
-import modelo.articulo.Articulo;
-import modelo.articulo.Habano;
-//import modelo.bombitatest.BombitaTest;
-import modelo.coordenadas.Coordenada;
-import modelo.mapa.Mapa;
-import modelo.obstaculos.BloqueAcero;
-import modelo.obstaculos.Obstaculo;
-import modelo.personaje.Bombita;
-import modelo.personaje.Personaje;
-import modelo.personaje.enemigos.Cecilio;
-import modelo.personaje.enemigos.LopezComun;
-import vista.Mapa.VistaMapa;
-import vista.fiuba.algo3.titiritero.dibujables.Circulo;
-import vista.fiuba.algo3.titiritero.dibujables.Figura;
-import vista.fiuba.algo3.titiritero.dibujables.Imagen;
 import vista.fiuba.algo3.titiritero.dibujables.SuperficiePanel;
-import vista.fiuba.algo3.titiritero.modelo.GameLoop;
-import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 
-@SuppressWarnings("unused")
 public class VentanaPrincipal {
 
 	private JFrame frame;
-	private JLabel labelInfo, labelPts, labelVida, labelVel, labelNiv, labelImg, labelPnl;
-	private BarraEstado barra;
 	
 	public JFrame obtenerFrame() {
 		return frame;
@@ -100,47 +63,7 @@ public class VentanaPrincipal {
 		// CONTROL DEL JUEGO
 		final ControlJuego controlDelJuego = new ControlJuego(panel, null);
 
-		BarraEstado barraEstado = new BarraEstado(controlDelJuego.getBombita(),controlDelJuego.mapa);
-		Thread hilo = new Thread(barraEstado);
-		hilo.start();
-		contenedor.add(barraEstado,BorderLayout.CENTER);
-		
-		// LABELS 
-		int puntajeMapa = controlDelJuego.obtenerPuntajeArea();
-		int velocidadBombita = controlDelJuego.obtenerVelocidadArea();
-		Font fuente = new Font(Font.SERIF,Font.BOLD,15);
-		labelInfo = new JLabel("Informacion");
-		labelInfo.setFont(fuente);
-		labelInfo.setForeground(Color.white);
-		labelInfo.setBounds(625, 15, 100, 50);
-		labelPts = new JLabel("Puntos: "+ puntajeMapa);
-		labelPts.setVisible(true);
-		labelPts.setForeground(Color.white);
-		labelPts.setBounds(610, 50, 100, 50);
-		labelVida = new JLabel("Vida: "+ (controlDelJuego.obtenerVidaArea()));
-		labelPts.setVisible(true);
-		labelVida.setForeground(Color.white);
-		labelVida.setBounds(610, 90, 100, 50);
-		labelVel = new JLabel("Velocidad: "+ velocidadBombita + " km/h");
-		labelVel.setForeground(Color.white);
-		labelVel.setBounds(610, 130, 120, 50);
-		labelNiv = new JLabel("Nivel: 1");
-		labelNiv.setForeground(Color.white);
-		labelNiv.setBounds(610, 165, 100, 50);
-		labelImg = new JLabel();
-		labelImg.setIcon(new ImageIcon(getClass().getResource("/vista/Imagenes/BombitaRodriguez1.png")));
-		labelImg.setBounds(600,380,200,200);
-		labelPnl = new JLabel();
-		labelPnl.setIcon(new ImageIcon(getClass().getResource("/vista/Imagenes/Panel1.png")));
-		labelPnl.setBounds(600,16,130,200);
-		
-		contenedor.add(labelInfo);
-		contenedor.add(labelPts);
-		contenedor.add(labelVida);
-		contenedor.add(labelVel);
-		contenedor.add(labelNiv);
-		contenedor.add(labelImg);
-		contenedor.add(labelPnl);
+		BarraEstado barraEstado = new BarraEstado(contenedor,controlDelJuego);
 
 
 		// MENU HERRAMIENTAS

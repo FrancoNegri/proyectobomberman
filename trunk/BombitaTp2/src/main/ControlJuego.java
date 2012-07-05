@@ -1,56 +1,33 @@
 package main;
 
-import java.awt.Color; 
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
-
-import modelo.articulo.Articulo;
-import modelo.articulo.Habano;
-import modelo.articulo.Timer;
-import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
-import modelo.obstaculos.BloqueAcero;
-import modelo.obstaculos.BloqueLadrillo;
-import modelo.obstaculos.Obstaculo;
 import modelo.personaje.Bombita;
-import modelo.personaje.Personaje;
-import modelo.personaje.enemigos.Cecilio;
-import modelo.personaje.enemigos.LopezAlado;
-import modelo.personaje.enemigos.LopezComun;
 import vista.Mapa.VistaMapa;
 import vista.fiuba.algo3.titiritero.modelo.GameLoop;
 import vista.fiuba.algo3.titiritero.modelo.SuperficieDeDibujo;
 import control.Persistencia.Persistencia;
 import control.Teclado.Teclado;
-import modelo.salida.*;
+
 public class ControlJuego implements Runnable {
 
 	Mapa mapa;
+	int nivel = 1;
 	private GameLoop gameLoop;
 	private JPanel panel;
 	private Bombita bombita;
-	private BufferedImage fondo;
 	private JFrame frame;
 	Persistencia pers = new Persistencia();
 	Teclado teclado;
 	private boolean finDelJuego = false;
 	
 	public ControlJuego(JPanel unPanel, JFrame unFrame)  {
-		this.gameLoop = new GameLoop(0, (SuperficieDeDibujo) unPanel);
+		this.gameLoop = new GameLoop(1, (SuperficieDeDibujo) unPanel);
 		this.panel = unPanel;
 		this.frame = unFrame;
-	
-		Personaje modelo3;
-		
 		//Cargo Mapa DE OBJETOS----------------------------------------------------------------
 		
 		try {
@@ -127,33 +104,17 @@ public class ControlJuego implements Runnable {
 		return bombita.getVelocidad();
 	}
 	
-	/*MANEJO DEL FONDO DEL MAPA
-	private void cargarFondoMapa() {
-		try{
-			fondo = ImageIO.read(getClass().getClassLoader().getResource("/vista/Imagenes/BloquePiso.png"));
-		}catch(Exception e){}
-	}
-	
-	private void drawPane(Graphics g){
-		//Hacer un for sobre el panel para ir agregando los bloques
-		if(fondo!=null){
-			for(int i=0;i<40;i++){
-			for(int j=0;j<40;j++){
-				g.drawImage(fondo, i*32, j*32, i*32+32, j*32+32, 0, 0, 256, 256, null);
-			}
-			}
-		}
-		}
-		
-	public void dibujarMapa(Graphics g){
-		this.cargarFondoMapa();
-		this.drawPane(g);
-	}*/
-	
 	public Bombita getBombita() {
 		return this.bombita;
 	}
 	
+	public Mapa getMapa() {
+		return this.mapa;
+	}
+	
+	public int getNivel() {
+		return this.nivel;
+	}
 	
 	//GAME OVER
 	public void gameOver() {
@@ -193,17 +154,17 @@ public class ControlJuego implements Runnable {
 
 
 	public void run() {
-		int k = 1;
+		
 		while(!finDelJuego){
 			if(mapa.terminoNivel()){
 				try {
-					k = k+1;
-					cargarMapaEnXml("lvls/lvl"+k+".xml");
+					cargarMapaEnXml("lvl"+nivel+".xml");
 					pasajeDeNivel();
 					finDelJuego = false;
 				} catch (IOException e) {
 					juegoGanado();
 				}
+				nivel = nivel+1;
 			}
 		}
 	}
@@ -217,7 +178,8 @@ public class ControlJuego implements Runnable {
 	public void cargarMapaEnXml(String ruta) throws IOException{
 		gameLoop.reiniciar();
 		mapa= pers.recuperar(ruta);
-		teclado.set(pers.recuperarBombita());
+		bombita = pers.recuperarBombita();
+		teclado.set(bombita);
 		gameLoop.agregar(mapa);
 		VistaMapa VistaDelMapaCargado = new VistaMapa(mapa);
 		gameLoop.agregar(VistaDelMapaCargado);
