@@ -1,29 +1,23 @@
 package main;
 
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import modelo.mapa.Mapa;
-import modelo.personaje.Bombita;
 
-public class BarraEstado extends JPanel implements Runnable {
+public class BarraEstado implements Runnable {
 	
-	private int velocidad;
-	private int puntaje;
-	private int vida;
+	Container cont;
+	ControlJuego control;
 	private JLabel labelInfo, labelPts, labelVida, labelVel, labelNiv, labelImg, labelPnl;
-	Bombita rodriguez;
-	Mapa mapa;
 	
-	public BarraEstado(Bombita unRodriguez, Mapa unMapa) {
-		rodriguez =unRodriguez;
-		mapa = unMapa;
-		this.velocidad = 0;
-		this.puntaje = 0;
-		this.vida = 0;
+	public BarraEstado(Container cont,ControlJuego control) {
+		this.cont = cont;
+		this.control = control;
 		this.inicializarBarraEstado();
+		Thread hilo = new Thread(this);
+		hilo.start();
 	}
 	
 	public void inicializarBarraEstado() {
@@ -32,13 +26,13 @@ public class BarraEstado extends JPanel implements Runnable {
 		labelInfo.setFont(fuente);
 		labelInfo.setForeground(Color.white);
 		labelInfo.setBounds(625, 15, 100, 50);
-		labelPts = new JLabel("Puntos: "+ puntaje );
+		labelPts = new JLabel("Puntos: "+ control.mapa.obtenerPuntajeTotal() );
 		labelPts.setForeground(Color.white);
 		labelPts.setBounds(610, 50, 100, 50);
-		labelVida = new JLabel("Vida: "+ vida );
+		labelVida = new JLabel("Vida: "+ control.getBombita().obtenerVida() );
 		labelVida.setForeground(Color.white);
 		labelVida.setBounds(610, 90, 100, 50);
-		labelVel = new JLabel("Velocidad: "+ velocidad + " km/h");
+		labelVel = new JLabel("Velocidad: "+ control.getBombita().getVelocidad() + " km/h");
 		labelVel.setForeground(Color.white);
 		labelVel.setBounds(610, 130, 120, 50);
 		labelNiv = new JLabel("Nivel: 1");
@@ -51,20 +45,20 @@ public class BarraEstado extends JPanel implements Runnable {
 		labelPnl.setIcon(new ImageIcon(getClass().getResource("/vista/Imagenes/Panel1.png")));
 		labelPnl.setBounds(600,16,130,200);
 		
-		add(labelInfo);
-		add(labelPts);
-		add(labelVida);
-		add(labelVel);
-		add(labelNiv);
-		add(labelImg);
-		add(labelPnl);
+		cont.add(labelInfo);
+		cont.add(labelPts);
+		cont.add(labelVida);
+		cont.add(labelVel);
+		cont.add(labelNiv);
+		cont.add(labelImg);
+		cont.add(labelPnl);
 	}
 	
 	public void actualizarBarraEstado() {
-		labelPts.setText("Puntos: " + mapa.obtenerPuntajeTotal());
-		labelVida.setText("Vida: "+ rodriguez.obtenerVida());
-		labelVel.setText("Velocidad: "+ rodriguez.getVelocidad() + " km/h");
-		labelNiv.setText("Nivel: 1");
+		labelPts.setText("Puntos: " + control.getMapa().obtenerPuntajeTotal());
+		labelVida.setText("Vida: "+ control.getBombita().obtenerVida());
+		labelVel.setText("Velocidad: "+ control.getBombita().getVelocidad() + " km/h");
+		labelNiv.setText("Nivel: "+control.getNivel());
 	}
 
 	public void run() {
