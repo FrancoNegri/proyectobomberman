@@ -1,4 +1,4 @@
-package control.teclado;
+package control.tecladoTest;
 
 import java.awt.event.KeyEvent;
 
