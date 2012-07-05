@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="0" name="PersistenciaTest" package="control.PersistenciaTest" tests="2" time="3.315" timestamp="2012-07-04T20:53:07">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="0" name="PersistenciaTest" package="control.PersistenciaTest" tests="2" time="2.43" timestamp="2012-07-05T03:44:13">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -114,7 +114,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -163,17 +163,17 @@
           <property name="ant.project.invoked-targets" value="test" />
 
       </properties>
-
-      <testcase classname="control.PersistenciaTest.PersistenciaTest" name="testGuardarElJuego" time="0.235" />
 
       <testcase classname="control.PersistenciaTest.PersistenciaTest" name="testQueRecuperaElJuego" time="0.5" />
 
+      <testcase classname="control.PersistenciaTest.PersistenciaTest" name="testGuardarElJuego" time="0.048" />
+
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="1" name="ColicionadorTest" package="modelo.DetectorDeColisionesTest" tests="1" time="0.079" timestamp="2012-07-04T20:53:10">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="1" name="ColicionadorTest" package="modelo.DetectorDeColisionesTest" tests="1" time="0.069" timestamp="2012-07-05T03:44:15">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -287,7 +287,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -337,14 +337,14 @@
 
       </properties>
 
-      <testcase classname="modelo.DetectorDeColisionesTest.ColicionadorTest" name="testQuePruebaUnaColicion" time="0.051" />
+      <testcase classname="modelo.DetectorDeColisionesTest.ColicionadorTest" name="testQuePruebaUnaColicion" time="0.02" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="2" name="ModeloTest" package="modelo.TestIntegracion" tests="1" time="2.46" timestamp="2012-07-04T20:53:10">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="2" name="ModeloTest" package="modelo.TestIntegracion" tests="1" time="0.188" timestamp="2012-07-05T03:44:15">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -458,7 +458,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -508,7 +508,7 @@
 
       </properties>
 
-      <testcase classname="modelo.TestIntegracion.ModeloTest" name="testJuego" time="2.424" />
+      <testcase classname="modelo.TestIntegracion.ModeloTest" name="testJuego" time="0.164" />
 
       <system-out><![CDATA[Prueba Integracion
 Puntaje :0
@@ -536,643 +536,12 @@ Puntaje :0
 Puntaje :0
 Puntaje :0
 Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :0
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :100
-Puntaje :300
-Puntaje :300
-Puntaje :300
-Puntaje :300
-Puntaje :300
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :500
-Puntaje :700
-Puntaje :700
-Puntaje :700
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
-Puntaje :900
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="3" name="TranslacionAbajoTest" package="modelo.Translaciontests" tests="2" time="0.132" timestamp="2012-07-04T20:53:12">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="3" name="TranslacionAbajoTest" package="modelo.Translaciontests" tests="2" time="0.137" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1286,7 +655,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -1336,16 +705,16 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.Translaciontests.TranslacionAbajoTest" name="TestQueGuardaLaTranslacion" time="0.0" />
+      <testcase classname="modelo.Translaciontests.TranslacionAbajoTest" name="TestQueGuardaLaTranslacion" time="0.001" />
 
-      <testcase classname="modelo.Translaciontests.TranslacionAbajoTest" name="TestQueChequeaLaAccion" time="0.094" />
+      <testcase classname="modelo.Translaciontests.TranslacionAbajoTest" name="TestQueChequeaLaAccion" time="0.106" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="4" name="TranslacionArribaTest" package="modelo.Translaciontests" tests="2" time="0.034" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="4" name="TranslacionArribaTest" package="modelo.Translaciontests" tests="2" time="0.037" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1459,7 +828,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -1509,16 +878,16 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.Translaciontests.TranslacionArribaTest" name="TestQueGuardaLaTranslacion" time="0.0" />
+      <testcase classname="modelo.Translaciontests.TranslacionArribaTest" name="TestQueGuardaLaTranslacion" time="0.001" />
 
-      <testcase classname="modelo.Translaciontests.TranslacionArribaTest" name="TestQueChequeaLaAccion" time="0.003" />
+      <testcase classname="modelo.Translaciontests.TranslacionArribaTest" name="TestQueChequeaLaAccion" time="0.005" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="5" name="TranslacionDerechaTest" package="modelo.Translaciontests" tests="2" time="0.031" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="5" name="TranslacionDerechaTest" package="modelo.Translaciontests" tests="2" time="0.035" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1632,7 +1001,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -1682,7 +1051,7 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.Translaciontests.TranslacionDerechaTest" name="TestQueGuardaLaTranslacion" time="0.0" />
+      <testcase classname="modelo.Translaciontests.TranslacionDerechaTest" name="TestQueGuardaLaTranslacion" time="0.001" />
 
       <testcase classname="modelo.Translaciontests.TranslacionDerechaTest" name="TestQueChequeaLaAccion" time="0.005" />
 
@@ -1691,7 +1060,7 @@ Puntaje :900
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="6" name="TranslacionIzquierdaTest" package="modelo.Translaciontests" tests="2" time="0.028" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="6" name="TranslacionIzquierdaTest" package="modelo.Translaciontests" tests="2" time="0.03" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1805,7 +1174,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -1855,7 +1224,7 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.Translaciontests.TranslacionIzquierdaTest" name="TestQueGuardaLaTranslacion" time="0.0" />
+      <testcase classname="modelo.Translaciontests.TranslacionIzquierdaTest" name="TestQueGuardaLaTranslacion" time="0.001" />
 
       <testcase classname="modelo.Translaciontests.TranslacionIzquierdaTest" name="TestQueChequeaLaAccion" time="0.004" />
 
@@ -1864,7 +1233,7 @@ Puntaje :900
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="7" name="MolovFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.111" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="7" name="MolovFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.149" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -1978,7 +1347,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -2030,14 +1399,14 @@ Puntaje :900
 
       <testcase classname="modelo.armamentoFactoryTest.MolovFactoryTest" name="testQueCambiaElTiempo" time="0.002" />
 
-      <testcase classname="modelo.armamentoFactoryTest.MolovFactoryTest" name="testQueChequeaLaContruccionDeUnaMolotov" time="0.026" />
+      <testcase classname="modelo.armamentoFactoryTest.MolovFactoryTest" name="testQueChequeaLaContruccionDeUnaMolotov" time="0.025" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="8" name="ProyectilFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.032" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="8" name="ProyectilFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.039" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -2151,7 +1520,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -2210,7 +1579,7 @@ Puntaje :900
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="9" name="ToleToleFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.035" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="9" name="ToleToleFactoryTest" package="modelo.armamentoFactoryTest" tests="2" time="0.034" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -2324,7 +1693,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -2374,16 +1743,16 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.armamentoFactoryTest.ToleToleFactoryTest" name="testQueCambiaElTiempo" time="0.003" />
+      <testcase classname="modelo.armamentoFactoryTest.ToleToleFactoryTest" name="testQueCambiaElTiempo" time="0.001" />
 
-      <testcase classname="modelo.armamentoFactoryTest.ToleToleFactoryTest" name="testQueChequeaLaContruccionDeUnaMolotov" time="0.005" />
+      <testcase classname="modelo.armamentoFactoryTest.ToleToleFactoryTest" name="testQueChequeaLaContruccionDeUnaMolotov" time="0.004" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="10" name="ArmamentoTest" package="modelo.armamentoTest" tests="2" time="0.126" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="10" name="ArmamentoTest" package="modelo.armamentoTest" tests="3" time="0.119" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -2497,7 +1866,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -2547,16 +1916,18 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.armamentoTest.ArmamentoTest" name="testCambiarEltiempo" time="0.003" />
+      <testcase classname="modelo.armamentoTest.ArmamentoTest" name="testActualizarLaBomba" time="0.015" />
 
-      <testcase classname="modelo.armamentoTest.ArmamentoTest" name="testActualizarLaBomba" time="0.01" />
+      <testcase classname="modelo.armamentoTest.ArmamentoTest" name="testCambiarEltiempo" time="0.005" />
+
+      <testcase classname="modelo.armamentoTest.ArmamentoTest" name="testExploto" time="0.007" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="11" name="ProyectilTest" package="modelo.armamentoTest" tests="1" time="0.071" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="11" name="ProyectilTest" package="modelo.armamentoTest" tests="1" time="0.08" timestamp="2012-07-05T03:44:16">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -2670,7 +2041,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -2720,14 +2091,14 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.armamentoTest.ProyectilTest" name="testQueActualizaLaBombaYLaHaceExplotar" time="0.034" />
+      <testcase classname="modelo.armamentoTest.ProyectilTest" name="testQueActualizaLaBombaYLaHaceExplotar" time="0.039" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="12" name="HabanoTest" package="modelo.articulotest" tests="5" time="0.057" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="12" name="HabanoTest" package="modelo.articulotest" tests="6" time="0.055" timestamp="2012-07-05T03:44:17">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -2841,7 +2212,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -2891,22 +2262,24 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.articulotest.HabanoTest" name="testUsar" time="0.002" />
+      <testcase classname="modelo.articulotest.HabanoTest" name="testaumentarVelocidadsuperandoVelocidadMaxima" time="0.002" />
+
+      <testcase classname="modelo.articulotest.HabanoTest" name="testAumentarVelocidadSuperandoVelocidadMaxima" time="0.002" />
 
       <testcase classname="modelo.articulotest.HabanoTest" name="testaumentarVelocidad" time="0.001" />
 
       <testcase classname="modelo.articulotest.HabanoTest" name="testUsarconBombitaNull" time="0.002" />
 
-      <testcase classname="modelo.articulotest.HabanoTest" name="testObtenerCoordenadas" time="0.001" />
+      <testcase classname="modelo.articulotest.HabanoTest" name="testObtenerCoordenadas" time="0.002" />
 
-      <testcase classname="modelo.articulotest.HabanoTest" name="testaumentarVelocidadsuperandoVelocidadMaxima" time="0.001" />
+      <testcase classname="modelo.articulotest.HabanoTest" name="testUsar" time="0.003" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="13" name="ProyoctilTest" package="modelo.articulotest" tests="1" time="0.015" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="13" name="ProyoctilTest" package="modelo.articulotest" tests="1" time="0.022" timestamp="2012-07-05T03:44:17">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -3020,7 +2393,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -3070,14 +2443,14 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.articulotest.ProyoctilTest" name="testQueVerificaPonerUnProyectilEnUnMapaYloActualiza" time="0.001" />
+      <testcase classname="modelo.articulotest.ProyoctilTest" name="testQueVerificaPonerUnProyectilEnUnMapaYloActualiza" time="0.002" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="14" name="TimerTest" package="modelo.articulotest" tests="5" time="0.14" timestamp="2012-07-04T20:53:13">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="14" name="TimerTest" package="modelo.articulotest" tests="5" time="0.238" timestamp="2012-07-05T03:44:17">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -3191,7 +2564,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -3241,22 +2614,22 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testUsar" time="0.088" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testErrorAlUsar" time="0.118" />
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testReducirArmamentoConTiempoCero" time="0.004" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testUsarSinArmamento" time="0.04" />
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testErrorAlUsar" time="0.005" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testReducirTiempo" time="0.012" />
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testUsarSinArmamento" time="0.004" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testReducirArmamentoConTiempoCero" time="0.01" />
 
-      <testcase classname="modelo.articulotest.TimerTest" name="testReducirTiempo" time="0.005" />
+      <testcase classname="modelo.articulotest.TimerTest" name="testUsar" time="0.006" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="15" name="BloqueAceroTest" package="modelo.bloquetest" tests="4" time="0.063" timestamp="2012-07-04T20:53:14">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="15" name="BloqueAceroTest" package="modelo.bloquetest" tests="5" time="0.055" timestamp="2012-07-05T03:44:17">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -3370,7 +2743,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -3420,11 +2793,13 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testDaniar" time="0.001" />
+      <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testObtenerPuntaje" time="0.001" />
 
       <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testQuePruebaQuitarVida" time="0.001" />
 
-      <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.0" />
+      <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.001" />
+
+      <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testDaniar" time="0.001" />
 
       <testcase classname="modelo.bloquetest.BloqueAceroTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.001" />
 
@@ -3433,7 +2808,7 @@ Puntaje :900
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="16" name="BloqueCementoTest" package="modelo.bloquetest" tests="4" time="0.06" timestamp="2012-07-04T20:53:14">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="16" name="BloqueCementoTest" package="modelo.bloquetest" tests="4" time="0.039" timestamp="2012-07-05T03:44:17">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -3547,7 +2922,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -3596,21 +2971,21 @@ Puntaje :900
           <property name="ant.project.invoked-targets" value="test" />
 
       </properties>
-
-      <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testDaniar" time="0.003" />
 
       <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQuePruebaQuitarVida" time="0.001" />
 
-      <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.0" />
+      <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.001" />
 
-      <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.0" />
+      <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testDaniar" time="0.001" />
+
+      <testcase classname="modelo.bloquetest.BloqueCementoTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.001" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="17" name="BloqueLadrilloTest" package="modelo.bloquetest" tests="4" time="0.056" timestamp="2012-07-04T20:53:14">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="17" name="BloqueLadrilloTest" package="modelo.bloquetest" tests="4" time="0.042" timestamp="2012-07-05T03:44:17">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -3724,7 +3099,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -3773,21 +3148,21 @@ Puntaje :900
           <property name="ant.project.invoked-targets" value="test" />
 
       </properties>
-
-      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testDaniar" time="0.002" />
 
       <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQuePruebaQuitarVida" time="0.001" />
 
-      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.001" />
+      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQuePruebaQueUnBloqueEsDestruido" time="0.002" />
 
-      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.001" />
+      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testDaniar" time="0.001" />
+
+      <testcase classname="modelo.bloquetest.BloqueLadrilloTest" name="testQueChequeaQueElObjetoSeCreeCorrectamente" time="0.002" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="18" name="BombitaTest" package="modelo.bombitatest" tests="17" time="0.254" timestamp="2012-07-04T20:53:14">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="18" name="BombitaTest" package="modelo.bombitatest" tests="19" time="0.155" timestamp="2012-07-05T03:44:17">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -3901,7 +3276,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -3951,46 +3326,50 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testDaniar" time="0.003" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerTimerYCambiarTiempoRetraso" time="0.003" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testSinVida" time="0.002" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarBomba" time="0.001" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testchocar" time="0.002" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarVida" time="0.002" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarVelocidad" time="0.002" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testRestarVida" time="0.002" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarCoordenadaX" time="0.003" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testCambiarActitud" time="0.002" />
+
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarVelocidad" time="0.005" />
+
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarCoordenadaX" time="0.002" />
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarCoordenadaY" time="0.002" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testMoverseHaciaArriba" time="0.003" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testMoverseHaciaArriba" time="0.002" />
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testMoverseHaciaAbajo" time="0.002" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testMoverseHaciaDerecha" time="0.011" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testMoverseHaciaDerecha" time="0.002" />
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testMoverseHaciaIzquierda" time="0.002" />
 
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerHabanoYAumentarVelocidad" time="0.009" />
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerHabanoYAumentarVelocidad" time="0.002" />
 
       <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerToleToleYCambiarBomba" time="0.002" />
 
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testDaniar" time="0.002" />
+
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testSinVida" time="0.004" />
+
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testchocar" time="0.001" />
+
+      <testcase classname="modelo.bombitatest.BombitaTest" name="testAtacar" time="0.004" />
+
       <testcase classname="modelo.bombitatest.BombitaTest" name="testCambiarArmamentoInicialPorToleTole" time="0.002" />
-
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testObtenerTimerYCambiarTiempoRetraso" time="0.004" />
-
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarBomba" time="0.002" />
-
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testInicializarVida" time="0.005" />
-
-      <testcase classname="modelo.bombitatest.BombitaTest" name="testRestarVida" time="0.003" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="19" name="CasilleroTest" package="modelo.casillerotest" tests="23" time="0.41" timestamp="2012-07-04T20:53:14">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="19" name="CasilleroTest" package="modelo.casillerotest" tests="31" time="0.33" timestamp="2012-07-05T03:44:17">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -4104,7 +3483,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -4154,45 +3533,13 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testSalidaOn" time="0.002" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaCasillero" time="0.078" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeEliminaCasillero" time="0.002" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaUnArmamento" time="0.099" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgreganPersonajes" time="0.001" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaArticulable" time="0.036" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeActualizaTodo" time="0.006" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testQueCompruevaSiEsAtacable" time="0.002" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testSalidaOffporObstaculo" time="0.005" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testcasilleroSinPersonajes" time="0.0" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testestaBombitaSinPersonajes" time="0.001" />
-
       <testcase classname="modelo.casillerotest.CasilleroTest" name="testCasilleroSinPersonjesConPersonaje" time="0.001" />
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testEstaSoloBombitaConPersonajeCualquiera" time="0.002" />
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testEstaSoloBombitaConPersonajeCualquiera" time="0.001" />
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testEstaSoloBombitaConVariosPersonajes" time="0.002" />
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testEstaSoloBombitaConVariosPersonajes" time="0.001" />
 
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeEliminaUnArmamento" time="0.001" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeEliminanPersonajes" time="0.001" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeEliminaArticulable" time="0.002" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testQueCompruevaSiEsCaminable" time="0.001" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testestaBombitaConPesonajeCualquiera" time="0.001" />
-
-      <testcase classname="modelo.casillerotest.CasilleroTest" name="testestaBombitaConVariosPersonajes" time="0.001" />
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testVerificarCasilleroNoVacioAlAgregarleUnaSalida" time="0.0" />
 
       <testcase classname="modelo.casillerotest.CasilleroTest" name="testSalidaOff" time="0.001" />
 
@@ -4200,12 +3547,60 @@ Puntaje :900
 
       <testcase classname="modelo.casillerotest.CasilleroTest" name="testEstaSoloBombita" time="0.001" />
 
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testObtenerFuego" time="0.0" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testObtenerSalida" time="0.0" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaCasillero" time="0.036" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeEliminaCasillero" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaUnArmamento" time="0.043" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgreganPersonajes" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeAgregaArticulable" time="0.027" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeActualizaTodo" time="0.005" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testQueCompruevaSiEsAtacable" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testSalidaOffporObstaculo" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testcasilleroSinPersonajes" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testestaBombitaSinPersonajes" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testEliminarArticuloIgual" time="0.005" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testEliminarArmamentoIgual" time="0.003" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testEliminarObstaculoIgual" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testVerificarSalidaOn" time="0.0" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeEliminaUnArmamento" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeEliminanPersonajes" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testDondeSeEliminaArticulable" time="0.0" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testQueCompruevaSiEsCaminable" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testestaBombitaConPesonajeCualquiera" time="0.001" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testestaBombitaConVariosPersonajes" time="0.002" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testVerificarSalidaOnNoPosible" time="0.0" />
+
+      <testcase classname="modelo.casillerotest.CasilleroTest" name="testSalidaOn" time="0.001" />
+
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="20" name="CoordenadasTest" package="modelo.coordenadastest" tests="6" time="0.071" timestamp="2012-07-04T20:53:15">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="20" name="CoordenadasTest" package="modelo.coordenadastest" tests="6" time="0.057" timestamp="2012-07-05T03:44:18">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -4319,7 +3714,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -4369,24 +3764,24 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaErrorAlSetearMal" time="0.0" />
+      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaErrorAlSetearMal" time="0.001" />
 
-      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaErrorAlModificarX" time="0.001" />
+      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaErrorAlModificarX" time="0.0" />
 
       <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaErrorAlModificarY" time="0.0" />
 
-      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaCoordenadasIguales" time="0.002" />
+      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaCoordenadasIguales" time="0.001" />
 
       <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQueVerificaSeteo" time="0.0" />
 
-      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaElGuardado" time="0.002" />
+      <testcase classname="modelo.coordenadastest.CoordenadasTest" name="testQuePruebaElGuardado" time="0.001" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="21" name="TranslacionTest" package="modelo.coordenadastest" tests="1" time="0.029" timestamp="2012-07-04T20:53:15">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="21" name="TranslacionTest" package="modelo.coordenadastest" tests="1" time="0.029" timestamp="2012-07-05T03:44:18">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -4500,7 +3895,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -4557,7 +3952,7 @@ Puntaje :900
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="22" name="AladoTest" package="modelo.enemigostest" tests="11" time="0.693" timestamp="2012-07-04T20:53:15">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="22" name="AladoTest" package="modelo.enemigostest" tests="13" time="0.408" timestamp="2012-07-05T03:44:18">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -4671,7 +4066,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -4721,34 +4116,38 @@ Puntaje :900
 
       </properties>
 
+      <testcase classname="modelo.enemigostest.AladoTest" name="testObtenerPuntaje" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarBomba" time="0.001" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVida" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testRestarVida" time="0.001" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testDaniarAlado" time="0.001" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testEnemigoAtacar" time="0.269" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarRandom" time="0.018" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVelocidad" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaX" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaY" time="0.001" />
+
       <testcase classname="modelo.enemigostest.AladoTest" name="testDaniar" time="0.002" />
 
-      <testcase classname="modelo.enemigostest.AladoTest" name="testSinVida" time="0.002" />
+      <testcase classname="modelo.enemigostest.AladoTest" name="testSinVida" time="0.003" />
 
-      <testcase classname="modelo.enemigostest.AladoTest" name="testchocar" time="0.002" />
-
-      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVelocidad" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaX" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarCoordenadaY" time="0.002" />
-
-      <testcase classname="modelo.enemigostest.AladoTest" name="testEnemigoAtacar" time="0.56" />
-
-      <testcase classname="modelo.enemigostest.AladoTest" name="testCaminarRandom" time="0.016" />
-
-      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarBomba" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.AladoTest" name="testInicializarVida" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.AladoTest" name="testRestarVida" time="0.002" />
+      <testcase classname="modelo.enemigostest.AladoTest" name="testChocar" time="0.003" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="23" name="CecilioTest" package="modelo.enemigostest" tests="11" time="0.348" timestamp="2012-07-04T20:53:16">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="23" name="CecilioTest" package="modelo.enemigostest" tests="11" time="0.21" timestamp="2012-07-05T03:44:18">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -4862,7 +4261,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -4911,35 +4310,35 @@ Puntaje :900
           <property name="ant.project.invoked-targets" value="test" />
 
       </properties>
-
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testDaniar" time="0.002" />
-
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testSinVida" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testchocar" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVelocidad" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarCoordenadaX" time="0.004" />
-
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarCoordenadaY" time="0.002" />
-
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testEnemigoAtacar" time="0.203" />
-
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarRandom" time="0.013" />
 
       <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarBomba" time="0.002" />
 
       <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVida" time="0.002" />
 
-      <testcase classname="modelo.enemigostest.CecilioTest" name="testRestarVida" time="0.005" />
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testRestarVida" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testEnemigoAtacar" time="0.106" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testCaminarRandom" time="0.007" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarVelocidad" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarCoordenadaX" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testInicializarCoordenadaY" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testDaniar" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testSinVida" time="0.001" />
+
+      <testcase classname="modelo.enemigostest.CecilioTest" name="testchocar" time="0.002" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="24" name="ComunTest" package="modelo.enemigostest" tests="11" time="0.24" timestamp="2012-07-04T20:53:16">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="24" name="ComunTest" package="modelo.enemigostest" tests="11" time="0.267" timestamp="2012-07-05T03:44:19">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -5053,7 +4452,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -5103,34 +4502,34 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.enemigostest.ComunTest" name="testDaniar" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.ComunTest" name="testSinVida" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.ComunTest" name="testchocar" time="0.001" />
-
-      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVelocidad" time="0.002" />
-
-      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaX" time="0.002" />
-
-      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaY" time="0.003" />
-
-      <testcase classname="modelo.enemigostest.ComunTest" name="testEnemigoAtacar" time="0.118" />
-
-      <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarRandom" time="0.008" />
-
-      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarBomba" time="0.003" />
+      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarBomba" time="0.005" />
 
       <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVida" time="0.002" />
 
-      <testcase classname="modelo.enemigostest.ComunTest" name="testRestarVida" time="0.001" />
+      <testcase classname="modelo.enemigostest.ComunTest" name="testRestarVida" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testEnemigoAtacar" time="0.142" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testCaminarRandom" time="0.013" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarVelocidad" time="0.001" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaX" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testInicializarCoordenadaY" time="0.002" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testDaniar" time="0.003" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testSinVida" time="0.004" />
+
+      <testcase classname="modelo.enemigostest.ComunTest" name="testchocar" time="0.002" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="25" name="FuegoDeExplocionTest" package="modelo.fuegoDeExplocionTest" tests="1" time="0.031" timestamp="2012-07-04T20:53:16">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="25" name="FuegoDeExplocionTest" package="modelo.fuegoDeExplocionTest" tests="2" time="0.022" timestamp="2012-07-05T03:44:19">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -5244,7 +4643,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -5294,14 +4693,16 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.fuegoDeExplocionTest.FuegoDeExplocionTest" name="FuegoDeExplocionVivir" time="0.003" />
+      <testcase classname="modelo.fuegoDeExplocionTest.FuegoDeExplocionTest" name="obtenerCoordenadaDelFuego" time="0.001" />
+
+      <testcase classname="modelo.fuegoDeExplocionTest.FuegoDeExplocionTest" name="FuegoDeExplocionVivir" time="0.002" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="26" name="MapaTest" package="modelo.mapatest" tests="14" time="0.256" timestamp="2012-07-04T20:53:16">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="26" name="MapaTest" package="modelo.mapatest" tests="14" time="0.189" timestamp="2012-07-05T03:44:19">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -5415,7 +4816,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -5465,40 +4866,40 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testTamanio" time="0.001" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerCasilleroTamanioFueraDeRango" time="0.001" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testTerminoNivelConBombitaenSalidayPersonajes" time="0.008" />
-
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerCasilleroTamanioFueraDeRango" time="0.002" />
-
-      <testcase classname="modelo.mapatest.MapaTest" name="testConstructorTamanioInvalido" time="0.002" />
-
-      <testcase classname="modelo.mapatest.MapaTest" name="testTerminoNivelsinBombitaenSalida" time="0.013" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testTerminoNivelsinBombitaenSalida" time="0.004" />
 
       <testcase classname="modelo.mapatest.MapaTest" name="testTerminoNivelconPersonajeEnSalida" time="0.004" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testTerminoNivel" time="0.006" />
+      <testcase classname="modelo.mapatest.MapaTest" name="testConstructorTamanioInvalido" time="0.001" />
+
+      <testcase classname="modelo.mapatest.MapaTest" name="testTerminoNivelConBombitaenSalidayPersonajes" time="0.005" />
+
+      <testcase classname="modelo.mapatest.MapaTest" name="testErrorCasilleroInvalido" time="0.028" />
+
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerPersonajeDelMapa" time="0.002" />
+
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerObstaculoDelMapa" time="0.029" />
+
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerArmamentoDelMapa" time="0.004" />
+
+      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerArticuloDelMapa" time="0.03" />
+
+      <testcase classname="modelo.mapatest.MapaTest" name="testTamanio" time="0.001" />
+
+      <testcase classname="modelo.mapatest.MapaTest" name="testTerminoNivel" time="0.005" />
 
       <testcase classname="modelo.mapatest.MapaTest" name="testObtenerCasillero" time="0.001" />
 
       <testcase classname="modelo.mapatest.MapaTest" name="testConstructor" time="0.001" />
 
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerPersonajeDelMapa" time="0.003" />
-
-      <testcase classname="modelo.mapatest.MapaTest" name="testErrorCasilleroInvalido" time="0.024" />
-
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerObstaculoDelMapa" time="0.025" />
-
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerArmamentoDelMapa" time="0.003" />
-
-      <testcase classname="modelo.mapatest.MapaTest" name="testObtenerArticuloDelMapa" time="0.024" />
-
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="27" name="TableroTest" package="modelo.mapatest" tests="5" time="0.043" timestamp="2012-07-04T20:53:17">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="27" name="TableroTest" package="modelo.mapatest" tests="5" time="0.04" timestamp="2012-07-05T03:44:19">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -5612,7 +5013,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -5664,20 +5065,20 @@ Puntaje :900
 
       <testcase classname="modelo.mapatest.TableroTest" name="testObtenercasilleroTamaniofueradeRango" time="0.002" />
 
-      <testcase classname="modelo.mapatest.TableroTest" name="testCambiarcasilleroTamaniofueradeRango" time="0.002" />
+      <testcase classname="modelo.mapatest.TableroTest" name="testCambiarcasilleroTamaniofueradeRango" time="0.001" />
 
       <testcase classname="modelo.mapatest.TableroTest" name="testConstructorconTamanioInvalido" time="0.001" />
 
       <testcase classname="modelo.mapatest.TableroTest" name="testObtenerTamanio" time="0.001" />
 
-      <testcase classname="modelo.mapatest.TableroTest" name="testObtenercasillero" time="0.002" />
+      <testcase classname="modelo.mapatest.TableroTest" name="testObtenercasillero" time="0.001" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="28" name="MovimientoPersonajeTest" package="modelo.movimientotest" tests="7" time="0.066" timestamp="2012-07-04T20:53:17">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="28" name="MovimientoPersonajeTest" package="modelo.movimientotest" tests="7" time="0.082" timestamp="2012-07-05T03:44:19">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -5791,7 +5192,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -5841,26 +5242,26 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.003" />
+      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverDerechaYNoCambiaOtroSentido" time="0.019" />
 
-      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverDerechaYNoCambiaOtroSentido" time="0.002" />
+      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testListaDeMovimientosInicializadoCorrectamente" time="0.002" />
+
+      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testObtenerNumeroRandom" time="0.002" />
 
       <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverArriba" time="0.001" />
 
       <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverAbajo" time="0.002" />
 
-      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverIzquierda" time="0.001" />
+      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverIzquierda" time="0.003" />
 
-      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverDerecha" time="0.002" />
-
-      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testObtenerNumeroRandom" time="0.002" />
+      <testcase classname="modelo.movimientotest.MovimientoPersonajeTest" name="testMoverDerecha" time="0.001" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="29" name="ondaEspansivaTest" package="modelo.ondaexpantest" tests="3" time="0.054" timestamp="2012-07-04T20:53:17">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="29" name="ondaEspansivaTest" package="modelo.ondaexpantest" tests="3" time="0.038" timestamp="2012-07-05T03:44:19">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -5974,7 +5375,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -6023,19 +5424,19 @@ Puntaje :900
           <property name="ant.project.invoked-targets" value="test" />
 
       </properties>
+
+      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombaConMocks" time="0.007" />
 
       <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnElMedio" time="0.003" />
 
-      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnUnLateral" time="0.003" />
-
-      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombaConMocks" time="0.021" />
+      <testcase classname="modelo.ondaexpantest.ondaEspansivaTest" name="testQueVerificaLaExplocionDeLaBombasinMocksEnUnLateral" time="0.002" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="30" name="PuntajeTest" package="modelo.puntaje" tests="7" time="0.115" timestamp="2012-07-04T20:53:17">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="30" name="PuntajeTest" package="modelo.puntaje" tests="7" time="0.055" timestamp="2012-07-05T03:44:19">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -6149,7 +5550,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -6198,27 +5599,27 @@ Puntaje :900
           <property name="ant.project.invoked-targets" value="test" />
 
       </properties>
-
-      <testcase classname="modelo.puntaje.PuntajeTest" name="testVerificarPuntajeInicialCorrecto" time="0.003" />
-
-      <testcase classname="modelo.puntaje.PuntajeTest" name="testAumentarPuntaje" time="0.002" />
-
-      <testcase classname="modelo.puntaje.PuntajeTest" name="testPuntajeInicialArticulo" time="0.002" />
-
-      <testcase classname="modelo.puntaje.PuntajeTest" name="testPuntajeInicialObstaculo" time="0.02" />
 
       <testcase classname="modelo.puntaje.PuntajeTest" name="testAumentarPuntajeLuegoDeMatarEnemigo" time="0.002" />
 
       <testcase classname="modelo.puntaje.PuntajeTest" name="testAumentarPuntajeLuegoDeDestruirObstaculo" time="0.002" />
 
-      <testcase classname="modelo.puntaje.PuntajeTest" name="testAumentarPuntajeLuegoDeObtenerArticulo" time="0.004" />
+      <testcase classname="modelo.puntaje.PuntajeTest" name="testAumentarPuntajeLuegoDeObtenerArticulo" time="0.002" />
+
+      <testcase classname="modelo.puntaje.PuntajeTest" name="testVerificarPuntajeInicialCorrecto" time="0.001" />
+
+      <testcase classname="modelo.puntaje.PuntajeTest" name="testPuntajeInicialArticulo" time="0.002" />
+
+      <testcase classname="modelo.puntaje.PuntajeTest" name="testPuntajeInicialObstaculo" time="0.002" />
+
+      <testcase classname="modelo.puntaje.PuntajeTest" name="testAumentarPuntaje" time="0.002" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="31" name="PuntajeTest" package="modelo.puntajetest" tests="5" time="0.073" timestamp="2012-07-04T20:53:17">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="31" name="PuntajeTest" package="modelo.puntajetest" tests="6" time="0.061" timestamp="2012-07-05T03:44:20">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -6332,7 +5733,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -6382,22 +5783,24 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="modelo.puntajetest.PuntajeTest" name="testVerificarPuntajeInicialCorrecto" time="0.006" />
+      <testcase classname="modelo.puntajetest.PuntajeTest" name="testAumentarPuntajeLuegoDeMatarEnemigo" time="0.002" />
 
-      <testcase classname="modelo.puntajetest.PuntajeTest" name="testAumentarPuntaje" time="0.004" />
+      <testcase classname="modelo.puntajetest.PuntajeTest" name="testAumentarPuntajeLuegoDeDestruirObstaculo" time="0.002" />
 
-      <testcase classname="modelo.puntajetest.PuntajeTest" name="testAumentarPuntajeLuegoDeMatarEnemigo" time="0.003" />
+      <testcase classname="modelo.puntajetest.PuntajeTest" name="testAumentarPuntajeLuegoDeObtenerArticulo" time="0.008" />
 
-      <testcase classname="modelo.puntajetest.PuntajeTest" name="testAumentarPuntajeLuegoDeDestruirObstaculo" time="0.009" />
+      <testcase classname="modelo.puntajetest.PuntajeTest" name="testVerificarPuntajeInicialCorrecto" time="0.003" />
 
-      <testcase classname="modelo.puntajetest.PuntajeTest" name="testAumentarPuntajeLuegoDeObtenerArticulo" time="0.003" />
+      <testcase classname="modelo.puntajetest.PuntajeTest" name="testObtenerPuntajeToleTole" time="0.003" />
+
+      <testcase classname="modelo.puntajetest.PuntajeTest" name="testAumentarPuntaje" time="0.002" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="32" name="VistaCasilleroTest" package="vista.CasilleroTest" tests="1" time="2.227" timestamp="2012-07-04T20:53:17">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="32" name="VistaCasilleroTest" package="vista.CasilleroTest" tests="1" time="1.452" timestamp="2012-07-05T03:44:20">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -6511,7 +5914,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -6561,14 +5964,14 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="vista.CasilleroTest.VistaCasilleroTest" name="testVistaMapaDibujar" time="0.875" />
+      <testcase classname="vista.CasilleroTest.VistaCasilleroTest" name="testVistaMapaDibujar" time="0.584" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="33" name="VistaMapaTest" package="vista.MapaTest" tests="1" time="0.086" timestamp="2012-07-04T20:53:20">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="33" name="VistaMapaTest" package="vista.MapaTest" tests="1" time="0.077" timestamp="2012-07-05T03:44:21">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -6682,7 +6085,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -6732,14 +6135,14 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="vista.MapaTest.VistaMapaTest" name="testVistaMapaDibujar" time="0.072" />
+      <testcase classname="vista.MapaTest.VistaMapaTest" name="testVistaMapaDibujar" time="0.064" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="34" name="CirculoTest" package="vista.fiuba.algo3.titiritero.dibujables" tests="1" time="0.053" timestamp="2012-07-04T20:53:20">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="34" name="CirculoTest" package="vista.fiuba.algo3.titiritero.dibujables" tests="1" time="0.06" timestamp="2012-07-05T03:44:21">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -6853,7 +6256,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -6903,14 +6306,14 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" name="testDibujar" time="0.036" />
+      <testcase classname="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" name="testDibujar" time="0.048" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="35" name="CuadradoTest" package="vista.fiuba.algo3.titiritero.dibujables" tests="1" time="0.026" timestamp="2012-07-04T20:53:20">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="35" name="CuadradoTest" package="vista.fiuba.algo3.titiritero.dibujables" tests="1" time="0.021" timestamp="2012-07-05T03:44:21">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -7024,7 +6427,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -7074,14 +6477,14 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="vista.fiuba.algo3.titiritero.dibujables.CuadradoTest" name="testDibujar" time="0.009" />
+      <testcase classname="vista.fiuba.algo3.titiritero.dibujables.CuadradoTest" name="testDibujar" time="0.007" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="36" name="ImagenTest" package="vista.fiuba.algo3.titiritero.dibujables" tests="1" time="0.075" timestamp="2012-07-04T20:53:20">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="36" name="ImagenTest" package="vista.fiuba.algo3.titiritero.dibujables" tests="1" time="0.04" timestamp="2012-07-05T03:44:21">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -7195,7 +6598,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -7245,7 +6648,7 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="vista.fiuba.algo3.titiritero.dibujables.ImagenTest" name="testDibujar" time="0.058" />
+      <testcase classname="vista.fiuba.algo3.titiritero.dibujables.ImagenTest" name="testDibujar" time="0.028" />
 
       <system-out><![CDATA[file:/C:/Users/Fedee/Desktop/proyectobomberman/BombitaTp2/build/tests/res/imagen.png
 ]]></system-out>
@@ -7253,7 +6656,7 @@ Puntaje :900
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="37" name="SuperficiePanelTest" package="vista.fiuba.algo3.titiritero.dibujables" tests="1" time="0.43" timestamp="2012-07-04T20:53:20">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="37" name="SuperficiePanelTest" package="vista.fiuba.algo3.titiritero.dibujables" tests="1" time="0.248" timestamp="2012-07-05T03:44:21">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -7367,7 +6770,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -7417,7 +6820,7 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="vista.fiuba.algo3.titiritero.dibujables.SuperficiePanelTest" name="paintDeberiaInvocarDrawImageYLimpiar" time="0.415" />
+      <testcase classname="vista.fiuba.algo3.titiritero.dibujables.SuperficiePanelTest" name="paintDeberiaInvocarDrawImageYLimpiar" time="0.23" />
 
       <system-out><![CDATA[repintando
 ]]></system-out>
@@ -7425,7 +6828,7 @@ Puntaje :900
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="38" name="GameLoopTest" package="vista.fiuba.algo3.titiritero.modelo" tests="4" time="0.786" timestamp="2012-07-04T20:53:20">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="38" name="GameLoopTest" package="vista.fiuba.algo3.titiritero.modelo" tests="4" time="0.682" timestamp="2012-07-05T03:44:22">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -7539,7 +6942,7 @@ Puntaje :900
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -7589,13 +6992,13 @@ Puntaje :900
 
       </properties>
 
-      <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarDibujar" time="0.314" />
+      <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarVivir" time="0.231" />
 
-      <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarLimpiar" time="0.206" />
+      <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="agregarNoDeberiaAgregarDuplicador" time="0.001" />
 
-      <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarVivir" time="0.224" />
+      <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarDibujar" time="0.218" />
 
-      <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="agregarNoDeberiaAgregarDuplicador" time="0.002" />
+      <testcase classname="vista.fiuba.algo3.titiritero.modelo.GameLoopTest" name="iniciarEjecucionDeberiaInvocarLimpiar" time="0.202" />
 
       <system-out><![CDATA[]]></system-out>
 
@@ -7614,7 +7017,7 @@ java.lang.InterruptedException: sleep interrupted
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="39" name="VistaObjetoTest" package="vista.vistaObjetoTest" tests="14" time="0.771" timestamp="2012-07-04T20:53:21">
+  <testsuite errors="0" failures="0" hostname="Fedee-PC" id="39" name="VistaObjetoTest" package="vista.vistaObjetoTest" tests="14" time="0.545" timestamp="2012-07-05T03:44:22">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -7728,7 +7131,7 @@ java.lang.InterruptedException: sleep interrupted
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6766611261258945613.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher1640137461449014792.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit4702044278662413027.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases6429097796426384965.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher7222223662760705537.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit8265273282820422621.properties" />
 
           <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
 
@@ -7778,33 +7181,33 @@ java.lang.InterruptedException: sleep interrupted
 
       </properties>
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelBloqueLadrillo" time="0.057" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelTimer" time="0.037" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelFuegoDeExplocion" time="0.067" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeHabano" time="0.023" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelToleTole" time="0.066" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelToleTole" time="0.027" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelProyectil" time="0.056" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelProyectil" time="0.031" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeBombita" time="0.045" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeBombita" time="0.031" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelMolotov" time="0.034" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeCecilio" time="0.023" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeCecilio" time="0.038" />
-
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeLopezAlado" time="0.046" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelMolotov" time="0.029" />
 
       <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeLopezComun" time="0.028" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelBloqueCemento" time="0.029" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeLopezAlado" time="0.03" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelBloqueAcero" time="0.038" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelBloqueCemento" time="0.027" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeLaSalida" time="0.033" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelBloqueAcero" time="0.025" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelTimer" time="0.06" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeLaSalida" time="0.037" />
 
-      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDeHabano" time="0.031" />
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelBloqueLadrillo" time="0.063" />
+
+      <testcase classname="vista.vistaObjetoTest.VistaObjetoTest" name="testQuePruevaLaVistaDelFuegoDeExplocion" time="0.033" />
 
       <system-out><![CDATA[]]></system-out>
 
