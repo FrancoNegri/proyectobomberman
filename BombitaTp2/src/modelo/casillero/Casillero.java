@@ -39,9 +39,7 @@ public class Casillero {
 	}
 
 	public int obtenerPuntaje() {
-		int puntajeDeRonda = puntaje;
-		puntaje = 0;
-		return puntajeDeRonda;
+		return this.puntaje;
 	}
 
 	// Metodo Sobrecargado
@@ -129,10 +127,10 @@ public class Casillero {
 		this.actualizarObstaculos();
 		this.Colicionar();
 		this.ActualizarArticulo();
-		this.ActualivarFuegoExplocion();
+		this.ActualizarFuegoExplocion();
 	}
 
-	private void ActualivarFuegoExplocion() {
+	private void ActualizarFuegoExplocion() {
 		if (fuegoDeLaExplocion != null) {
 			fuegoDeLaExplocion.vivir();
 			if (fuegoDeLaExplocion.estaMuerto()) {
@@ -142,9 +140,11 @@ public class Casillero {
 	}
 
 	private void ActualizarArticulo() {
-		if (this.usarArticulo()) {
-			this.puntaje = puntaje + unArticulo.obtenerPuntaje();
-			this.unArticulo = null; // si se uso el articulo lo pongo en null
+		if (this.unArticulo != null){
+			if (this.usarArticulo()) {
+				this.actualizarPuntaje(unArticulo.obtenerPuntaje()); 
+				this.unArticulo = null; // si se uso el articulo lo pongo en null
+			}
 		}
 	}
 
@@ -174,7 +174,7 @@ public class Casillero {
 	public void actualizarObstaculos() {
 		if (unObstaculo != null) {
 			if (unObstaculo.Destruido()) {
-				this.puntaje = puntaje + unObstaculo.obtenerPuntaje();
+				this.actualizarPuntaje(unObstaculo.obtenerPuntaje());
 				unObstaculo = null;
 			}
 		}
@@ -196,6 +196,7 @@ public class Casillero {
 		while (IteradorPersonajes.hasNext()) {
 			Personaje personaje = IteradorPersonajes.next();
 			if (personaje.estaMuerto()) {
+				this.actualizarPuntaje(personaje.obtenerPuntaje());
 				IteradorPersonajes.remove();
 			}
 		}
