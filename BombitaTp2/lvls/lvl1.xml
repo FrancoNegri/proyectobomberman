@@ -4,7 +4,16 @@
 		<Bombita Vida="10" Velocidad="10.0">
 			<Coordenada CoordenadaX="0" CoordenadaY="0" />
 		</Bombita>
-	</Personajes>
+		<Cecilio Vida="5" Velocidad="10.0">
+			<Coordenada CoordenadaX="14" CoordenadaY="0"></Coordenada></Cecilio>
+		<Cecilio Velocidad="10.0" Vida="5">
+			<Coordenada CoordenadaX="0" CoordenadaY="34"></Coordenada></Cecilio>
+		<Cecilio Vida="5" Velocidad="10.0">
+			<Coordenada CoordenadaX="12" CoordenadaY="31"></Coordenada></Cecilio>
+		<LopezComun Vida="5" Velocidad="20.0">
+			<Coordenada CoordenadaX="3" CoordenadaY="12"></Coordenada></LopezComun>
+		<LopezComun Velocidad="20.0" Vida="5">
+			<Coordenada CoordenadaX="20" CoordenadaY="13"></Coordenada></LopezComun></Personajes>
 	<Bloques>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="8" CoordenadaY="3" />
@@ -31,8 +40,6 @@
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="8" CoordenadaY="18"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="33" CoordenadaY="18"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="8" CoordenadaY="23"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="33" CoordenadaY="23"></Coordenada></BloqueDeAcero>
@@ -41,21 +48,13 @@
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="8" CoordenadaY="28"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="23" CoordenadaY="28"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="28" CoordenadaY="28"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="33" CoordenadaY="28"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="3" CoordenadaY="33"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="8" CoordenadaY="33"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="13" CoordenadaY="33"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="23" CoordenadaY="33"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="28" CoordenadaY="33"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="33" CoordenadaY="33"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
@@ -80,6 +79,7 @@
 		<Timer>
 			<Coordenada CoordenadaX="30" CoordenadaY="10" />
 		</Timer>
-	</Articulos>
+		<ToleTole>
+			<Coordenada CoordenadaX="29" CoordenadaY="35"></Coordenada></ToleTole></Articulos>
 	<Salida>
 		<Coordenada CoordenadaX="0" CoordenadaY="20"></Coordenada></Salida></Mapa>

@@ -49,27 +49,11 @@
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="8" CoordenadaY="8"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="13" CoordenadaY="8"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="18" CoordenadaY="8"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="23" CoordenadaY="8"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="33" CoordenadaY="8"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="3" CoordenadaY="13"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="8" CoordenadaY="13"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="13" CoordenadaY="13"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="23" CoordenadaY="13"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="28" CoordenadaY="13"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="33" CoordenadaY="13"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="38" CoordenadaY="13"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="18" CoordenadaY="18"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
@@ -77,17 +61,11 @@
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="8" CoordenadaY="18"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="3" CoordenadaY="18"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="23" CoordenadaY="18"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="28" CoordenadaY="18"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="33" CoordenadaY="18"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="38" CoordenadaY="18"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="8" CoordenadaY="23"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="13" CoordenadaY="23"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
@@ -97,25 +75,13 @@
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="33" CoordenadaY="23"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="38" CoordenadaY="23"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="3" CoordenadaY="28"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="8" CoordenadaY="28"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="18" CoordenadaY="28"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="23" CoordenadaY="28"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="28" CoordenadaY="28"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="33" CoordenadaY="28"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="38" CoordenadaY="28"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="3" CoordenadaY="33"></Coordenada></BloqueDeAcero>
-		<BloqueDeAcero Vida="1000">
-			<Coordenada CoordenadaX="8" CoordenadaY="33"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
 			<Coordenada CoordenadaX="13" CoordenadaY="33"></Coordenada></BloqueDeAcero>
 		<BloqueDeAcero Vida="1000">
@@ -143,11 +109,10 @@
 	<Armamentos></Armamentos>
 	<Articulos>
 		<Habano>
-			<Coordenada CoordenadaX="18" CoordenadaY="25" />
+			<Coordenada CoordenadaX="0" CoordenadaY="37" />
 		</Habano>
 		<Timer>
-			<Coordenada CoordenadaX="30" CoordenadaY="10" />
-		</Timer>
-	</Articulos>
+			<Coordenada CoordenadaX="27" CoordenadaY="31" />
+		</Timer></Articulos>
 	<Salida>
-		<Coordenada CoordenadaX="0" CoordenadaY="20"></Coordenada></Salida></Mapa>
+		<Coordenada CoordenadaX="34" CoordenadaY="21"></Coordenada></Salida></Mapa>
