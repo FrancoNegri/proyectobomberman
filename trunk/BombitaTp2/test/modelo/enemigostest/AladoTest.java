@@ -9,7 +9,11 @@ import modelo.articulo.Habano;
 import modelo.casillero.Casillero;
 import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
+import modelo.personaje.Personaje;
 import modelo.personaje.enemigos.*;
+
+import org.dom4j.Element;
+import org.dom4j.QName;
 import org.junit.*;
 
 
@@ -128,4 +132,24 @@ public class AladoTest {
 		lopez.tomarArticulo(habano);
 		assert(true);
 	}
+	
+	@Test
+	public void testQueGuardaUnAlago() {
+		Element elem =  lopez.guardar();
+		assertTrue(elem.getName() == "LopezAlado");
+	}
+	
+	@Test
+	public void testQueCargaUnElem() {
+		Coordenada coord = new Coordenada(1,1);
+		Element elemCord = coord.guardar();
+		Element elemCes = mock(Element.class);
+		when(elemCes.element(new QName("Coordenada"))).thenReturn(elemCord);
+		when(elemCes.attributeValue((new QName("Vida")))).thenReturn("2");
+		Personaje peros =  lopez.recuperar(elemCes, mapa);
+		assertTrue(peros.obtenerVida() == 2);
+		assertTrue(peros.obtenerCoordenadaXY().equals(coord));
+	}
+	
+	
 }
