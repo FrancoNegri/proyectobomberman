@@ -57,9 +57,9 @@ public class PuntajeTest {
 	
 	@Test
 	public void testAumentarPuntajeLuegoDeMatarEnemigo() {
-		cecilio.Daniar(5);
-		casillero.actualizar();
-		assertTrue(casillero.obtenerPuntaje() == 300);
+		otroCecilio.Daniar(5);
+		otroCasillero.actualizar();
+		assertTrue(otroCasillero.obtenerPuntaje() == 300);
 	}
 	
 	@Test
