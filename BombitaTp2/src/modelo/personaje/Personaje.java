@@ -127,7 +127,7 @@ public abstract class Personaje implements ObjetoVisible, Daniable,ObjetoPosicio
 			 */
 			if(tiempoHastaMoverse <= 0){
 				this.caminar();
-				tiempoHastaMoverse = velocidad;
+				tiempoHastaMoverse = (20/(this.velocidad));
 			}else{
 				tiempoHastaMoverse--;
 			}
