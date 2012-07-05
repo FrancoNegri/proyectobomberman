@@ -57,8 +57,7 @@ public class PuntajeTest {
 	}
 	
 	@Test
-	public void testAumentarPuntajeLuegoDeMatarEnemigo() { //Pensar en que momento se peude sumar el puntaje al morir un enemigo
-		cecilio.Daniar(5);
+	public void testAumentarPuntajeLuegoDeMatarEnemigo() {
 		casillero.actualizar();
 		assertTrue(casillero.obtenerPuntaje() == 300);
 	}
