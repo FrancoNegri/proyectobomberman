@@ -197,13 +197,13 @@ public class ControlJuego implements Runnable {
 		while(!finDelJuego){
 			if(mapa.terminoNivel()){
 				try {
-					cargarMapaEnXml("lvl"+k+".xml");
+					k = k+1;
+					cargarMapaEnXml("lvls/lvl"+k+".xml");
 					pasajeDeNivel();
 					finDelJuego = false;
 				} catch (IOException e) {
 					juegoGanado();
 				}
-				k = k+1;
 			}
 		}
 	}
