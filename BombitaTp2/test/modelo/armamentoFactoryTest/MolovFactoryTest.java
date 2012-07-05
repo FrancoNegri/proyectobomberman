@@ -13,6 +13,7 @@ import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.Personaje;
 
+import org.dom4j.Element;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -39,5 +40,13 @@ public class MolovFactoryTest {
 		moloFac.cambiarTime(3);
 		assertTrue(moloFac.obtenerTime()==3);
 	}
+	
+	@Test
+	public void testQueGuardaUnFactory(){
+		Element elem = moloFac.guardar();
+		assertTrue(elem.getName() == "ArmamentoFactory");
+	}
+	
+	
 	
 }
