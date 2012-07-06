@@ -3,6 +3,7 @@ import modelo.armamento.Armamento;
 import modelo.armamento.Molotov;
 import modelo.armamento.ToleTole;
 import modelo.articulo.Articulable;
+import modelo.articulo.ArticuloToleTole;
 import modelo.articulo.Habano;
 import modelo.casillero.Casillero;
 import modelo.mapa.Mapa;
@@ -251,7 +252,7 @@ public class CasilleroTest {
 		Casillero cas = new Casillero();
 		Coordenada coordenada = new Coordenada(2,2);
 		Mapa mapa = new Mapa(10);
-		Articulable tole = new ToleTole(coordenada,mapa,6);
+		Articulable tole = new ArticuloToleTole(coordenada);
 		cas.eliminar(tole);
 		Articulable art = cas.obtenerArticulo();
 		assertTrue(art == null);

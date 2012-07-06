@@ -79,7 +79,7 @@
 		<Timer>
 			<Coordenada CoordenadaX="30" CoordenadaY="10" />
 		</Timer>
-		<ToleTole>
-			<Coordenada CoordenadaX="29" CoordenadaY="35"></Coordenada></ToleTole></Articulos>
+		<ArticuloToleTole>
+			<Coordenada CoordenadaX="29" CoordenadaY="35"></Coordenada></ArticuloToleTole></Articulos>
 	<Salida>
 		<Coordenada CoordenadaX="0" CoordenadaY="20"></Coordenada></Salida></Mapa>

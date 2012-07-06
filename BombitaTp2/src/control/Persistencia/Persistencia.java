@@ -8,6 +8,7 @@ import modelo.armamento.Molotov;
 import modelo.armamento.Proyectil;
 import modelo.armamento.ToleTole;
 import modelo.articulo.Articulo;
+import modelo.articulo.ArticuloToleTole;
 import modelo.articulo.Habano;
 import modelo.articulo.Timer;
 import modelo.mapa.Mapa;
@@ -133,6 +134,7 @@ public class Persistencia {
 				Armamento arma = Molotov.recuperar(ElemCes, nuevoMapa);
 				nuevoMapa.agregarAlMapa(arma);
 			}
+			
 		}
 	}
 
@@ -148,7 +150,10 @@ public class Persistencia {
 				Articulo Art = Timer.recuperar(ElemCes);
 				nuevoMapa.agregarAlMapa(Art);
 			}
-
+			if (ElemCes.getName() == "ArticuloToleTole") {
+				Articulo arma = ArticuloToleTole.recuperar(ElemCes, nuevoMapa);
+				nuevoMapa.agregarAlMapa(arma);
+			}
 		}
 	}
 	
