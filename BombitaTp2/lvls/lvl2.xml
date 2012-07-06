@@ -109,10 +109,10 @@
 	<Armamentos></Armamentos>
 	<Articulos>
 		<Habano>
-			<Coordenada CoordenadaX="0" CoordenadaY="37" />
+			<Coordenada CoordenadaX="18" CoordenadaY="13"/>
 		</Habano>
 		<Timer>
-			<Coordenada CoordenadaX="27" CoordenadaY="31" />
+			<Coordenada CoordenadaX="38" CoordenadaY="8"/>
 		</Timer></Articulos>
 	<Salida>
-		<Coordenada CoordenadaX="34" CoordenadaY="21"></Coordenada></Salida></Mapa>
+		<Coordenada CoordenadaX="18" CoordenadaY="23"></Coordenada></Salida></Mapa>

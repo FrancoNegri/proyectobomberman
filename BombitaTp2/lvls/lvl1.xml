@@ -74,12 +74,12 @@
 	<Armamentos></Armamentos>
 	<Articulos>
 		<Habano>
-			<Coordenada CoordenadaX="18" CoordenadaY="25" />
+			<Coordenada CoordenadaX="23" CoordenadaY="3"/>
 		</Habano>
 		<Timer>
-			<Coordenada CoordenadaX="30" CoordenadaY="10" />
+			<Coordenada CoordenadaX="3" CoordenadaY="8"/>
 		</Timer>
 		<ArticuloToleTole>
-			<Coordenada CoordenadaX="29" CoordenadaY="35"></Coordenada></ArticuloToleTole></Articulos>
+			<Coordenada CoordenadaX="18" CoordenadaY="13"></Coordenada></ArticuloToleTole></Articulos>
 	<Salida>
-		<Coordenada CoordenadaX="0" CoordenadaY="20"></Coordenada></Salida></Mapa>
+		<Coordenada CoordenadaX="3" CoordenadaY="23"></Coordenada></Salida></Mapa>
