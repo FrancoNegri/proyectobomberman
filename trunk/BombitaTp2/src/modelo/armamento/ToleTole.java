@@ -12,7 +12,7 @@ import modelo.coordenadas.Coordenada;
 import modelo.mapa.Mapa;
 import modelo.personaje.*;
 
-public class ToleTole extends Armamento implements Articulable {
+public class ToleTole extends Armamento{
 
 	private int puntaje;
 	
@@ -22,13 +22,6 @@ public class ToleTole extends Armamento implements Articulable {
 		this.radio = ConstantesJuego.radio_toletole;
 		this.puntaje = ConstantesJuego.puntaje_articulos;
 	}
-	
-	public void usar(Personaje unPersonaje){
-		
-			ToleToleFactory nuevaFactory = new ToleToleFactory();
-			unPersonaje.cambiarArmamento(nuevaFactory);
-	}
-	
 
 	
 	public int obtenerPuntaje() {
@@ -55,9 +48,5 @@ public class ToleTole extends Armamento implements Articulable {
 		bombaRecuperada.radio = Integer.parseInt(elemArmamento.attributeValue(new QName("Radio")));
 		bombaRecuperada.exploto = Boolean.parseBoolean(elemArmamento.attributeValue(new QName("Exploto")));
 		return bombaRecuperada;
-		
-		
 	}
-	
-	
 }

@@ -82,7 +82,8 @@ public class BombitaTest {
 
 	@Test
 	public void testObtenerToleToleYCambiarBomba() {
-		rodriguez.tomarArticulo(toleTole);
+		ArticuloToleTole artTole = new ArticuloToleTole(mock(Coordenada.class));
+		rodriguez.tomarArticulo(artTole);
 		assertEquals(toleToleFactory.getClass(), rodriguez.tirarArmamento().getClass());
 	}
 
