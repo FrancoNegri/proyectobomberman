@@ -22,13 +22,12 @@ public class VistaMapa implements ObjetoDibujable {
 				Casillero casillero = mapaDibujable
 						.obtenerCasillero(coordenada);
 				actualizadorDeVistaCasillero Actualizador = new actualizadorDeVistaCasillero(casillero,superficieDeDibujo);
-				Thread hilo = new Thread(Actualizador);
-				hilo.run();
+				Actualizador.run();
 			}
 		}
 	}
 
-	private class actualizadorDeVistaCasillero implements Runnable {
+	private class actualizadorDeVistaCasillero{
 		private Casillero casillero;
 		SuperficieDeDibujo unaSuperficieDeDibujo;
 
