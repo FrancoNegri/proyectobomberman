@@ -1,0 +1,47 @@
+Algoritmos y Programacion III - TP2 - Facultad de Ingenieria UBA
+
+
+                                 ************************************************************
+                                 ***              BOMBITA RODRIGUEZ, THE GAME ©           ***
+                                 ***						          ***
+                                 ***......(\_/)                                           ***
+                                 ***......( '_')                                          ***
+                                 ***..../""""""""""""\======()                            ***
+                                 ***./"""""""""""""""""""\                                ***
+                                 ***.\_@_@_@_@_@_@_@_@_@_/                                ***
+                                 ************************************************************
+
+
+--------------------------------------------------------------------------------------------------------------------------
+                                                         NIVELES
+--------------------------------------------------------------------------------------------------------------------------
+
+
+PRIMER NIVEL:
+
+Se podran encontrar a los 2 enemigos de Bombita (2 Lopez Comun y 3 Cecilio) . 
+Además, los diferentes articulos (un tole tole, un timer y un habano) se encuentran debajo de los bloques de ladrillo y la salida hacia el otro nivel se encuentra oculta, al igual que los ya mencionados objetos.
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+SEGUNDO NIVEL:
+
+Aqui ya se podran encontrar a los 3 enemigos de bombita (3 Cecilio, 2 Lopez Alado y 2 Lopez Comun).
+Al igual que en el nivel 1, se encuentran la misma cantidad de articulos y la salida; todos ocultos debajo de bloques de ladrillo.
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+                                                       INTEGRANTES
+--------------------------------------------------------------------------------------------------------------------------
+
+Franco Negri - 93817 - franconegri2004@hotmail.com
+
+Francisco Disalvo - 91545 - fran_disa@hotmail.com
+
+Matias Barro - 92970 - matias.barro@gmail.com
+
+Federico Di Rocco - 92853 - fede.dirocco@hotmail.com
