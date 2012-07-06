@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Fedee-PC" name="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" tests="1" time="0.125" timestamp="2012-07-05T21:17:08">
+<testsuite errors="0" failures="0" hostname="Fedee-PC" name="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" tests="1" time="0.307" timestamp="2012-07-06T03:44:50">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="coverage.summaryxml.dir" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\cobertura-summary-xml" />
@@ -57,7 +57,7 @@
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases8515663502341037509.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher6286887770385029352.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit7506412459703487789.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junittestcases2838018364889925647.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\reports\junit-xml\IGNORETHIS.xml crashfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junitvmwatcher8371387719147316116.properties propsfile=C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\junit7508954672575881002.properties" />
     <property name="java.class.path" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\instrumented;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\asm-tree-3.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\checkstyle-5.5-all.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\cobertura.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\dom4j-1.6.1.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\jakarta-oro-2.0.8.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\junit-4.10.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\log4j-1.2.9.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\libs\mockito-all-1.9.0.jar;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\build\tests;C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2;C:\Program Files\QuickTime\QTSystem\QTJava.zip;C:\Program Files\Java\jre7\lib;C:\ant\lib\ant-launcher.jar;C:\ant\lib\ant.jar;C:\ant\lib\ant-junit.jar;C:\ant\lib\ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
@@ -82,7 +82,7 @@
     <property name="src.dir" value="C:\Users\Fedee\Desktop\proyectobomberman\BombitaTp2\src" />
     <property name="ant.project.invoked-targets" value="test" />
   </properties>
-  <testcase classname="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" name="testDibujar" time="0.111" />
+  <testcase classname="vista.fiuba.algo3.titiritero.dibujables.CirculoTest" name="testDibujar" time="0.179" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
