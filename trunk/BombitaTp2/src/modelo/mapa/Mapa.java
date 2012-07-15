@@ -143,6 +143,7 @@ public class Mapa implements ObjetoVivo {
 		Element elemBloques = DocumentHelper.createElement("Bloques");
 		Element elemArmamentos = DocumentHelper.createElement("Armamentos");
 		Element elemArticulos = DocumentHelper.createElement("Articulos");
+		Element elemSalida;
 		for (int j = 0; j < this.obtenerTamanio(); j++) {
 			for (int k = 0; k < this.obtenerTamanio(); k++) {
 				Coordenada coordenada = new Coordenada(j, k);
@@ -166,6 +167,11 @@ public class Mapa implements ObjetoVivo {
 				Obstaculo obstaculo = CasilleroAux.obtenerObstaculo();
 				if (obstaculo != null) {
 					elemBloques.add(obstaculo.guardar());
+				}
+				Salida salida = CasilleroAux.obtenerSalida();
+				if(salida != null){
+					elemSalida = salida.guardar();
+					elemMapa.add(elemSalida);
 				}
 			}
 		}
