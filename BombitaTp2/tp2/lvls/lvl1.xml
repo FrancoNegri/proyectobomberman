@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mapa Tamanio="40">
+	<Personajes>
+		<Bombita Vida="10" Velocidad="10">
+			<Coordenada CoordenadaX="0" CoordenadaY="0" />
+		</Bombita>
+		<Cecilio Vida="5" Velocidad="10">
+			<Coordenada CoordenadaX="14" CoordenadaY="0"></Coordenada></Cecilio>
+		<Cecilio Velocidad="10" Vida="5">
+			<Coordenada CoordenadaX="0" CoordenadaY="34"></Coordenada></Cecilio>
+		<Cecilio Vida="5" Velocidad="10">
+			<Coordenada CoordenadaX="12" CoordenadaY="31"></Coordenada></Cecilio>
+		<LopezComun Vida="5" Velocidad="20">
+			<Coordenada CoordenadaX="3" CoordenadaY="12"></Coordenada></LopezComun>
+		<LopezComun Velocidad="20" Vida="5">
+			<Coordenada CoordenadaX="20" CoordenadaY="13"></Coordenada></LopezComun></Personajes>
+	<Bloques>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="8" CoordenadaY="3" />
+		</BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="18" CoordenadaY="3" />
+		</BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="33" CoordenadaY="3" /></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="13" CoordenadaY="8"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="18" CoordenadaY="8"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="3" CoordenadaY="13"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="8" CoordenadaY="13"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="28" CoordenadaY="13"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="33" CoordenadaY="13"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="13" CoordenadaY="18"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="8" CoordenadaY="18"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="8" CoordenadaY="23"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="33" CoordenadaY="23"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="38" CoordenadaY="23"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="8" CoordenadaY="28"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="28" CoordenadaY="28"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="3" CoordenadaY="33"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="13" CoordenadaY="33"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="23" CoordenadaY="33"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="33" CoordenadaY="33"></Coordenada></BloqueDeAcero>
+		<BloqueDeAcero Vida="1000">
+			<Coordenada CoordenadaX="38" CoordenadaY="33"></Coordenada></BloqueDeAcero>
+		<BloqueDeLadrillos Vida="5">
+			<Coordenada CoordenadaX="23" CoordenadaY="3"></Coordenada></BloqueDeLadrillos>
+		<BloqueDeLadrillos Vida="5">
+			<Coordenada CoordenadaX="3" CoordenadaY="8"></Coordenada></BloqueDeLadrillos>
+		<BloqueDeLadrillos Vida="5">
+			<Coordenada CoordenadaX="18" CoordenadaY="13"></Coordenada></BloqueDeLadrillos>
+		<BloqueDeLadrillos Vida="5">
+			<Coordenada CoordenadaX="38" CoordenadaY="8"></Coordenada></BloqueDeLadrillos>
+		<BloqueDeLadrillos Vida="5">
+			<Coordenada CoordenadaX="3" CoordenadaY="23"></Coordenada></BloqueDeLadrillos>
+		<BloqueDeLadrillos Vida="5">
+			<Coordenada CoordenadaX="18" CoordenadaY="23"></Coordenada></BloqueDeLadrillos></Bloques>
+	<Armamentos></Armamentos>
+	<Articulos>
+		<Habano>
+			<Coordenada CoordenadaX="23" CoordenadaY="3"/>
+		</Habano>
+		<Timer>
+			<Coordenada CoordenadaX="3" CoordenadaY="8"/>
+		</Timer>
+		<ArticuloToleTole>
+			<Coordenada CoordenadaX="18" CoordenadaY="13"></Coordenada></ArticuloToleTole></Articulos>
+	<Salida>
+		<Coordenada CoordenadaX="3" CoordenadaY="23"></Coordenada></Salida></Mapa>

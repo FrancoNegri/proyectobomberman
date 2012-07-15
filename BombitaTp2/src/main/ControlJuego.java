@@ -32,7 +32,7 @@ public class ControlJuego implements Runnable {
 		
 		try {
 			gameLoop.reiniciar();
-			mapa = pers.recuperar("lvls/lvl1.xml");
+			mapa = pers.recuperar("c:/tp2/lvls/lvl1.xml");
 			Thread juego = new Thread(this);
 			bombita = pers.recuperarBombita();
 			teclado = new Teclado(bombita);
@@ -61,14 +61,14 @@ public class ControlJuego implements Runnable {
 	
 	public void CargarJuego(){
 		try {
-			cargarMapaEnXml("lvls/JUEGOGUARDADO.xml");
+			cargarMapaEnXml("c:/tp2/lvls/JUEGOGUARDADO.xml");
 		} catch (Exception e2) {
 			e2.printStackTrace();
 		}
 	}	
 	
 	public void GuardarJuego(){
-		pers.guardar("lvls/JUEGOGUARDADO.xml", mapa);
+		pers.guardar("c:/tp2/lvls/JUEGOGUARDADO.xml", mapa);
 	}
 	
 	public void moverBombitaArriba(){
@@ -123,7 +123,7 @@ public class ControlJuego implements Runnable {
 	               JOptionPane.YES_NO_OPTION);
 	       if (n == JOptionPane.YES_OPTION) {
 	    	   nivel = 1;
-	    	   this.cargarMapaEnXml("lvls/lvl"+nivel+".xml");
+	    	   this.cargarMapaEnXml("c:/tp2/lvls/lvl"+nivel+".xml");
 	    	   gameLoop.iniciarEjecucion();
 	       } else
 	           System.exit(0);
@@ -136,7 +136,7 @@ public class ControlJuego implements Runnable {
 	               "Ganaste",
 	               JOptionPane.YES_NO_OPTION);
 	       if (n == JOptionPane.YES_OPTION) {
-	    	   cargarMapaEnXml("lvls/lvl"+nivel+".xml");
+	    	   cargarMapaEnXml("c:/tp2/lvls/lvl"+nivel+".xml");
 	    	   gameLoop.iniciarEjecucion();
 	       } else
 	           System.exit(0);
@@ -150,7 +150,7 @@ public class ControlJuego implements Runnable {
 		              JOptionPane.YES_NO_OPTION);
 		      if (n == JOptionPane.YES_OPTION) {
 		    	  nivel = 1;
-		    	  cargarMapaEnXml("lvls/lvl"+nivel+".xml");
+		    	  cargarMapaEnXml("c:/tp2/lvls/lvl"+nivel+".xml");
 		    	  gameLoop.iniciarEjecucion();
 		      } else
 		          System.exit(0);
