@@ -1,0 +1,1 @@
+la carpeta "tp2" debe guardarse en c:/ para que el juego corra correctamente
