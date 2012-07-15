@@ -64,6 +64,11 @@ public class Salida implements ObjetoVivo,ObjetoPosicionable,ObjetoVisible {
 		return Salidarecu;
 	}
 		
+	public Element guardar(){
+		Element elemSalida = DocumentHelper.createElement("Salida");
+		elemSalida.add(coordenada.guardar());
+		return elemSalida;
+	}
 		
 	
 }
